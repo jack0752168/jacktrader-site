@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Analytics 4 (gtag.js) — cookieless Consent Mode, no banner needed -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK1VSBED5T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'granted'});
+    gtag('js', new Date());
+    gtag('config','G-NK1VSBED5T');
+  </script>
+  <title>OKX Copy-Trading Fees: What You Actually Pay | JackTrader</title>
+  <meta name="description" content="OKX copy-trading fees explained: the lead-trader profit share, the trading fees underneath, what&#x27;s rebatable, and a full worked example with real numbers." />
+  <meta name="keywords" content="okx copy trading fees,okx copy trading profit share,okx lead trader commission,copy trading fee rebate,okx copy trading cost,okx high water mark,okx copy trading rebate,what does okx copy trading cost,okx profit sharing ratio,copy trading trading fees" />
+  <meta name="author" content="JackTrader" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <meta name="theme-color" content="#0b0d12" />
+  <link rel="canonical" href="https://www.jacktrader.xyz/en/blog/okx-copy-trading-fees.html" />
+  <link rel="alternate" hreflang="en" href="https://www.jacktrader.xyz/en/blog/okx-copy-trading-fees.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.jacktrader.xyz/en/blog/okx-copy-trading-fees.html" />
+  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://t.me" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="JackTrader" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="OKX Copy-Trading Fees: What You Actually Pay" />
+  <meta property="og:description" content="OKX copy-trading fees explained: the lead-trader profit share, the trading fees underneath, what&#x27;s rebatable, and a full worked example with real numbers." />
+  <meta property="og:url" content="https://www.jacktrader.xyz/en/blog/okx-copy-trading-fees.html" />
+  <meta property="og:image" content="https://www.jacktrader.xyz/assets/rebate/monthly-volume.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@trader_j888" />
+  <meta name="twitter:title" content="OKX Copy-Trading Fees: What You Actually Pay" />
+  <meta name="twitter:description" content="OKX copy-trading fees explained: the lead-trader profit share, the trading fees underneath, what&#x27;s rebatable, and a full worked example with real numbers." />
+  <meta name="twitter:image" content="https://www.jacktrader.xyz/assets/rebate/monthly-volume.jpg" />
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "OKX copy-trading fees: what you actually pay",
+  "description": "OKX copy-trading fees explained: the lead-trader profit share, the trading fees underneath, what's rebatable, and a full worked example with real numbers.",
+  "author": {
+    "@type": "Organization",
+    "name": "JackTrader",
+    "url": "https://www.jacktrader.xyz/en/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "JackTrader",
+    "url": "https://www.jacktrader.xyz/en/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.jacktrader.xyz/assets/brand/favicon.svg"
+    }
+  },
+  "datePublished": "2026-06-10",
+  "dateModified": "2026-07-19",
+  "mainEntityOfPage": "https://www.jacktrader.xyz/en/blog/okx-copy-trading-fees.html",
+  "image": "https://www.jacktrader.xyz/assets/rebate/monthly-volume.jpg",
+  "inLanguage": "en",
+  "keywords": "okx copy trading fees,okx copy trading profit share,okx lead trader commission,copy trading fee rebate,okx copy trading cost,okx high water mark,okx copy trading rebate,what does okx copy trading cost,okx profit sharing ratio,copy trading trading fees"
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.jacktrader.xyz/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.jacktrader.xyz/en/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "OKX Copy-Trading Fees",
+      "item": "https://www.jacktrader.xyz/en/blog/okx-copy-trading-fees.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the actual fees for OKX copy-trading?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two separate charges. First, a profit-share commission to the lead trader — commonly around 10%, charged only on net realised profit above your high-water mark. Second, the standard OKX maker/taker trading fees (0.02% maker / 0.05% taker at the Regular tier) on every mirrored order, charged on notional whether you win or lose. The second leg is usually the larger of the two for active traders."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the lead trader take a cut even when I lose money?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The profit-share commission is charged only on new realised profit above your prior high-water mark. If a settlement period closes flat or down, the lead trader's profit share for that period is zero. However, you still pay the underlying OKX trading fees on every mirrored open and close, because those are transaction fees on volume, not on profit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get a rebate on OKX copy-trading fees?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only on the trading-fee leg, not the profit share. The maker/taker fees your mirrored orders pay to OKX can be rebated up to 40% through a sub-broker channel, settled in real time in USDT. The profit share goes to the lead trader, not to OKX as an exchange fee, so there is no broker commission behind it to rebate. Any service claiming to rebate your profit share is misrepresenting how it works."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a high-water mark in OKX copy-trading?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's the peak value your copied equity has reached, which OKX uses to make sure you only pay profit share once on the same gains. If you profit, pay the share, then lose some and recover it, you don't pay share again on the recovered amount — the mark already accounts for it. You only pay profit share on genuinely new profit above the previous peak."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are my OKX copy-trading fees higher than expected?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almost always because of trading-fee turnover, not the profit share. You inherit the lead trader's execution style, so a high-frequency or taker-heavy trader generates many mirrored fills, each paying 0.05% taker at the Regular tier on notional. On a small allocation this can add up to far more than the profit share. Check the trader's trade frequency and maker/taker mix, not just their PnL, before copying."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does copied volume affect my OKX VIP tier?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Mirrored trades count toward your own 30-day trading volume, so copying a busy lead trader can move you up the OKX VIP ladder faster than your manual trading alone would. That can actually work in your favour, since higher VIP tiers reduce the maker/taker rates on the trading-fee leg of your copy-trading cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is JackTrader affiliated with OKX or the lead traders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. JackTrader is an independent referral / sub-broker partner and is not affiliated with OKX or with any lead trader on its copy-trading platform. We rebate a share of the OKX trading fees generated by accounts bound through our channel. The up-to-40% figure is a maximum reference, not a guarantee, and depends on OKX policy and account review. Nothing here is investment advice."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/en/" aria-label="JackTrader"><span class="brand-mark">J</span><span>JackTrader</span></a>
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="site-nav" aria-label="Main navigation" id="primary-nav">
+        <a href="/en/">Home</a>
+        <a href="/en/binance-us-stocks.html">Binance Stocks 🔥</a>
+        <a href="/en/okx-us-stocks.html">OKX Stocks</a>
+        <a href="/en/binance-rebate.html">Binance</a>
+        <a href="/en/okx-rebate.html">OKX</a>
+        <a href="/en/binance-partner.html">Binance Partner</a>
+        <a href="/en/okx-partner.html">OKX Partner</a>
+        <a href="/en/blog/">Blog</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-toggle"><a href="/">中</a><a href="/zh-tw/">繁</a><a href="/en/" class="active">EN</a></div>
+        <a class="nav-cta" href="https://t.me/Jack168668" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="/en/">Home</a> / <a href="/en/blog/">Blog</a> / OKX Copy-Trading Fees</div>
+        <p class="eyebrow">OKX copy trading · Updated June 2026</p>
+        <h1>OKX copy-trading fees: <span class="hl">what you actually pay</span></h1>
+        <p class="page-lede">Most "OKX copy-trading fees" explainers stop at "the lead trader takes 10% of profit" and call it a day. That's half the bill. There are <strong>two separate charges</strong> stacked on every account that copies a trader, they're calculated on completely different bases, and only one of them can ever be rebated. I run an OKX-to-Binance copy system day to day, so this is the version with the second charge put back in — the trading fees underneath the mirror — plus exactly which leg a <a href="/en/okx-rebate.html">sub-broker rebate</a> touches, and a worked example with the arithmetic shown.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width:820px">
+<h2>The two charges, separated</h2>
+<p>When you copy a lead trader on OKX, your account pays into two different pockets, and conflating them is the single biggest reason people misjudge what copy-trading actually costs:</p>
+<ol>
+<li><strong>The profit-share commission</strong> goes to the lead trader. It's a percentage — most commonly around 10%, set by the trader within OKX's allowed band — charged <em>only on net realised profit</em>, and only when a settlement period closes above your high-water mark. Lose money in a period, and this charge is zero.</li>
+<li><strong>The underlying trading fees</strong> go to OKX. Every time the lead trader opens or closes a position, your account mirrors that order, and that mirrored order pays the <em>standard maker/taker fee</em> just like a manual trade would. These accrue on every fill, win or lose, profit or no profit.</li>
+</ol>
+<p>The mental model that fixes this: copy-trading is not a single product with one fee. It's a <strong>permission layer</strong> that places ordinary trades in your account on someone else's signal. The orders themselves are taxed exactly like any other OKX order. The profit share is an extra fee bolted on top for the signal. You are paying a performance fee <em>and</em> a transaction fee, and they answer to different rules.</p>
+
+<h2>Charge one: the lead trader's profit share</h2>
+<p>This is the headline number on every lead trader's card, and the part most people fixate on. A few mechanics decide what it really costs you:</p>
+<ul>
+<li><strong>It's a share of profit, not of volume or capital.</strong> If the trader's profit-share ratio is 10% and your copied positions net +$1,000 realised over a settlement period, the trader is owed $100. Your principal is never charged; only the gain is.</li>
+<li><strong>The high-water mark protects you from paying twice.</strong> OKX tracks the peak your copied equity has reached. You only pay profit share on <em>new</em> profit above that prior peak. If you make $1,000, pay share on it, then lose $400 and claw it back, you do not pay share again on the clawed-back $400 — the mark already accounts for it. You only pay on genuinely new high-water gains.</li>
+<li><strong>It settles per period, not per trade.</strong> OKX nets your copied profit across the settlement window and charges the share on the net. Individual winning trades inside a losing period don't get cherry-picked for a charge.</li>
+<li><strong>The ratio is the trader's lever, capped by OKX.</strong> Lead traders choose their own profit-share ratio up to the platform's ceiling. A popular trader with a strong record may set it at the high end; someone building a following may set it lower to attract copiers. Always read the ratio on the trader's card before you copy — it's the single largest variable in your copy-trading cost.</li>
+</ul>
+<p>The honest framing: the profit share only hurts when you're winning, which is the good kind of fee to pay. But it is genuinely expensive on a strong run. A trader on a 10% ratio who doubles a $5,000 copy allocation has earned you $5,000 and taken $500 of it. That's the deal — and it is <strong>not rebatable</strong>, for a reason we'll get to.</p>
+
+<h2>Charge two: the trading fees nobody mentions</h2>
+<p>Here's the leg the lazy explainers skip. Every mirrored order pays OKX's normal maker/taker fee. If your lead trader is a high-frequency scalper flipping positions a dozen times a day, your account is generating a dozen taxable fills a day — and at OKX's Regular tier, the taker side of that is <strong>0.05%</strong> per fill, charged on notional, not on profit.</p>
+<p>This is where copy-trading quietly gets expensive in a way the profit share never reveals, because trading fees accrue <em>regardless of whether you make money</em>. (Copy trading also runs on the global platform, so it is worth confirming <a href="/en/blog/is-okx-available-in-the-us.html">whether OKX is available in your jurisdiction</a> before you allocate.) Below is OKX's official perpetual-futures fee ladder, which is what your mirrored futures orders pay (the same schedule we break down in the <a href="/en/blog/okx-sub-broker-affiliate-program.html">OKX sub-broker explainer</a>):</p>
+
+<table class="compare">
+<thead><tr><th>OKX perp tier</th><th>30-day futures volume</th><th>Maker</th><th>Taker</th></tr></thead>
+<tbody>
+<tr><td>Regular</td><td>&lt; $5M</td><td>0.0200%</td><td>0.0500%</td></tr>
+<tr><td>VIP 1</td><td>≥ $5M</td><td>0.0160%</td><td>0.0450%</td></tr>
+<tr><td>VIP 2</td><td>≥ $10M</td><td>0.0150%</td><td>0.0360%</td></tr>
+<tr><td>VIP 3</td><td>≥ $50M</td><td>0.0100%</td><td>0.0280%</td></tr>
+<tr><td>VIP 4</td><td>≥ $200M</td><td>0.0080%</td><td>0.0270%</td></tr>
+<tr><td>VIP 5</td><td>≥ $600M</td><td>0.0050%</td><td>0.0260%</td></tr>
+<tr><td>VIP 6</td><td>≥ $1B</td><td>0.0000%</td><td>0.0250%</td></tr>
+<tr><td>VIP 7</td><td>≥ $1.5B</td><td>−0.0020%</td><td>0.0200%</td></tr>
+<tr><td>VIP 8</td><td>≥ $2B</td><td>−0.0050%</td><td>0.0200%</td></tr>
+<tr><td>VIP 9</td><td>≥ $20B</td><td>−0.0050%</td><td>0.0150%</td></tr>
+</tbody>
+</table>
+<p class="hero-note">Most copiers sit at Regular — but copy-trading mirrors the <em>trader's</em> activity, so a busy lead trader can push your 30-day volume up the ladder faster than you'd expect, because every one of their flips counts as your volume too.</p>
+<p>A subtle, important point: the maker/taker split is not under your control when you copy. You take whatever the lead trader's execution style hands you. A patient trader who posts limit orders generates mostly maker fills (cheaper); an aggressive trader who crosses the spread to chase entries generates taker fills (more than double the cost at Regular). When you evaluate a lead trader, their <em>style</em> silently sets your trading-fee bill, separate from whatever profit-share ratio they advertise.</p>
+
+<h2>Why only one charge can be rebated</h2>
+<p>This is the crux, and it's where most affiliate sites are either vague or quietly misleading. A fee rebate works by returning a slice of the <strong>trading fee that OKX collects</strong> — because the rebate flows out of the broker/affiliate commission OKX pays on those exchange fees. So:</p>
+<ul>
+<li><strong>The trading-fee leg is rebatable.</strong> Those mirrored maker/taker fills generate exchange fees, OKX shares a portion of that with a sub-broker channel, and a slice comes back to you. Through a <a href="/en/okx-rebate.html">sub-broker channel like ours</a>, that's up to 40% of the trading-fee leg, settled in real time in USDT.</li>
+<li><strong>The profit-share leg is NOT rebatable.</strong> That money goes to the <em>lead trader</em>, not to OKX as an exchange fee. There is no broker commission sitting behind it for anyone to rebate. Any service claiming to rebate your copy-trading profit share is either confused or describing something else.</li>
+</ul>
+<p>We say this on the record in our own FAQ and it's worth repeating because it's the honest line in the sand: <em>the trading fees paid by copiers flow through the rebate ledger; the copy-trading profit share does not.</em> If a rebate offer blurs that boundary, treat it as a red flag — it's the cleanest test of whether the provider actually understands the product. For the general mechanics of how the trading-fee rebate is calculated and paid, see <a href="/en/blog/crypto-fee-rebate-explained.html">how crypto fee rebates work</a>.</p>
+
+<h2>Worked example: copying a futures trader for a month</h2>
+<p>Numbers make this concrete. Say you allocate <strong>$5,000</strong> to copy an active USDT-perp lead trader with a <strong>10% profit-share ratio</strong>. Over one month the trader runs your copied positions to <strong>$30M of mirrored notional</strong> (a realistic figure for an active trader with leverage and frequent flips on a $5k base), split <strong>40% maker / 60% taker</strong> because they chase entries. You finish the month <strong>+$1,200 realised</strong>, all of it new high-water profit. You're at OKX's Regular tier.</p>
+<p><strong>Charge one — profit share to the lead trader:</strong></p>
+<ul>
+<li>$1,200 realised profit × 10% = <strong>$120</strong> to the lead trader.</li>
+<li>Not rebatable. This is the cost of the signal.</li>
+</ul>
+<p><strong>Charge two — trading fees to OKX (Regular tier):</strong></p>
+<ul>
+<li>Maker: $30M × 40% = $12M × 0.0200% = <strong>$2,400</strong></li>
+<li>Taker: $30M × 60% = $18M × 0.0500% = <strong>$9,000</strong></li>
+<li>Gross trading fees = <strong>$11,400</strong> for the month</li>
+</ul>
+<p>Pause on that. The profit share everyone talks about is $120. The trading fees nobody mentions are <strong>$11,400</strong> — almost a hundred times larger, and they'd have been charged even if you'd finished flat or down. On a $5,000 allocation, mirroring an aggressive high-turnover trader, the transaction cost is the entire story, and the performance fee is a rounding error next to it.</p>
+<p><strong>Now apply the rebate to the rebatable leg:</strong></p>
+<ul>
+<li>Up to 40% of the $11,400 trading-fee leg ≈ <strong>$4,560 back</strong>, paid in real time in USDT.</li>
+<li>The $120 profit share is untouched — still $120.</li>
+<li>Net cost of copying = $120 + $11,400 − $4,560 = <strong>$6,960</strong>, versus $11,520 without a rebate. The rebate cut your total copy-trading cost by roughly 40%.</li>
+</ul>
+<p class="hero-note">The lesson isn't "copy-trading is a rip-off" — it's that for high-turnover lead traders the <em>trading-fee leg dominates</em>, and that leg is exactly the one a rebate compresses. Pick a lower-turnover trader and the trading fees shrink; pick a frantic scalper and the rebate is doing real work for you.</p>
+
+<h2>How turnover changes the picture</h2>
+<p>The example above used an aggressive trader on purpose, to show the trading-fee leg at its loudest. Flip the variables and the balance shifts:</p>
+<table class="compare">
+<thead><tr><th>Lead trader style</th><th>Monthly mirrored notional (on $5k)</th><th>Trading fees dominate?</th><th>What to optimise</th></tr></thead>
+<tbody>
+<tr><td>Low-frequency swing (few trades/week, mostly maker)</td><td>~$1M–3M</td><td>No — profit share can rival fees</td><td>Read the profit-share ratio carefully</td></tr>
+<tr><td>Moderate intraday</td><td>~$8M–15M</td><td>Roughly balanced</td><td>Both legs matter; rebate is meaningful</td></tr>
+<tr><td>High-frequency scalper (many flips/day, taker-heavy)</td><td>$25M+</td><td>Yes — fees swamp profit share</td><td>Rebate on the trading-fee leg is the big win</td></tr>
+</tbody>
+</table>
+<p>This is the practical takeaway for choosing a lead trader: the advertised profit-share ratio is the <em>visible</em> price, but the trader's turnover and maker/taker mix set the <em>invisible</em> price — and on busy traders the invisible price is the larger one. A trader on a 10% ratio who trades patiently can cost you far less than a trader on an 8% ratio who churns, once both fee legs are counted.</p>
+
+<h2>Five things to check before you copy</h2>
+<ol>
+<li><strong>The profit-share ratio.</strong> It's on the trader's card. This is your performance fee, charged only on high-water profit.</li>
+<li><strong>The trader's turnover.</strong> A high win-rate means little if frantic trading hands you a five-figure fee bill on a small allocation. Look at trade frequency, not just PnL.</li>
+<li><strong>Maker vs taker style.</strong> Patient limit-order traders cost you roughly half the taker rate per fill. You inherit their execution style, so it's part of your cost.</li>
+<li><strong>Your own VIP tier drift.</strong> Mirrored volume counts toward your 30-day total. A busy trader can move you up the OKX ladder — sometimes a hidden upside, since higher tiers cut the trading-fee leg.</li>
+<li><strong>Whether your account is rebate-bound.</strong> The trading-fee leg is only rebatable if your account is attributed to a sub-broker channel from the start. Rebates can't be applied retroactively to an unbound account.</li>
+</ol>
+
+<h2>Setting up the rebatable leg</h2>
+<p>To get the trading-fee portion of your copy-trading bill rebated, your OKX account needs to be bound to a sub-broker channel before you trade. Register through the rebate-bound link so attribution starts on your first fill: <a href="https://www.promooboost.com/join/TRADERJACK" target="_blank" rel="noopener">promooboost.com/join/TRADERJACK</a>. The rebate then returns up to 40% of the trading fees your mirrored orders generate, in real time in USDT, with a per-trade dashboard so you can reconcile each fill — and it stacks on top of your VIP tier and any OKB discount rather than replacing them. If you already hold an OKX account and want to know whether it can be migrated, ask for an assessment on <a href="https://t.me/Jack168668" target="_blank" rel="noopener">Telegram @Jack168668</a> before assuming it transfers. Full channel terms live on the <a href="/en/okx-rebate.html">OKX rebate page</a>, and you can compare the two venues' underlying fees in our <a href="/en/blog/binance-vs-okx-fees-2026.html">Binance vs OKX fees breakdown</a>.</p>
+<p>One reminder that the worked example should have made obvious: a fee rebate lowers your <em>cost of trading</em>; it does nothing to change whether the lead trader you copied is any good. Copy-trading carries the full risk of the underlying strategy, leverage and market — a rebate makes a winning copy cheaper and a losing copy slightly less painful, but it is not a hedge and it is not a guarantee of anything.</p>
+
+        <div class="section-head" style="margin-top:8px;text-align:left">
+          <p class="eyebrow">FAQ</p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item" open><summary class="faq-q">What are the actual fees for OKX copy-trading?<span class="plus">+</span></summary><div class="faq-a">Two separate charges. First, a profit-share commission to the lead trader — commonly around 10%, charged only on net realised profit above your high-water mark. Second, the standard OKX maker/taker trading fees (0.02% maker / 0.05% taker at the Regular tier) on every mirrored order, charged on notional whether you win or lose. The second leg is usually the larger of the two for active traders.</div></details>
+          <details class="faq-item"><summary class="faq-q">Does the lead trader take a cut even when I lose money?<span class="plus">+</span></summary><div class="faq-a">No. The profit-share commission is charged only on new realised profit above your prior high-water mark. If a settlement period closes flat or down, the lead trader&#x27;s profit share for that period is zero. However, you still pay the underlying OKX trading fees on every mirrored open and close, because those are transaction fees on volume, not on profit.</div></details>
+          <details class="faq-item"><summary class="faq-q">Can I get a rebate on OKX copy-trading fees?<span class="plus">+</span></summary><div class="faq-a">Only on the trading-fee leg, not the profit share. The maker/taker fees your mirrored orders pay to OKX can be rebated up to 40% through a sub-broker channel, settled in real time in USDT. The profit share goes to the lead trader, not to OKX as an exchange fee, so there is no broker commission behind it to rebate. Any service claiming to rebate your profit share is misrepresenting how it works.</div></details>
+          <details class="faq-item"><summary class="faq-q">What is a high-water mark in OKX copy-trading?<span class="plus">+</span></summary><div class="faq-a">It&#x27;s the peak value your copied equity has reached, which OKX uses to make sure you only pay profit share once on the same gains. If you profit, pay the share, then lose some and recover it, you don&#x27;t pay share again on the recovered amount — the mark already accounts for it. You only pay profit share on genuinely new profit above the previous peak.</div></details>
+          <details class="faq-item"><summary class="faq-q">Why are my OKX copy-trading fees higher than expected?<span class="plus">+</span></summary><div class="faq-a">Almost always because of trading-fee turnover, not the profit share. You inherit the lead trader&#x27;s execution style, so a high-frequency or taker-heavy trader generates many mirrored fills, each paying 0.05% taker at the Regular tier on notional. On a small allocation this can add up to far more than the profit share. Check the trader&#x27;s trade frequency and maker/taker mix, not just their PnL, before copying.</div></details>
+          <details class="faq-item"><summary class="faq-q">Does copied volume affect my OKX VIP tier?<span class="plus">+</span></summary><div class="faq-a">Yes. Mirrored trades count toward your own 30-day trading volume, so copying a busy lead trader can move you up the OKX VIP ladder faster than your manual trading alone would. That can actually work in your favour, since higher VIP tiers reduce the maker/taker rates on the trading-fee leg of your copy-trading cost.</div></details>
+          <details class="faq-item"><summary class="faq-q">Is JackTrader affiliated with OKX or the lead traders?<span class="plus">+</span></summary><div class="faq-a">No. JackTrader is an independent referral / sub-broker partner and is not affiliated with OKX or with any lead trader on its copy-trading platform. We rebate a share of the OKX trading fees generated by accounts bound through our channel. The up-to-40% figure is a maximum reference, not a guarantee, and depends on OKX policy and account review. Nothing here is investment advice.</div></details>
+        </div>
+
+        <div class="cta-band" style="margin-top:48px">
+          <h2>Stop overpaying on fees</h2>
+          <p>Register through the rebate link and start getting up to 40% back from your next trade — settled in real time, in USDT.</p>
+          <div class="hero-actions" style="justify-content:center">
+            <a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener">Register Binance</a>
+            <a class="btn btn-okx" href="https://www.promooboost.com/join/TRADERJACK" target="_blank" rel="noopener">Register OKX</a>
+            <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">Have an account? Telegram</a>
+          </div>
+        </div>
+
+        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: All figures are illustrative and reflect published Binance / OKX schedules at the time of writing, which can change without notice. This article is educational and not investment advice. JackTrader is an independent referral / sub-broker partner and is not Binance or OKX.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="/en/"><span class="brand-mark">J</span><span>JackTrader</span></a>
+          <p>Trading fee rebates and channel partnerships across Binance, OKX, wallet and DEX ecosystems. Real-time settlement, fully trackable.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Rebate plans</h4>
+          <a href="/en/binance-rebate.html">Binance Rebate</a>
+          <a href="/en/okx-rebate.html">OKX Rebate</a>
+          <a href="/en/wallet-rebate.html">Wallet &amp; DEX</a>
+          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a><a href="/en/okx-partner.html">OKX partner</a>
+        </div>
+        <div class="footer-col">
+          <h4>Deep dives</h4>
+          <a href="/en/blog/binance-fee-calculator-2026.html">Binance fee calculator 2026</a>
+          <a href="/en/blog/okx-sub-broker-affiliate-program.html">OKX sub-broker explained</a>
+          <a href="/en/blog/binance-vs-okx-fees-2026.html">Binance vs OKX fees 2026</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance or OKX. Rebate rates, eligibility and rules depend on platform policy, account status, review and local regulations; displayed rates are a maximum reference and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
+        <p class="copyright">© 2026 JackTrader · Independent referral partner.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Analytics 4 (gtag.js) — cookieless Consent Mode, no banner needed -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK1VSBED5T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'granted'});
+    gtag('js', new Date());
+    gtag('config','G-NK1VSBED5T');
+  </script>
+  <title>Spot vs Futures Fees: Which Is Cheaper on Binance & OKX | JackTrader</title>
+  <meta name="description" content="Spot vs futures fees on Binance &amp; OKX: why 0.02%/0.05% futures looks cheaper than 0.10% spot but leverage inverts the real cost. Worked examples + rebate stack." />
+  <meta name="keywords" content="spot vs futures fees,binance futures fee vs spot,okx futures vs spot fee,which is cheaper spot or futures,crypto futures fee leverage,futures fee on notional,binance spot fee 0.10,okx perp fee 0.02,futures funding cost,crypto fee rebate" />
+  <meta name="author" content="JackTrader" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <meta name="theme-color" content="#0b0d12" />
+  <link rel="canonical" href="https://www.jacktrader.xyz/en/blog/spot-vs-futures-fees.html" />
+  <link rel="alternate" hreflang="en" href="https://www.jacktrader.xyz/en/blog/spot-vs-futures-fees.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.jacktrader.xyz/en/blog/spot-vs-futures-fees.html" />
+  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://t.me" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="JackTrader" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Spot vs Futures Fees: Which Is Cheaper on Binance &amp; OKX" />
+  <meta property="og:description" content="Spot vs futures fees on Binance &amp; OKX: why 0.02%/0.05% futures looks cheaper than 0.10% spot but leverage inverts the real cost. Worked examples + rebate stack." />
+  <meta property="og:url" content="https://www.jacktrader.xyz/en/blog/spot-vs-futures-fees.html" />
+  <meta property="og:image" content="https://www.jacktrader.xyz/assets/rebate/rebate-system-interface.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@trader_j888" />
+  <meta name="twitter:title" content="Spot vs Futures Fees: Which Is Cheaper on Binance &amp; OKX" />
+  <meta name="twitter:description" content="Spot vs futures fees on Binance &amp; OKX: why 0.02%/0.05% futures looks cheaper than 0.10% spot but leverage inverts the real cost. Worked examples + rebate stack." />
+  <meta name="twitter:image" content="https://www.jacktrader.xyz/assets/rebate/rebate-system-interface.png" />
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Spot vs futures fees: which is actually cheaper on Binance and OKX?",
+  "description": "Spot vs futures fees on Binance & OKX: why 0.02%/0.05% futures looks cheaper than 0.10% spot but leverage inverts the real cost. Worked examples + rebate stack.",
+  "author": {
+    "@type": "Organization",
+    "name": "JackTrader",
+    "url": "https://www.jacktrader.xyz/en/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "JackTrader",
+    "url": "https://www.jacktrader.xyz/en/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.jacktrader.xyz/assets/brand/favicon.svg"
+    }
+  },
+  "datePublished": "2026-06-10",
+  "dateModified": "2026-06-10",
+  "mainEntityOfPage": "https://www.jacktrader.xyz/en/blog/spot-vs-futures-fees.html",
+  "image": "https://www.jacktrader.xyz/assets/rebate/rebate-system-interface.png",
+  "inLanguage": "en",
+  "keywords": "spot vs futures fees,binance futures fee vs spot,okx futures vs spot fee,which is cheaper spot or futures,crypto futures fee leverage,futures fee on notional,binance spot fee 0.10,okx perp fee 0.02,futures funding cost,crypto fee rebate"
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.jacktrader.xyz/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.jacktrader.xyz/en/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Spot vs Futures Fees",
+      "item": "https://www.jacktrader.xyz/en/blog/spot-vs-futures-fees.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are futures fees really cheaper than spot fees on Binance and OKX?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per dollar of notional traded, yes — futures is 0.02% maker / 0.05% taker versus a flat ~0.10% on spot, a real 2x to 5x gap. But the futures rate is charged on your full leveraged position, not the cash you put up. Measured against your own capital, futures is only cheaper up to about 2x leverage as a taker (5x as a maker); above that, spot is cheaper."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does leverage make futures fees more expensive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because the fee percentage applies to position notional, not your margin. At 10x, a $1,000 margin controls $10,000 of notional, so a 0.05% taker fee costs $5 — which is 0.5% of your actual $1,000, five times the spot rate. The formula is simple: fee as a percent of your capital equals the fee rate multiplied by your leverage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does spot or futures win for long-term holding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spot, clearly. Futures charges funding roughly every 8 hours on top of trade fees, and it compounds the longer you hold — often around 0.03% of notional per day. Spot has no funding at all: you pay once to enter and once to exit and can hold indefinitely. For anything held more than a day or two, spot's lack of a carry meter usually makes it cheaper overall."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the break-even price move to cover fees on each product?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a round trip you need price to move enough to cover both sides. Spot taker both sides is about 0.20%; futures maker both sides is about 0.04%; futures taker both sides is about 0.10% — before funding. Add a few days of funding on futures and the futures number climbs toward and past spot, which is why holding time decides the winner."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the fee rebate apply to both spot and futures?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The JackTrader sub-broker channel rebates up to 40% of the fee you pay regardless of product — spot or futures, maker or taker — settled in real time in USDT with a per-trade dashboard. It stacks on top of your VIP tier and BNB/OKB discount rather than replacing them. The 40% is a maximum reference, not a guarantee, and depends on platform policy and account review."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add the rebate to an account I already have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "New accounts should register through the rebate-bound links so attribution starts from the first trade — rebates cannot be applied retroactively to an unbound account. Binance does run a rebind path for existing accounts: you need completed KYC, a master account with no current referrer, no more than 5,000 USD of trading volume in the last 90 days, no wash-trading flag, and a non-restricted region. Approval alone does not pay — the binding only takes effect once you trade 150,000 USD within 30 days of applying. Ask for a case-by-case assessment on Telegram before assuming a transfer is possible."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/en/" aria-label="JackTrader"><span class="brand-mark">J</span><span>JackTrader</span></a>
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="site-nav" aria-label="Main navigation" id="primary-nav">
+        <a href="/en/">Home</a>
+        <a href="/en/binance-us-stocks.html">Binance Stocks 🔥</a>
+        <a href="/en/okx-us-stocks.html">OKX Stocks</a>
+        <a href="/en/binance-rebate.html">Binance</a>
+        <a href="/en/okx-rebate.html">OKX</a>
+        <a href="/en/binance-partner.html">Binance Partner</a>
+        <a href="/en/okx-partner.html">OKX Partner</a>
+        <a href="/en/blog/">Blog</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-toggle"><a href="/">中</a><a href="/zh-tw/">繁</a><a href="/en/" class="active">EN</a></div>
+        <a class="nav-cta" href="https://t.me/Jack168668" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="/en/">Home</a> / <a href="/en/blog/">Blog</a> / Spot vs Futures Fees</div>
+        <p class="eyebrow">Crypto fees · Updated June 2026</p>
+        <h1>Spot vs futures fees: <span class="hl">which is actually cheaper on Binance and OKX?</span></h1>
+        <p class="page-lede">Open the fee schedule and futures looks like a steal: <strong>0.02% maker / 0.05% taker</strong> on perpetuals versus a flat <strong>0.10%</strong> on spot. So the answer is "trade futures, it's five times cheaper," right? No — and that mistake quietly drains leveraged accounts. The futures rate is charged on your <em>full position notional</em>, not the cash you put up, so leverage multiplies the fee against your actual capital. This guide does the math both exchanges hope you skip, with worked examples, the funding cost everyone forgets, and how a <a href="/en/partner.html">sub-broker rebate stacks on both products</a>.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width:820px">
+<h2>The short answer</h2>
+<p>Per dollar of <strong>notional traded</strong>, futures is far cheaper than spot — 0.05% taker versus 0.10% is a real 2x gap, and it's why high-frequency desks live on perps. But per dollar of <strong>your own capital at risk</strong>, that gap flips the moment you add leverage. A taker futures trade at 10x charges 0.05% on ten times your margin, which is <strong>0.5% of your capital per side</strong> — five times the spot rate measured the same way. The headline number is true; the denominator is the trap.</p>
+<p>The honest rule we'll build to: <strong>futures wins when you're flat-to-low leverage, holding briefly, and trading as a maker. Spot wins when you'd otherwise run high leverage, hold across many funding windows, or cross the spread repeatedly.</strong> And on either product, a rebate compresses the cost by the same proportion — so the choice of product matters less than whether you're claiming one.</p>
+
+<h2>Why the futures rate looks cheaper (and the catch)</h2>
+<p>Three structural reasons make perpetual futures fees print lower than spot on both Binance and OKX:</p>
+<ul>
+<li><strong>Maker/taker split.</strong> Spot Regular is a flat 0.10% either way on Binance; OKX runs about 0.08% maker / 0.10% taker. Futures splits sharply — 0.02% if you add liquidity, 0.05% if you take it. A disciplined maker on futures pays one-fifth the spot rate.</li>
+<li><strong>Competition concentrated the volume.</strong> Perps are where the rivalry and the flow live, so the two exchanges have matched each other down to identical 0.02%/0.05% entry pricing. Spot has been left at the older, higher 0.10% standard.</li>
+<li><strong>The token discount is smaller on futures — but off a smaller base.</strong> Paying fees with BNB takes 25% off spot but only 10% off futures. Ten percent of an already-tiny 0.02% is almost nothing, which is why the BNB discount barely moves a perps trader. (More on that mechanic in our <a href="/en/blog/binance-vs-okx-fees-2026.html">Binance vs OKX fee breakdown</a>.)</li>
+</ul>
+<p>The catch sits in one sentence the fee page never spells out: <strong>the futures percentage is applied to position notional, while the spot percentage is applied to the cash you actually spend.</strong> On spot, if you buy $1,000 of BTC you pay 0.10% of $1,000 = $1. On futures, if you post $1,000 of margin at 10x you control $10,000 of notional, and the taker fee is 0.05% of $10,000 = $5. Same cash out of pocket, five times the fee. Leverage didn't just amplify your P&L — it amplified your fee bill against your capital.</p>
+
+<h2>The only fair comparison: fee as a percent of your capital</h2>
+<p>To compare two products honestly you need the same denominator. Notional flatters futures; capital tells the truth. The formula for a single side is:</p>
+<p><strong>Fee as % of capital = fee rate × leverage.</strong></p>
+<p>Spot is implicitly 1x (you can't margin a basic spot buy), so its "fee as % of capital" equals its fee rate. Futures multiplies by however much leverage you run. Here's the same $1,000 of capital, one side, taker, at Regular tier:</p>
+
+<table class="compare">
+<thead><tr><th>Product & leverage</th><th>Rate on notional</th><th>Notional controlled</th><th>Fee paid</th><th>Fee as % of your $1,000</th></tr></thead>
+<tbody>
+<tr><td>Spot (1x)</td><td>0.100%</td><td>$1,000</td><td>$1.00</td><td>0.100%</td></tr>
+<tr><td>Futures 1x</td><td>0.050%</td><td>$1,000</td><td>$0.50</td><td>0.050%</td></tr>
+<tr><td>Futures 3x</td><td>0.050%</td><td>$3,000</td><td>$1.50</td><td>0.150%</td></tr>
+<tr><td>Futures 5x</td><td>0.050%</td><td>$5,000</td><td>$2.50</td><td>0.250%</td></tr>
+<tr><td>Futures 10x</td><td>0.050%</td><td>$10,000</td><td>$5.00</td><td>0.500%</td></tr>
+<tr><td>Futures 20x</td><td>0.050%</td><td>$20,000</td><td>$10.00</td><td>1.000%</td></tr>
+</tbody>
+</table>
+<p>The crossover is exact and easy to remember: <strong>futures (taker) is cheaper than spot only up to 2x leverage</strong>, because 0.05% × 2 = 0.10%, the spot rate. Above 2x as a taker, you are paying more in fees per dollar of capital than you would on spot. As a <em>maker</em> the crossover moves to 5x (0.02% × 5 = 0.10%). Most leveraged traders run well past both lines and never notice, because the fee is quoted against notional where it looks harmless.</p>
+
+<h2>Worked example #1 — the 10x day trader who thinks futures is "cheaper"</h2>
+<p>A trader has $2,000 and likes 10x perps. In a session they open and close five round trips, taker on both legs, on Binance USDT-M at Regular tier (0.05% taker).</p>
+<ul>
+<li>Notional per position: $2,000 × 10 = <strong>$20,000</strong>.</li>
+<li>Fee per side: $20,000 × 0.05% = $10. Round trip (open + close) = <strong>$20</strong>.</li>
+<li>Five round trips: <strong>$100 in fees</strong> — which is <strong>5% of the $2,000 account</strong>, in one day, before a single dollar of P&L.</li>
+</ul>
+<p>Now the same trader does the equivalent exposure on spot — but spot can't be leveraged, so to match $20,000 of exposure they'd need $20,000 of cash, which they don't have. The honest like-for-like is: <strong>at equal capital and equal exposure, futures' leverage is what makes the fee large, not the rate.</strong> If this trader instead held $2,000 of spot BTC and traded it five times round trip at 0.10%, the fee would be $2,000 × 0.10% × 2 × 5 = <strong>$20 total</strong> — one-fifth the futures bill — because there's no 10x multiplier on the notional. The futures rate was "cheaper" and the futures bill was 5x bigger. Both true at once.</p>
+
+<h2>Worked example #2 — the maker who actually uses futures correctly</h2>
+<p>Same $2,000, but now a patient trader posts <strong>limit orders that rest in the book</strong> (maker, 0.02%) and runs a modest <strong>3x</strong>. Five round trips on OKX perps at Regular (0.020% maker).</p>
+<ul>
+<li>Notional per position: $2,000 × 3 = $6,000.</li>
+<li>Maker fee per side: $6,000 × 0.020% = $1.20. Round trip = $2.40.</li>
+<li>Five round trips: <strong>$12 in fees</strong> — 0.6% of the account.</li>
+</ul>
+<p>This is futures used the way the low rate intends: maker fills, restrained leverage. The fee-as-%-of-capital here (0.06% per side) beats spot's 0.10%. The lesson isn't "futures bad" — it's that the cheap rate is conditional on behaviour. Flip this same trader to 10x taker and the bill quadruples. For the mechanics of getting filled as a maker rather than paying the taker fee, see our <a href="/en/blog/maker-vs-taker-fees-explained.html">maker vs taker guide</a>.</p>
+
+<h2>The cost spot doesn't have: funding</h2>
+<p>Fees aren't the whole bill on futures. Perpetuals charge <strong>funding</strong> every eight hours — a payment between longs and shorts that keeps the perp tethered to spot. It's typically small (often around 0.01% per 8h, ~0.03%/day, on each direction's notional), but it compounds with holding time and, like the fee, it's levied on <em>notional</em>, not your margin.</p>
+<p>Hold a 10x long for three days at 0.01%/8h and you've paid roughly 0.09% of notional in funding — which is 0.9% of your capital, on top of the trade fees. Spot has no funding at all: you own the coin, you pay once to enter and once to exit, and you can hold for years with zero carry. <strong>This is the single biggest reason spot beats futures for anything held longer than a day or two.</strong> The fee schedule comparison is a snapshot; funding is a meter that runs the whole time your perp is open.</p>
+
+<h2>Break-even move: how far price must travel to cover fees</h2>
+<p>A different way to feel the difference: how much does the price have to move in your favour just to break even on costs? Because the round-trip fee is a fixed slice of notional, the break-even <em>price move</em> on futures is independent of leverage (leverage scales fee and P&L together) — but the spot comparison is what surprises people.</p>
+
+<table class="compare">
+<thead><tr><th>Scenario</th><th>Round-trip cost (of notional)</th><th>Break-even price move</th><th>Carry if held 3 days</th></tr></thead>
+<tbody>
+<tr><td>Spot, taker both sides (0.10%)</td><td>0.20%</td><td>0.20%</td><td>none — no funding</td></tr>
+<tr><td>Futures, maker both sides (0.02%)</td><td>0.04%</td><td>0.04%</td><td>+ ~0.09% funding</td></tr>
+<tr><td>Futures, taker both sides (0.05%)</td><td>0.10%</td><td>0.10%</td><td>+ ~0.09% funding</td></tr>
+</tbody>
+</table>
+<p>For a quick maker scalp, futures' 0.04% break-even crushes spot's 0.20% — futures is genuinely, dramatically cheaper for fast in-and-out trading. But add three days of funding and the futures taker case (0.10% + 0.09% = 0.19%) converges on spot, and a longer hold pushes it past. <strong>Time is the variable that decides it.</strong> Short and maker-driven, futures wins on cost; long and held, spot wins because it has no meter running.</p>
+
+<h2>How a rebate stacks on both — and why it changes the calculus</h2>
+<p>Whatever you pay after VIP tier and token discount, a sub-broker rebate hands a slice back in real time. JackTrader runs a <a href="/en/binance-rebate.html">Binance channel</a> and an <a href="/en/okx-rebate.html">OKX channel</a> that each rebate <strong>up to 40% of the fee you paid</strong>, in USDT, with no minimum volume and a per-trade dashboard. Critically, the rebate applies to <strong>both spot and futures fees</strong> — it doesn't care which product generated the fee, only that you generated one.</p>
+<p>The rebate <strong>stacks</strong>; it doesn't replace your discounts. The order on Binance is: gross fee at your VIP rate → BNB discount applies → the rebate pays back up to 40% of what's left. Apply that to the worked numbers:</p>
+<ul>
+<li>Example #1's $100 daily futures bill → up to <strong>~$40/day back</strong>, turning a 5% daily fee drag into roughly 3%.</li>
+<li>Example #2's $12 maker bill → up to <strong>~$4.80 back</strong>, dropping the effective maker rate toward 0.012% on notional.</li>
+<li>A spot trader paying 0.10% sees the effective rate fall toward <strong>0.06%</strong> after a 40% rebate — before any BNB discount.</li>
+</ul>
+<p>Because the rebate compresses both products by the same proportion, it doesn't change <em>which</em> product is cheaper — but it lowers the floor under whichever you choose, and it's worth far more over a year than agonising over the spot-versus-futures decision. The "40%" is a maximum reference, not a guarantee, and depends on platform policy and account review.</p>
+
+<h2>Tier and token: where the comparison shifts at volume</h2>
+<p>Everything above used Regular-tier rates, where most accounts actually sit. Climbing the VIP ladder widens the futures advantage on notional but doesn't rescue high leverage. For reference, here is how OKX's official post-April-2026 futures schedule progresses — the same ladder logic applies on Binance:</p>
+
+<table class="compare">
+<thead><tr><th>OKX tier (30-day futures vol)</th><th>Maker</th><th>Taker</th></tr></thead>
+<tbody>
+<tr><td>Regular (&lt; $5M)</td><td>0.020%</td><td>0.050%</td></tr>
+<tr><td>VIP1 (≥ $5M)</td><td>0.016%</td><td>0.045%</td></tr>
+<tr><td>VIP2 (≥ $10M)</td><td>0.015%</td><td>0.036%</td></tr>
+<tr><td>VIP3 (≥ $50M)</td><td>0.010%</td><td>0.028%</td></tr>
+<tr><td>VIP5 (≥ $600M)</td><td>0.005%</td><td>0.026%</td></tr>
+<tr><td>VIP6 (≥ $1B)</td><td>0.000%</td><td>0.025%</td></tr>
+<tr><td>VIP9 (≥ $20B)</td><td>−0.005%</td><td>0.015%</td></tr>
+</tbody>
+</table>
+<p>At VIP6 the maker fee hits zero and at VIP7+ it turns negative — the exchange pays you to quote. That's why market-making desks live almost entirely on futures-maker flow. But note the taker line barely moves (0.050% → 0.015% across the whole ladder), so a high-leverage taker strategy stays expensive against capital even at the top. The fix for taker cost is behavioural (flip to maker) and structural (the rebate), not tier-climbing. For how the sub-broker rate layers onto these tiers, see the <a href="/en/blog/okx-sub-broker-affiliate-program.html">OKX sub-broker explainer</a>, and for the equivalent Binance ladder, the <a href="/en/blog/binance-fee-calculator-2026.html">Binance fee calculator</a>.</p>
+
+<h2>So which is cheaper? A decision rule</h2>
+<p>There's no universal winner — it's a function of leverage, holding time, and maker share. The rule:</p>
+<ul>
+<li><strong>Futures is cheaper when:</strong> you'd run low leverage anyway (≤2x taker, ≤5x maker), you hold minutes-to-hours, and you can wait for maker fills. Scalpers and short-horizon traders should be on futures — the 0.04% maker round trip is unbeatable on spot.</li>
+<li><strong>Spot is cheaper when:</strong> you'd otherwise lever up high, you hold across many funding windows (days to months), or you cross the spread constantly. Position traders and HODLers should be on spot — no funding meter, no leverage multiplier on the fee.</li>
+<li><strong>Either way:</strong> trade as a maker when you can, and claim the rebate. Those two levers move your real cost more than the product choice does.</li>
+</ul>
+<p>The takeaway most fee guides bury: the "five times cheaper" futures headline is an artefact of measuring against notional. Measure against your capital — the only number that pays your bills — and futures is cheaper only at low leverage and short holds. Know which regime you're in, then stack a rebate on top of whichever product fits.</p>
+
+        <div class="section-head" style="margin-top:8px;text-align:left">
+          <p class="eyebrow">FAQ</p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item" open><summary class="faq-q">Are futures fees really cheaper than spot fees on Binance and OKX?<span class="plus">+</span></summary><div class="faq-a">Per dollar of notional traded, yes — futures is 0.02% maker / 0.05% taker versus a flat ~0.10% on spot, a real 2x to 5x gap. But the futures rate is charged on your full leveraged position, not the cash you put up. Measured against your own capital, futures is only cheaper up to about 2x leverage as a taker (5x as a maker); above that, spot is cheaper.</div></details>
+          <details class="faq-item"><summary class="faq-q">Why does leverage make futures fees more expensive?<span class="plus">+</span></summary><div class="faq-a">Because the fee percentage applies to position notional, not your margin. At 10x, a $1,000 margin controls $10,000 of notional, so a 0.05% taker fee costs $5 — which is 0.5% of your actual $1,000, five times the spot rate. The formula is simple: fee as a percent of your capital equals the fee rate multiplied by your leverage.</div></details>
+          <details class="faq-item"><summary class="faq-q">Does spot or futures win for long-term holding?<span class="plus">+</span></summary><div class="faq-a">Spot, clearly. Futures charges funding roughly every 8 hours on top of trade fees, and it compounds the longer you hold — often around 0.03% of notional per day. Spot has no funding at all: you pay once to enter and once to exit and can hold indefinitely. For anything held more than a day or two, spot&#x27;s lack of a carry meter usually makes it cheaper overall.</div></details>
+          <details class="faq-item"><summary class="faq-q">What is the break-even price move to cover fees on each product?<span class="plus">+</span></summary><div class="faq-a">For a round trip you need price to move enough to cover both sides. Spot taker both sides is about 0.20%; futures maker both sides is about 0.04%; futures taker both sides is about 0.10% — before funding. Add a few days of funding on futures and the futures number climbs toward and past spot, which is why holding time decides the winner.</div></details>
+          <details class="faq-item"><summary class="faq-q">Does the fee rebate apply to both spot and futures?<span class="plus">+</span></summary><div class="faq-a">Yes. The JackTrader sub-broker channel rebates up to 40% of the fee you pay regardless of product — spot or futures, maker or taker — settled in real time in USDT with a per-trade dashboard. It stacks on top of your VIP tier and BNB/OKB discount rather than replacing them. The 40% is a maximum reference, not a guarantee, and depends on platform policy and account review.</div></details>
+          <details class="faq-item"><summary class="faq-q">Can I add the rebate to an account I already have?<span class="plus">+</span></summary><div class="faq-a">New accounts should register through the rebate-bound links so attribution starts from the first trade — rebates cannot be applied retroactively to an unbound account. Binance does run a rebind path for existing accounts: you need completed KYC, a master account with no current referrer, no more than 5,000 USD of trading volume in the last 90 days, no wash-trading flag, and a non-restricted region. Approval alone does not pay — the binding only takes effect once you trade 150,000 USD within 30 days of applying. Ask for a case-by-case assessment on Telegram before assuming a transfer is possible.</div></details>
+        </div>
+
+        <div class="related-note" style="margin-top:40px;padding:16px 20px;border-left:3px solid var(--yellow);background:rgba(255,255,255,0.03);border-radius:8px;color:var(--text-2);font-size:15px"><strong>New category:</strong> Binance stock tokens trade like spot pairs, on the spot fee schedule — compared in the <a href="/en/blog/binance-us-stocks-vs-brokers.html">stock tokens vs brokers guide</a>.</div>
+
+        <div class="cta-band" style="margin-top:48px">
+          <h2>Stop overpaying on fees</h2>
+          <p>Register through the rebate link and start getting up to 40% back from your next trade — in real time, in USDT.</p>
+          <div class="hero-actions" style="justify-content:center">
+            <a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener">Register Binance</a>
+            <a class="btn btn-okx" href="https://www.promooboost.com/join/TRADERJACK" target="_blank" rel="noopener">Register OKX</a>
+            <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">Have an account? Telegram</a>
+          </div>
+        </div>
+
+        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: All figures are illustrative and reflect published Binance / OKX schedules at the time of writing, which can change without notice. This article is educational and not investment advice. JackTrader is an independent referral / sub-broker partner and is not Binance or OKX.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="/en/"><span class="brand-mark">J</span><span>JackTrader</span></a>
+          <p>Trading fee rebates and channel partnerships across Binance, OKX, wallet and DEX ecosystems. Real-time settlement, fully trackable.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Rebate plans</h4>
+          <a href="/en/binance-rebate.html">Binance Rebate</a>
+          <a href="/en/okx-rebate.html">OKX Rebate</a>
+          <a href="/en/wallet-rebate.html">Wallet &amp; DEX</a>
+          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a><a href="/en/okx-partner.html">OKX partner</a>
+        </div>
+        <div class="footer-col">
+          <h4>Deep dives</h4>
+          <a href="/en/blog/binance-fee-calculator-2026.html">Binance fee calculator 2026</a>
+          <a href="/en/blog/okx-sub-broker-affiliate-program.html">OKX sub-broker explained</a>
+          <a href="/en/blog/binance-vs-okx-fees-2026.html">Binance vs OKX fees 2026</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance or OKX. Rebate rates, eligibility and rules depend on platform policy, account status, review and local regulations; displayed rates are a maximum reference and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
+        <p class="copyright">© 2026 JackTrader · Independent referral partner.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="/scripts.js"></script>
+</body>
+</html>

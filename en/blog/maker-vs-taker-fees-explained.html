@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Analytics 4 (gtag.js) — cookieless Consent Mode, no banner needed -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK1VSBED5T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'granted'});
+    gtag('js', new Date());
+    gtag('config','G-NK1VSBED5T');
+  </script>
+  <title>Maker vs Taker Fees Explained 2026: Flip to Maker, Pay Less | JackTrader</title>
+  <meta name="description" content="Maker vs taker fees on Binance and OKX in 2026 — what each side costs, why the gap matters at volume, how to fill as a maker with post-only orders, and where a rebate stacks on top. Worked example." />
+  <meta name="keywords" content="maker vs taker fee,maker fee,taker fee,what is a maker order,post only order,binance maker fee,okx maker fee,binance taker fee,maker rebate,reduce trading fees" />
+  <meta name="author" content="JackTrader" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <meta name="theme-color" content="#0b0d12" />
+  <link rel="canonical" href="https://www.jacktrader.xyz/en/blog/maker-vs-taker-fees-explained.html" />
+  <link rel="alternate" hreflang="en" href="https://www.jacktrader.xyz/en/blog/maker-vs-taker-fees-explained.html" />
+  <link rel="alternate" hreflang="zh-TW" href="https://www.jacktrader.xyz/zh-tw/blog/maker-vs-taker-fees-explained.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.jacktrader.xyz/en/blog/maker-vs-taker-fees-explained.html" />
+  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://t.me" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="JackTrader" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Maker vs Taker Fees Explained 2026: Flip to Maker, Pay Less" />
+  <meta property="og:description" content="What maker and taker fees cost on Binance and OKX, why the gap compounds at volume, and how to fill as a maker. Worked example plus where a rebate stacks." />
+  <meta property="og:url" content="https://www.jacktrader.xyz/en/blog/maker-vs-taker-fees-explained.html" />
+  <meta property="og:image" content="https://www.jacktrader.xyz/assets/rebate/binance-fees.jpg" />
+  <meta property="og:image:alt" content="Maker vs taker fee comparison on Binance and OKX 2026" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@trader_j888" />
+  <meta name="twitter:title" content="Maker vs Taker Fees Explained 2026: Flip to Maker, Pay Less" />
+  <meta name="twitter:description" content="The maker/taker gap is the cheapest fee cut you control. Binance + OKX rates, worked example, and how a rebate stacks." />
+  <meta name="twitter:image" content="https://www.jacktrader.xyz/assets/rebate/binance-fees.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "@id":"https://www.jacktrader.xyz/en/blog/maker-vs-taker-fees-explained.html#article",
+    "headline":"Maker vs Taker Fees Explained 2026: Flip to Maker, Pay Less",
+    "description":"What maker and taker fees cost on Binance and OKX in 2026, why the gap compounds at volume, how to fill as a maker with post-only orders, and where a rebate stacks on top.",
+    "author":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/en/"},
+    "publisher":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/en/","logo":{"@type":"ImageObject","url":"https://www.jacktrader.xyz/assets/brand/favicon.svg"}},
+    "datePublished":"2026-06-10",
+    "dateModified":"2026-06-10",
+    "mainEntityOfPage":"https://www.jacktrader.xyz/en/blog/maker-vs-taker-fees-explained.html",
+    "image":"https://www.jacktrader.xyz/assets/rebate/binance-fees.jpg",
+    "articleSection":"Crypto trading fees",
+    "keywords":"maker vs taker fee, maker fee, taker fee, post only order, binance maker fee, okx maker fee, maker rebate",
+    "about":[{"@type":"Thing","name":"Maker fee"},{"@type":"Thing","name":"Taker fee"},{"@type":"Thing","name":"Post-only order"},{"@type":"Thing","name":"Crypto trading fee rebate"}]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.jacktrader.xyz/en/"},
+      {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.jacktrader.xyz/en/blog/"},
+      {"@type":"ListItem","position":3,"name":"Maker vs Taker Fees Explained","item":"https://www.jacktrader.xyz/en/blog/maker-vs-taker-fees-explained.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What is the difference between a maker and a taker fee?","acceptedAnswer":{"@type":"Answer","text":"A maker order adds liquidity to the order book — it rests as a limit order and waits to be filled, so the exchange charges the lower maker fee. A taker order removes liquidity by matching an existing order immediately (a market order or an aggressive limit that crosses the spread), so it pays the higher taker fee. On futures the gap is wide: Binance USDT-M futures charge 0.0200% maker versus 0.0500% taker at the Regular tier."}},
+      {"@type":"Question","name":"Why are maker fees lower than taker fees?","acceptedAnswer":{"@type":"Answer","text":"Exchanges want a deep, liquid order book. Makers supply that liquidity by posting resting orders, so the venue rewards them with a cheaper fee — sometimes even a rebate at high VIP tiers. Takers consume that liquidity, so they pay more. The fee schedule is the incentive that keeps the book full."}},
+      {"@type":"Question","name":"How do I make sure my order is treated as a maker order?","acceptedAnswer":{"@type":"Answer","text":"Use a limit order priced so it does not immediately cross the spread, and enable the post-only flag if the exchange offers it. Post-only guarantees the order is either added to the book as a maker or rejected — it will never execute as a taker. On Binance and OKX this is a checkbox on the limit-order ticket and a time-in-force option on the API."}},
+      {"@type":"Question","name":"Do grid bots pay maker or taker fees?","acceptedAnswer":{"@type":"Answer","text":"It depends on configuration. A grid bot that places resting limit orders at each grid level fills mostly as a maker, which is why grid strategies are so fee-sensitive. If the bot is set to chase the price with market orders it pays taker fees on every fill, which can quietly erase the grid's edge."}},
+      {"@type":"Question","name":"Does a fee rebate apply to both maker and taker fees?","acceptedAnswer":{"@type":"Answer","text":"Yes. A sub-broker or affiliate rebate is calculated on whatever fee the exchange actually charged you, maker or taker. So the rebate stacks on top of the maker discount you already earned by posting limit orders — the two savings compound rather than replace each other."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/en/" aria-label="JackTrader home"><span class="brand-mark">J</span><span>JackTrader</span></a>
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="site-nav" aria-label="Main navigation" id="primary-nav">
+        <a href="/en/">Home</a>
+        <a href="/en/binance-us-stocks.html">Binance Stocks 🔥</a>
+        <a href="/en/okx-us-stocks.html">OKX Stocks</a>
+        <a href="/en/binance-rebate.html">Binance</a>
+        <a href="/en/okx-rebate.html">OKX</a>
+        <a href="/en/binance-partner.html">Binance Partner</a>
+        <a href="/en/okx-partner.html">OKX Partner</a>
+        <a href="/en/blog/">Blog</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-toggle"><a href="/">中</a><a href="/zh-tw/">繁</a><a href="/en/" class="active">EN</a></div>
+        <a class="nav-cta" href="https://t.me/Jack168668" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="/en/">Home</a> / <a href="/en/blog/">Blog</a> / Maker vs Taker Fees Explained</div>
+        <p class="eyebrow">Crypto fees · Updated June 2026</p>
+        <h1>Maker vs taker fees explained: flip to maker and pay less in 2026</h1>
+        <p class="page-lede">Most traders never touch the cheapest fee discount available to them. It costs nothing, needs no volume tier, and no BNB balance — you just have to fill the other side of the book. This guide shows exactly what the maker and taker rates are on Binance and OKX in 2026, why the gap compounds the more you trade, how to guarantee a maker fill with a post-only order, and where a rebate stacks on top of all of it.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width:820px">
+
+        <h2>The short version</h2>
+        <p>Every order you send is either a <strong>maker</strong> or a <strong>taker</strong>:</p>
+        <ul>
+          <li><strong>Maker</strong> — you post a limit order that <em>rests</em> on the book and waits. You add liquidity, so you pay the lower maker fee.</li>
+          <li><strong>Taker</strong> — you send an order that fills <em>immediately</em> against a resting order (a market order, or a limit order priced through the spread). You remove liquidity, so you pay the higher taker fee.</li>
+        </ul>
+        <p>On spot the gap is small or zero. On <strong>futures it is large</strong>: Binance charges 0.0200% maker versus 0.0500% taker — the taker side costs <strong>2.5×</strong> as much. If you trade size, deciding to fill as a maker is the single highest-return, lowest-effort fee cut you control. Then a <a href="/en/binance-rebate.html">sub-broker rebate</a> pays back a slice of whatever fee remains.</p>
+
+        <h2>What a maker order and a taker order actually are</h2>
+        <p>The order book has two sides — bids below the current price, asks above it. The distance between the best bid and best ask is the <em>spread</em>.</p>
+        <ul>
+          <li>If you place a buy limit order <strong>below</strong> the best ask, it can't fill yet, so it joins the book as a resting bid. When someone else later sells into it, <strong>you were the maker</strong>.</li>
+          <li>If you place a market buy, or a buy limit priced <strong>at or above</strong> the best ask, it matches instantly against a resting ask. <strong>You were the taker</strong>.</li>
+        </ul>
+        <p>The label is decided at the moment of the fill, not by your intent. A limit order is <em>not</em> automatically a maker order — if it crosses the spread it executes as a taker. The only way to be certain is the <strong>post-only</strong> flag (covered below).</p>
+
+        <h2>Maker vs taker fees on Binance and OKX (Regular tier, 2026)</h2>
+        <p>These are the published rates for a Regular / Level-1 account before any VIP discount, BNB/OKB discount, or rebate. Note where maker and taker are equal (spot) and where they split hard (futures).</p>
+
+        <table class="compare">
+          <thead><tr><th>Market</th><th>Maker fee</th><th>Taker fee</th><th>Taker premium</th></tr></thead>
+          <tbody>
+            <tr><td>Binance spot</td><td>0.1000%</td><td>0.1000%</td><td>—</td></tr>
+            <tr><td>Binance USDT-M futures</td><td>0.0200%</td><td>0.0500%</td><td>+150%</td></tr>
+            <tr><td>OKX spot</td><td>0.0800%</td><td>0.1000%</td><td>+25%</td></tr>
+            <tr><td>OKX perpetual / futures</td><td>0.0200%</td><td>0.0500%</td><td>+150%</td></tr>
+          </tbody>
+        </table>
+        <p>Two takeaways. First, on Binance <strong>spot</strong> there is no maker discount at the Regular tier — the split only opens up once you hit VIP 1+. Second, on <strong>futures</strong> (where most high-volume and bot flow lives), the taker side costs 2.5× the maker side on both venues. That is the gap worth engineering around. For the full VIP ladder see our <a href="/en/blog/binance-fee-calculator-2026.html">Binance fee calculator</a> and the <a href="/en/blog/binance-vs-okx-fees-2026.html">Binance vs OKX fee comparison</a>.</p>
+
+        <h2>Worked example: what the gap costs at volume</h2>
+        <p>Say you run <strong>$10,000,000</strong> in monthly USDT-M futures volume — a mid-size grid or quant desk. Compare paying all-taker versus all-maker:</p>
+        <table class="compare">
+          <thead><tr><th>Fill style</th><th>Fee rate</th><th>Monthly fee on $10M</th><th>Annualised</th></tr></thead>
+          <tbody>
+            <tr><td>All taker</td><td>0.0500%</td><td>$5,000</td><td>$60,000</td></tr>
+            <tr><td>All maker</td><td>0.0200%</td><td>$2,000</td><td>$24,000</td></tr>
+            <tr><td><strong>Saved by going maker</strong></td><td>—</td><td><strong>$3,000</strong></td><td><strong>$36,000</strong></td></tr>
+          </tbody>
+        </table>
+        <p>Switching from taker to maker fills cuts the fee bill by <strong>60%</strong> — $36,000 a year on a $10M/month book — without trading less or changing your edge. Now layer a rebate: if your channel returns <strong>up to 40%</strong> of the fee you still pay, the $24,000 maker bill drops by up to a further ~$9,600. The maker discount and the rebate <em>compound</em>; they don't overlap.</p>
+
+        <h2>How to actually get filled as a maker</h2>
+        <ol>
+          <li><strong>Use limit orders, not market orders.</strong> A market order is always a taker. A limit order can be a maker — if it doesn't cross the spread.</li>
+          <li><strong>Turn on post-only.</strong> Both Binance and OKX offer a <code>post-only</code> flag (a checkbox on the order ticket, a time-in-force option on the API). It guarantees the order either rests as a maker or is rejected — it will <em>never</em> execute as a taker. This is the safest way to lock in maker fees.</li>
+          <li><strong>Price inside, not through.</strong> To buy, post at or below the best bid; to sell, post at or above the best ask. You give up immediacy in exchange for the cheaper fee and (often) a better price.</li>
+          <li><strong>Configure your bot for maker fills.</strong> A grid bot placing resting limit orders at each level is a maker by design — that's a big reason grids are fee-efficient. If your bot chases price with market orders, you're paying taker on every fill. See <a href="/en/blog/grid-bot-fee-optimization.html">grid bot fee optimization</a>.</li>
+          <li><strong>Accept the trade-off.</strong> Maker orders may not fill if the market runs away from your price. For passive, mean-reverting and grid strategies that's fine. For momentum entries where fill certainty matters more than 3 bps, taking is sometimes the right call — just know what it costs.</li>
+        </ol>
+
+        <h2>Where a rebate stacks on top</h2>
+        <p>Going maker lowers the <em>gross</em> fee the exchange charges. A <strong>sub-broker / affiliate rebate</strong> pays back a share of whatever you still pay — maker or taker. Because the rebate is computed on your actual paid fee, it applies after your maker discount, so the two savings compound:</p>
+        <ul>
+          <li>Post limit / post-only → you pay the maker rate instead of the taker rate.</li>
+          <li>Sign up through a <a href="/en/binance-rebate.html">Binance</a> or <a href="/en/okx-rebate.html">OKX</a> rebate channel → up to 40% of that maker fee comes back to you, settled in real time in USDT.</li>
+          <li>No API keys, no custody — the rebate is tracked on the exchange's own affiliate ledger. See <a href="/en/blog/crypto-fee-rebate-explained.html">how crypto fee rebates work</a>.</li>
+        </ul>
+
+        <h2>Quick checklist</h2>
+        <ul>
+          <li><strong>Default to limit orders</strong> and enable <strong>post-only</strong> wherever fill timing allows.</li>
+          <li><strong>Know your futures gap</strong> — taker costs 2.5× maker on Binance and OKX; that's the bps you're choosing to spend each time you take.</li>
+          <li><strong>Audit your bot's order type</strong> — confirm it's posting, not crossing, the spread.</li>
+          <li><strong>Stack a rebate</strong> on top of the maker rate so the two discounts compound.</li>
+          <li><strong>Reconcile</strong> your fee history against any rebate dashboard each settlement.</li>
+        </ul>
+
+        <h2>FAQ</h2>
+        <h3>What is the difference between a maker and a taker fee?</h3>
+        <p>A maker order adds liquidity to the order book — it rests as a limit order and waits to be filled, so the exchange charges the lower maker fee. A taker order removes liquidity by matching an existing order immediately (a market order or an aggressive limit that crosses the spread), so it pays the higher taker fee. On futures the gap is wide: Binance USDT-M futures charge 0.0200% maker versus 0.0500% taker at the Regular tier.</p>
+
+        <h3>Why are maker fees lower than taker fees?</h3>
+        <p>Exchanges want a deep, liquid order book. Makers supply that liquidity by posting resting orders, so the venue rewards them with a cheaper fee — sometimes even a rebate at high VIP tiers. Takers consume that liquidity, so they pay more. The fee schedule is the incentive that keeps the book full.</p>
+
+        <h3>How do I make sure my order is treated as a maker order?</h3>
+        <p>Use a limit order priced so it does not immediately cross the spread, and enable the post-only flag if the exchange offers it. Post-only guarantees the order is either added to the book as a maker or rejected — it will never execute as a taker. On Binance and OKX this is a checkbox on the limit-order ticket and a time-in-force option on the API.</p>
+
+        <h3>Do grid bots pay maker or taker fees?</h3>
+        <p>It depends on configuration. A grid bot that places resting limit orders at each grid level fills mostly as a maker, which is why grid strategies are so fee-sensitive. If the bot is set to chase the price with market orders it pays taker fees on every fill, which can quietly erase the grid's edge.</p>
+
+        <h3>Does a fee rebate apply to both maker and taker fees?</h3>
+        <p>Yes. A sub-broker or affiliate rebate is calculated on whatever fee the exchange actually charged you, maker or taker. So the rebate stacks on top of the maker discount you already earned by posting limit orders — the two savings compound rather than replace each other.</p>
+
+        <div class="section-head" style="margin-top:8px;text-align:left">
+          <p class="eyebrow">FAQ</p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item" open><summary class="faq-q">What is the difference between a maker and a taker fee?<span class="plus">+</span></summary><div class="faq-a">A maker order adds liquidity to the order book — it rests as a limit order and waits to be filled, so the exchange charges the lower maker fee. A taker order removes liquidity by matching an existing order immediately (a market order or an aggressive limit that crosses the spread), so it pays the higher taker fee. On futures the gap is wide: Binance USDT-M futures charge 0.0200% maker versus 0.0500% taker at the Regular tier.</div></details>
+          <details class="faq-item"><summary class="faq-q">Why are maker fees lower than taker fees?<span class="plus">+</span></summary><div class="faq-a">Exchanges want a deep, liquid order book. Makers supply that liquidity by posting resting orders, so the venue rewards them with a cheaper fee — sometimes even a rebate at high VIP tiers. Takers consume that liquidity, so they pay more. The fee schedule is the incentive that keeps the book full.</div></details>
+          <details class="faq-item"><summary class="faq-q">How do I make sure my order is treated as a maker order?<span class="plus">+</span></summary><div class="faq-a">Use a limit order priced so it does not immediately cross the spread, and enable the post-only flag if the exchange offers it. Post-only guarantees the order is either added to the book as a maker or rejected — it will never execute as a taker. On Binance and OKX this is a checkbox on the limit-order ticket and a time-in-force option on the API.</div></details>
+          <details class="faq-item"><summary class="faq-q">Do grid bots pay maker or taker fees?<span class="plus">+</span></summary><div class="faq-a">It depends on configuration. A grid bot that places resting limit orders at each grid level fills mostly as a maker, which is why grid strategies are so fee-sensitive. If the bot is set to chase the price with market orders it pays taker fees on every fill, which can quietly erase the grid&#x27;s edge.</div></details>
+          <details class="faq-item"><summary class="faq-q">Does a fee rebate apply to both maker and taker fees?<span class="plus">+</span></summary><div class="faq-a">Yes. A sub-broker or affiliate rebate is calculated on whatever fee the exchange actually charged you, maker or taker. So the rebate stacks on top of the maker discount you already earned by posting limit orders — the two savings compound rather than replace each other.</div></details>
+        </div>
+
+        <div class="cta-band" style="margin-top:48px">
+          <h2>Stack a rebate on your maker fills</h2>
+          <p>Plug your real monthly volume into the on-page calculator and see what comes back in real time — on top of the maker rate you already earn.</p>
+          <div class="hero-actions" style="justify-content:center">
+            <a class="btn btn-binance" href="/en/binance-rebate.html">Binance rebate calculator</a>
+            <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">Get a tier assessment on Telegram</a>
+          </div>
+        </div>
+
+        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Fee schedules are accurate to Binance's and OKX's published rates at the time of writing and may change without notice. This article is educational and not investment advice. JackTrader is an independent referral / sub-broker partner and is not affiliated with Binance or OKX; rebate rates depend on platform policy and are a maximum reference, not a guarantee.</p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="/en/"><span class="brand-mark">J</span><span>JackTrader</span></a>
+          <p>Trading fee rebates and channel partnerships across Binance, OKX, wallet and DEX ecosystems. Real-time settlement, fully trackable.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Rebate plans</h4>
+          <a href="/en/binance-rebate.html">Binance Rebate</a>
+          <a href="/en/okx-rebate.html">OKX Rebate</a>
+          <a href="/en/wallet-rebate.html">Wallet &amp; DEX</a>
+          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a><a href="/en/okx-partner.html">OKX partner</a>
+        </div>
+        <div class="footer-col">
+          <h4>Deep dives</h4>
+          <a href="/en/blog/binance-fee-calculator-2026.html">Binance fee calculator 2026</a>
+          <a href="/en/blog/okx-sub-broker-affiliate-program.html">OKX sub-broker explained</a>
+          <a href="/en/blog/grid-bot-fee-optimization.html">Grid bot fee optimization</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance or OKX. Rebate rates, eligibility and rules depend on platform policy, account status, review and local regulations; displayed rates are a maximum reference and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
+        <p class="copyright">© 2026 JackTrader · Independent referral partner.</p>
+      </div>
+    </div>
+  </footer>
+  <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script src="/scripts.js"></script>
+</body>
+</html>

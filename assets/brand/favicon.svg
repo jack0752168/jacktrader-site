@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Jack Trader">
+  <rect width="64" height="64" rx="14" fill="#f3ba2f"/>
+  <path d="M37 12v29c0 7.2-4.7 11.5-11.7 11.5-4.5 0-8.2-1.8-10.5-5.2l5.2-4.1c1.2 1.8 2.7 2.8 5 2.8 3.2 0 5.2-1.9 5.2-5.7V12H37Z" fill="#070809"/>
+  <path d="M42 43h9v8h-9z" fill="#070809"/>
+</svg>

@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Analytics 4 (gtag.js) — cookieless Consent Mode, no banner needed -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK1VSBED5T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'granted'});
+    gtag('js', new Date());
+    gtag('config','G-NK1VSBED5T');
+  </script>
+  <title>How to Claim a Fee Rebate When You Connect a Bot via API Key (2026) | JackTrader</title>
+  <meta name="description" content="A fee rebate binds to your exchange account, not your API key or your bot. So self-hosted bots (Freqtrade, Hummingbot, OctoBot) can capture an up-to-40% rebate while many SaaS bots can't. How API-key binding actually works and how to set it up." />
+  <meta name="keywords" content="bot api key fee rebate,trading bot referral discount,self-hosted bot rebate,freqtrade rebate,hummingbot rebate,does a trading bot get the referral discount,api key referral binding,crypto bot fee rebate" />
+  <meta name="author" content="JackTrader" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <meta name="theme-color" content="#0b0d12" />
+  <link rel="canonical" href="https://www.jacktrader.xyz/en/blog/bot-api-key-fee-rebate.html" />
+  <link rel="alternate" hreflang="en" href="https://www.jacktrader.xyz/en/blog/bot-api-key-fee-rebate.html" />
+  <link rel="alternate" hreflang="zh-TW" href="https://www.jacktrader.xyz/zh-tw/blog/bot-api-key-fee-rebate.html" />
+  <link rel="alternate" hreflang="ko" href="https://www.jacktrader.xyz/ko/blog/bot-api-key-fee-rebate.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.jacktrader.xyz/en/blog/bot-api-key-fee-rebate.html" />
+  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://t.me" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="JackTrader" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="How to Claim a Fee Rebate When You Connect a Bot via API Key" />
+  <meta property="og:description" content="The rebate binds to your exchange account, not your API key or your bot. Why self-hosted bots can capture an up-to-40% rebate and many SaaS bots can't." />
+  <meta property="og:url" content="https://www.jacktrader.xyz/en/blog/bot-api-key-fee-rebate.html" />
+  <meta property="og:image" content="https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg" />
+  <meta property="og:image:alt" content="Bot API key fee rebate binding explained 2026" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@trader_j888" />
+  <meta name="twitter:title" content="How to Claim a Fee Rebate When You Connect a Bot via API Key" />
+  <meta name="twitter:description" content="The rebate binds to the account, not the key. Self-hosted bots can capture it; many SaaS bots already spent your binding." />
+  <meta name="twitter:image" content="https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "@id":"https://www.jacktrader.xyz/en/blog/bot-api-key-fee-rebate.html#article",
+    "headline":"How to Claim a Fee Rebate When You Connect a Bot via API Key (2026)",
+    "description":"A fee rebate binds to your exchange account at registration, not to the API key your bot uses. That single fact decides whether a self-hosted bot (Freqtrade, Hummingbot, OctoBot) or a SaaS bot can capture an up-to-40% rebate — and how to set the binding up correctly.",
+    "author":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/en/"},
+    "publisher":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/en/","logo":{"@type":"ImageObject","url":"https://www.jacktrader.xyz/assets/brand/favicon.svg"}},
+    "datePublished":"2026-06-30",
+    "dateModified":"2026-08-05",
+    "mainEntityOfPage":"https://www.jacktrader.xyz/en/blog/bot-api-key-fee-rebate.html",
+    "image":"https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg",
+    "articleSection":"Bot trading fees",
+    "keywords":"bot api key fee rebate, trading bot referral discount, self-hosted bot rebate, freqtrade rebate, hummingbot rebate",
+    "about":[{"@type":"Thing","name":"Crypto trading bot fees"},{"@type":"Thing","name":"Exchange API key"},{"@type":"Thing","name":"Fee rebate"}]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.jacktrader.xyz/en/"},
+      {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.jacktrader.xyz/en/blog/"},
+      {"@type":"ListItem","position":3,"name":"Bot API Key Fee Rebate","item":"https://www.jacktrader.xyz/en/blog/bot-api-key-fee-rebate.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does the fee rebate attach to my API key or my exchange account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To your exchange account. A referral/rebate binding is recorded on the account itself at registration (or, on Binance and OKX, on an unbound existing account within the eligibility window). The API key is just a credential that lets your bot place orders on that account — creating, deleting or rotating keys does not change the rebate. So if your account is bound to a rebate, every order your bot sends through any of its API keys earns it; if the account is not bound, no API key can fix that."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a self-hosted bot like Freqtrade or Hummingbot get the referral discount?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, fully. Self-hosted and open-source bots connect to an exchange account that you registered yourself, so you control the referral binding. Register the account under a referral, generate an API key, paste it into the bot, and every trade the bot makes counts toward your rebate. The bot software has no idea a rebate exists — it just trades; the rebate is settled by the exchange on the bound account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why can't some SaaS or copy-trading bots give me the rebate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some hosted bots and signal platforms ask you to register a new exchange account through their own referral link, which spends your one-time binding on them instead of you. After that the account is bound to the provider, and you cannot rebind it to a different rebate. If a bot connects to an account you already own via API key (the normal model), it does not touch your binding — so the issue is only with bots that funnel you through their own sign-up. Always register the exchange account yourself first, then connect the bot by API key."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to give the bot or the rebate provider any extra permissions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The rebate is calculated by the exchange from your bound account's trading volume — the rebate provider never needs your API key, password or withdrawal access. For the bot, create an API key with trade permission only and leave withdrawal disabled. A legitimate rebate setup requires nothing beyond the account binding itself; anyone asking for your password, withdrawal-enabled keys or a deposit to them is a red flag."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I already run a bot on an existing account — can I still add a rebate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Possibly. If the account has never been bound to a referral, Binance and OKX let you bind one on the existing account within their eligibility rules (Binance's rebind test looks at the account's trailing 90-day trading volume — 5,000 USD or less — not at account age, and the binding only activates after 150,000 USD within 30 days). You do not need to touch the bot or its keys — binding happens at the account level, and the bot keeps trading. If the account is already bound elsewhere, the cleaner route is to run the bot on a fresh account registered under the rebate. Ask for an account-specific check before assuming."
+      }
+    }
+  ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/en/" aria-label="JackTrader home"><span class="brand-mark">J</span><span>JackTrader</span></a>
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="site-nav" aria-label="Main navigation" id="primary-nav">
+        <a href="/en/">Home</a>
+        <a href="/en/binance-us-stocks.html">Binance Stocks 🔥</a>
+        <a href="/en/okx-us-stocks.html">OKX Stocks</a>
+        <a href="/en/binance-rebate.html">Binance</a>
+        <a href="/en/okx-rebate.html">OKX</a>
+        <a href="/en/binance-partner.html">Binance Partner</a>
+        <a href="/en/okx-partner.html">OKX Partner</a>
+        <a href="/en/blog/">Blog</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-toggle"><a href="/">中</a><a href="/zh-tw/">繁</a><a href="/en/" class="active">EN</a></div>
+        <a class="nav-cta" href="https://t.me/Jack168668" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="/en/">Home</a> / <a href="/en/blog/">Blog</a> / Bot API Key Fee Rebate</div>
+        <p class="eyebrow">Bot trading · Setup · Updated June 2026</p>
+        <h1>How to claim a fee rebate when you connect a bot via API key</h1>
+        <p class="page-lede">Here's the one fact that decides whether your bot earns a fee rebate: <strong>the rebate binds to your exchange account, not to your API key and not to your bot.</strong> Once you understand that, the whole picture clears up — a self-hosted bot like Freqtrade, Hummingbot or OctoBot can capture an up-to-40% rebate with zero code changes, while some hosted bots quietly spend your one-time binding on themselves. This is the setup guide for getting the rebate onto the account your bot trades.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width:820px">
+
+        <h2>The short version</h2>
+        <ol>
+          <li><strong>The rebate lives on the account.</strong> When you bind a referral on Binance or OKX, the binding is recorded on the exchange account. Every trade that account makes — manual, scripted or bot — earns the rebate.</li>
+          <li><strong>The API key is just a door key.</strong> Your bot authenticates with an API key to place orders. Creating, deleting or rotating keys changes nothing about the rebate. The key carries no referral information.</li>
+          <li><strong>So the question is never "does my bot support rebates" — it's "is the account my bot trades on bound to one".</strong> Self-hosted bots win here because you own the account and the binding. The only thing that can go wrong is letting a hosted bot register the account for you under <em>its</em> referral.</li>
+        </ol>
+        <p>If you take one thing away: <strong>register the exchange account yourself under a rebate first, then connect the bot by API key.</strong> Never the other way around.</p>
+
+        <h2>Why the rebate binds to the account, not the key</h2>
+        <p>A fee rebate is a share of the trading commission the exchange already charges you, paid back because your account is attributed to a referral/sub-broker relationship. That attribution is a property of the <em>account</em>, set when the account is created (or bound later if it was never attributed). It has to be — the exchange settles rebates from total trading volume on the account at the end of each cycle, then pays out, typically <a href="/en/blog/weekly-usdt-rebate-settlement.html">weekly in USDT</a>.</p>
+        <p>An API key, by contrast, is a per-account credential with scoped permissions (read, trade, sometimes withdraw). It exists <em>below</em> the account in the hierarchy. You can hold five keys for five different bots on one account, rotate them monthly for security, and the rebate is completely unaffected because it was never attached to a key in the first place. This is good news: it means securing your bot (trade-only keys, no withdrawal, IP allowlist) and earning a rebate are fully independent decisions.</p>
+
+        <h2>Self-hosted vs SaaS bots: who controls the binding</h2>
+        <table class="compare">
+          <thead><tr><th>Bot type</th><th>Who registers the exchange account</th><th>Can you bind your own rebate?</th><th>What to watch</th></tr></thead>
+          <tbody>
+            <tr><td>Self-hosted / open-source (Freqtrade, Hummingbot, OctoBot, Jesse)</td><td>You do</td><td>Yes — full control</td><td>Nothing; just register under a rebate before generating the key</td></tr>
+            <tr><td>SaaS bot that connects by API key to your account (most grid/DCA dashboards)</td><td>You do</td><td>Yes — the bot only borrows the key</td><td>Confirm it asks for an API key, not a "sign up through us" link</td></tr>
+            <tr><td>SaaS / copy platform that asks you to register the exchange through its referral</td><td>The provider does</td><td>No — your binding is spent on them</td><td>This is the one to avoid if you want your own rebate</td></tr>
+          </tbody>
+        </table>
+        <p class="hero-note">The dividing line isn't "self-hosted vs hosted" — it's <strong>who owns the referral binding on the underlying exchange account</strong>. A hosted bot that connects via API key is fine. A hosted bot that makes you sign up for the exchange through its link is the one that takes the rebate you could have kept.</p>
+
+        <h2>The setup, step by step</h2>
+        <ol>
+          <li><strong>Register the exchange account under a rebate.</strong> Use the referral binding on the <a href="/en/binance-rebate.html">Binance rebate</a> or <a href="/en/okx-rebate.html">OKX rebate</a> page. This is the only step that touches the rebate — and it takes two minutes.</li>
+          <li><strong>Complete KYC and fund the account</strong> as normal. The binding is already recorded; nothing about funding or verification changes it.</li>
+          <li><strong>Create an API key with trade permission only.</strong> Disable withdrawals on the key. Add an IP allowlist if your bot runs from a fixed server. This is a security step, unrelated to the rebate.</li>
+          <li><strong>Paste the key into your bot</strong> (Freqtrade's <code>config.json</code>, Hummingbot's connect flow, OctoBot's exchange tab). The bot starts trading on the bound account.</li>
+          <li><strong>Verify the rebate accrues.</strong> After the first settlement cycle, your rebate should reflect the bot's trading volume. Because it's bound to the account, it captures 100% of what the bot trades, not a sampled subset.</li>
+        </ol>
+        <p>For exchange-specific fee tuning inside the bot — maker-only entries, BNB discounts, trading-mode selection — see the companion guide on <a href="/en/blog/freqtrade-fees-rebate.html">Freqtrade fees on Binance and OKX</a>, which works through the config knobs that decide whether your bot pays maker or taker.</p>
+
+        <h2>Worked example — a self-hosted bot doing $4M/month</h2>
+        <p>You run Freqtrade on a personal VPS, trading USDT-margined perps, turning over <strong>$4,000,000 of notional per month</strong>. Assume a blended effective fee of 0.04% (a realistic mix of maker entries and taker exits):</p>
+        <ul>
+          <li>Monthly trading fees ≈ $4,000,000 × 0.04% = <strong>$1,600</strong> (about $19,200/year).</li>
+          <li>If the account is <strong>not</strong> bound to a rebate, you pay all of it. The bot earns the rebate provider nothing and you nothing.</li>
+          <li>If the same account is bound to an up-to-40% rebate: ≈ $1,600 × 40% = <strong>$640/month back</strong>, settled in real time in USDT — about $7,680 a year returned, with the bot, the strategy and the API keys all untouched.</li>
+        </ul>
+        <p>The strategy didn't change. The code didn't change. The only difference between the two scenarios is which way you registered the account before you generated the API key. That is the entire lever — and it's why "register first, connect second" matters.</p>
+
+        <h2>Common mistakes</h2>
+        <ul>
+          <li><strong>Registering the exchange through a bot platform's link</strong> when you wanted your own rebate — this spends your binding on them. Register the exchange yourself.</li>
+          <li><strong>Assuming a new API key resets or creates a rebate</strong> — it does nothing of the sort. The account binding is what matters.</li>
+          <li><strong>Giving a "rebate bot" your API key or password</strong> — no legitimate rebate needs either. The exchange computes it from your bound account; see <a href="/en/blog/are-crypto-rebates-safe.html">are crypto fee rebates safe</a> for the red-flag checklist.</li>
+          <li><strong>Forgetting funding costs</strong> — a rebate cuts trading fees, not <a href="/en/blog/funding-rate-vs-trading-fee.html">funding payments</a>. On a perp bot, model both.</li>
+        </ul>
+
+        <h2>How this fits the bigger fee picture</h2>
+        <p>Binding a rebate is one of two levers that change every fee line for a bot; the other is maker routing. For how fees differ across bot styles, see the <a href="/en/blog/crypto-trading-bot-fees-2026.html">crypto trading bot fee comparison</a>; for the maker-vs-taker mechanics every bot config exposes, see <a href="/en/blog/maker-vs-taker-fees-explained.html">maker vs taker fees explained</a>. The rebate is the lever you can pull once and keep forever — but only if it's bound to the account your bot actually trades on.</p>
+
+        <h2>FAQ</h2>
+        <div class="faq-list">
+          <details class="faq-item" open><summary class="faq-q">Does the fee rebate attach to my API key or my exchange account?<span class="plus">+</span></summary><div class="faq-a">To your exchange account. A referral/rebate binding is recorded on the account itself at registration (or, on Binance and OKX, on an unbound existing account within the eligibility window). The API key is just a credential that lets your bot place orders on that account — creating, deleting or rotating keys does not change the rebate. So if your account is bound to a rebate, every order your bot sends through any of its API keys earns it; if the account is not bound, no API key can fix that.</div></details>
+          <details class="faq-item"><summary class="faq-q">Can a self-hosted bot like Freqtrade or Hummingbot get the referral discount?<span class="plus">+</span></summary><div class="faq-a">Yes, fully. Self-hosted and open-source bots connect to an exchange account that you registered yourself, so you control the referral binding. Register the account under a referral, generate an API key, paste it into the bot, and every trade the bot makes counts toward your rebate. The bot software has no idea a rebate exists — it just trades; the rebate is settled by the exchange on the bound account.</div></details>
+          <details class="faq-item"><summary class="faq-q">Why can't some SaaS or copy-trading bots give me the rebate?<span class="plus">+</span></summary><div class="faq-a">Some hosted bots and signal platforms ask you to register a new exchange account through their own referral link, which spends your one-time binding on them instead of you. After that the account is bound to the provider, and you cannot rebind it to a different rebate. If a bot connects to an account you already own via API key (the normal model), it does not touch your binding — so the issue is only with bots that funnel you through their own sign-up. Always register the exchange account yourself first, then connect the bot by API key.</div></details>
+          <details class="faq-item"><summary class="faq-q">Do I need to give the bot or the rebate provider any extra permissions?<span class="plus">+</span></summary><div class="faq-a">No. The rebate is calculated by the exchange from your bound account's trading volume — the rebate provider never needs your API key, password or withdrawal access. For the bot, create an API key with trade permission only and leave withdrawal disabled. A legitimate rebate setup requires nothing beyond the account binding itself; anyone asking for your password, withdrawal-enabled keys or a deposit to them is a red flag.</div></details>
+          <details class="faq-item"><summary class="faq-q">I already run a bot on an existing account — can I still add a rebate?<span class="plus">+</span></summary><div class="faq-a">Possibly. If the account has never been bound to a referral, Binance and OKX let you bind one on the existing account within their eligibility rules (Binance's rebind test looks at the account's trailing 90-day trading volume — 5,000 USD or less — not at account age, and the binding only activates after 150,000 USD within 30 days). You do not need to touch the bot or its keys — binding happens at the account level, and the bot keeps trading. If the account is already bound elsewhere, the cleaner route is to run the bot on a fresh account registered under the rebate. Ask for an account-specific check before assuming.</div></details>
+        </div>
+
+        <div class="cta-band" style="margin-top:48px">
+          <h2>Bind the rebate before you connect the bot</h2>
+          <p>Register your exchange account under an up-to-40% rebate, then paste a trade-only API key into Freqtrade, Hummingbot or any bot. The rebate captures 100% of the account's volume, settled in real time in USDT — no strategy change, no extra permissions.</p>
+          <div class="hero-actions" style="justify-content:center">
+            <a class="btn btn-binance" href="/en/binance-rebate.html">Binance rebate</a>
+            <a class="btn btn-okx" href="/en/okx-rebate.html">OKX rebate</a>
+            <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">Check my account binding</a>
+          </div>
+        </div>
+
+        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Fee schedules and rebate rates reflect published rates at the time of writing and may change without notice. Examples are illustrative; your real costs depend on venue, product, maker/taker split and VIP tier. Bot names are open-source tools referenced neutrally for context. This article is educational and not investment advice. JackTrader is an independent referral / sub-broker partner and is not Binance or OKX. Single-tier referrals only, no downline or multi-level structure.</p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="/en/"><span class="brand-mark">J</span><span>JackTrader</span></a>
+          <p>Trading fee rebates and channel partnerships across Binance, OKX, wallet and DEX ecosystems. Real-time settlement, fully trackable.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Rebate plans</h4>
+          <a href="/en/binance-rebate.html">Binance Rebate</a>
+          <a href="/en/okx-rebate.html">OKX Rebate</a>
+          <a href="/en/wallet-rebate.html">Wallet &amp; DEX</a>
+          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a><a href="/en/okx-partner.html">OKX partner</a>
+        </div>
+        <div class="footer-col">
+          <h4>Deep dives</h4>
+          <a href="/en/blog/freqtrade-fees-rebate.html">Freqtrade fees &amp; rebate</a>
+          <a href="/en/blog/crypto-trading-bot-fees-2026.html">Trading bot fee comparison</a>
+          <a href="/en/blog/maker-vs-taker-fees-explained.html">Maker vs taker fees</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance or OKX. Rebate rates, eligibility and rules depend on platform policy, account status, review and local regulations; displayed rates are a maximum reference and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
+        <p class="copyright">© 2026 JackTrader · Independent referral partner.</p>
+      </div>
+    </div>
+  </footer>
+  <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script src="/scripts.js"></script>
+</body>
+</html>

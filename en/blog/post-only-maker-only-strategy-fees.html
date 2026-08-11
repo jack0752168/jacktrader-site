@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Analytics 4 (gtag.js) — cookieless Consent Mode, no banner needed -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK1VSBED5T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'granted'});
+    gtag('js', new Date());
+    gtag('config','G-NK1VSBED5T');
+  </script>
+  <title>Post-Only / Maker-Only Strategy 2026: Cut Trading Fees to Near-Zero | JackTrader</title>
+  <meta name="description" content="Post-only orders never pay the taker fee and can even earn a maker rebate. How the post-only flag works on Binance and OKX, the trade-off you accept (fill risk), a worked cost comparison, and how a fee rebate stacks on the maker legs you do pay." />
+  <meta name="keywords" content="post only order fees,post only order,maker only strategy,maker rebate crypto,post only binance,post only okx,limit order maker fee,negative maker fee" />
+  <meta name="author" content="JackTrader" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <meta name="theme-color" content="#0b0d12" />
+  <link rel="canonical" href="https://www.jacktrader.xyz/en/blog/post-only-maker-only-strategy-fees.html" />
+  <link rel="alternate" hreflang="en" href="https://www.jacktrader.xyz/en/blog/post-only-maker-only-strategy-fees.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.jacktrader.xyz/en/blog/post-only-maker-only-strategy-fees.html" />
+  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://t.me" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="JackTrader" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Post-Only / Maker-Only Strategy 2026: Cut Fees to Near-Zero" />
+  <meta property="og:description" content="Post-only orders never pay the taker fee and can even earn a maker rebate. How the flag works, the fill-risk trade-off, and how a rebate stacks on top." />
+  <meta property="og:url" content="https://www.jacktrader.xyz/en/blog/post-only-maker-only-strategy-fees.html" />
+  <meta property="og:image" content="https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg" />
+  <meta property="og:image:alt" content="Post-only maker-only order fee comparison 2026" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@trader_j888" />
+  <meta name="twitter:title" content="Post-Only / Maker-Only Strategy 2026: Cut Fees to Near-Zero" />
+  <meta name="twitter:description" content="The post-only flag is the cheapest basis point in trading — here's how to use it and what you give up." />
+  <meta name="twitter:image" content="https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "@id":"https://www.jacktrader.xyz/en/blog/post-only-maker-only-strategy-fees.html#article",
+    "headline":"Post-Only / Maker-Only Strategy 2026: Cut Trading Fees to Near-Zero",
+    "description":"How the post-only order flag eliminates taker fees and can earn a maker rebate, the fill-risk trade-off you accept, a worked cost comparison on Binance and OKX, and how a fee rebate stacks on the maker legs.",
+    "author":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/en/"},
+    "publisher":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/en/","logo":{"@type":"ImageObject","url":"https://www.jacktrader.xyz/assets/brand/favicon.svg"}},
+    "datePublished":"2026-07-04",
+    "dateModified":"2026-07-04",
+    "mainEntityOfPage":"https://www.jacktrader.xyz/en/blog/post-only-maker-only-strategy-fees.html",
+    "image":"https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg",
+    "articleSection":"Bot trading fees",
+    "keywords":"post only order fees, maker only strategy, maker rebate crypto, post only binance, post only okx",
+    "about":[{"@type":"Thing","name":"Post-only order"},{"@type":"Thing","name":"Maker fee"},{"@type":"Thing","name":"Fee rebate"}]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.jacktrader.xyz/en/"},
+      {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.jacktrader.xyz/en/blog/"},
+      {"@type":"ListItem","position":3,"name":"Post-Only / Maker-Only Strategy","item":"https://www.jacktrader.xyz/en/blog/post-only-maker-only-strategy-fees.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does a post-only order actually do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A post-only order is a limit order with a guarantee: if any part of it would execute immediately against the resting book — which would make it a taker fill — the exchange rejects or repositions it instead of filling. That means the order can only ever add liquidity, so you always pay the maker fee (or receive a maker rebate on some venues) and never the more expensive taker fee. On Binance and OKX it is a flag you set on a limit order (post-only / maker-only), available in both the UI and the API."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much cheaper is maker than taker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On standard tiers the taker fee is roughly double the maker fee. Binance and OKX USDT-M futures are about 0.02% maker versus 0.05% taker; spot is around 0.08–0.10% taker versus a lower maker rate. On a round trip that is the difference between paying about 0.10% (both legs taker) and about 0.04% (both legs maker) — before any rebate. At high VIP or market-maker tiers the maker fee can even go negative, meaning the exchange pays you to provide liquidity. Over thousands of fills that gap is the single largest lever a high-frequency book controls."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the downside of a maker-only strategy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fill risk. A post-only order only executes if the market comes to your price, so you may not get filled at all, or you get filled on only part of your size, or the market moves away while you wait. For strategies that must execute now — latency arbitrage, stop-outs, momentum entries — post-only is the wrong tool because a missed fill costs more than the taker fee saved. Maker-only works best for strategies that can be patient: grid bots, market making, mean-reversion, and any leg that isn't time-critical. The skill is deciding which orders can wait and which cannot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I combine post-only with a fee rebate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and they stack. Post-only ensures you pay the maker fee instead of the taker fee; a rebate then returns a percentage of whatever fee you do pay. So the post-only flag shrinks the fee, and the rebate shrinks it again — up to 40% back, settled in real time in USDT. On the taker legs you can't avoid (the ones that must fire immediately), the rebate is your only lever, which is exactly why the two work together: post-only for the patient legs, rebate for everything."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does post-only guarantee a maker rebate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It guarantees you are charged the maker fee, not the taker fee — but whether that maker fee is positive, zero or negative depends on your VIP or market-maker tier on the venue. A negative maker fee (a true maker rebate paid by the exchange) usually requires a high volume or market-maker qualification. For most traders post-only means paying a small positive maker fee rather than the larger taker fee; the third-party fee rebate then applies on top of that. Do not assume you will be paid to trade unless your tier explicitly shows a negative maker rate."
+      }
+    }
+  ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/en/" aria-label="JackTrader home"><span class="brand-mark">J</span><span>JackTrader</span></a>
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="site-nav" aria-label="Main navigation" id="primary-nav">
+        <a href="/en/">Home</a>
+        <a href="/en/binance-us-stocks.html">Binance Stocks 🔥</a>
+        <a href="/en/okx-us-stocks.html">OKX Stocks</a>
+        <a href="/en/binance-rebate.html">Binance</a>
+        <a href="/en/okx-rebate.html">OKX</a>
+        <a href="/en/binance-partner.html">Binance Partner</a>
+        <a href="/en/okx-partner.html">OKX Partner</a>
+        <a href="/en/blog/">Blog</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-toggle"><a href="/">中</a><a href="/zh-tw/">繁</a><a href="/en/" class="active">EN</a></div>
+        <a class="nav-cta" href="https://t.me/Jack168668" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="/en/">Home</a> / <a href="/en/blog/">Blog</a> / Post-Only / Maker-Only Strategy</div>
+        <p class="eyebrow">Bot trading · Execution · Updated July 2026</p>
+        <h1>Post-only / maker-only strategy: cut trading fees to near-zero</h1>
+        <p class="page-lede">The cheapest basis point in trading is the one you never pay. A post-only order refuses to cross the spread, so it can only ever add liquidity — which means you pay the maker fee instead of the taker fee, and at the right tier the exchange can even pay you. It isn't free money: you trade certainty of fill for cost. Here's exactly how the flag works on Binance and OKX, the worked cost comparison, which strategies it suits, and how a fee rebate stacks on the maker legs you still pay.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width:820px">
+
+        <h2>The short version</h2>
+        <ol>
+          <li><strong>Post-only = maker guaranteed.</strong> If the order would fill immediately (taker), the exchange rejects/repositions it instead. You never pay the taker fee.</li>
+          <li><strong>Maker is roughly half of taker</strong> — and can be negative at high tiers. On futures that's ~0.02% maker vs ~0.05% taker.</li>
+          <li><strong>The cost is fill risk.</strong> You only trade if the market comes to you. That's fine for patient strategies, wrong for anything that must execute now.</li>
+          <li><strong>Rebate stacks on top.</strong> Whatever maker fee you do pay, a rebate returns up to 40% of it.</li>
+        </ol>
+
+        <h2>How the post-only flag works</h2>
+        <p>Every fill is either a <strong>maker</strong> (you posted a resting limit order and someone else hit it — you added liquidity) or a <strong>taker</strong> (you crossed the spread and removed liquidity that was already there). Taker is the expensive side of the book because you're paying for immediacy.</p>
+        <p>A <strong>post-only</strong> order (also called maker-only) is a limit order with one rule bolted on: <em>if any portion would execute on placement, don't fill it — reject it or slide it to the top of the book instead.</em> The consequence is absolute: a post-only order can never be a taker fill. On Binance and OKX it's a checkbox in the order ticket and a single flag in the API (<code>timeInForce</code>/order-type parameter). Set it, and you have mathematically removed the taker fee from that order.</p>
+
+        <h2>The cost comparison: taker vs post-only maker</h2>
+        <p>Take a bot doing a round trip on USDT-M futures at standard tier. Compare all-taker execution against all-maker (post-only) execution:</p>
+        <table class="compare">
+          <thead><tr><th>Execution</th><th>Entry</th><th>Exit</th><th>Round-trip fee</th><th>vs taker</th></tr></thead>
+          <tbody>
+            <tr><td>Both legs taker (market)</td><td>0.05%</td><td>0.05%</td><td><strong>0.100%</strong></td><td>—</td></tr>
+            <tr><td>One leg maker, one taker</td><td>0.02%</td><td>0.05%</td><td><strong>0.070%</strong></td><td>−30%</td></tr>
+            <tr><td>Both legs post-only maker</td><td>0.02%</td><td>0.02%</td><td><strong>0.040%</strong></td><td>−60%</td></tr>
+            <tr><td>Both maker + 40% rebate</td><td>0.012%</td><td>0.012%</td><td><strong>0.024%</strong></td><td>−76%</td></tr>
+          </tbody>
+        </table>
+        <p>Going fully post-only cuts the round-trip fee by <strong>60%</strong> before any rebate. Add a rebate on the maker legs and you're at roughly a quarter of the all-taker cost. On a book that turns over $10M a month, moving from all-taker (0.10%) to post-only-plus-rebate (0.024%) is the difference between about <strong>$120,000</strong> and <strong>$28,800</strong> a year in fees — roughly <strong>$91k</strong> saved, with no change to the underlying signal.</p>
+
+        <h2>The trade-off: fill risk is real</h2>
+        <p>Post-only isn't free — you pay for the saved fee in <strong>execution uncertainty</strong>:</p>
+        <ul>
+          <li><strong>You might not fill at all.</strong> If the market never trades back to your price, the order sits and expires.</li>
+          <li><strong>Partial fills.</strong> Only part of your size may get hit, leaving you with unwanted exposure or an incomplete position.</li>
+          <li><strong>Adverse selection.</strong> Resting orders tend to fill when the market is moving against you — the fills you get are slightly worse than random.</li>
+        </ul>
+        <p>For a strategy where a missed fill costs more than the taker fee saved — momentum entries, stop-outs, latency <a href="/en/blog/arbitrage-bot-fees.html">arbitrage</a> — post-only is the wrong tool. Use it where you can be patient.</p>
+
+        <h2>Which strategies suit maker-only</h2>
+        <table class="compare">
+          <thead><tr><th>Strategy</th><th>Post-only fit</th><th>Why</th></tr></thead>
+          <tbody>
+            <tr><td>Grid bots</td><td>Excellent</td><td>Every grid level is a resting limit order by design — post-only is native</td></tr>
+            <tr><td>Market making</td><td>Excellent</td><td>The whole business is posting liquidity; taker fills are the exception</td></tr>
+            <tr><td>Mean reversion</td><td>Good</td><td>You want to buy weakness / sell strength — patience is the edge</td></tr>
+            <tr><td>DCA / accumulation</td><td>Good</td><td>No urgency; post below mid and let fills come</td></tr>
+            <tr><td>Momentum / breakout</td><td>Poor</td><td>Must execute now; a missed fill misses the move</td></tr>
+            <tr><td>Latency arbitrage</td><td>Poor</td><td>The gap closes in milliseconds; you have to take</td></tr>
+          </tbody>
+        </table>
+        <p>The discipline is per-order, not per-strategy: even a mostly-taker book usually has some legs — the non-urgent ones — that can be posted maker. Grid bots get this for free, which is why the <a href="/en/blog/grid-bot-fee-optimization.html">grid bot fee optimization</a> playbook leans so hard on maker share.</p>
+
+        <h2>Where the rebate fits</h2>
+        <p>Post-only handles the fees you can <em>choose</em> to avoid. A rebate handles the fees you <em>can't</em>:</p>
+        <ol>
+          <li><strong>Patient legs → post-only.</strong> Pay the maker fee, not the taker fee. Cost cut ~60% on those fills.</li>
+          <li><strong>Urgent legs → rebate.</strong> The taker fills a fast strategy must cross still get up to 40% back, in real time in USDT.</li>
+          <li><strong>Maker legs → rebate too.</strong> The rebate applies to whatever fee you pay, so even your post-only maker fee shrinks further.</li>
+        </ol>
+        <p>Post-only is code; the rebate is an account setting that requires no code change and no strategy risk. Together they attack the fee from both ends. See the mechanism on the <a href="/en/okx-rebate.html">OKX rebate</a> and <a href="/en/binance-rebate.html">Binance rebate</a> pages, and the broader logic in our <a href="/en/blog/maker-vs-taker-fees-explained.html">maker vs taker breakdown</a>. If you run a self-hosted bot, the <a href="/en/blog/bot-api-key-fee-rebate.html">API-key rebate guide</a> shows how to attach one to your own keys — and once you've cut cost this far, our note on <a href="/en/blog/how-trading-fees-destroy-backtest-returns.html">how fees destroy backtest returns</a> shows how much net edge you just recovered.</p>
+
+        <h2>Setup checklist</h2>
+        <ul>
+          <li>Identify which orders are <strong>time-critical</strong> (must take) vs <strong>patient</strong> (can post).</li>
+          <li>Set the <strong>post-only flag</strong> on the patient legs — UI checkbox or API order-type parameter.</li>
+          <li>Handle <strong>rejections</strong>: your bot must expect post-only orders to bounce and re-post, not crash.</li>
+          <li>Monitor your <strong>maker/taker fill ratio</strong> — it's the KPI that proves the strategy is working.</li>
+          <li>Attach a <strong>rebate</strong> so both maker and unavoidable taker fees shrink further.</li>
+          <li>Check whether your <strong>tier</strong> shows a negative maker rate — if so, post-only literally pays you.</li>
+        </ul>
+
+        <h2>Frequently asked questions</h2>
+        <div class="faq">
+          <details class="faq-item" open><summary class="faq-q">What does a post-only order actually do?<span class="plus">+</span></summary><div class="faq-a">A post-only order is a limit order with a guarantee: if any part of it would execute immediately against the resting book — which would make it a taker fill — the exchange rejects or repositions it instead of filling. That means the order can only ever add liquidity, so you always pay the maker fee (or receive a maker rebate on some venues) and never the more expensive taker fee. On Binance and OKX it is a flag you set on a limit order (post-only / maker-only), available in both the UI and the API.</div></details>
+          <details class="faq-item"><summary class="faq-q">How much cheaper is maker than taker?<span class="plus">+</span></summary><div class="faq-a">On standard tiers the taker fee is roughly double the maker fee. Binance and OKX USDT-M futures are about 0.02% maker versus 0.05% taker; spot is around 0.08–0.10% taker versus a lower maker rate. On a round trip that is the difference between paying about 0.10% (both legs taker) and about 0.04% (both legs maker) — before any rebate. At high VIP or market-maker tiers the maker fee can even go negative, meaning the exchange pays you to provide liquidity. Over thousands of fills that gap is the single largest lever a high-frequency book controls.</div></details>
+          <details class="faq-item"><summary class="faq-q">What is the downside of a maker-only strategy?<span class="plus">+</span></summary><div class="faq-a">Fill risk. A post-only order only executes if the market comes to your price, so you may not get filled at all, or you get filled on only part of your size, or the market moves away while you wait. For strategies that must execute now — latency arbitrage, stop-outs, momentum entries — post-only is the wrong tool because a missed fill costs more than the taker fee saved. Maker-only works best for strategies that can be patient: grid bots, market making, mean-reversion, and any leg that isn't time-critical. The skill is deciding which orders can wait and which cannot.</div></details>
+          <details class="faq-item"><summary class="faq-q">Can I combine post-only with a fee rebate?<span class="plus">+</span></summary><div class="faq-a">Yes, and they stack. Post-only ensures you pay the maker fee instead of the taker fee; a rebate then returns a percentage of whatever fee you do pay. So the post-only flag shrinks the fee, and the rebate shrinks it again — up to 40% back, settled in real time in USDT. On the taker legs you can't avoid (the ones that must fire immediately), the rebate is your only lever, which is exactly why the two work together: post-only for the patient legs, rebate for everything.</div></details>
+          <details class="faq-item"><summary class="faq-q">Does post-only guarantee a maker rebate?<span class="plus">+</span></summary><div class="faq-a">It guarantees you are charged the maker fee, not the taker fee — but whether that maker fee is positive, zero or negative depends on your VIP or market-maker tier on the venue. A negative maker fee (a true maker rebate paid by the exchange) usually requires a high volume or market-maker qualification. For most traders post-only means paying a small positive maker fee rather than the larger taker fee; the third-party fee rebate then applies on top of that. Do not assume you will be paid to trade unless your tier explicitly shows a negative maker rate.</div></details>
+        </div>
+
+        <div class="cta-band" style="margin-top:48px">
+          <h2>Stack a rebate on your maker legs</h2>
+          <p>Post-only cuts the fee you can avoid; a rebate cuts the rest — up to 40% back on every fill, maker or taker, settled in real time in USDT. No code change, no strategy risk, fully reconcilable.</p>
+          <div class="hero-actions" style="justify-content:center">
+            <a class="btn btn-binance" href="/en/binance-rebate.html">Binance rebate</a>
+            <a class="btn btn-okx" href="/en/okx-rebate.html">OKX rebate</a>
+            <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">Get a tier assessment</a>
+          </div>
+        </div>
+
+        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Fee schedules, maker/taker rates and rebate percentages reflect published rates at the time of writing and may change without notice. Examples are illustrative; your real costs depend on venue, product, VIP/market-maker tier, fill ratio and slippage. Negative maker fees require qualifying tiers and are not guaranteed. This article is educational and not investment advice. JackTrader is an independent referral / sub-broker partner and is not Binance or OKX. Single-tier referrals only, no downline or multi-level structure.</p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="/en/"><span class="brand-mark">J</span><span>JackTrader</span></a>
+          <p>Trading fee rebates and channel partnerships across Binance, OKX, wallet and DEX ecosystems. Real-time settlement, fully trackable.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Rebate plans</h4>
+          <a href="/en/binance-rebate.html">Binance Rebate</a>
+          <a href="/en/okx-rebate.html">OKX Rebate</a>
+          <a href="/en/wallet-rebate.html">Wallet &amp; DEX</a>
+          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a><a href="/en/okx-partner.html">OKX partner</a>
+        </div>
+        <div class="footer-col">
+          <h4>Deep dives</h4>
+          <a href="/en/blog/maker-vs-taker-fees-explained.html">Maker vs taker fees</a>
+          <a href="/en/blog/grid-bot-fee-optimization.html">Grid bot fee optimization</a>
+          <a href="/en/blog/scalping-fees-crypto.html">Scalping fees in crypto</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance or OKX. Rebate rates, eligibility and rules depend on platform policy, account status, review and local regulations; displayed rates are a maximum reference and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
+        <p class="copyright">© 2026 JackTrader · Independent referral partner.</p>
+      </div>
+    </div>
+  </footer>
+  <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script src="/scripts.js"></script>
+</body>
+</html>

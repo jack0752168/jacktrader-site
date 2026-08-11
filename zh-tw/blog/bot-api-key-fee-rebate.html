@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Analytics 4 (gtag.js) — cookieless Consent Mode, no banner needed -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK1VSBED5T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'granted'});
+    gtag('js', new Date());
+    gtag('config','G-NK1VSBED5T');
+  </script>
+  <title>自架交易機器人怎麼拿返傭：API 金鑰帳戶綁定教學 2026 | JackTrader</title>
+  <meta name="description" content="返傭綁在你的交易所帳戶上，不是綁在 API 金鑰或機器人上。所以自架機器人（Freqtrade、Hummingbot、OctoBot）能拿到最高 40% 返傭，部分 SaaS 機器人卻不行。API 金鑰綁定的真實運作與設定步驟。" />
+  <meta name="keywords" content="自架機器人返傭,交易機器人返傭,API金鑰綁定返傭,Freqtrade返傭,Hummingbot返傭,機器人手續費返傭,自架bot綁定,幣安OKX返傭綁定" />
+  <meta name="author" content="JackTrader" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <meta name="theme-color" content="#0b0d12" />
+  <link rel="canonical" href="https://www.jacktrader.xyz/zh-tw/blog/bot-api-key-fee-rebate.html" />
+  <link rel="alternate" hreflang="en" href="https://www.jacktrader.xyz/en/blog/bot-api-key-fee-rebate.html" />
+  <link rel="alternate" hreflang="zh-TW" href="https://www.jacktrader.xyz/zh-tw/blog/bot-api-key-fee-rebate.html" />
+  <link rel="alternate" hreflang="ko" href="https://www.jacktrader.xyz/ko/blog/bot-api-key-fee-rebate.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.jacktrader.xyz/en/blog/bot-api-key-fee-rebate.html" />
+  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://t.me" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="JackTrader" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:title" content="自架交易機器人怎麼拿返傭：API 金鑰帳戶綁定教學" />
+  <meta property="og:description" content="返傭綁在帳戶上，不是綁在 API 金鑰或機器人上。為什麼自架機器人能拿到最高 40% 返傭，部分 SaaS 機器人卻不行。" />
+  <meta property="og:url" content="https://www.jacktrader.xyz/zh-tw/blog/bot-api-key-fee-rebate.html" />
+  <meta property="og:image" content="https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg" />
+  <meta property="og:image:alt" content="自架交易機器人 API 金鑰返傭綁定教學 2026" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@trader_j888" />
+  <meta name="twitter:title" content="自架交易機器人怎麼拿返傭：API 金鑰帳戶綁定教學" />
+  <meta name="twitter:description" content="返傭綁帳戶不綁金鑰。自架機器人能拿，部分 SaaS 機器人已先花掉你的綁定。" />
+  <meta name="twitter:image" content="https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "@id":"https://www.jacktrader.xyz/zh-tw/blog/bot-api-key-fee-rebate.html#article",
+    "headline":"自架交易機器人怎麼拿返傭：API 金鑰帳戶綁定教學 2026",
+    "description":"返傭在註冊時綁在你的交易所帳戶上，而不是綁在機器人使用的 API 金鑰上。這一點決定了自架機器人（Freqtrade、Hummingbot、OctoBot）或 SaaS 機器人能否拿到最高 40% 返傭，以及如何正確設定綁定。",
+    "author":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/zh-tw/"},
+    "publisher":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/zh-tw/","logo":{"@type":"ImageObject","url":"https://www.jacktrader.xyz/assets/brand/favicon.svg"}},
+    "datePublished":"2026-06-30",
+    "dateModified":"2026-08-05",
+    "inLanguage":"zh-TW",
+    "mainEntityOfPage":"https://www.jacktrader.xyz/zh-tw/blog/bot-api-key-fee-rebate.html",
+    "image":"https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg",
+    "articleSection":"機器人交易手續費",
+    "keywords":"自架機器人返傭, 交易機器人返傭, API 金鑰綁定返傭, Freqtrade 返傭, Hummingbot 返傭",
+    "about":[{"@type":"Thing","name":"加密交易機器人手續費"},{"@type":"Thing","name":"交易所 API 金鑰"},{"@type":"Thing","name":"手續費返傭"}]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"首頁","item":"https://www.jacktrader.xyz/zh-tw/"},
+      {"@type":"ListItem","position":2,"name":"部落格","item":"https://www.jacktrader.xyz/zh-tw/blog/"},
+      {"@type":"ListItem","position":3,"name":"自架機器人 API 金鑰返傭","item":"https://www.jacktrader.xyz/zh-tw/blog/bot-api-key-fee-rebate.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "返傭是綁在我的 API 金鑰上，還是綁在交易所帳戶上？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "綁在交易所帳戶上。推薦／返傭綁定是在註冊時記錄在帳戶本身（或在幣安、OKX 上，於符合資格的期間內為一個尚未綁定的既有帳戶補綁）。API 金鑰只是讓機器人在該帳戶下單的憑證——建立、刪除或更換金鑰都不會改變返傭。所以只要帳戶綁了返傭，機器人透過任何一把 API 金鑰送出的每一筆委託都算數；如果帳戶沒綁，任何金鑰都補不回來。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "像 Freqtrade、Hummingbot 這類自架機器人能拿到返傭嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以，完全可以。自架與開源機器人連接的是你自己註冊的交易所帳戶，所以綁定權在你手上。先在返傭連結下註冊帳戶、產生 API 金鑰、貼進機器人，之後機器人做的每一筆交易都算進你的返傭。機器人軟體根本不知道有返傭這回事——它只負責下單，返傭是交易所在已綁定的帳戶上結算的。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "為什麼有些 SaaS 或跟單機器人不能給我返傭？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "有些託管機器人或訊號平台會要你透過它們自己的推薦連結去註冊一個新的交易所帳戶，這等於把你那一次性的綁定花在它們身上而不是你身上。之後帳戶就綁在該服務商名下，你無法再重新綁到別的返傭。如果機器人是透過 API 金鑰連到你已經擁有的帳戶（正常模式），它不會動到你的綁定——問題只出在那些把你導去它自家註冊頁的機器人。永遠先自己註冊交易所帳戶，再用 API 金鑰接機器人。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我需要給機器人或返傭服務商額外的權限嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不需要。返傭是交易所根據你已綁定帳戶的交易量計算的——返傭服務商從不需要你的 API 金鑰、密碼或提現權限。對機器人，只要建立「僅交易」權限的 API 金鑰，並關閉提現。一個正當的返傭設定除了帳戶綁定本身之外不需要任何東西；任何人要你的密碼、開啟提現權限的金鑰、或要你把錢入金給對方，都是危險訊號。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我的機器人已經在一個既有帳戶上跑了，還能加返傭嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "有可能。如果該帳戶從未綁定過任何推薦，幣安與 OKX 允許你在符合規則的前提下為既有帳戶補綁（幣安的換綁測試看的是帳戶近 90 天總交易量是否在 5,000 USD 以內，與帳戶開多久無關，且要在 30 天內做滿 150,000 USD 才生效）。你不用動機器人或它的金鑰——綁定發生在帳戶層級，機器人照常交易。如果帳戶已經綁在別處，較乾淨的做法是在返傭連結下開一個新帳戶讓機器人去跑。動手前先請對方做一次帳戶層級的查核，別自己假設。"
+      }
+    }
+  ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/zh-tw/" aria-label="JackTrader"><span class="brand-mark">J</span><span>JackTrader</span></a>
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-label="開啟選單" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="site-nav" aria-label="主導航" id="primary-nav">
+        <a href="/zh-tw/">首頁</a>
+        <a href="/zh-tw/binance-us-stocks.html">幣安美股 🔥</a>
+        <a href="/zh-tw/okx-us-stocks.html">OKX美股</a>
+        <a href="/zh-tw/binance-rebate.html">幣安返傭</a>
+        <a href="/zh-tw/okx-rebate.html">OKX返傭</a>
+        <a href="/zh-tw/partner.html">助力人</a>
+        <a href="/zh-tw/blog/">部落格</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-toggle"><a href="/">中</a><a href="/zh-tw/" class="active">繁</a><a href="/en/">EN</a></div>
+        <a class="nav-cta" href="https://t.me/Jack168668" target="_blank" rel="noopener">Telegram 諮詢</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="/zh-tw/">首頁</a> / <a href="/zh-tw/blog/">部落格</a> / 自架機器人 API 金鑰返傭</div>
+        <p class="eyebrow">機器人交易 · 設定 · 2026 年 6 月更新</p>
+        <h1>自架交易機器人怎麼拿返傭：API 金鑰帳戶綁定教學</h1>
+        <p class="page-lede">決定你的機器人能不能拿返傭，只有一個關鍵事實：<strong>返傭綁在你的交易所帳戶上，不是綁在 API 金鑰、也不是綁在機器人上。</strong>想通這點，整個邏輯就清楚了——像 Freqtrade、Hummingbot、OctoBot 這類自架機器人，完全不用改一行程式就能拿到最高 40% 返傭；而部分託管機器人卻會悄悄把你那一次性的綁定花在它們自己身上。這篇就是教你把返傭綁到機器人實際交易的那個帳戶上。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width:820px">
+
+        <h2>先講結論</h2>
+        <ol>
+          <li><strong>返傭住在帳戶上。</strong>當你在幣安或 OKX 綁定推薦，綁定就記錄在交易所帳戶上。該帳戶做的每一筆交易——手動、腳本還是機器人——都拿得到返傭。</li>
+          <li><strong>API 金鑰只是一把門鑰匙。</strong>機器人用 API 金鑰驗證身分去下單。建立、刪除或更換金鑰，對返傭毫無影響。金鑰本身不帶任何推薦資訊。</li>
+          <li><strong>所以該問的從來不是「我的機器人支不支援返傭」，而是「機器人交易的那個帳戶有沒有綁返傭」。</strong>自架機器人在這點上贏，因為帳戶和綁定都在你手上。唯一會出錯的，就是讓某個託管機器人用<em>它的</em>推薦連結幫你註冊帳戶。</li>
+        </ol>
+        <p>如果只記一句：<strong>先在返傭連結下自己註冊交易所帳戶，再用 API 金鑰接機器人。</strong>順序千萬別反過來。</p>
+
+        <h2>為什麼返傭綁帳戶、不綁金鑰</h2>
+        <p>返傭是交易所本來就向你收的手續費中，因為你的帳戶被歸屬到某個推薦／Sub-broker 關係，而退還的一部分。這個歸屬是<em>帳戶</em>的屬性，在帳戶建立時設定（若當初未歸屬，也可後續補綁）。本來就只能這樣——交易所是在每個結算週期結束時，依該帳戶的總交易量結算返傭再支付，通常是<a href="/en/blog/weekly-usdt-rebate-settlement.html">每週以 USDT 結算</a>。</p>
+        <p>相對地，API 金鑰是帳戶層級的憑證，帶有限定權限（讀取、交易、有時還有提現）。它在層級上位於帳戶<em>之下</em>。你可以為一個帳戶上的五個機器人持有五把金鑰、每月為了安全更換一次，返傭完全不受影響，因為它從一開始就沒綁在金鑰上。這其實是好消息：它代表「把機器人弄安全」（只給交易權限、關閉提現、設 IP 白名單）和「拿返傭」是兩件完全獨立的事。</p>
+
+        <h2>自架 vs SaaS 機器人：綁定權在誰手上</h2>
+        <table class="compare">
+          <thead><tr><th>機器人類型</th><th>誰註冊交易所帳戶</th><th>你能綁自己的返傭嗎？</th><th>要注意什麼</th></tr></thead>
+          <tbody>
+            <tr><td>自架／開源（Freqtrade、Hummingbot、OctoBot、Jesse）</td><td>你自己</td><td>能——完全掌控</td><td>沒什麼；只要在產生金鑰前先在返傭連結下註冊</td></tr>
+            <tr><td>用 API 金鑰連到你帳戶的 SaaS 機器人（多數網格／DCA 面板）</td><td>你自己</td><td>能——機器人只是借用金鑰</td><td>確認它要的是 API 金鑰，而不是「透過我們註冊」的連結</td></tr>
+            <tr><td>要你透過它推薦連結註冊交易所的 SaaS／跟單平台</td><td>服務商</td><td>不能——你的綁定被花在它們身上</td><td>想保留自己的返傭，就是要避開這種</td></tr>
+          </tbody>
+        </table>
+        <p class="hero-note">分界線不是「自架 vs 託管」，而是<strong>底層交易所帳戶的推薦綁定權在誰手上</strong>。透過 API 金鑰連接的託管機器人沒問題；會出事的，是那種逼你透過它的連結去註冊交易所的機器人——它拿走了你本來能留住的返傭。</p>
+
+        <h2>設定步驟</h2>
+        <ol>
+          <li><strong>在返傭連結下註冊交易所帳戶。</strong>透過<a href="/zh-tw/binance-rebate.html">幣安返傭</a>或<a href="/zh-tw/okx-rebate.html">OKX 返傭</a>頁面的推薦綁定完成。這是唯一會碰到返傭的步驟，兩分鐘搞定。</li>
+          <li><strong>照常完成 KYC、入金。</strong>綁定已經記錄好了；入金或驗證都不會改變它。</li>
+          <li><strong>建立「僅交易」權限的 API 金鑰。</strong>關閉這把金鑰的提現權限。如果機器人跑在固定 IP 的伺服器上，再加上 IP 白名單。這是安全步驟，跟返傭無關。</li>
+          <li><strong>把金鑰貼進機器人</strong>（Freqtrade 的 <code>config.json</code>、Hummingbot 的 connect 流程、OctoBot 的交易所分頁）。機器人就會在已綁定的帳戶上開始交易。</li>
+          <li><strong>確認返傭有在累積。</strong>第一個結算週期後，返傭就應該反映機器人的交易量。因為綁在帳戶上，它會抓到機器人交易的 100%，而不是抽樣的一部分。</li>
+        </ol>
+        <p>機器人內部的交易所手續費微調——掛單進場、BNB 折扣、交易模式選擇——可參考姊妹文<a href="/en/blog/freqtrade-fees-rebate.html">Freqtrade 在幣安與 OKX 的手續費（英文）</a>，裡面逐項拆解了決定你付掛單還是吃單費的設定。</p>
+
+        <h2>實算範例——一個每月 400 萬美元的自架機器人</h2>
+        <p>你在自己的 VPS 上跑 Freqtrade，交易 USDT 本位永續，每月周轉<strong>名目 400 萬美元</strong>。假設混合有效費率為 0.04%（掛單進場、吃單出場的現實組合）：</p>
+        <ul>
+          <li>每月手續費 ≈ 400 萬 × 0.04% = <strong>1,600 美元</strong>（約每年 19,200 美元）。</li>
+          <li>如果帳戶<strong>沒</strong>綁返傭，你全額付掉。機器人替返傭方賺不到、你也拿不到。</li>
+          <li>如果同一帳戶綁了最高 40% 返傭：≈ 1,600 × 40% = <strong>每月退 640 美元</strong>，官方後台實時結算 USDT——約每年退回 7,680 美元，而機器人、策略、API 金鑰全都原封不動。</li>
+        </ul>
+        <p>策略沒變、程式沒變。兩種情境唯一的差別，只是你在產生 API 金鑰<em>之前</em>用哪種方式註冊帳戶。這就是全部的槓桿——也是為什麼「先綁、後接」這麼重要。</p>
+
+        <h2>常見錯誤</h2>
+        <ul>
+          <li><strong>想要自己的返傭，卻透過機器人平台的連結去註冊交易所</strong>——這會把你的綁定花在它們身上。請自己註冊交易所。</li>
+          <li><strong>以為新的 API 金鑰會重設或產生返傭</strong>——完全不會。重點永遠是帳戶綁定。</li>
+          <li><strong>把 API 金鑰或密碼交給「返傭機器人」</strong>——正當返傭兩者都不需要。交易所是用你綁定的帳戶來計算返傭；危險訊號清單見<a href="/en/blog/are-crypto-rebates-safe.html">加密返傭安全嗎（英文）</a>。</li>
+          <li><strong>忘了資金費率</strong>——返傭砍的是交易手續費，不是<a href="/en/blog/funding-rate-vs-trading-fee.html">資金費率（英文）</a>。跑永續機器人時，兩者都要算進去。</li>
+        </ul>
+
+        <h2>把它放進更大的手續費版圖</h2>
+        <p>對機器人來說，綁返傭是會改變每一條手續費的兩個槓桿之一，另一個是掛單路由。不同類型機器人的費率差異，見<a href="/zh-tw/blog/grid-bot-fee-optimization.html">網格機器人手續費優化</a>；想直接比較幣安與 OKX 的費率，見<a href="/zh-tw/blog/binance-vs-okx-fees-2026.html">幣安 vs OKX 手續費</a>。返傭是那個你拉一次就能一直留著的槓桿——但前提是它綁在機器人實際交易的那個帳戶上。</p>
+
+        <h2>常見問題</h2>
+        <div class="faq-list">
+          <details class="faq-item" open><summary class="faq-q">返傭是綁在我的 API 金鑰上，還是綁在交易所帳戶上？<span class="plus">+</span></summary><div class="faq-a">綁在交易所帳戶上。推薦／返傭綁定是在註冊時記錄在帳戶本身（或在幣安、OKX 上，於符合資格的期間內為一個尚未綁定的既有帳戶補綁）。API 金鑰只是讓機器人在該帳戶下單的憑證——建立、刪除或更換金鑰都不會改變返傭。所以只要帳戶綁了返傭，機器人透過任何一把 API 金鑰送出的每一筆委託都算數；如果帳戶沒綁，任何金鑰都補不回來。</div></details>
+          <details class="faq-item"><summary class="faq-q">像 Freqtrade、Hummingbot 這類自架機器人能拿到返傭嗎？<span class="plus">+</span></summary><div class="faq-a">可以，完全可以。自架與開源機器人連接的是你自己註冊的交易所帳戶，所以綁定權在你手上。先在返傭連結下註冊帳戶、產生 API 金鑰、貼進機器人，之後機器人做的每一筆交易都算進你的返傭。機器人軟體根本不知道有返傭這回事——它只負責下單，返傭是交易所在已綁定的帳戶上結算的。</div></details>
+          <details class="faq-item"><summary class="faq-q">為什麼有些 SaaS 或跟單機器人不能給我返傭？<span class="plus">+</span></summary><div class="faq-a">有些託管機器人或訊號平台會要你透過它們自己的推薦連結去註冊一個新的交易所帳戶，這等於把你那一次性的綁定花在它們身上而不是你身上。之後帳戶就綁在該服務商名下，你無法再重新綁到別的返傭。如果機器人是透過 API 金鑰連到你已經擁有的帳戶（正常模式），它不會動到你的綁定——問題只出在那些把你導去它自家註冊頁的機器人。永遠先自己註冊交易所帳戶，再用 API 金鑰接機器人。</div></details>
+          <details class="faq-item"><summary class="faq-q">我需要給機器人或返傭服務商額外的權限嗎？<span class="plus">+</span></summary><div class="faq-a">不需要。返傭是交易所根據你已綁定帳戶的交易量計算的——返傭服務商從不需要你的 API 金鑰、密碼或提現權限。對機器人，只要建立「僅交易」權限的 API 金鑰，並關閉提現。一個正當的返傭設定除了帳戶綁定本身之外不需要任何東西；任何人要你的密碼、開啟提現權限的金鑰、或要你把錢入金給對方，都是危險訊號。</div></details>
+          <details class="faq-item"><summary class="faq-q">我的機器人已經在一個既有帳戶上跑了，還能加返傭嗎？<span class="plus">+</span></summary><div class="faq-a">有可能。如果該帳戶從未綁定過任何推薦，幣安與 OKX 允許你在符合規則的前提下為既有帳戶補綁（幣安的換綁測試看的是帳戶近 90 天總交易量是否在 5,000 USD 以內，與帳戶開多久無關，且要在 30 天內做滿 150,000 USD 才生效）。你不用動機器人或它的金鑰——綁定發生在帳戶層級，機器人照常交易。如果帳戶已經綁在別處，較乾淨的做法是在返傭連結下開一個新帳戶讓機器人去跑。動手前先請對方做一次帳戶層級的查核，別自己假設。</div></details>
+        </div>
+
+        <div class="cta-band" style="margin-top:48px">
+          <h2>先綁返傭，再接機器人</h2>
+          <p>在最高 40% 返傭下註冊你的交易所帳戶，再把「僅交易」權限的 API 金鑰貼進 Freqtrade、Hummingbot 或任何機器人。返傭會抓到帳戶交易量的 100%，官方後台實時結算 USDT——不改策略、不開額外權限。</p>
+          <div class="hero-actions" style="justify-content:center">
+            <a class="btn btn-binance" href="/zh-tw/binance-rebate.html">幣安返傭</a>
+            <a class="btn btn-okx" href="/zh-tw/okx-rebate.html">OKX 返傭</a>
+            <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">查核我的帳戶綁定</a>
+          </div>
+        </div>
+
+        <p style="margin-top:32px;color:var(--text-3);font-size:13px">免責聲明：手續費表與返傭比例為撰文當下的公開費率，可能隨時調整，恕不另行通知。範例僅供說明；你的實際成本取決於交易所、產品、掛單／吃單比例與 VIP 等級。文中機器人名稱為開源工具，僅為中性脈絡引用。本文為教育性質，非投資建議。JackTrader 為獨立推薦／Sub-broker 合作夥伴，並非幣安或 OKX。僅單層推薦，無下線或多層結構。</p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="/zh-tw/"><span class="brand-mark">J</span><span>JackTrader</span></a>
+          <p>橫跨幣安、OKX、錢包與 DEX 生態的交易手續費返傭與通道合作。官方後台實時結算、全程可查。</p>
+        </div>
+        <div class="footer-col">
+          <h4>返傭方案</h4>
+          <a href="/zh-tw/binance-rebate.html">幣安返傭</a>
+          <a href="/zh-tw/okx-rebate.html">OKX 返傭</a>
+          <a href="/zh-tw/partner.html">助力人計劃</a>
+        </div>
+        <div class="footer-col">
+          <h4>深度文章</h4>
+          <a href="/zh-tw/blog/grid-bot-fee-optimization.html">網格機器人手續費優化</a>
+          <a href="/zh-tw/blog/binance-vs-okx-fees-2026.html">幣安 vs OKX 手續費</a>
+          <a href="/zh-tw/blog/okx-vs-bybit-fees-2026.html">OKX vs Bybit 手續費</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="disclaimer">JackTrader 為獨立推薦合作夥伴，與幣安、OKX、Bybit 均無官方隸屬關係。返傭比例、資格與規則受平台政策、帳戶狀態、審核與當地法規影響；所示比例為上限參考，非收益保證。數位資產交易具風險，本站內容皆非投資建議。</p>
+        <p class="copyright">© 2026 JackTrader · 獨立推薦合作夥伴。</p>
+      </div>
+    </div>
+  </footer>
+  <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script src="/scripts.js"></script>
+</body>
+</html>

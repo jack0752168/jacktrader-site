@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Analytics 4 (gtag.js) — cookieless Consent Mode, no banner needed -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK1VSBED5T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'granted'});
+    gtag('js', new Date());
+    gtag('config','G-NK1VSBED5T');
+  </script>
+  <title>How Trading Fees Destroy Backtest Returns 2026: Paper vs Live | JackTrader</title>
+  <meta name="description" content="A backtest that ignores fees shows a profit live trading erases. The exact math of how per-trade cost compounds across turnover, why high-frequency strategies collapse first, and the three levers — honest fee modelling, maker routing and an up-to-40% rebate — that close the gap." />
+  <meta name="keywords" content="backtest trading fees,backtest fees crypto,trading fees backtest,freqtrade backtest fees,backtest slippage,fees kill backtest,strategy backtest cost,realistic backtest" />
+  <meta name="author" content="JackTrader" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <meta name="theme-color" content="#0b0d12" />
+  <link rel="canonical" href="https://www.jacktrader.xyz/en/blog/how-trading-fees-destroy-backtest-returns.html" />
+  <link rel="alternate" hreflang="en" href="https://www.jacktrader.xyz/en/blog/how-trading-fees-destroy-backtest-returns.html" />
+  <link rel="alternate" hreflang="zh-TW" href="https://www.jacktrader.xyz/zh-tw/blog/how-trading-fees-destroy-backtest-returns.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.jacktrader.xyz/en/blog/how-trading-fees-destroy-backtest-returns.html" />
+  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://t.me" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="JackTrader" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="How Trading Fees Destroy Backtest Returns 2026" />
+  <meta property="og:description" content="A backtest that ignores fees shows a profit live trading erases. The exact cost math, why high-frequency strategies collapse first, and the three levers that close the gap." />
+  <meta property="og:url" content="https://www.jacktrader.xyz/en/blog/how-trading-fees-destroy-backtest-returns.html" />
+  <meta property="og:image" content="https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg" />
+  <meta property="og:image:alt" content="Backtest returns collapsing once trading fees are applied" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@trader_j888" />
+  <meta name="twitter:title" content="How Trading Fees Destroy Backtest Returns 2026" />
+  <meta name="twitter:description" content="The gap between a fee-free backtest and live P&L is almost always the fees. The math, and the three levers that close it." />
+  <meta name="twitter:image" content="https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "@id":"https://www.jacktrader.xyz/en/blog/how-trading-fees-destroy-backtest-returns.html#article",
+    "headline":"How Trading Fees Destroy Backtest Returns 2026: The Gap Between Paper and Live",
+    "description":"Why a strategy that prints in backtest bleeds in production — the per-trade cost math, how fees compound across turnover, which strategies collapse first, and the three levers (honest fee modelling, maker routing, fee rebate) that close the gap.",
+    "author":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/en/"},
+    "publisher":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/en/","logo":{"@type":"ImageObject","url":"https://www.jacktrader.xyz/assets/brand/favicon.svg"}},
+    "datePublished":"2026-07-04",
+    "dateModified":"2026-07-04",
+    "mainEntityOfPage":"https://www.jacktrader.xyz/en/blog/how-trading-fees-destroy-backtest-returns.html",
+    "image":"https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg",
+    "articleSection":"Bot trading fees",
+    "keywords":"backtest trading fees, backtest fees crypto, freqtrade backtest fees, backtest slippage, realistic backtest",
+    "about":[{"@type":"Thing","name":"Backtesting"},{"@type":"Thing","name":"Trading fees"},{"@type":"Thing","name":"Fee rebate"}]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.jacktrader.xyz/en/"},
+      {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.jacktrader.xyz/en/blog/"},
+      {"@type":"ListItem","position":3,"name":"How Trading Fees Destroy Backtest Returns","item":"https://www.jacktrader.xyz/en/blog/how-trading-fees-destroy-backtest-returns.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why do my backtest returns disappear in live trading?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common reason is that the backtest either ignored fees and slippage or used an unrealistically low number. Your gross edge per trade is fixed, but every round trip pays fees on two legs plus slippage — and those costs were always there, the backtest just didn't charge you for them. When the modelled cost is smaller than the real cost, the paper equity curve is inflated by exactly the difference, multiplied by how many trades you make. High-turnover strategies feel this most because the small per-trade gap is repeated thousands of times."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much should I budget for fees in a backtest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use your real effective rate, not the headline maker fee. If your strategy takes liquidity, model the taker fee on both legs — roughly 0.10% round trip on spot at standard tier, or about 0.10% on USDT-M futures (0.05% taker each side). Add realistic slippage for your order size and the pair's depth. If you post limit orders you can model the maker fee, but only for the fills that would actually rest and get hit — assuming 100% maker fills is a classic way to fool yourself. When in doubt, model costs slightly worse than reality; a strategy that survives a pessimistic cost assumption is the only kind worth running live."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does slippage matter more than fees?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on order size and liquidity. Fees are fixed and knowable — a fixed percentage per fill. Slippage scales with how much you move the book, so for large orders in thin pairs it can dwarf fees, while for small orders in deep pairs like BTC or ETH perps fees dominate. Both are part of your all-in cost per trade, and both must be in the backtest. The difference is that you can negotiate fees down with VIP tiers and a rebate; slippage you manage with order sizing, passive execution and venue liquidity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a fee rebate save a strategy that is marginal after costs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Often, yes — because the rebate acts directly on the largest controllable cost. A rebate returns a percentage of the trading fees you pay, so it lowers your effective cost per trade and lifts net edge without any change to the signal. On a marginal book where net edge is a fraction of the fee, getting up to 40% of fees back can multiply what actually reaches your equity. It cannot rescue a strategy with no real edge, and it cannot reduce funding payments — only the trading-fee component — but for a genuine strategy killed by cost, it is the cheapest fix available."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which strategies are most sensitive to fee assumptions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The ones with tiny edge per trade and high turnover: scalping, market making, arbitrage, high-frequency grid and DCA bots that rebalance often. For these, the fee is frequently the single biggest line in the P&L, so a wrong fee assumption in the backtest changes the conclusion from profitable to loss-making. Low-frequency, high-conviction strategies that hold for days are far less sensitive because the per-trade edge is large relative to a one-time cost. If your strategy turns over its capital many times a day, treat the fee assumption as the most important input in the whole backtest."
+      }
+    }
+  ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/en/" aria-label="JackTrader home"><span class="brand-mark">J</span><span>JackTrader</span></a>
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="site-nav" aria-label="Main navigation" id="primary-nav">
+        <a href="/en/">Home</a>
+        <a href="/en/binance-us-stocks.html">Binance Stocks 🔥</a>
+        <a href="/en/okx-us-stocks.html">OKX Stocks</a>
+        <a href="/en/binance-rebate.html">Binance</a>
+        <a href="/en/okx-rebate.html">OKX</a>
+        <a href="/en/binance-partner.html">Binance Partner</a>
+        <a href="/en/okx-partner.html">OKX Partner</a>
+        <a href="/en/blog/">Blog</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-toggle"><a href="/">中</a><a href="/zh-tw/">繁</a><a href="/en/" class="active">EN</a></div>
+        <a class="nav-cta" href="https://t.me/Jack168668" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="/en/">Home</a> / <a href="/en/blog/">Blog</a> / How Trading Fees Destroy Backtest Returns</div>
+        <p class="eyebrow">Bot trading · Backtesting · Updated July 2026</p>
+        <h1>How trading fees destroy backtest returns: the gap between paper and live</h1>
+        <p class="page-lede">Almost every quant has lived it: a backtest that prints a beautiful equity curve, deployed live, that quietly bleeds. The strategy didn't break — the costs were always there, the backtest just didn't charge you for them. Fees and slippage are subtracted from every single round trip, so on a high-turnover book they compound into the largest line in your P&L. Here's the exact math of how a fee-free backtest lies, which strategies collapse first, and the three levers that close the gap between paper and production.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width:820px">
+
+        <h2>The short version</h2>
+        <p>A backtest measures gross edge. Live trading measures gross edge <em>minus</em> cost. Three facts explain the whole disappearing-return problem:</p>
+        <ol>
+          <li><strong>Cost is per trade, not per year.</strong> Every round trip pays fees on two legs plus slippage. The more you trade, the more times that subtraction happens.</li>
+          <li><strong>The gap equals the mis-modelled cost × turnover.</strong> If your backtest charged 0% and reality charges 0.13% per round trip, and you do 3,000 round trips a year, the paper curve is inflated by roughly 390% of turned notional.</li>
+          <li><strong>Edge per trade is what matters, not annual return.</strong> A strategy with 0.15% gross edge per trade and 0.13% cost keeps 0.02% — it is one bad fee assumption away from being a loss.</li>
+        </ol>
+        <p>The fix isn't a smarter signal. It's modelling cost honestly, then attacking the largest controllable piece of it: the trading fee.</p>
+
+        <h2>Why a fee-free backtest lies</h2>
+        <p>Backtesting engines — freqtrade, Backtrader, VectorBT, your own notebook — default to whatever fee you tell them. Leave it at zero, or paste an over-optimistic maker rate, and every simulated fill keeps money the live exchange would take. That error is invisible on a low-frequency strategy because a large per-trade edge swallows it. On a high-frequency strategy it is fatal, because the small per-trade error is repeated thousands of times and compounds into the equity curve.</p>
+        <p>Put plainly: <strong>the backtest didn't discover alpha, it discovered your fee assumption.</strong> Change the fee input and the "alpha" changes with it. That's the tell — if your Sharpe collapses when you move the fee from 0% to your real effective rate, the return was never real.</p>
+
+        <h2>The one number that decides it: net edge per trade</h2>
+        <p>Everything reduces to a single line:</p>
+        <p style="background:var(--surface-2,#12151c);padding:16px 20px;border-radius:10px;font-size:15px"><strong>Net edge per trade = gross edge − (fee leg 1 + fee leg 2) − slippage</strong></p>
+        <p>Take a futures strategy that, in a clean backtest, shows <strong>0.15% gross edge per round trip</strong>. Model realistic costs on USDT-M perps at standard tier:</p>
+        <ul>
+          <li>Entry (taker) = 0.05%</li>
+          <li>Exit (taker) = 0.05%</li>
+          <li>Slippage (small size, deep book) = 0.03%</li>
+          <li><strong>Total cost = 0.13% per round trip</strong></li>
+        </ul>
+        <p>Net edge = 0.15% − 0.13% = <strong>0.02% per trade</strong>. The costs ate <strong>87%</strong> of the gross edge. A backtest that charged nothing showed you the 0.15%; live trading pays you the 0.02%. That is the entire mystery of the vanishing return, in one subtraction.</p>
+
+        <h2>How the gap compounds across turnover</h2>
+        <p>Now scale it by trade count. Assume the same strategy does <strong>3,000 round trips a year</strong> (about 12 a day):</p>
+        <table class="compare">
+          <thead><tr><th>Scenario</th><th>Edge kept per trade</th><th>Annual sum (of turned notional)</th><th>What you'd conclude</th></tr></thead>
+          <tbody>
+            <tr><td>Backtest, 0% fees</td><td>0.15%</td><td>≈ 450%</td><td>"Deploy immediately"</td></tr>
+            <tr><td>Live, standard fees + slippage</td><td>0.02%</td><td>≈ 60%</td><td>"Barely worth it"</td></tr>
+            <tr><td>Live, with up-to-40% rebate on fees</td><td>0.06%</td><td>≈ 180%</td><td>"Genuinely profitable"</td></tr>
+          </tbody>
+        </table>
+        <p>(Figures are illustrative of turned notional, not compounded account return, and ignore leverage/funding — the point is the <em>ratio</em> between rows, not the absolute number.) The fee-free backtest overstated the strategy by roughly 7×. The same strategy, costed honestly, is marginal. The same strategy again, with a rebate applied to the fee it can't avoid, is back in profitable territory — <strong>without touching the signal.</strong></p>
+
+        <h2>The three levers that close the gap</h2>
+        <p>Once your backtest charges realistic cost and the strategy still has positive net edge, you optimise the cost base three ways:</p>
+        <ol>
+          <li><strong>Model cost honestly — pessimistically.</strong> Use your real effective rate on both legs, add slippage for your size, and never assume 100% maker fills. A strategy that survives a worse-than-reality cost assumption is the only kind safe to run live. See our <a href="/en/blog/effective-fee-rate-explained.html">effective fee rate breakdown</a> for how to compute the blended number to plug in.</li>
+          <li><strong>Maker routing wherever the strategy tolerates it.</strong> Moving a leg from taker (0.05%) to maker (0.02%, or a negative rebate on some venues) cuts break-even directly. This is the same logic as our <a href="/en/blog/maker-vs-taker-fees-explained.html">maker vs taker breakdown</a> and the <a href="/en/blog/post-only-maker-only-strategy-fees.html">post-only / maker-only playbook</a> — the cheapest basis point is the one you never pay.</li>
+          <li><strong>Rebate the fees you can't avoid.</strong> On the taker legs a fast strategy must cross, a rebate hands back up to 40% of the fee, settled in real time in USDT. That drops your effective cost per trade and lifts net edge on every future fill. It's the one lever that requires no code change and no strategy risk — see the mechanism on the <a href="/en/okx-rebate.html">OKX rebate</a> and <a href="/en/binance-rebate.html">Binance rebate</a> pages.</li>
+        </ol>
+        <p>One honest caveat: a rebate reduces <em>trading fees</em> only. It does not touch funding payments, which are a separate transfer between longs and shorts — if your strategy holds perps, model funding independently (see <a href="/en/blog/funding-rate-vs-trading-fee.html">funding rate vs trading fee</a>). And it cannot manufacture edge that was never there. What it does is stop a real edge from being taxed to death.</p>
+
+        <h2>Which strategies collapse first</h2>
+        <p>Fee sensitivity is a function of edge-per-trade divided by cost-per-trade. The lower that ratio, the more a wrong fee assumption changes your conclusion:</p>
+        <table class="compare">
+          <thead><tr><th>Strategy</th><th>Edge per trade</th><th>Turnover</th><th>Fee sensitivity</th></tr></thead>
+          <tbody>
+            <tr><td>Scalping / market making</td><td>Tiny</td><td>Very high</td><td>Extreme — fee is often the biggest P&L line</td></tr>
+            <tr><td>Arbitrage</td><td>Tiny (basis points)</td><td>High</td><td>Extreme — every leg pays</td></tr>
+            <tr><td>High-frequency grid / DCA</td><td>Small</td><td>High</td><td>High — many small rebalances</td></tr>
+            <tr><td>Swing / trend (days)</td><td>Large</td><td>Low</td><td>Low — cost is a rounding error</td></tr>
+          </tbody>
+        </table>
+        <p>If you run anything in the top three rows, the fee assumption isn't a footnote in your backtest — it's the most important input in the whole model. For deeper cost math on those, see <a href="/en/blog/scalping-fees-crypto.html">scalping fees</a>, <a href="/en/blog/arbitrage-bot-fees.html">arbitrage bot fees</a> and the <a href="/en/blog/crypto-trading-bot-fees-2026.html">trading bot fee comparison</a>. If you run a self-hosted bot, our guide on <a href="/en/blog/freqtrade-fees-rebate.html">adding a rebate on your own freqtrade API account</a> shows how to lower the exact number that broke your backtest.</p>
+
+        <h2>Checklist before you trust a backtest</h2>
+        <ul>
+          <li>Fee input = your <strong>real effective rate</strong> on both legs, not the headline maker fee.</li>
+          <li>Slippage modelled for your <strong>order size</strong> and the pair's depth — not zero.</li>
+          <li>Maker-fill assumption is <strong>realistic</strong> (some limit orders won't get hit), not 100%.</li>
+          <li>Funding modelled <strong>separately</strong> if you hold perps.</li>
+          <li>Net edge survives a <strong>pessimistic</strong> cost assumption, with margin to spare.</li>
+          <li>You know how much a <strong>rebate</strong> lifts net edge before you scale size.</li>
+        </ul>
+
+        <h2>Frequently asked questions</h2>
+        <div class="faq">
+          <details class="faq-item" open><summary class="faq-q">Why do my backtest returns disappear in live trading?<span class="plus">+</span></summary><div class="faq-a">The most common reason is that the backtest either ignored fees and slippage or used an unrealistically low number. Your gross edge per trade is fixed, but every round trip pays fees on two legs plus slippage — and those costs were always there, the backtest just didn't charge you for them. When the modelled cost is smaller than the real cost, the paper equity curve is inflated by exactly the difference, multiplied by how many trades you make. High-turnover strategies feel this most because the small per-trade gap is repeated thousands of times.</div></details>
+          <details class="faq-item"><summary class="faq-q">How much should I budget for fees in a backtest?<span class="plus">+</span></summary><div class="faq-a">Use your real effective rate, not the headline maker fee. If your strategy takes liquidity, model the taker fee on both legs — roughly 0.10% round trip on spot at standard tier, or about 0.10% on USDT-M futures (0.05% taker each side). Add realistic slippage for your order size and the pair's depth. If you post limit orders you can model the maker fee, but only for the fills that would actually rest and get hit — assuming 100% maker fills is a classic way to fool yourself. When in doubt, model costs slightly worse than reality; a strategy that survives a pessimistic cost assumption is the only kind worth running live.</div></details>
+          <details class="faq-item"><summary class="faq-q">Does slippage matter more than fees?<span class="plus">+</span></summary><div class="faq-a">It depends on order size and liquidity. Fees are fixed and knowable — a fixed percentage per fill. Slippage scales with how much you move the book, so for large orders in thin pairs it can dwarf fees, while for small orders in deep pairs like BTC or ETH perps fees dominate. Both are part of your all-in cost per trade, and both must be in the backtest. The difference is that you can negotiate fees down with VIP tiers and a rebate; slippage you manage with order sizing, passive execution and venue liquidity.</div></details>
+          <details class="faq-item"><summary class="faq-q">Can a fee rebate save a strategy that is marginal after costs?<span class="plus">+</span></summary><div class="faq-a">Often, yes — because the rebate acts directly on the largest controllable cost. A rebate returns a percentage of the trading fees you pay, so it lowers your effective cost per trade and lifts net edge without any change to the signal. On a marginal book where net edge is a fraction of the fee, getting up to 40% of fees back can multiply what actually reaches your equity. It cannot rescue a strategy with no real edge, and it cannot reduce funding payments — only the trading-fee component — but for a genuine strategy killed by cost, it is the cheapest fix available.</div></details>
+          <details class="faq-item"><summary class="faq-q">Which strategies are most sensitive to fee assumptions?<span class="plus">+</span></summary><div class="faq-a">The ones with tiny edge per trade and high turnover: scalping, market making, arbitrage, high-frequency grid and DCA bots that rebalance often. For these, the fee is frequently the single biggest line in the P&L, so a wrong fee assumption in the backtest changes the conclusion from profitable to loss-making. Low-frequency, high-conviction strategies that hold for days are far less sensitive because the per-trade edge is large relative to a one-time cost. If your strategy turns over its capital many times a day, treat the fee assumption as the most important input in the whole backtest.</div></details>
+        </div>
+
+        <div class="cta-band" style="margin-top:48px">
+          <h2>Lower the cost that broke your backtest</h2>
+          <p>Get up to 40% of your trading fees back — settled in real time in USDT, fully reconcilable, no strategy change and no code change. On a high-turnover book, that's often the difference between a marginal strategy and a profitable one.</p>
+          <div class="hero-actions" style="justify-content:center">
+            <a class="btn btn-binance" href="/en/binance-rebate.html">Binance rebate</a>
+            <a class="btn btn-okx" href="/en/okx-rebate.html">OKX rebate</a>
+            <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">Get a tier assessment</a>
+          </div>
+        </div>
+
+        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Fee schedules and rebate rates reflect published rates at the time of writing and may change without notice. Examples are illustrative of turned notional and are not projected account returns; your real results depend on venue, product, maker/taker split, VIP tier, slippage and funding. This article is educational and not investment advice. JackTrader is an independent referral / sub-broker partner and is not Binance or OKX. Single-tier referrals only, no downline or multi-level structure.</p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="/en/"><span class="brand-mark">J</span><span>JackTrader</span></a>
+          <p>Trading fee rebates and channel partnerships across Binance, OKX, wallet and DEX ecosystems. Real-time settlement, fully trackable.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Rebate plans</h4>
+          <a href="/en/binance-rebate.html">Binance Rebate</a>
+          <a href="/en/okx-rebate.html">OKX Rebate</a>
+          <a href="/en/wallet-rebate.html">Wallet &amp; DEX</a>
+          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a><a href="/en/okx-partner.html">OKX partner</a>
+        </div>
+        <div class="footer-col">
+          <h4>Deep dives</h4>
+          <a href="/en/blog/crypto-trading-bot-fees-2026.html">Trading bot fee comparison</a>
+          <a href="/en/blog/scalping-fees-crypto.html">Scalping fees in crypto</a>
+          <a href="/en/blog/arbitrage-bot-fees.html">Arbitrage bot fees</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance or OKX. Rebate rates, eligibility and rules depend on platform policy, account status, review and local regulations; displayed rates are a maximum reference and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
+        <p class="copyright">© 2026 JackTrader · Independent referral partner.</p>
+      </div>
+    </div>
+  </footer>
+  <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script src="/scripts.js"></script>
+</body>
+</html>

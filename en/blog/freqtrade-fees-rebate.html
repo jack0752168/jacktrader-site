@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Analytics 4 (gtag.js) — cookieless Consent Mode, no banner needed -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK1VSBED5T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'granted'});
+    gtag('js', new Date());
+    gtag('config','G-NK1VSBED5T');
+  </script>
+  <title>Freqtrade Fees on Binance &amp; OKX 2026: Cut Them and Add a Rebate | JackTrader</title>
+  <meta name="description" content="Freqtrade pays whatever your exchange charges — and your config decides maker or taker. The fee settings that matter (order_types, entry/exit pricing, trading_mode), how BNB and VIP tiers stack, and how to bind an up-to-40% rebate on the account your bot trades." />
+  <meta name="keywords" content="freqtrade fees,freqtrade binance fees,freqtrade okx fees,freqtrade rebate,freqtrade reduce fees,freqtrade maker order,freqtrade fee config,self hosted bot rebate" />
+  <meta name="author" content="JackTrader" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <meta name="theme-color" content="#0b0d12" />
+  <link rel="canonical" href="https://www.jacktrader.xyz/en/blog/freqtrade-fees-rebate.html" />
+  <link rel="alternate" hreflang="en" href="https://www.jacktrader.xyz/en/blog/freqtrade-fees-rebate.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.jacktrader.xyz/en/blog/freqtrade-fees-rebate.html" />
+  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://t.me" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="JackTrader" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Freqtrade Fees on Binance &amp; OKX 2026: Cut Them and Add a Rebate" />
+  <meta property="og:description" content="Your config decides whether Freqtrade pays maker or taker. The settings that matter, how BNB and VIP stack, and how to bind an up-to-40% rebate on the account." />
+  <meta property="og:url" content="https://www.jacktrader.xyz/en/blog/freqtrade-fees-rebate.html" />
+  <meta property="og:image" content="https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg" />
+  <meta property="og:image:alt" content="Freqtrade fee reduction and rebate on Binance and OKX 2026" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@trader_j888" />
+  <meta name="twitter:title" content="Freqtrade Fees on Binance &amp; OKX 2026: Cut Them and Add a Rebate" />
+  <meta name="twitter:description" content="Maker or taker is a config choice. Plus how to bind an up-to-40% rebate on the account your bot trades." />
+  <meta name="twitter:image" content="https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "@id":"https://www.jacktrader.xyz/en/blog/freqtrade-fees-rebate.html#article",
+    "headline":"Freqtrade Fees on Binance & OKX 2026: How to Cut Them and Add a Rebate",
+    "description":"Freqtrade pays whatever the exchange charges, and its config decides maker vs taker. The fee-relevant settings (order_types, entry/exit pricing, trading_mode), how BNB and VIP tiers stack, and how to bind an up-to-40% rebate on the underlying account your bot trades.",
+    "author":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/en/"},
+    "publisher":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/en/","logo":{"@type":"ImageObject","url":"https://www.jacktrader.xyz/assets/brand/favicon.svg"}},
+    "datePublished":"2026-06-30",
+    "dateModified":"2026-06-30",
+    "mainEntityOfPage":"https://www.jacktrader.xyz/en/blog/freqtrade-fees-rebate.html",
+    "image":"https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg",
+    "articleSection":"Bot trading fees",
+    "keywords":"freqtrade fees, freqtrade binance fees, freqtrade okx fees, freqtrade rebate, freqtrade reduce fees",
+    "about":[{"@type":"Thing","name":"Freqtrade"},{"@type":"Thing","name":"Crypto trading bot fees"},{"@type":"Thing","name":"Fee rebate"}]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.jacktrader.xyz/en/"},
+      {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.jacktrader.xyz/en/blog/"},
+      {"@type":"ListItem","position":3,"name":"Freqtrade Fees & Rebate","item":"https://www.jacktrader.xyz/en/blog/freqtrade-fees-rebate.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What fee does Freqtrade actually pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Whatever your exchange charges your account — Freqtrade has no fees of its own; it is free, open-source software you self-host. On Binance and OKX that means roughly 0.10% spot and 0.02% maker / 0.05% taker on USDT-margined perps at the regular tier, before any BNB discount, VIP tier or rebate. Freqtrade only decides, through your order configuration, whether a given fill is a maker or a taker order — and that choice is the single biggest fee variable you control inside the bot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I make Freqtrade trade as a maker to pay lower fees?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Set the entry and exit order_types to limit rather than market in your config, and price them to post into the book (Freqtrade's pricing section lets you use the order book side so orders rest as maker). Limit orders that don't cross the spread are charged the maker fee, which is lower than taker and on some venues/tiers can be a rebate. The trade-off is fill risk: a resting order may not execute, so strategies that must fill immediately will still pay taker. Many traders run limit entries with a small timeout and accept the occasional miss to capture the maker rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get a fee rebate on a Freqtrade bot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Because Freqtrade connects via API key to an exchange account you registered yourself, you control the referral binding. Register the Binance or OKX account under a rebate, generate a trade-only API key, and paste it into Freqtrade's config. Every trade the bot makes on that account then earns an up-to-40% rebate, settled in real time in USDT, with no change to your strategy or code. The rebate binds to the account, not to the API key, so rotating keys for security never affects it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the BNB discount stack with a rebate on Freqtrade?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are separate mechanisms and generally apply in sequence. The BNB discount lowers the fee Binance charges at the moment of the trade (paying fees in BNB); the rebate returns a share of the fees you were charged, settled later. A rebate is calculated on the commission attributed to your account, so combining a maker-routed strategy, the BNB discount and a rebate compounds three different reductions. Model your own numbers — the exact interaction depends on tier and product — but they are not mutually exclusive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Spot or futures — where do Freqtrade fees bite hardest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on turnover and holding time, not the product label. High-frequency spot strategies that flip often pay the spot taker rate (around 0.10%) on huge volume, which adds up fast. Perp strategies pay a lower headline rate (around 0.05% taker) but add funding payments on held positions, which a rebate cannot touch. The rule is the same either way: cut the trading-fee line with maker routing plus a rebate, and budget funding separately on any position you hold."
+      }
+    }
+  ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/en/" aria-label="JackTrader home"><span class="brand-mark">J</span><span>JackTrader</span></a>
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="site-nav" aria-label="Main navigation" id="primary-nav">
+        <a href="/en/">Home</a>
+        <a href="/en/binance-us-stocks.html">Binance Stocks 🔥</a>
+        <a href="/en/okx-us-stocks.html">OKX Stocks</a>
+        <a href="/en/binance-rebate.html">Binance</a>
+        <a href="/en/okx-rebate.html">OKX</a>
+        <a href="/en/binance-partner.html">Binance Partner</a>
+        <a href="/en/okx-partner.html">OKX Partner</a>
+        <a href="/en/blog/">Blog</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-toggle"><a href="/">中</a><a href="/zh-tw/">繁</a><a href="/en/" class="active">EN</a></div>
+        <a class="nav-cta" href="https://t.me/Jack168668" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="/en/">Home</a> / <a href="/en/blog/">Blog</a> / Freqtrade Fees &amp; Rebate</div>
+        <p class="eyebrow">Bot trading · Freqtrade · Updated June 2026</p>
+        <h1>Freqtrade fees on Binance &amp; OKX 2026: cut them and add a rebate</h1>
+        <p class="page-lede">Freqtrade is free, open-source and self-hosted — so it has <em>no</em> fees of its own. Every cent you pay goes to the exchange, and two things you control decide how much: <strong>whether your orders fill as maker or taker</strong>, and <strong>whether the account your API key trades on is bound to a rebate</strong>. Get both right and the same strategy on the same volume keeps a meaningfully larger share of its returns. Here are the exact config knobs and the binding step.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width:820px">
+
+        <h2>The short version</h2>
+        <ol>
+          <li><strong>Freqtrade pays the exchange's fee, nothing extra.</strong> On Binance/OKX that's ~0.10% spot and ~0.02% maker / 0.05% taker on USDT perps at the regular tier.</li>
+          <li><strong>Your config decides maker vs taker.</strong> Limit entry/exit orders that post into the book pay the cheaper maker fee; market orders pay taker. This is the biggest fee lever inside the bot.</li>
+          <li><strong>Your account binding decides the rebate.</strong> Because you own the API account, you can bind an up-to-40% rebate on it — and Freqtrade keeps trading exactly as before.</li>
+        </ol>
+        <p>Three reductions stack: maker routing, the BNB discount (Binance), and the rebate. None of them touch your strategy logic.</p>
+
+        <h2>Where fees actually land in a Freqtrade trade</h2>
+        <p>Freqtrade executes your strategy's entry and exit signals as orders on the exchange. The fee on each fill is set by the exchange's schedule and by one bot-side variable: the order type. A few config sections govern it:</p>
+        <ul>
+          <li><strong><code>order_types</code></strong> — whether entries and exits are sent as <code>limit</code> or <code>market</code>. Market orders are takers; limit orders that rest in the book are makers.</li>
+          <li><strong><code>entry_pricing</code> / <code>exit_pricing</code></strong> — how Freqtrade prices a limit order (which side of the book, with what offset). Pricing into the book keeps the order a maker; pricing across it turns it into a taker even if it's technically a "limit" order.</li>
+          <li><strong><code>trading_mode</code></strong> (<code>spot</code> vs <code>futures</code>) and <strong><code>margin_mode</code></strong> — these pick which fee schedule applies. Perps use the lower futures rates but add funding.</li>
+          <li><strong>Exchange fee field</strong> — Freqtrade uses the venue's reported fee for P&L and backtests; keep it accurate so your backtests don't overstate returns.</li>
+        </ul>
+        <p>The maker-vs-taker decision is the same one every bot faces; the mechanics are covered in depth in <a href="/en/blog/maker-vs-taker-fees-explained.html">maker vs taker fees explained</a>. For Freqtrade specifically, the practical move is limit entries with a short timeout so you capture the maker rate when liquidity allows and only fall back to taker when you must.</p>
+
+        <h2>The three fee reductions, stacked</h2>
+        <table class="compare">
+          <thead><tr><th>Lever</th><th>Where you set it</th><th>What it does</th><th>Touches strategy?</th></tr></thead>
+          <tbody>
+            <tr><td>Maker routing</td><td>Freqtrade <code>order_types</code> / pricing</td><td>Pays maker (~0.02%) instead of taker (~0.05%) on perps; bigger gap on spot</td><td>Slightly — adds fill risk</td></tr>
+            <tr><td>BNB discount (Binance)</td><td>Exchange account setting</td><td>Lowers the charged fee when fees are paid in BNB</td><td>No</td></tr>
+            <tr><td>Fee rebate</td><td>Account referral binding</td><td>Returns up to 40% of fees paid, settled in real time in USDT</td><td>No</td></tr>
+          </tbody>
+        </table>
+        <p class="hero-note">Reference rates are regular-tier and illustrative; your real numbers depend on venue, product and VIP tier. The point isn't the exact basis points — it's that these are three independent reductions you can run at the same time.</p>
+
+        <h2>Worked example — a Freqtrade perp bot at $5M/month</h2>
+        <p>Your Freqtrade bot trades USDT-margined perps, turning over <strong>$5,000,000 notional per month</strong>. Compare an all-taker config to a maker-routed, rebated one:</p>
+        <ul>
+          <li><strong>All-taker, no rebate:</strong> $5M × 0.05% = <strong>$2,500/month</strong> in fees (~$30,000/year).</li>
+          <li><strong>Maker-routed (say 70% maker / 30% taker):</strong> blended ≈ (0.7 × 0.02%) + (0.3 × 0.05%) = 0.029% → $5M × 0.029% = <strong>$1,450/month</strong>.</li>
+          <li><strong>Maker-routed + up-to-40% rebate:</strong> rebate ≈ $1,450 × 40% = $580 back → net ≈ <strong>$870/month</strong> (~$10,440/year).</li>
+        </ul>
+        <p>That's <strong>$2,500 → $870 per month</strong> on identical volume — roughly a 65% cut to the fee bill, achieved entirely with order configuration and an account binding, no change to the trading logic. Over a year it's the difference between paying $30,000 and paying about $10,400 to run the same bot. For how this compares across bot styles, see the <a href="/en/blog/crypto-trading-bot-fees-2026.html">crypto trading bot fee comparison</a>.</p>
+
+        <h2>How to bind the rebate (the part most Freqtrade users miss)</h2>
+        <p>This is the lever people leave on the table, because it happens <em>outside</em> the bot. The rebate binds to your exchange <strong>account</strong>, not to your API key — so the sequence is:</p>
+        <ol>
+          <li>Register your Binance or OKX account under a rebate via the <a href="/en/binance-rebate.html">Binance rebate</a> or <a href="/en/okx-rebate.html">OKX rebate</a> page <em>before</em> you generate the API key.</li>
+          <li>Create a trade-only API key (withdrawals disabled, IP allowlist if your VPS has a fixed IP).</li>
+          <li>Paste the key into Freqtrade's <code>config.json</code> exchange block and run.</li>
+        </ol>
+        <p>The full account-vs-key explanation — including how to handle a bot that already runs on an existing account — is in <a href="/en/blog/bot-api-key-fee-rebate.html">how to claim a fee rebate when you connect a bot via API key</a>. The one thing to remember: register first, connect second, and never let a third party register the exchange account for you if you want to keep the rebate.</p>
+
+        <h2>Don't forget funding</h2>
+        <p>A rebate cuts your <em>trading</em> fees. On perpetual futures you also pay (or receive) funding on held positions, and a rebate cannot touch that — it's a transfer between long and short traders, not an exchange fee. A Freqtrade strategy that holds positions through funding windows should budget it separately; the distinction is laid out in <a href="/en/blog/funding-rate-vs-trading-fee.html">funding rate vs trading fee</a>.</p>
+
+        <h2>FAQ</h2>
+        <div class="faq-list">
+          <details class="faq-item" open><summary class="faq-q">What fee does Freqtrade actually pay?<span class="plus">+</span></summary><div class="faq-a">Whatever your exchange charges your account — Freqtrade has no fees of its own; it is free, open-source software you self-host. On Binance and OKX that means roughly 0.10% spot and 0.02% maker / 0.05% taker on USDT-margined perps at the regular tier, before any BNB discount, VIP tier or rebate. Freqtrade only decides, through your order configuration, whether a given fill is a maker or a taker order — and that choice is the single biggest fee variable you control inside the bot.</div></details>
+          <details class="faq-item"><summary class="faq-q">How do I make Freqtrade trade as a maker to pay lower fees?<span class="plus">+</span></summary><div class="faq-a">Set the entry and exit order_types to limit rather than market in your config, and price them to post into the book (Freqtrade's pricing section lets you use the order book side so orders rest as maker). Limit orders that don't cross the spread are charged the maker fee, which is lower than taker and on some venues/tiers can be a rebate. The trade-off is fill risk: a resting order may not execute, so strategies that must fill immediately will still pay taker. Many traders run limit entries with a small timeout and accept the occasional miss to capture the maker rate.</div></details>
+          <details class="faq-item"><summary class="faq-q">Can I get a fee rebate on a Freqtrade bot?<span class="plus">+</span></summary><div class="faq-a">Yes. Because Freqtrade connects via API key to an exchange account you registered yourself, you control the referral binding. Register the Binance or OKX account under a rebate, generate a trade-only API key, and paste it into Freqtrade's config. Every trade the bot makes on that account then earns an up-to-40% rebate, settled in real time in USDT, with no change to your strategy or code. The rebate binds to the account, not to the API key, so rotating keys for security never affects it.</div></details>
+          <details class="faq-item"><summary class="faq-q">Does the BNB discount stack with a rebate on Freqtrade?<span class="plus">+</span></summary><div class="faq-a">They are separate mechanisms and generally apply in sequence. The BNB discount lowers the fee Binance charges at the moment of the trade (paying fees in BNB); the rebate returns a share of the fees you were charged, settled later. A rebate is calculated on the commission attributed to your account, so combining a maker-routed strategy, the BNB discount and a rebate compounds three different reductions. Model your own numbers — the exact interaction depends on tier and product — but they are not mutually exclusive.</div></details>
+          <details class="faq-item"><summary class="faq-q">Spot or futures — where do Freqtrade fees bite hardest?<span class="plus">+</span></summary><div class="faq-a">It depends on turnover and holding time, not the product label. High-frequency spot strategies that flip often pay the spot taker rate (around 0.10%) on huge volume, which adds up fast. Perp strategies pay a lower headline rate (around 0.05% taker) but add funding payments on held positions, which a rebate cannot touch. The rule is the same either way: cut the trading-fee line with maker routing plus a rebate, and budget funding separately on any position you hold.</div></details>
+        </div>
+
+        <div class="cta-band" style="margin-top:48px">
+          <h2>Run the same Freqtrade strategy for a fraction of the fees</h2>
+          <p>Bind an up-to-40% rebate on your Binance or OKX account, route limit orders as maker, and keep settling in real time in USDT. No strategy change, no code change, no extra permissions — just a lower cost base.</p>
+          <div class="hero-actions" style="justify-content:center">
+            <a class="btn btn-binance" href="/en/binance-rebate.html">Binance rebate</a>
+            <a class="btn btn-okx" href="/en/okx-rebate.html">OKX rebate</a>
+            <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">Get a tier assessment</a>
+          </div>
+        </div>
+
+        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Fee schedules and rebate rates reflect published rates at the time of writing and may change without notice. Examples are illustrative; your real costs depend on venue, product, maker/taker split and VIP tier. Freqtrade is independent open-source software referenced neutrally for context; this page is not affiliated with or endorsed by it. This article is educational and not investment advice. JackTrader is an independent referral / sub-broker partner and is not Binance or OKX. Single-tier referrals only, no downline or multi-level structure.</p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="/en/"><span class="brand-mark">J</span><span>JackTrader</span></a>
+          <p>Trading fee rebates and channel partnerships across Binance, OKX, wallet and DEX ecosystems. Real-time settlement, fully trackable.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Rebate plans</h4>
+          <a href="/en/binance-rebate.html">Binance Rebate</a>
+          <a href="/en/okx-rebate.html">OKX Rebate</a>
+          <a href="/en/wallet-rebate.html">Wallet &amp; DEX</a>
+          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a><a href="/en/okx-partner.html">OKX partner</a>
+        </div>
+        <div class="footer-col">
+          <h4>Deep dives</h4>
+          <a href="/en/blog/bot-api-key-fee-rebate.html">Bot API key fee rebate</a>
+          <a href="/en/blog/crypto-trading-bot-fees-2026.html">Trading bot fee comparison</a>
+          <a href="/en/blog/grid-bot-fee-optimization.html">Grid bot fee optimization</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance or OKX. Rebate rates, eligibility and rules depend on platform policy, account status, review and local regulations; displayed rates are a maximum reference and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
+        <p class="copyright">© 2026 JackTrader · Independent referral partner.</p>
+      </div>
+    </div>
+  </footer>
+  <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script src="/scripts.js"></script>
+</body>
+</html>

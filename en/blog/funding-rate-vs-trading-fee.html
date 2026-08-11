@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Analytics 4 (gtag.js) — cookieless Consent Mode, no banner needed -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK1VSBED5T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'granted'});
+    gtag('js', new Date());
+    gtag('config','G-NK1VSBED5T');
+  </script>
+  <title>Funding Rate vs Trading Fee 2026: Which Actually Costs More? | JackTrader</title>
+  <meta name="description" content="Funding rate and trading fee are two different perpetual-futures costs that traders constantly confuse. What each one is, who pays whom, when funding dwarfs fees and vice versa, plus the 2026 math and which one a rebate can actually cut." />
+  <meta name="keywords" content="funding rate vs fees,funding rate vs trading fee,perpetual funding rate,crypto funding fee,what is funding rate,perp trading costs,reduce perp fees" />
+  <meta name="author" content="JackTrader" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <meta name="theme-color" content="#0b0d12" />
+  <link rel="canonical" href="https://www.jacktrader.xyz/en/blog/funding-rate-vs-trading-fee.html" />
+  <link rel="alternate" hreflang="en" href="https://www.jacktrader.xyz/en/blog/funding-rate-vs-trading-fee.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.jacktrader.xyz/en/blog/funding-rate-vs-trading-fee.html" />
+  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://t.me" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="JackTrader" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Funding Rate vs Trading Fee 2026: Which Actually Costs More?" />
+  <meta property="og:description" content="Two different perp costs traders confuse. What each is, when funding dwarfs fees, the math, and which one a rebate can cut." />
+  <meta property="og:url" content="https://www.jacktrader.xyz/en/blog/funding-rate-vs-trading-fee.html" />
+  <meta property="og:image" content="https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg" />
+  <meta property="og:image:alt" content="Funding rate vs trading fee comparison for crypto perpetuals 2026" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@trader_j888" />
+  <meta name="twitter:title" content="Funding Rate vs Trading Fee 2026: Which Costs More?" />
+  <meta name="twitter:description" content="What each perp cost is, when funding dwarfs fees, and which one a rebate can actually cut." />
+  <meta name="twitter:image" content="https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "@id":"https://www.jacktrader.xyz/en/blog/funding-rate-vs-trading-fee.html#article",
+    "headline":"Funding Rate vs Trading Fee 2026: Which Actually Costs More?",
+    "description":"The difference between the funding rate and the trading fee on crypto perpetuals — what each is, who pays whom, when funding dwarfs fees and when fees dominate, the 2026 math, and which cost a rebate can cut.",
+    "author":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/en/"},
+    "publisher":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/en/","logo":{"@type":"ImageObject","url":"https://www.jacktrader.xyz/assets/brand/favicon.svg"}},
+    "datePublished":"2026-06-28",
+    "dateModified":"2026-06-28",
+    "mainEntityOfPage":"https://www.jacktrader.xyz/en/blog/funding-rate-vs-trading-fee.html",
+    "image":"https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg",
+    "articleSection":"Fee mechanics",
+    "keywords":"funding rate vs fees, funding rate vs trading fee, perpetual funding rate, crypto funding fee",
+    "about":[{"@type":"Thing","name":"Funding rate"},{"@type":"Thing","name":"Trading fee"},{"@type":"Thing","name":"Perpetual futures"}]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.jacktrader.xyz/en/"},
+      {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.jacktrader.xyz/en/blog/"},
+      {"@type":"ListItem","position":3,"name":"Funding Rate vs Trading Fee 2026","item":"https://www.jacktrader.xyz/en/blog/funding-rate-vs-trading-fee.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between a funding rate and a trading fee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A trading fee is paid to the exchange every time you open or close a position — a maker or taker percentage on the notional you trade. A funding rate is a periodic payment exchanged between long and short holders of a perpetual contract, usually every eight hours, to keep the perp price tethered to spot. The exchange does not keep funding; it flows trader to trader. So the trading fee is a transaction cost you pay on every fill, while funding is a holding cost (or income) that depends only on which side you hold and for how long."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who pays the funding rate, longs or shorts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the sign of the rate. When the perpetual trades above spot, the funding rate is positive and longs pay shorts; when it trades below spot, the rate is negative and shorts pay longs. The rate is applied to your position's notional at each funding timestamp, so if you are flat at the funding time you pay and receive nothing. Holding the crowded side of a strongly trending market can mean paying funding repeatedly, which over days can exceed what you ever paid in trading fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which costs more, funding or trading fees?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends entirely on how you trade. For a high-frequency trader who opens and closes constantly but holds briefly, trading fees dominate because funding barely applies. For a position trader who holds a leveraged perp for days or weeks, funding usually dominates because it recurs every eight hours while the trading fee was paid only twice. The rule of thumb: the faster you turn over, the more fees matter; the longer you hold, the more funding matters."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a fee rebate reduce the funding rate too?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A rebate returns a share of the trading fees you pay the exchange — it does not touch funding, because funding is a trader-to-trader payment the exchange never keeps. So a rebate of up to 40% directly cuts the maker/taker side of your costs but has no effect on what you pay or receive in funding. The way to manage funding is positioning: avoid holding the expensive side through funding timestamps, or use the rate itself as part of the trade thesis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate my total perpetual trading cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add three things: the trading fee on entry, the trading fee on exit, and the sum of every funding payment while the position was open. Trading fee per side is roughly 0.0200% maker or 0.0500% taker of notional on USDT perps; funding is the published rate times notional at each eight-hour timestamp. A short scalp might cost two trading fees and zero funding; a multi-day hold might cost two trading fees plus a dozen funding payments. Only the trading-fee portion is reducible with a rebate."
+      }
+    }
+  ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/en/" aria-label="JackTrader home"><span class="brand-mark">J</span><span>JackTrader</span></a>
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="site-nav" aria-label="Main navigation" id="primary-nav">
+        <a href="/en/">Home</a>
+        <a href="/en/binance-us-stocks.html">Binance Stocks 🔥</a>
+        <a href="/en/okx-us-stocks.html">OKX Stocks</a>
+        <a href="/en/binance-rebate.html">Binance</a>
+        <a href="/en/okx-rebate.html">OKX</a>
+        <a href="/en/binance-partner.html">Binance Partner</a>
+        <a href="/en/okx-partner.html">OKX Partner</a>
+        <a href="/en/blog/">Blog</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-toggle"><a href="/">中</a><a href="/zh-tw/">繁</a><a href="/en/" class="active">EN</a></div>
+        <a class="nav-cta" href="https://t.me/Jack168668" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="/en/">Home</a> / <a href="/en/blog/">Blog</a> / Funding Rate vs Trading Fee 2026</div>
+        <p class="eyebrow">Fee mechanics · Updated June 2026</p>
+        <h1>Funding rate vs trading fee 2026: which actually costs more?</h1>
+        <p class="page-lede">Traders lump them together as "perp costs," but the funding rate and the trading fee are two completely different things — one is a transaction cost paid to the exchange, the other a holding cost paid to other traders. Confusing them leads to the wrong optimisation: cutting fees when funding is bleeding you, or worrying about funding on a strategy that never holds long enough to pay it. Here's exactly what each is, when each dominates, the 2026 math, and which one you can actually cut.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width:820px">
+
+        <h2>Two costs, two completely different mechanisms</h2>
+        <p>On a perpetual futures contract you face two recurring costs, and they work nothing alike:</p>
+        <ul>
+          <li><strong>Trading fee</strong> — a percentage paid to the <em>exchange</em> every time you open or close, charged as a maker or taker rate on your notional. It's a <strong>transaction cost</strong>: pay it on the fill, done. We break the mechanic down in <a href="/en/blog/maker-vs-taker-fees-explained.html">maker vs taker fees explained</a>.</li>
+          <li><strong>Funding rate</strong> — a periodic payment exchanged <em>between longs and shorts</em> (typically every 8 hours) to keep the perp price tethered to spot. The exchange doesn't keep it; it flows trader to trader. It's a <strong>holding cost</strong> (or income): you pay it for as long as you hold the wrong side, and nothing if you're flat at the timestamp.</li>
+        </ul>
+        <p>That single distinction — transaction cost vs holding cost — decides everything about which one matters to you.</p>
+
+        <h2>Who pays whom in funding</h2>
+        <p>Funding has a sign. When the perpetual trades <strong>above</strong> spot (more aggressive longs), the rate is positive and <strong>longs pay shorts</strong>. When it trades <strong>below</strong> spot, the rate is negative and <strong>shorts pay longs</strong>. The payment is the rate times your notional, applied at each funding timestamp. The practical consequence: holding the crowded side of a strong trend can mean paying funding again and again, and over several days that drip can quietly exceed everything you paid in trading fees to get in and out.</p>
+
+        <h2>When each one dominates</h2>
+        <table class="compare">
+          <thead><tr><th>Trader style</th><th>Holding time</th><th>Dominant cost</th><th>Why</th></tr></thead>
+          <tbody>
+            <tr><td>Scalper / HFT</td><td>Seconds–minutes</td><td><strong>Trading fee</strong></td><td>Hundreds of fills, rarely held across a funding timestamp</td></tr>
+            <tr><td>Day trader</td><td>Hours</td><td>Trading fee (mostly)</td><td>May cross one funding window; fees still lead on turnover</td></tr>
+            <tr><td>Swing trader</td><td>Days</td><td>Mixed</td><td>A handful of funding payments start to rival the two trading fees</td></tr>
+            <tr><td>Position trader</td><td>Weeks</td><td><strong>Funding</strong></td><td>Dozens of funding payments vs only two trading fees</td></tr>
+          </tbody>
+        </table>
+        <p>The rule of thumb is clean: <strong>the faster you turn over, the more fees matter; the longer you hold, the more funding matters.</strong> Optimising the wrong one is a common, expensive mistake.</p>
+
+        <h2>Worked example: scalp vs multi-day hold</h2>
+        <p>Both traders use $1,000,000 notional on a USDT perp. Trading fee 0.0500% taker per side; assume an average funding rate of 0.01% per 8h (3× daily) on the side that pays.</p>
+        <table class="compare">
+          <thead><tr><th></th><th>Scalp (held 5 min)</th><th>Position (held 10 days)</th></tr></thead>
+          <tbody>
+            <tr><td>Entry + exit trading fee</td><td>$500 + $500 = <strong>$1,000</strong></td><td>$500 + $500 = <strong>$1,000</strong></td></tr>
+            <tr><td>Funding payments</td><td>0 (flat before timestamp) = <strong>$0</strong></td><td>30 × $100 = <strong>$3,000</strong></td></tr>
+            <tr><td>Total cost</td><td><strong>$1,000</strong></td><td><strong>$4,000</strong></td></tr>
+            <tr><td>Reducible by a rebate?</td><td>Yes — up to 40% of $1,000</td><td>Only the $1,000 fee part</td></tr>
+          </tbody>
+        </table>
+        <p>For the scalper, fees are 100% of the cost and a rebate cuts up to 40% of the whole bill. For the position trader, funding is three-quarters of the cost and untouchable by a rebate — the lever there is <em>positioning</em>, not fee optimisation. Same instrument, opposite cost structure. For the turnover-heavy end of this spectrum, see <a href="/en/blog/scalping-fees-crypto.html">scalping fees in crypto</a> and <a href="/en/blog/reduce-crypto-trading-fees.html">how to reduce crypto trading fees</a>.</p>
+        <p class="hero-note">Rates are illustrative non-VIP USDT-perp figures at the time of writing; funding rates vary continuously by market and timestamp. Confirm live schedules and the current funding rate on your venue.</p>
+
+        <h2>What you can actually cut — and how</h2>
+        <p>Be precise about your lever, because the two costs respond to different actions:</p>
+        <ol>
+          <li><strong>Trading fee → maker routing + a rebate.</strong> Post-only orders move you from taker (0.0500%) to maker (0.0200%), and a rebate then returns up to 40% of whatever you still pay, settled in USDT. This is the reducible cost. Start on <a href="/en/binance-rebate.html">Binance</a> or <a href="/en/okx-rebate.html">OKX</a>.</li>
+          <li><strong>Funding → positioning, not fees.</strong> A rebate can't touch funding. You manage it by not holding the expensive side through timestamps, by sizing for the carry, or — for some desks — by deliberately collecting funding on the side that gets paid. It's a trade-design problem, not a fee-schedule one.</li>
+        </ol>
+        <p>The takeaway: diagnose which cost is actually eating your returns before you optimise. If you turn over fast, attack the trading fee — that's where the rebate gives you up to 40% back for free. If you hold for days, look at funding and your entry timing first. For the cross-venue fee picture, see <a href="/en/blog/binance-vs-okx-fees-2026.html">Binance vs OKX fees 2026</a>.</p>
+
+        <h2>FAQ</h2>
+        <div class="faq-list">
+          <details class="faq-item" open><summary class="faq-q">What is the difference between a funding rate and a trading fee?<span class="plus">+</span></summary><div class="faq-a">A trading fee is paid to the exchange every time you open or close a position — a maker or taker percentage on the notional you trade. A funding rate is a periodic payment exchanged between long and short holders of a perpetual contract, usually every eight hours, to keep the perp price tethered to spot. The exchange does not keep funding; it flows trader to trader. So the trading fee is a transaction cost you pay on every fill, while funding is a holding cost (or income) that depends only on which side you hold and for how long.</div></details>
+          <details class="faq-item"><summary class="faq-q">Who pays the funding rate, longs or shorts?<span class="plus">+</span></summary><div class="faq-a">It depends on the sign of the rate. When the perpetual trades above spot, the funding rate is positive and longs pay shorts; when it trades below spot, the rate is negative and shorts pay longs. The rate is applied to your position's notional at each funding timestamp, so if you are flat at the funding time you pay and receive nothing. Holding the crowded side of a strongly trending market can mean paying funding repeatedly, which over days can exceed what you ever paid in trading fees.</div></details>
+          <details class="faq-item"><summary class="faq-q">Which costs more, funding or trading fees?<span class="plus">+</span></summary><div class="faq-a">It depends entirely on how you trade. For a high-frequency trader who opens and closes constantly but holds briefly, trading fees dominate because funding barely applies. For a position trader who holds a leveraged perp for days or weeks, funding usually dominates because it recurs every eight hours while the trading fee was paid only twice. The rule of thumb: the faster you turn over, the more fees matter; the longer you hold, the more funding matters.</div></details>
+          <details class="faq-item"><summary class="faq-q">Does a fee rebate reduce the funding rate too?<span class="plus">+</span></summary><div class="faq-a">No. A rebate returns a share of the trading fees you pay the exchange — it does not touch funding, because funding is a trader-to-trader payment the exchange never keeps. So a rebate of up to 40% directly cuts the maker/taker side of your costs but has no effect on what you pay or receive in funding. The way to manage funding is positioning: avoid holding the expensive side through funding timestamps, or use the rate itself as part of the trade thesis.</div></details>
+          <details class="faq-item"><summary class="faq-q">How do I calculate my total perpetual trading cost?<span class="plus">+</span></summary><div class="faq-a">Add three things: the trading fee on entry, the trading fee on exit, and the sum of every funding payment while the position was open. Trading fee per side is roughly 0.0200% maker or 0.0500% taker of notional on USDT perps; funding is the published rate times notional at each eight-hour timestamp. A short scalp might cost two trading fees and zero funding; a multi-day hold might cost two trading fees plus a dozen funding payments. Only the trading-fee portion is reducible with a rebate.</div></details>
+        </div>
+
+        <div class="cta-band" style="margin-top:48px">
+          <h2>Cut the cost you can actually cut</h2>
+          <p>A rebate can't touch funding, but it strips up to 40% off every trading fee you pay. Bind your Binance or OKX account to JackTrader's channel and get it back in USDT, settled in real time, single-tier and fully trackable.</p>
+          <div class="hero-actions" style="justify-content:center">
+            <a class="btn btn-binance" href="/en/binance-rebate.html">Binance rebate</a>
+            <a class="btn btn-okx" href="/en/okx-rebate.html">OKX rebate</a>
+            <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">Ask on Telegram</a>
+          </div>
+        </div>
+
+        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Fee and funding figures reflect each exchange's published schedule and live market conditions at the time of writing and depend on platform policy, your account, 30-day volume, balances, promotions and region. "Up to 40%" is a maximum reference, not a guarantee of returns. JackTrader is an independent referral / sub-broker partner and is not affiliated with Binance, OKX or Bybit. This article is educational and not investment advice; single-tier referrals only, no downline or multi-level structure.</p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="/en/"><span class="brand-mark">J</span><span>JackTrader</span></a>
+          <p>Trading fee rebates and channel partnerships across Binance, OKX, wallet and DEX ecosystems. Real-time settlement, fully trackable.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Rebate plans</h4>
+          <a href="/en/binance-rebate.html">Binance Rebate</a>
+          <a href="/en/okx-rebate.html">OKX Rebate</a>
+          <a href="/en/wallet-rebate.html">Wallet &amp; DEX</a>
+          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a><a href="/en/okx-partner.html">OKX partner</a>
+        </div>
+        <div class="footer-col">
+          <h4>Deep dives</h4>
+          <a href="/en/blog/scalping-fees-crypto.html">Scalping fees in crypto</a>
+          <a href="/en/blog/crypto-trading-bot-fees-2026.html">Crypto trading bot fees</a>
+          <a href="/en/blog/maker-vs-taker-fees-explained.html">Maker vs taker fees</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance, OKX or Bybit. Rebate rates, eligibility and rules depend on platform policy, account status, review and local regulations; displayed rates are a maximum reference and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
+        <p class="copyright">© 2026 JackTrader · Independent referral partner.</p>
+      </div>
+    </div>
+  </footer>
+  <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script src="/scripts.js"></script>
+</body>
+</html>

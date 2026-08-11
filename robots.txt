@@ -1,0 +1,70 @@
+User-agent: *
+Allow: /
+
+# Major search engines — explicit allow
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: DuckDuckBot
+Allow: /
+
+# LLM crawlers — allow read access for citation
+# OpenAI: GPTBot=training, OAI-SearchBot=ChatGPT search index, ChatGPT-User=live browsing
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+# Anthropic: ClaudeBot=training, Claude-SearchBot=search index, Claude-User=live fetch
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+# Google Gemini / AI Overviews
+User-agent: Google-Extended
+Allow: /
+# Perplexity: PerplexityBot=index, Perplexity-User=live fetch
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+# Common Crawl (feeds most open LLM training corpora)
+User-agent: CCBot
+Allow: /
+# Apple Intelligence / Siri
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+User-agent: meta-externalfetcher
+Allow: /
+# Amazon Alexa / Rufus
+User-agent: Amazonbot
+Allow: /
+# DuckDuckGo DuckAssist
+User-agent: DuckAssistBot
+Allow: /
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+# ByteDance Doubao
+User-agent: Bytespider
+Allow: /
+# xAI Grok
+User-agent: xAI-Crawler
+Allow: /
+
+# LLM-friendly content summary
+# https://www.jacktrader.xyz/llms.txt
+# https://www.jacktrader.xyz/llms-full.txt
+
+Sitemap: https://www.jacktrader.xyz/sitemap.xml
