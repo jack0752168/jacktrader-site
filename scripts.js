@@ -117,11 +117,13 @@
     calc(readVol());
   }
 
-  // ---------- CTA conversion tracking (Vercel Web Analytics, cookieless) ----------
+  // ---------- CTA conversion tracking (GA4, cookieless consent mode) ----------
   // Fires a custom event when a visitor clicks a money CTA — the closest on-site
-  // proxy for "this SEO visitor is converting". Read in Vercel → Analytics → Events.
+  // proxy for "this SEO visitor is converting". Read in GA4 → Reports → Events.
+  // The Vercel Web Analytics branch was dropped 2026-08-13: after the 08-12 move to
+  // GitHub Pages, /_vercel/insights/script.js 404s, so va() only ever queued events
+  // into a vaq array nothing drained. GA4 is now the sole (and only live) sink.
   function track(name, data) {
-    if (typeof window.va === "function") { window.va("event", { name: name, data: data }); }
     if (typeof window.gtag === "function") { window.gtag("event", name, data); }
   }
   document.addEventListener("click", function (e) {
