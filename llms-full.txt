@@ -734,6 +734,7 @@ How do I apply for an OKX rebate? Futures vs spot?
 Is OKX Wallet rebate the same as exchange rebate?
 Can an existing OKX account be rebound?
 How do trading teams set up channel collaboration?
+To put numbers on any of the above before you apply, work through the OKX fee calculator for 2026 — it shows the per-tier maker/taker rates a rebate is actually calculated against.
 OKX exchange rebates, OKX Wallet campaign rebates and on-chain DEX rebates follow different rules and must be confirmed by eligibility, platform policy and campaign terms. Up to 40% is a reference.
 
 ## How to apply
@@ -3020,7 +3021,7 @@ You will see both. A referral link (for example, a partner's ?ref= URL) pre-fill
 ## The kickback mechanics: where the money is actually made
 The rebate is a percentage of the commission Binance pays the partner, which in turn is a percentage of the fee you pay. So three numbers stack, in order:
 Your base fee. Binance spot Regular is 0.10%; USDT-M futures are 0.02% maker / 0.05% taker. This is what you'd pay with no code and no optimizations.
-Your discounts. Paying fees in BNB cuts 25% off spot and 10% off futures. Climbing the VIP 1–9 ladder cuts the base rate further — at the very top, VIP 9 futures makers can even reach a negative maker fee (around −0.005%, i.e. a rebate from Binance itself). Run your own numbers in the Binance fee calculator.
+Your discounts. Paying fees in BNB cuts 25% off spot and 10% off futures. Climbing the VIP 1–9 ladder cuts the base rate further — at the very top, VIP 9 futures makers can even reach a negative maker fee (around −0.005%, i.e. a rebate from Binance itself). Run your own numbers in the Binance fee calculator, and check the exact per-tier rates in the 2026 Binance futures fee schedule.
 Your partner rebate. On top of all of the above, a partner can return up to 40% of the remaining fee, settled in real time in USDT.
 The crucial, often-misunderstood point: the rebate stacks on top of the BNB discount and your VIP tier — it does not replace them. You keep your VIP rate and your BNB reduction, and the partner rebate comes off whatever fee is left. If you are still deciding which of the three introducer routes to sign up under in the first place, our breakdown of referral vs affiliate vs sub-broker maps who each one actually pays. The code and the VIP ladder are not competing; they compound.
 ### A worked example you can reconcile
@@ -4165,7 +4166,7 @@ Up to 40% of fee, real-time settlement in USDT
 Up to 40% of fee, real-time settlement in USDT
 Two things jump out. First, the futures fees are identical at the entry tier — this is not a coincidence; the two exchanges have spent years matching each other's perpetual pricing because that's where the volume and the rivalry live. Second, the only meaningful retail-facing gap is on spot maker, where OKX's entry rate runs a touch lower. For anyone trading perpetuals — which is most active traders — that spot gap is irrelevant.
 ## Futures fees by VIP tier — the real battleground
-Active traders generate almost all their fees on perpetuals, so the futures VIP ladder is where the comparison actually matters. Below is the maker/taker progression for both venues. For the full per-tier Binance breakdown including spot, see our Binance fee calculator 2026; for how OKX structures its referral and institutional tiers, see the OKX sub-broker explainer.
+Active traders generate almost all their fees on perpetuals, so the futures VIP ladder is where the comparison actually matters. Below is the maker/taker progression for both venues. For the full per-tier Binance breakdown including spot, see our Binance fee calculator 2026; for the tier-by-tier Binance futures fee schedule for 2026 including funding mechanics; and for how OKX structures its referral and institutional tiers, see the OKX sub-broker explainer.
 
 Tier
 Binance maker / taker
@@ -5019,7 +5020,7 @@ One thing to be clear about: a healthy rebate relationship is one level deep. Yo
 ## How the numbers stack on Binance and OKX
 The most common misconception is that a rebate replaces the other discounts you already get. It does not — it stacks on top of them. Let's make this concrete with Binance.
 Binance spot fees start at 0.10% (Regular tier). USDT-M futures are 0.02% maker / 0.05% taker. Paying fees in BNB knocks 25% off spot and 10% off futures. VIP tiers cut further still — at the top, VIP9 futures maker fees can even go negative. A sub-broker rebate of up to 40% layers on after all of that. So a trader using BNB at VIP3 keeps their BNB discount, keeps their VIP rate, and then gets up to 40% of whatever fee actually booked returned in USDT.
-Stripped to the headline number: after a 40% rebate alone, Binance futures land at roughly 0.012% maker / 0.030% taker — before you even stack BNB and VIP on top. For OKX, perps are 0.02% maker / 0.05% taker at standard, VIP and sub-broker tiers cut further, and USDC-margined perps can carry maker rebates. If you want to run these numbers against your own volume, our Binance fee calculator for 2026 does the arithmetic for you.
+Stripped to the headline number: after a 40% rebate alone, Binance futures land at roughly 0.012% maker / 0.030% taker — before you even stack BNB and VIP on top. For OKX, perps are 0.02% maker / 0.05% taker at standard, VIP and sub-broker tiers cut further, and USDC-margined perps can carry maker rebates. If you want to run these numbers against your own volume, our Binance fee calculator for 2026 does the arithmetic for you, and the OKX fee calculator for 2026 covers the same maths on the OKX side.
 ## A worked example: where the money actually shows up
 Take an active trader doing $2,000,000 a month in Binance USDT-M futures notional, split 60% maker / 40% taker, at the Regular fee tier:
 Maker fees: $1,200,000 × 0.02% = $240
