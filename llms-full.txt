@@ -734,7 +734,7 @@ How do I apply for an OKX rebate? Futures vs spot?
 Is OKX Wallet rebate the same as exchange rebate?
 Can an existing OKX account be rebound?
 How do trading teams set up channel collaboration?
-To put numbers on any of the above before you apply, work through the OKX fee calculator for 2026 — it shows the per-tier maker/taker rates a rebate is actually calculated against.
+To put numbers on any of the above before you apply, work through the OKX fee calculator for 2026 — it shows the per-tier maker/taker rates a rebate is actually calculated against. Looking at the partner side rather than the trader side? How to become an OKX affiliate walks through the application itself.
 OKX exchange rebates, OKX Wallet campaign rebates and on-chain DEX rebates follow different rules and must be confirmed by eligibility, platform policy and campaign terms. Up to 40% is a reference.
 
 ## How to apply
@@ -4215,7 +4215,7 @@ Say you run $20M of monthly USDT-perp notional, 70% maker / 30% taker, at VIP 1 
 Binance VIP 1 (0.016% / 0.040%): $14M × 0.016% = $2,240 maker + $6M × 0.040% = $2,400 taker = $4,640 gross/month. Pay with BNB (10% off futures): ≈ $4,176. A 40% rebate on that ≈ $1,670/month back.
 OKX VIP 1 (0.016% / 0.050%): $14M × 0.016% = $2,240 maker + $6M × 0.050% = $3,000 taker = $5,240 gross/month. A 40% rebate ≈ $2,096/month back.
 Binance's lower mid-tier taker fee means its gross cost is lower here ($4,640 vs $5,240) for this taker-heavy mix. But because OKX's gross is higher, the OKX rebate is larger in absolute dollars. The net cost after rebate ends up within a few hundred dollars a month on $20M of flow — i.e., a fraction of a single basis point. Flip the mix to 90% maker and the two converge almost exactly, because the maker schedules are identical.
-The lesson: at realistic volumes, the rebate is worth far more than the venue choice. Skipping the rebate on either exchange costs you 1,600–2,100 dollars a month in this example; choosing the "wrong" exchange costs you almost nothing by comparison.
+The lesson: at realistic volumes, the rebate is worth far more than the venue choice. Skipping the rebate on either exchange costs you 1,600–2,100 dollars a month in this example; choosing the "wrong" exchange costs you almost nothing by comparison. If you are weighing running a channel yourself instead of joining one, the gating factor is the exchange’s review rather than the fee table — start with who qualifies for the Binance affiliate program.
 ## So which is actually cheaper?
 Net of rebates, they're effectively tied. A precise verdict by trader type:
 Taker-heavy mid-tier traders — Binance has a marginal edge on the mid-tier taker schedule.
@@ -4987,7 +4987,7 @@ Those partners earn a commission on the fees their referred traders generate. A 
 ## How the exchange affiliate ledger actually works
 Here is the part most rebate sites never explain. When you register under a referral partner, the exchange permanently binds your account to that partner's referral ID. From that moment, every fee you pay is logged against the partner in the exchange's affiliate ledger — a back-office accounting system that runs on the exchange's side, not the partner's.
 The partner cannot see your balance, your positions, or your password. They can only see a line in the ledger that says: "this referred account paid X in fees this week." The exchange computes the commission from that line and pays the partner. The partner then forwards an agreed percentage of it to you. This is why a legitimate rebate needs nothing from you except that you registered through the right link. No API keys. No withdrawal permissions. No custody of your funds. We come back to safety in detail below, but the architecture itself is the reason rebates are safe: the only data crossing the boundary is a fee total.
-A good partner exposes that ledger back to you as a per-trade dashboard, so you can reconcile every fill against the rebate you received. If a provider can only show you a vague weekly lump sum with no per-trade breakdown, they are either on a thin tier or hiding the math.
+A good partner exposes that ledger back to you as a per-trade dashboard, so you can reconcile every fill against the rebate you received. If a provider can only show you a vague weekly lump sum with no per-trade breakdown, they are either on a thin tier or hiding the math. Which tier a partner sits on is settled when the exchange reviews their application, not afterwards — the Binance affiliate program eligibility criteria cover what that review weighs.
 ## Affiliate vs sub-broker: the two tiers that decide your rate
 Not all referral partners are equal, and the difference shows up directly in your rebate percentage. There are essentially two tiers that matter.
 
@@ -7215,6 +7215,7 @@ Configure your bot for maker fills. A grid bot placing resting limit orders at e
 Accept the trade-off. Maker orders may not fill if the market runs away from your price. For passive, mean-reverting and grid strategies that's fine. For momentum entries where fill certainty matters more than 3 bps, taking is sometimes the right call — just know what it costs.
 ## Where a rebate stacks on top
 Going maker lowers the gross fee the exchange charges. A sub-broker / affiliate rebate pays back a share of whatever you still pay — maker or taker. Because the rebate is computed on your actual paid fee, it applies after your maker discount, so the two savings compound:
+Desks routing enough volume that the rebate becomes a line item of its own sometimes end up on the other side of it; applying to the OKX affiliate program is where that path starts.
 Post limit / post-only → you pay the maker rate instead of the taker rate.
 Sign up through a Binance or OKX rebate channel → up to 40% of that maker fee comes back to you, settled in real time in USDT.
 No API keys, no custody — the rebate is tracked on the exchange's own affiliate ledger. See how crypto fee rebates work.
@@ -8273,7 +8274,7 @@ Their own paid acquisition, content, etc.
 If a channel sits on a gross band around 40% and passes roughly half of it through, the trader nets about 20% — which is the range most affiliate-tier rebate sites Google ranks for "okx rebate" actually deliver.
 Sub-broker channels are different because the gross share that comes in from OKX is meaningfully larger, so even after the same operational margin, the pass-through to traders can end at 40% rather than inside the 30% default band. That is the entire reason high-frequency desks bother to negotiate sub-broker terms instead of just clicking the first referral link.
 ## How OKX VIP tiers and the rebate fit together
-Same logic as Binance: VIP tier changes the gross fee OKX charges you. The affiliate / sub-broker rebate changes what you keep after.
+Same logic as Binance: VIP tier changes the gross fee OKX charges you. The affiliate / sub-broker rebate changes what you keep after. The Binance side is built on the same two layers, but the way you get onto the partner side of it differs — see the Binance affiliate program requirements for what the exchange looks at there.
 
 OKX perp tier
 30-day futures volume
