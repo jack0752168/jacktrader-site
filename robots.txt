@@ -68,3 +68,4 @@ Allow: /
 # https://www.jacktrader.xyz/llms-full.txt
 
 Sitemap: https://www.jacktrader.xyz/sitemap.xml
+Sitemap: https://www.jacktrader.xyz/sitemap2.xml
