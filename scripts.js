@@ -131,8 +131,13 @@
     if (!a) return;
     var href = a.getAttribute("href") || "";
     var page = location.pathname;
+    // 社区主页关注（站内 → 交易所社区，与 /sq /xq 的反向；用于测「站内访客有多少去关注」）
+    if (href.indexOf("square/profile") > -1 || href.indexOf("uni-qr/cpro") > -1)
+      track("cta_follow_binance_square", { page: page });
+    else if (href.indexOf("okx.com/") > -1 && href.indexOf("orbit") > -1 || href.indexOf("oyidl.net") > -1)
+      track("cta_follow_okx_orbit", { page: page });
     // 换绑(rebind)链接也在 bsmkweb.cc 域下，必须先判它，否则会被计成普通注册
-    if (href.indexOf("bind-ref") > -1) track("cta_rebind_binance", { page: page });
+    else if (href.indexOf("bind-ref") > -1) track("cta_rebind_binance", { page: page });
     else if (href.indexOf("bsmkweb.cc") > -1) track("cta_register_binance", { page: page });
     else if (href.indexOf("promooboost.com") > -1) track("cta_register_okx", { page: page });
     else if (href.indexOf("t.me/") > -1) track("cta_telegram", { page: page });
