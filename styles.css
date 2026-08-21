@@ -246,7 +246,10 @@ button { font: inherit; cursor: pointer; }
 /* ---------- Proof ---------- */
 .proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .proof-grid figure { margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); background: var(--surface); }
-.proof-grid img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+/* height:auto 是必须的——图片带 width/height 属性时会形成 presentational hint，
+   把 height 锁成原图高度，aspect-ratio 与 object-fit 双双失效。2026-08-21 前
+   这块因此把 6 张手机竖屏截图按原高渲染：网格高 4345px＝5.4 个屏、占首页 35%。 */
+.proof-grid img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
 .proof-grid figcaption { padding: 13px 16px; color: var(--text-2); font-size: 13.5px; }
 
 /* ---------- Social ---------- */
