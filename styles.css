@@ -249,7 +249,12 @@ button { font: inherit; cursor: pointer; }
 /* height:auto 是必须的——图片带 width/height 属性时会形成 presentational hint，
    把 height 锁成原图高度，aspect-ratio 与 object-fit 双双失效。2026-08-21 前
    这块因此把 6 张手机竖屏截图按原高渲染：网格高 4345px＝5.4 个屏、占首页 35%。 */
-.proof-grid img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
+.proof-grid img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover;
+  /* 竖屏手机截图按 cover 会裁掉 53-65%；默认 center 会把上下两头都切掉，
+     而标题与金额通常在上部，故从顶部对齐保留信息密度最高的一段。 */
+  object-position: center top; display: block; }
+.proof-grid a.shot { display: block; cursor: zoom-in; }
+.proof-grid a.shot:hover img { opacity: .88; transition: opacity .2s; }
 .proof-grid figcaption { padding: 13px 16px; color: var(--text-2); font-size: 13.5px; }
 
 /* ---------- Social ---------- */
