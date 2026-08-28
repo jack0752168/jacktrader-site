@@ -373,7 +373,7 @@ Account statusNew / existing / has referral code
 Trade typeFutures / spot / grid / team
 VolumeAsset size & 30-day volumeExisting account · Telegram
 
-Weighing the official program against binding? If you are deciding whether to apply to Binance rather than bind into an existing channel, read our worth-it-or-not assessment of the Binance affiliate program first — it covers the approval bar and where the headline bands actually land.
+Weighing the official program against binding? If you are deciding whether to apply to Binance rather than bind into an existing channel, read our worth-it-or-not assessment of the Binance affiliate program first — it covers the approval bar and where the headline bands actually land. The condition-by-condition version of that bar sits in Binance affiliate program requirements.
 
 ## Check if your Binance account qualifies
 No commitment to trade and no sensitive permissions. Share your account status and volume to see an executable plan.
@@ -1092,6 +1092,8 @@ Yes. The rebate pool can be split between you and your users — you decide how 
 How do I start?+
 Message @Jack168668 on Telegram with your channel type, audience size and rough volume — you can get your link and split the same day.
 
+Applying to Binance directly instead? Some people would rather hold the agreement themselves than sit under an existing channel. That is a legitimate path with its own approval bar and reporting burden — we set out what it involves in Binance affiliate program requirements, and the parallel decision on the other venue in the OKX sub-broker versus affiliate comparison.
+
 ## Your traffic is already worth money
 Instead of letting your audience pay full fees elsewhere, take that rebate split back into your own hands. Real-time, recurring.
 Apply on TelegramSee the user-facing site
@@ -1729,6 +1731,7 @@ On Binance, possibly. The win-back path is open to a master account with no curr
 
 Should a high-volume trader use one exchange or several?+
 Most desks at scale run both Binance and OKX. Multi-venue gives you redundancy when one venue degrades, lets you route each strategy to whichever venue wins on fees and liquidity for that flow, and lets you aggregate volume within each venue via sub-accounts to climb VIP tiers faster. Stacking a rebate on both means the fee leak is plugged no matter where a given book trades.
+At this size the question changes shape. Once a desk is doing the volumes discussed above, the arithmetic stops being “what rebate can I be offered” and becomes “should I hold the agreement myself instead”. Whether that is worth doing depends entirely on what the exchange asks of a partner — the Binance-side conditions, and where applicants get stuck, are laid out in Binance affiliate program requirements.
 
 ## Stop overpaying on fees
 Register through the rebate link and start getting up to 40% back from your next trade — real-time payout, in USDT.
@@ -1841,6 +1844,7 @@ No. A sign-up bonus is a one-off reward (a voucher or token credit) tied to a pr
 
 Does the fee discount require KYC or extra steps?+
 No extra steps beyond the normal Binance onboarding. You complete standard KYC as any user would, and the discount or rebate is tracked on Binance's own affiliate ledger — there are no API keys to share and no custody of your funds. The rebate channel only ever sees the fee attribution, never your account access.
+Where the 40% side comes from. The reason one channel can pass back double what a plain referral does is that it sits on a different agreement with the exchange — and that agreement has its own entry bar. If you are curious what the partner side has to clear before it can quote you anything above the standard kickback, that is covered in Binance affiliate program requirements.
 
 ## Get up to 40%, not the standard 20%
 Register through the rebate-bound link and start getting up to 40% of your Binance fees back — in real time, in USDT, on top of your BNB discount.
@@ -2888,6 +2892,7 @@ The real flow is partner-initiated and manual. There is no passive prompt that a
 The partner generates a rebind link. Inside Binance's Super Invite backend, under Invited Users, the partner opens Rebind Application in the top-right corner and produces the link. Ours is live below — you do not need to request it.
 You open the link and manually enter the referral code. The link does not pre-fill anything. You open it while signed in to your Binance account, type the referral code MPZQWSDC into the field yourself, and submit. Binance then reviews the application against the five requirements. No password, no 2FA code, no seed phrase, no API key is ever involved — as with any legitimate rebind, if something asks for a credential, it is not Binance.
 You trade 150,000 USD within 30 days. Only on crossing that threshold does the relationship formally take effect, at which point the rebate — up to 40%, a maximum rather than a guarantee — begins accruing on the fees you pay, settled in real time in USDT.
+Binding as a trader is not the same as applying as a partner. Everything above is about attaching a referral to your own account. The other side of the table — what Binance asks of the person running the channel, and who actually gets approved — is a separate bar we broke down in Binance affiliate program requirements.
 
 ### Binance rebind application
 Open the rebind link, enter code MPZQWSDC manually, and submit. Read the 150,000 USD / 30-day condition above first — it decides whether this is worth your time.
@@ -3865,6 +3870,7 @@ VIP 9 is the top published tier, requiring roughly $4B in 30-day spot volume (or
 
 Will I lose my Binance VIP tier if my volume drops?+
 Yes. Binance re-evaluates every account at 00:00 UTC daily on a rolling 30-day window. If your trailing volume or your average daily BNB balance falls below the threshold, you are automatically downgraded on that cycle with no warning. Maintaining a tier requires keeping both gates satisfied continuously, not just hitting them once.
+Two ladders, not one. The VIP table above is the ladder you climb as a trader. There is a second, unrelated ladder for people who route other traders’ volume rather than their own — different gates, different review, and it is the one that decides who can quote a rebate in the first place. We mapped it in Binance affiliate program requirements.
 
 ## Stop overpaying on fees
 Register through the rebate link and start getting up to 40% back from your next trade — settled in real time in USDT.
@@ -6140,7 +6146,7 @@ Take a book doing $100,000,000 a month of perp volume at a blended effective rat
 
 Does a rebate conflict with a VIP tier or a market-maker agreement?+
 A sub-broker rebate is calculated on whatever fee the exchange actually charges you, so it sits on top of your VIP rate rather than replacing it — the percentage stays the same and only the absolute payout moves with your tier. At the very highest VIP levels and under bespoke market-maker agreements the affiliate rules can change, which is why those accounts are assessed individually. For the overwhelming majority of high-frequency operators below that frontier, the rebate simply stacks and lowers the effective fee floor further.
-At this turnover the channel matters as much as the tier. Operators running this kind of book usually end up asking whether to sit under someone else’s channel or run one. We modelled the difference in the sub-broker versus affiliate comparison for OKX.
+At this turnover the channel matters as much as the tier. Operators running this kind of book usually end up asking whether to sit under someone else’s channel or run one. We modelled the difference in the sub-broker versus affiliate comparison for OKX. The equivalent question on the Binance side turns on a different approval bar, set out in Binance affiliate program requirements.
 
 ## At HFT turnover, one basis point is real money
 You've already optimised VIP and maker routing — the taker residue is where a rebate bites. Bind your Binance or OKX account to JackTrader's channel and get up to 40% of your trading fees back in USDT, settled in real time, single-tier and fully trackable. The strategy doesn't change; the fee floor drops.
