@@ -373,7 +373,7 @@ Account statusNew / existing / has referral code
 Trade typeFutures / spot / grid / team
 VolumeAsset size & 30-day volumeExisting account · Telegram
 
-Weighing the official program against binding? If you are deciding whether to apply to Binance rather than bind into an existing channel, read our worth-it-or-not assessment of the Binance affiliate program first — it covers the approval bar and where the headline bands actually land. The condition-by-condition version of that bar sits in Binance affiliate program requirements.
+Weighing the official program against binding? If you are deciding whether to apply to Binance rather than bind into an existing channel, read our worth-it-or-not assessment of the Binance affiliate program first — it covers the approval bar and where the headline bands actually land. The condition-by-condition version of that bar sits in Binance affiliate program requirements. Registering a brand-new account instead? What the Binance sign-up bonus actually pays weighs the welcome promo against the recurring rebate this page calculates.
 
 ## Check if your Binance account qualifies
 No commitment to trade and no sensitive permissions. Share your account status and volume to see an executable plan.
@@ -2314,7 +2314,7 @@ Three stand out. First, it pays nothing on your own trading volume, which blinds
 
 What is the alternative if I trade volume but have no audience?+
 Register through a sub-broker or rebate channel instead of applying to the affiliate program. The channel books your account under its sub-broker relationship and passes a share of the fees you pay back to you — up to 40%, settled in real time in USDT — with no audience, no application review and no recruiting. It works from your first trade and stacks on top of your VIP tier and BNB discount. The exact rebate percentage is reviewed per account and is a maximum reference, not a guarantee.
-Next steps: check the bar in Binance affiliate program requirements, the rates in affiliate commission, or — if you have volume rather than an audience — the highest-rebate crypto exchanges of 2026.
+Next steps: check the bar in Binance affiliate program requirements, the rates in affiliate commission, or — if you have volume rather than an audience — the highest-rebate crypto exchanges of 2026. And if you are simply opening an account rather than applying to anything, what the Binance sign-up bonus is actually worth compares that one-off pool against the recurring rebate.
 
 ## No audience? Get paid on the volume you already trade
 See what an up-to-40% rebate returns on your monthly fees — no application review required.
@@ -2549,6 +2549,7 @@ $50M
 ~$70,000
 *Gross = (volume × 80% × 0.02%) + (volume × 20% × 0.05%) at the Regular tier. Rebate is calculated on the post-BNB fee at the maximum band; the actual rate you qualify for is reviewed per account and is not a guarantee. Crossing the $15M VIP 1 gate lowers the gross fee further, so high-volume rows are conservative. Always verify current rates against Binance's official schedule.
 For a spot-heavy trader, swap in the 0.10% spot rate (25% off with BNB) — see the Binance rebate calculator to plug in your exact split, or compare venues in our Binance vs OKX fee breakdown. Running both exchanges? The OKX fee calculator mirrors this math on the OKX side (OKX spot makers pay 0.08% vs Binance's symmetric 0.10%), and the OKX rebate page runs the numbers live.
+Brand-new account? Before you run these numbers, note that the welcome promo shown at registration and the recurring rebate modelled above come out of different budgets. The Binance sign-up bonus breakdown runs the same volume math against the one-off pool and shows which one is larger by month two.
 
 ## Run your own numbers
 Use the on-page calculator on our Binance rebate page to plug your real volume in.
@@ -3117,6 +3118,7 @@ Is it safe to use a referral partner — do they get access to my account?+
 A legitimate rebate requires nothing but that you registered through the right code or link. The partner can only see a fee total in the exchange's back-office ledger — never your balance, positions, password, or withdrawals. Anyone asking for API keys, withdrawal permissions, or your seed phrase is not running a normal rebate. Treat 'official partner of Binance' claims with suspicion.
 Also new: the same Binance account now trades tokenized US stocks — USDT-quoted, fractional, and the referral rebate applies to those trades too. See the Binance US stocks guide.
 Thinking of applying instead of binding? Whether the official program is worth the application at all is a separate question — we walked through the payout math, the approval bar and the three things that disappoint applicants in our honest verdict on the Binance affiliate program.
+Chasing the welcome bonus instead? The promo pool a new account is shown and the code you actually enter are two separate mechanisms — one expires, the other keeps paying every time you trade. We pulled them apart in what the Binance sign-up bonus actually gives you.
 
 ## Stop overpaying on fees
 Register through the rebate link and start getting up to 40% back from your next trade — real-time payout, in USDT.
@@ -4255,6 +4257,7 @@ No. The JackTrader sub-broker channel has no minimum volume requirement, so even
 Can I add the rebate to an account I already have?+
 Sometimes. New accounts should register through the rebate-bound links so attribution starts from the first trade — rebates cannot be applied retroactively to an unbound account. For existing accounts, migration between referral trees is reviewed case by case; ask for an assessment on Telegram before assuming it can transfer.
 Comparing the partner side too? Fee tables decide what you pay; commission programs decide what you earn back. Our verdict on whether Binance’s affiliate program is worth joining covers the payout math and the approval bar, and how OKX’s sub-broker route compares to a plain affiliate account covers the other side of the same decision.
+Opening the account rather than comparing tables? New registrations get pitched a welcome-voucher pool alongside the fee schedule, and the two are worth very different amounts to anyone who trades more than occasionally. The side-by-side is in the Binance sign-up bonus versus the lifetime fee rebate.
 
 ## Stop overpaying on fees
 Register through the rebate link and start getting up to 40% back from your next trade — real-time payout, in USDT.
@@ -5076,6 +5079,7 @@ Register through a rebate partner's referral link before you trade, since the bi
 
 Can I get a rebate on my existing exchange account?+
 Sometimes. Transfers between affiliate trees are possible on the exchange's review, and are usually easier if your current referrer is inactive. There's no guarantee, so it's best to ask on Telegram for an assessment before assuming your existing account can or can't be migrated.
+Signing up somewhere new? The welcome bonus a fresh account is offered and the fee rebate described above are unrelated mechanisms, and only the rebate compounds. We put numbers on both in what the Binance sign-up bonus really pays.
 
 ## Stop overpaying on fees
 Register through the rebate link and start getting up to 40% back from your next trade — real-time payout, in USDT.
@@ -6256,6 +6260,7 @@ Sometimes. Binance allows a one-time official rebind on an unbound master accoun
 
 Why do some sites advertise rebates higher than 40%?+
 A few numbers above 40% quote the commission the partner earns rather than the share passed back to you, or quote a temporary promo, or count perks like BNB/OKB discounts as part of the "rebate". Read what the percentage is calculated on and how it settles. JackTrader states up to 40% of your trading fee, settled in real time in USDT, single-tier referrals only, and not a guarantee.
+Comparing sign-up offers, not just rebate rates? Exchanges lead with a welcome-voucher headline, which is a ceiling on task-gated vouchers rather than a payment — a very different kind of number from the rebates ranked above. Our breakdown of the Binance sign-up bonus sets the two against each other over a year of trading.
 
 ## Find your real top-rebate tier
 Tell us your exchange and monthly volume and we'll tell you the highest rebate your account actually qualifies for — net of base fee, settled in real time in USDT.
