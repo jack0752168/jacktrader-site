@@ -373,7 +373,7 @@ Account statusNew / existing / has referral code
 Trade typeFutures / spot / grid / team
 VolumeAsset size & 30-day volumeExisting account · Telegram
 
-Weighing the official program against binding? If you are deciding whether to apply to Binance rather than bind into an existing channel, read our worth-it-or-not assessment of the Binance affiliate program first — it covers the approval bar and where the headline bands actually land. The condition-by-condition version of that bar sits in Binance affiliate program requirements. Registering a brand-new account instead? What the Binance sign-up bonus actually pays weighs the welcome promo against the recurring rebate this page calculates.
+Weighing the official program against binding? If you are deciding whether to apply to Binance rather than bind into an existing channel, read our worth-it-or-not assessment of the Binance affiliate program first — it covers the approval bar and where the headline bands actually land. The condition-by-condition version of that bar sits in Binance affiliate program requirements. Registering a brand-new account instead? What the Binance sign-up bonus actually pays weighs the welcome promo against the recurring rebate this page calculates. The equivalent decision on OKX is structured differently — a parallel sub-broker channel with its own onboarding and its own split — and is described in the OKX sub-broker breakdown.
 
 ## Check if your Binance account qualifies
 No commitment to trade and no sensitive permissions. Share your account status and volume to see an executable plan.
@@ -1577,7 +1577,7 @@ Disclaimer: All figures are illustrative and reflect published Binance / OKX sch
 
 URL: https://www.jacktrader.xyz/en/blog/best-exchange-high-volume-traders.html
 
-Summary: Best crypto exchange for high-volume traders in 2026: fees at scale, VIP & sub-broker tiers, API/liquidity, and rebate stacking — Binance vs OKX, with worked numbers.
+Summary: Best crypto exchange for high-volume traders in 2026: fees at scale, VIP and sub-broker tiers, and rebate stacking — Binance vs OKX, with real numbers.
 
 Home / Blog / Best Exchange for High-Volume Traders 2026
 Decision guide · Binance vs OKX at scale
@@ -2202,6 +2202,7 @@ There is no single number. The published shape at the time of writing is a 20% b
 
 Is the Binance affiliate program worth it in 2026?+
 For creators with a real audience, yes — commission is paid on trading fees, so a channel that attracts active futures traders or bots earns meaningfully, and the program is single-tier and trackable in Binance's own ledger. For casual referrers, the open referral program is usually enough. For traders who only want a rebate on their own fees, neither application is worth it: bind into an existing approved channel while you still meet the rebind conditions (no referrer, master account, 5,000 USD or less traded in the past 90 days) instead. The main drawbacks are the opaque affiliate approval process, headline rates that are ceilings rather than defaults, and the rebind volume ceiling (5,000 USD over the trailing 90 days) that quietly closes the door on anyone who traded first.
+The same job is structured differently on the other major venue. Where Binance runs one approval bar for its affiliate track, OKX splits the work between an ordinary affiliate account and a sub-broker tree, and the two carry different obligations and different rate ceilings. How OKX divides affiliate and sub-broker covers which side a given operator belongs on.
 
 ## Skip the application — bind into a vetted Binance channel
 JackTrader runs a vetted Binance affiliate channel, so you get the up-to-40% pass-through without applying, without an audience, and without a personal volume quota — settled in real time in USDT, single-tier and fully trackable. We'll check your account's binding window before you trade.
@@ -3873,6 +3874,7 @@ VIP 9 is the top published tier, requiring roughly $4B in 30-day spot volume (or
 Will I lose my Binance VIP tier if my volume drops?+
 Yes. Binance re-evaluates every account at 00:00 UTC daily on a rolling 30-day window. If your trailing volume or your average daily BNB balance falls below the threshold, you are automatically downgraded on that cycle with no warning. Maintaining a tier requires keeping both gates satisfied continuously, not just hitting them once.
 Two ladders, not one. The VIP table above is the ladder you climb as a trader. There is a second, unrelated ladder for people who route other traders’ volume rather than their own — different gates, different review, and it is the one that decides who can quote a rebate in the first place. We mapped it in Binance affiliate program requirements.
+Climbing the ladder and choosing the venue are two separate decisions. Once monthly turnover gets large enough that the VIP bands actually move, which exchange you sit on starts to matter more than which band you reach — the ladders are not shaped the same way. Where high-volume flow is cheapest once the tiers are accounted for runs that comparison.
 
 ## Stop overpaying on fees
 Register through the rebate link and start getting up to 40% back from your next trade — settled in real time in USDT.
@@ -4258,6 +4260,7 @@ Can I add the rebate to an account I already have?+
 Sometimes. New accounts should register through the rebate-bound links so attribution starts from the first trade — rebates cannot be applied retroactively to an unbound account. For existing accounts, migration between referral trees is reviewed case by case; ask for an assessment on Telegram before assuming it can transfer.
 Comparing the partner side too? Fee tables decide what you pay; commission programs decide what you earn back. Our verdict on whether Binance’s affiliate program is worth joining covers the payout math and the approval bar, and how OKX’s sub-broker route compares to a plain affiliate account covers the other side of the same decision.
 Opening the account rather than comparing tables? New registrations get pitched a welcome-voucher pool alongside the fee schedule, and the two are worth very different amounts to anyone who trades more than occasionally. The side-by-side is in the Binance sign-up bonus versus the lifetime fee rebate.
+Picking the venue is only half the decision. Once the comparison lands on OKX, the next question is which level your own turnover puts you on and what that does to your blended cost across spot and perpetuals — a different calculation from the head-to-head above. It is set out volume band by volume band in the OKX-side fee calculator.
 
 ## Stop overpaying on fees
 Register through the rebate link and start getting up to 40% back from your next trade — real-time payout, in USDT.
@@ -5943,6 +5946,7 @@ No. A rebate returns a share of the trading fees you pay the exchange — it doe
 
 How do I calculate my total perpetual trading cost?+
 Add three things: the trading fee on entry, the trading fee on exit, and the sum of every funding payment while the position was open. Trading fee per side is roughly 0.0200% maker or 0.0500% taker of notional on USDT perps; funding is the published rate times notional at each eight-hour timestamp. A short scalp might cost two trading fees and zero funding; a multi-day hold might cost two trading fees plus a dozen funding payments. Only the trading-fee portion is reducible with a rebate.
+Funding scales with the position; fees scale with the turnover. That is why a low-frequency carry trade and a high-frequency bot on the same notional end up with completely different cost structures — one is dominated by funding, the other by the fee ladder. For the turnover side of that split on OKX, see the per-level maker and taker breakdown.
 
 ## Cut the cost you can actually cut
 A rebate can't touch funding, but it strips up to 40% off every trading fee you pay. Bind your Binance or OKX account to JackTrader's channel and get it back in USDT, settled in real time, single-tier and fully trackable.
@@ -6151,6 +6155,7 @@ Take a book doing $100,000,000 a month of perp volume at a blended effective rat
 Does a rebate conflict with a VIP tier or a market-maker agreement?+
 A sub-broker rebate is calculated on whatever fee the exchange actually charges you, so it sits on top of your VIP rate rather than replacing it — the percentage stays the same and only the absolute payout moves with your tier. At the very highest VIP levels and under bespoke market-maker agreements the affiliate rules can change, which is why those accounts are assessed individually. For the overwhelming majority of high-frequency operators below that frontier, the rebate simply stacks and lowers the effective fee floor further.
 At this turnover the channel matters as much as the tier. Operators running this kind of book usually end up asking whether to sit under someone else’s channel or run one. We modelled the difference in the sub-broker versus affiliate comparison for OKX. The equivalent question on the Binance side turns on a different approval bar, set out in Binance affiliate program requirements.
+At this frequency the level ladder decides more than the strategy does. A single band of movement on the maker side changes the annual number more than most parameter tuning will. If you want to see exactly where OKX’s bands sit and how the OKB level stack compounds with them, that is mapped out in the OKX fee level breakdown.
 
 ## At HFT turnover, one basis point is real money
 You've already optimised VIP and maker routing — the taker residue is where a rebate bites. Bind your Binance or OKX account to JackTrader's channel and get up to 40% of your trading fees back in USDT, settled in real time, single-tier and fully trackable. The strategy doesn't change; the fee floor drops.
@@ -6725,7 +6730,7 @@ Disclaimer: Fee schedules and rebate rates reflect published rates at the time o
 
 URL: https://www.jacktrader.xyz/en/blog/hummingbot-fee-rebate.html
 
-Summary: Hummingbot is a free, open-source market-making bot — so it has no fees of its own. Because market makers churn enormous maker volume at razor-thin margins, the fee line is your dominant cost, and a rebate is worth more to you than to almost anyone else. The config knobs and the binding step.
+Summary: Hummingbot is free and open-source, so exchange fees are your dominant cost. How maker rates, VIP levels and rebates stack for a market-making book.
 
 Home / Blog / Hummingbot Fee Rebate
 Bot trading · Hummingbot · Updated July 2026
@@ -7265,6 +7270,7 @@ It depends on configuration. A grid bot that places resting limit orders at each
 
 Does a fee rebate apply to both maker and taker fees?+
 Yes. A sub-broker or affiliate rebate is calculated on whatever fee the exchange actually charged you, maker or taker. So the rebate stacks on top of the maker discount you already earned by posting limit orders — the two savings compound rather than replace each other.
+Market-making bots live entirely on the maker side of this split. A strategy that quotes both sides and rarely crosses the spread turns the maker rate into its dominant cost line, which is why fee handling matters more there than in almost any other setup. How a Hummingbot-style market-making book stacks maker rates against rebates works through that case.
 
 ## Stack a rebate on your maker fills
 Plug your real monthly volume into the on-page calculator and see what comes back in real time — on top of the maker rate you already earn.
@@ -7881,6 +7887,7 @@ Yes. Mirrored trades count toward your own 30-day trading volume, so copying a b
 
 Is JackTrader affiliated with OKX or the lead traders?+
 No. JackTrader is an independent referral / sub-broker partner and is not affiliated with OKX or with any lead trader on its copy-trading platform. We rebate a share of the OKX trading fees generated by accounts bound through our channel. The up-to-40% figure is a maximum reference, not a guarantee, and depends on OKX policy and account review. Nothing here is investment advice.
+Copy-trading costs sit on top of the ordinary schedule, not instead of it. The profit share is a separate line item; underneath it you are still paying the same maker and taker rates as any other account, and those move with your 30-day volume level. If you want the underlying rate maths rather than the copy-trading layer, see how OKX maker, taker and VIP levels combine into one effective rate.
 
 ## Stop overpaying on fees
 Register through the rebate link and start getting up to 40% back from your next trade — settled in real time, in USDT.
@@ -8776,6 +8783,7 @@ From VIP 7 onward. VIP 6 maker hits 0.0000%, VIP 7 is −0.0020%, and VIP 8 and 
 
 Can I get the OKX rebate on an account I already have?+
 Sometimes. New accounts should register through the rebate-bound link so attribution starts from the first trade, because rebates cannot be applied retroactively to an unbound account. For existing accounts, migration between referral trees is reviewed case by case — ask for an assessment on Telegram before assuming it can transfer.
+The tier is the input; your effective rate is the output. Knowing which level you sit on only tells you the headline maker/taker pair — what you actually pay per month depends on your spot/perp split and how much of your flow rests as maker. The volume-by-volume version of that arithmetic, with the OKB level stack layered on top, is worked through in the OKX fee calculator walkthrough.
 
 ## Stop overpaying on fees
 Register through the rebate link and start getting up to 40% back from your next trade — in real time, in USDT.
@@ -9949,6 +9957,7 @@ Yes. The JackTrader sub-broker channel rebates up to 40% of the fee you pay rega
 Can I add the rebate to an account I already have?+
 New accounts should register through the rebate-bound links so attribution starts from the first trade — rebates cannot be applied retroactively to an unbound account. Binance does run a rebind path for existing accounts: you need completed KYC, a master account with no current referrer, no more than 5,000 USD of trading volume in the last 90 days, no wash-trading flag, and a non-restricted region. Approval alone does not pay — the binding only takes effect once you trade 150,000 USD within 30 days of applying. Ask for a case-by-case assessment on Telegram before assuming a transfer is possible.
 New category: Binance stock tokens trade like spot pairs, on the spot fee schedule — compared in the stock tokens vs brokers guide.
+The two schedules stop tracking each other once you climb. Spot and USDT-perpetual ladders are quoted separately and widen at different rates as volume grows, which is why a single "my fee is X" number stops being true for anyone trading both. OKX’s spot and perpetual schedules laid side by side shows where the two diverge.
 
 ## Stop overpaying on fees
 Register through the rebate link and start getting up to 40% back from your next trade — in real time, in USDT.

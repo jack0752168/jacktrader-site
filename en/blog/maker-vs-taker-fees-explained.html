@@ -213,6 +213,8 @@
           <details class="faq-item"><summary class="faq-q">Does a fee rebate apply to both maker and taker fees?<span class="plus">+</span></summary><div class="faq-a">Yes. A sub-broker or affiliate rebate is calculated on whatever fee the exchange actually charged you, maker or taker. So the rebate stacks on top of the maker discount you already earned by posting limit orders — the two savings compound rather than replace each other.</div></details>
         </div>
 
+        <div class="related-note" style="margin-top:40px;padding:16px 20px;border-left:3px solid var(--yellow);background:rgba(255,255,255,0.03);border-radius:8px;color:var(--text-2);font-size:15px"><strong>Market-making bots live entirely on the maker side of this split.</strong> A strategy that quotes both sides and rarely crosses the spread turns the maker rate into its dominant cost line, which is why fee handling matters more there than in almost any other setup. <a href="/en/blog/hummingbot-fee-rebate.html">How a Hummingbot-style market-making book stacks maker rates against rebates</a> works through that case.</div>
+
         <div class="cta-band" style="margin-top:48px">
           <h2>Stack a rebate on your maker fills</h2>
           <p>Plug your real monthly volume into the on-page calculator and see what comes back in real time — on top of the maker rate you already earn.</p>

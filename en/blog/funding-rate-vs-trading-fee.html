@@ -204,6 +204,8 @@
           <details class="faq-item"><summary class="faq-q">How do I calculate my total perpetual trading cost?<span class="plus">+</span></summary><div class="faq-a">Add three things: the trading fee on entry, the trading fee on exit, and the sum of every funding payment while the position was open. Trading fee per side is roughly 0.0200% maker or 0.0500% taker of notional on USDT perps; funding is the published rate times notional at each eight-hour timestamp. A short scalp might cost two trading fees and zero funding; a multi-day hold might cost two trading fees plus a dozen funding payments. Only the trading-fee portion is reducible with a rebate.</div></details>
         </div>
 
+        <div class="related-note" style="margin-top:40px;padding:16px 20px;border-left:3px solid var(--yellow);background:rgba(255,255,255,0.03);border-radius:8px;color:var(--text-2);font-size:15px"><strong>Funding scales with the position; fees scale with the turnover.</strong> That is why a low-frequency carry trade and a high-frequency bot on the same notional end up with completely different cost structures — one is dominated by funding, the other by the fee ladder. For the turnover side of that split on OKX, see <a href="/en/blog/okx-fee-calculator-2026.html">the per-level maker and taker breakdown</a>.</div>
+
         <div class="cta-band" style="margin-top:48px">
           <h2>Cut the cost you can actually cut</h2>
           <p>A rebate can't touch funding, but it strips up to 40% off every trading fee you pay. Bind your Binance or OKX account to JackTrader's channel and get it back in USDT, settled in real time, single-tier and fully trackable.</p>
