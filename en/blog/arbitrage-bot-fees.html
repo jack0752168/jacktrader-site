@@ -213,6 +213,8 @@
           <details class="faq-item"><summary class="faq-q">Do cross-exchange arbitrage transfers add hidden costs?<span class="plus">+</span></summary><div class="faq-a">Yes. Beyond trading fees, cross-exchange arb can incur withdrawal/network fees, on-chain confirmation delays, and the risk that the spread closes before assets settle. Many desks avoid physical transfers by pre-funding both venues and rebalancing periodically, which trades transfer cost for capital cost. Either way, model these alongside trading fees — they are part of the all-in number that defines your break-even.</div></details>
         </div>
 
+        <div class="related-note" style="margin-top:40px;padding:16px 20px;border-left:3px solid var(--yellow);background:rgba(255,255,255,0.03);border-radius:8px;color:var(--text-2);font-size:15px"><strong>Only the resting leg can ever earn a rebate.</strong> Every arbitrage structure on this page has a leg that rests and a leg that crosses, and that split — not your VIP tier — decides how much of your flow is even eligible to be paid back. Once a desk is large enough that the maker side turns negative, the arithmetic changes shape entirely; <a href="/en/blog/crypto-market-maker-rebates.html">the two separate routes to a negative maker fee</a> covers which one fits a book that has to cross on demand.</div>
+
         <div class="cta-band" style="margin-top:48px">
           <h2>Lower your break-even spread</h2>
           <p>Get up to 40% of your trading fees back on the taker legs you can't avoid — settled in real time in USDT, fully reconcilable, no strategy change. On a thin-margin arb book, that's often the majority of your net.</p>

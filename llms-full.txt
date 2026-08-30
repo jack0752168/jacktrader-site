@@ -1360,6 +1360,7 @@ Maker is far cheaper and sometimes even pays you, but arbitrage usually demands 
 
 Do cross-exchange arbitrage transfers add hidden costs?+
 Yes. Beyond trading fees, cross-exchange arb can incur withdrawal/network fees, on-chain confirmation delays, and the risk that the spread closes before assets settle. Many desks avoid physical transfers by pre-funding both venues and rebalancing periodically, which trades transfer cost for capital cost. Either way, model these alongside trading fees — they are part of the all-in number that defines your break-even.
+Only the resting leg can ever earn a rebate. Every arbitrage structure on this page has a leg that rests and a leg that crosses, and that split — not your VIP tier — decides how much of your flow is even eligible to be paid back. Once a desk is large enough that the maker side turns negative, the arithmetic changes shape entirely; the two separate routes to a negative maker fee covers which one fits a book that has to cross on demand.
 
 ## Lower your break-even spread
 Get up to 40% of your trading fees back on the taker legs you can't avoid — settled in real time in USDT, fully reconcilable, no strategy change. On a thin-margin arb book, that's often the majority of your net.
@@ -2751,7 +2752,7 @@ Coin-M contracts, which are margined and settled in the underlying coin rather t
 
 How does an up-to-40% rebate stack on Binance futures fees?+
 The rebate sits on top of every other discount. Binance first computes your gross futures fee at your VIP tier, applies the 10% BNB discount if enabled, and a sub-broker or affiliate channel (such as JackTrader's Binance channel) then receives a share of that fee and passes up to 40% of it back to you, settled in real time in USDT. It does not change your VIP tier and does not require you to change strategy — a $5M-per-month futures book at the Regular rate pays about $1,300 in monthly fees, and a 40% rebate returns roughly $520 of that every month. The exact percentage you qualify for is reviewed per account and is a maximum reference, not a guarantee.
-Reaching a VIP tier? The volume + BNB gates that unlock each row above are in Binance VIP fee tiers 2026. Comparing the two big venues on futures specifically: OKX vs Bybit vs Binance futures fees.
+Reaching a VIP tier? The volume + BNB gates that unlock each row above are in Binance VIP fee tiers 2026. Comparing the two big venues on futures specifically: OKX vs Bybit vs Binance futures fees. And if you are far enough up the schedule that the maker column is heading toward zero, the VIP ladder versus a dedicated market-maker agreement explains why those two tracks usually exclude each other rather than stack.
 
 ## Run your own futures numbers
 Plug your real monthly volume and maker/taker split into the calculator on our Binance rebate page.
@@ -5490,6 +5491,7 @@ Sometimes, and that is the point. For high-turnover strategies, fees are often t
 
 Why are taker fees so damaging to bots?+
 Because bots compound them. A 0.0500% taker fee sounds trivial, but a bot doing $5,000,000 of taker volume a month pays $2,500 in fees monthly — $30,000 a year — before a single trade decision is judged. The same notional traded as maker at 0.0200% costs $1,000 a month instead. That is why serious bot operators design for post-only execution where possible and treat the taker fee as a cost to be engineered down, then bind a rebate to cut what remains.
+Above a certain size, the fee line stops being a subtraction. The per-bot-type cost profiles here all assume you pay to trade. For a book quoting nine figures a month that assumption inverts, and a strategy's ranking by fee efficiency can reorder completely once the maker side is credited rather than debited — how negative maker fees change a bot’s cost model works through what that does to the comparison.
 
 ## Cut the biggest line on your bot's books
 Fees are the largest recurring cost most bots carry. Bind your Binance or OKX account to JackTrader's channel and get up to 40% of your trading fees back in USDT, settled in real time, single-tier and fully trackable.
@@ -5580,6 +5582,7 @@ A rebate returns a share of the trading fees you pay the exchange — up to 40% 
 
 Do trading fees really matter compared to my trading profit or loss?+
 For infrequent traders, no — fees are a rounding error next to the position outcome. For active traders, bots and market makers they matter enormously, because fees are a guaranteed, compounding cost paid on every trade regardless of whether it wins or loses. Over a year, a high-turnover strategy can pay more in fees than it clears in edge, which is why professional desks obsess over the effective rate. The higher your turnover, the more fees move from footnote to headline — and the more a rebate is worth.
+There is a volume band where this annual number goes the other way. Everything modelled above treats the yearly fee bill as a cost to be minimised. Past a threshold most retail books never approach, posting liquidity is compensated rather than charged and the same line item turns into revenue — the point where the annual fee line stops being a cost sets out who qualifies and on what terms.
 
 ## Total your year of fees — then take part of it back
 Whatever your annual fee bill turns out to be, a rebate returns up to 40% of it in USDT, settled in real time, single-tier and fully trackable. Bind your Binance or OKX account to JackTrader's channel and stop paying full price on a cost you can't avoid.
@@ -5764,6 +5767,7 @@ Yes. Paying fees with BNB on Binance or holding OKB on OKX applies a percentage 
 
 How much can a rebate lower my effective fee rate?+
 A rebate returns a percentage of the trading fee you pay, so it lowers your net effective rate by that same percentage of the fee portion. An up-to-40% rebate on a 0.0400% effective rate returns 0.0160%, leaving a net effective rate near 0.0240%. It does not touch spread, slippage or funding, and it is a maximum reference rather than a guarantee. But because it scales with every dollar of fees you pay, the higher your turnover, the larger the absolute reduction in your real cost.
+The formula still holds when the maker term is negative — the answer just stops being intuitive. Blended effective rate is total fees divided by volume, so a desk whose maker fills are credited can push the numerator toward zero, or past it, without touching taker volume at all. What the sign flip does to this calculation, and why two desks on the identical tier land far apart, is in what happens to the effective rate when the maker leg turns negative.
 
 ## Lower your net effective rate — on the trades you already make
 A rebate returns up to 40% of the trading fee you pay (a maximum reference, not a guarantee), settled in USDT, single-tier and fully trackable. It stacks on top of your VIP tier and BNB/OKB discount, and it scales with your volume. Same account, same fills — a lower net effective rate.
@@ -9270,6 +9274,7 @@ Yes, and they stack. Post-only ensures you pay the maker fee instead of the take
 
 Does post-only guarantee a maker rebate?+
 It guarantees you are charged the maker fee, not the taker fee — but whether that maker fee is positive, zero or negative depends on your VIP or market-maker tier on the venue. A negative maker fee (a true maker rebate paid by the exchange) usually requires a high volume or market-maker qualification. For most traders post-only means paying a small positive maker fee rather than the larger taker fee; the third-party fee rebate then applies on top of that. Do not assume you will be paid to trade unless your tier explicitly shows a negative maker rate.
+Post-only guarantees a maker fill; it does not guarantee a maker rebate. Everything on this page gets your fee to the cheaper side of the pair — but the maker rate itself is still a positive number until you reach the narrow band where an exchange starts paying you to post depth. Which desks actually get there, and the two mutually-exclusive routes that lead there, is mapped in where the maker side actually goes negative.
 
 ## Stack a rebate on your maker legs
 Post-only cuts the fee you can avoid; a rebate cuts the rest — up to 40% back on every fill, maker or taker, settled in real time in USDT. No code change, no strategy risk, fully reconcilable.

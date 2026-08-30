@@ -204,6 +204,8 @@
           <details class="faq-item"><summary class="faq-q">Why are taker fees so damaging to bots?<span class="plus">+</span></summary><div class="faq-a">Because bots compound them. A 0.0500% taker fee sounds trivial, but a bot doing $5,000,000 of taker volume a month pays $2,500 in fees monthly — $30,000 a year — before a single trade decision is judged. The same notional traded as maker at 0.0200% costs $1,000 a month instead. That is why serious bot operators design for post-only execution where possible and treat the taker fee as a cost to be engineered down, then bind a rebate to cut what remains.</div></details>
         </div>
 
+        <div class="related-note" style="margin-top:40px;padding:16px 20px;border-left:3px solid var(--yellow);background:rgba(255,255,255,0.03);border-radius:8px;color:var(--text-2);font-size:15px"><strong>Above a certain size, the fee line stops being a subtraction.</strong> The per-bot-type cost profiles here all assume you pay to trade. For a book quoting nine figures a month that assumption inverts, and a strategy's ranking by fee efficiency can reorder completely once the maker side is credited rather than debited — <a href="/en/blog/crypto-market-maker-rebates.html">how negative maker fees change a bot’s cost model</a> works through what that does to the comparison.</div>
+
         <div class="cta-band" style="margin-top:48px">
           <h2>Cut the biggest line on your bot's books</h2>
           <p>Fees are the largest recurring cost most bots carry. Bind your Binance or OKX account to JackTrader's channel and get up to 40% of your trading fees back in USDT, settled in real time, single-tier and fully trackable.</p>
