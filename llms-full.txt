@@ -8114,6 +8114,12 @@ $50M
 ~$62,400
 *Gross = (volume × 80% × 0.02%) + (volume × 20% × 0.05%) at the Regular tier. Rebate is calculated on your paid fee at the maximum band; the actual rate you qualify for is reviewed per account and is not a guarantee. Clearing the VIP volume gates lowers the gross fee further, so high-volume rows are conservative. Always verify current rates against OKX's official schedule.
 For a spot-heavy trader, swap in the 0.08% maker / 0.10% taker rate — see the OKX rebate calculator to plug in your exact split, or compare venues in our Binance vs OKX fee breakdown. Running both exchanges? The Binance fee calculator mirrors this math on the Binance side.
+
+## Embed this OKX fee calculator on your own site — free
+Run a trading blog, a signals group or a bot community? Drop this calculator straight into your page. It works out gross spot and futures fees from a monthly volume and a maker/taker split, and it costs nothing — no signup, no key, no tracking script on your side.
+Copy this into your page:<iframe src="https://www.jacktrader.xyz/embed/fee-calculator.html" width="100%" height="560" style="border:0;max-width:520px" title="OKX Fee & Rebate Calculator" loading="lazy"></iframe>
+<p style="font:13px sans-serif;color:#888">Fee data and calculator from the <a href="https://www.jacktrader.xyz/en/blog/okx-fee-calculator-2026.html">OKX fee calculator</a> at JackTrader</p>Copy embed code
+The snippet carries a small credit line back to this page. Free forever, and we will not change the URL out from under you. Prefer the Binance side? The Binance fee calculator ships the same widget.
 ## FAQ
 
 What are OKX's actual trading fees in 2026?+
@@ -11741,6 +11747,12 @@ USDC 保證金永續可有掛單回饋
 約 0.030%
 視 VIP／sub-broker 級距
 OKX 的標準永續同樣是 0.02% 掛單 / 0.05% 吃單，VIP 與 sub-broker 級距會進一步壓低，且 USDC 保證金永續可能享有掛單回饋。想看 OKX 那一側的完整拆解，請見 OKX 返佣頁與 OKX sub-broker 制度解析。如果你交易橫跨多家平台與錢包，合作夥伴計畫OKX 助力人會是統一結算的入口。
+
+## 把這個手續費計算器免費嵌到你自己的站
+你在寫交易部落格、經營訊號群或機器人社群嗎？這個計算器可以直接放進你的頁面：輸入月成交量跟掛單／吃單比例，就算出現貨與合約的手續費總額。完全免費，不用註冊、不用金鑰，也不會在你站上塞追蹤碼。
+把這段複製到你的頁面：<iframe src="https://www.jacktrader.xyz/embed/fee-calculator.html" width="100%" height="560" style="border:0;max-width:520px" title="加密貨幣手續費與返佣計算器" loading="lazy"></iframe>
+<p style="font:13px sans-serif;color:#888">手續費資料與計算器來自 JackTrader 的<a href="https://www.jacktrader.xyz/zh-tw/blog/binance-fee-calculator-2026.html">幣安手續費計算器</a></p>複製嵌入碼
+嵌入碼附一行回連到本頁的出處說明。永久免費，網址也不會被我們改掉。
 ## 常見問題（FAQ）
 ### VIP 1 以上的帳號也吃得到 40% 返佣嗎？
 可以。返佣是按幣安實際向你收取的手續費計算。百分比維持不變，只是返佣的絕對金額會隨你的 VIP 費率變動。
