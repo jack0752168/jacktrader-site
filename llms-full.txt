@@ -1274,6 +1274,7 @@ No. A legitimate crypto introducing-broker or sub-broker relationship is single-
 
 Do affiliate, sub-broker and IB rebates change how my trades execute?+
 No. Across all three channels the rebate is a cash-back on fees the exchange already charged you, paid separately — usually weekly in USDT. Your order routing, fills, leverage and account behave identically with or without a rebate channel attached. The only difference between the channels is how much of your fee comes back and how cleanly it is reconciled.
+Naming the model is only half the job — the other half is which door you can actually walk through. Once you know whether you are an affiliate, a sub-broker or an IB, the next question is what each one requires of you at a specific exchange. Worked through end to end at which of the two Binance programs a given applicant is actually eligible for.
 
 ## Get the highest-rung rebate without the paperwork
 JackTrader runs a sub-broker channel on both Binance and OKX — bind your account and receive up to 40% of your trading fees back in USDT, settled in real time, single-tier and fully trackable.
@@ -1441,6 +1442,7 @@ Five stand out. First, anyone asking for your exchange password or login. Second
 
 How do I verify a rebate channel is legitimate before binding?+
 Confirm you open your own account directly on the official exchange and keep your own credentials. Check that the rebate is settled in a verifiable way — USDT, on a regular schedule, with per-trade visibility you can reconcile against your own fee history. Make sure the rate is described as a maximum ('up to'), not a guarantee, and that the structure is single-tier. Ask the channel to check your account's binding eligibility before you trade, and confirm there is a real human and a working support channel behind it. A legitimate channel will answer all of this without pressure.
+One cheap safety check: ask which programme the channel is actually in. A channel's answer is verifiable against the exchange's own published criteria, and a channel that can't say which tier it sits in is telling you something. The criteria themselves are laid out in the published eligibility bar you can check a Binance channel against.
 
 ## A rebate that passes every safety check
 You keep your own Binance/OKX account, your own password and 2FA — JackTrader never touches your funds or login. Rebates up to 40%, settled in real time in USDT, per-trade visibility you can reconcile, single-tier, no downline. We'll check your binding eligibility before you trade.
@@ -5384,6 +5386,7 @@ You apply to an exchange's sub-broker or institutional affiliate program, or par
 
 Is a sub-broker rebate safe for the trader?+
 Yes, because nothing about your account changes. You trade on the exchange exactly as normal, the exchange holds your funds and executes your orders, and the rebate is tracked on the exchange's own affiliate ledger. The sub-broker never has API keys, never has custody, and only sees fee attribution. The rebate is an extra payout on top of your normal trading, not a change to how your account works.
+Every exchange draws the affiliate/sub-broker line in a slightly different place. On Binance the split shows up as two separate programmes rather than one programme with tiers, which changes what an applicant has to demonstrate. Mapped in where Binance draws the line between the open programme and the vetted one.
 
 ## Use a sub-broker tier — or run one
 Trade through the sub-broker channel for up to 40% back, settled in real time, or talk to us about a partner tier if you have reach to active traders.
@@ -6270,6 +6273,7 @@ Sometimes. Binance allows a one-time official rebind on an unbound master accoun
 Why do some sites advertise rebates higher than 40%?+
 A few numbers above 40% quote the commission the partner earns rather than the share passed back to you, or quote a temporary promo, or count perks like BNB/OKB discounts as part of the "rebate". Read what the percentage is calculated on and how it settles. JackTrader states up to 40% of your trading fee, settled in real time in USDT, single-tier referrals only, and not a guarantee.
 Comparing sign-up offers, not just rebate rates? Exchanges lead with a welcome-voucher headline, which is a ceiling on task-gated vouchers rather than a payment — a very different kind of number from the rebates ranked above. Our breakdown of the Binance sign-up bonus sets the two against each other over a year of trading.
+A headline rate is a property of the channel's programme, not of the exchange. Two channels on the same exchange can quote different ceilings because they were admitted to different programmes — which is why comparing headline numbers across sites tells you less than it looks. Unpacked in why the headline Binance rate depends on which programme the channel got into.
 
 ## Find your real top-rebate tier
 Tell us your exchange and monthly volume and we'll tell you the highest rebate your account actually qualifies for — net of base fee, settled in real time in USDT.
@@ -6494,6 +6498,7 @@ Three real ones. First, the pass-through varies — a low-margin channel returns
 
 Why would an exchange pay a rebate site instead of keeping the fee?+
 Customer acquisition. Paying out part of a trader's fees to a channel that brings and retains that trader is cheaper and more measurable than advertising. The exchange still keeps the majority of every fee, gains a trader it might not have acquired, and only pays when real volume is generated. It's performance marketing: the rebate channel is effectively an outsourced, pay-for-results sales force, which is exactly why the affiliate and sub-broker programs exist.
+Before a channel can share anything, it has to be admitted to something. The economics on this page all start from a commission stream that only exists once the channel has cleared the exchange's own bar — and that bar is not the same for every tier of the programme. Set out in what a channel must clear before it has any commission to share on Binance.
 
 ## A rebate channel that shows its math
 JackTrader passes back the up-to-40% band, settled in real time in USDT, single-tier and fully trackable per trade. We never hold your funds or ask for account access beyond the referral binding. Ask us anything before you commit.
@@ -7605,6 +7610,7 @@ Yes, by binding into an established sub-broker channel instead of applying as a 
 
 Do OKX commission tiers change how my orders execute?+
 No. The commission tier only governs how much of the fee OKX already charged is shared upstream and rebated back. Your order routing, fills, leverage, VIP fee level and OKB discounts are unaffected. The rebate is a separate cash-back, settled in USDT, and your VIP and OKB discounts stack on top of it rather than being consumed by it.
+Tiers only matter once you're inside. OKX publishes a ladder you climb after admission; Binance's answer to the same question depends first on which of its two programmes admitted you, so the ladder question comes second there. Covered in what qualifying unlocks on the Binance side, and what it doesn't.
 
 ## Bind into the top OKX commission band — no quota, no waiting
 JackTrader runs a reviewed OKX sub-broker channel, so you get the up-to-40% pass-through from day one, settled in real time in USDT, single-tier and fully trackable. No volume threshold to climb.
@@ -7724,6 +7730,7 @@ You can apply to the affiliate program from an existing OKX account, but the reb
 
 How long does OKX affiliate approval take?+
 Self-serve affiliate approval is typically instant or within a day once your OKX account is KYC-verified — there is little to review because the band is set later by performance. Sub-broker onboarding takes longer, from a few days to a couple of weeks, because it involves business verification and a volume review. Binding into an existing sub-broker channel is immediate: there is nothing to approve on your side, the higher band is already in place.
+The Binance side asks a different question. OKX gates on an application you either pass or don't; Binance splits the same idea into two programs with two completely different bars, so "am I eligible?" has two answers depending on which one you mean. The equivalent breakdown for Binance is in how the same qualification question plays out on Binance's side.
 
 ## Skip the requirements maze — bind into a reviewed OKX channel
 JackTrader runs a reviewed OKX sub-broker channel, so you get the up-to-40% pass-through from day one — no volume threshold, no application to clear, settled in real time in USDT, single-tier and fully trackable. We'll check your account's binding eligibility before you trade.
@@ -10213,6 +10220,7 @@ Home / Blog / Weekly USDT Rebate Settlement
 Rebate mechanics · Updated June 2026
 Weekly USDT rebate settlement explained: how and when you get paid
 A fee rebate is only worth what actually lands in your wallet, on time, in a currency you can use. "Real-time settlement in USDT" is the phrase every serious rebate channel uses — but few explain what it really means: what gets counted, when the snapshot is taken, why the money arrives a few days after the week closes, and how to check you were paid the right amount. This is the mechanics, end to end.
+Where JackTrader sits, so this page isn't read as a description of us. Everything below explains the channel-payout model: the channel collects commission from the exchange on a batch cycle, then forwards your share out of its own wallet — which is why that model settles weekly rather than instantly. We do not run that model. Our arrangement is credited through the exchange's own back office, so the split is applied at Binance and OKX in real time and you read it in your own account rather than in our ledger. Read this page as the map of how the rest of the market pays — and as the checklist for auditing any channel that does hold your money in between.
 
 ## The money trail, in four steps
 Your rebate doesn't come from thin air — it's a slice of fees that already left your account. Here's the path it travels:
