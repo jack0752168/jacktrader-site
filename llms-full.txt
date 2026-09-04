@@ -562,6 +562,32 @@ Ready-made; real-time payout, back-end visible
 In one line: the active-user thresholds, the volume thresholds, the ongoing reviews — normally your biggest cost — are carried by us. You just bring the traders.
 Want the full breakdown? Our guide to how the OKX sub-broker channel works walks through sub-broker vs affiliate tier, commission bands and settlement in detail.
 
+Before you apply
+## "OKX partner" means three different things — which one do you actually want?
+Most people searching for an OKX partner programme land on the wrong one and waste an application cycle. OKX runs three separate partner tracks, documented in three separate places, with different applicants in mind. Only one of them is what this page is about.
+
+OKX partner track
+Built for
+How you join
+Is this page it?
+
+Affiliate / sub-broker
+Group admins, signal channels, KOLs, tool and data sites, communities — anyone who can reach people who already trade
+Apply as an affiliate, or come in under an existing sub-broker and inherit their tier
+Yes — this is the track we run.
+
+Broker Program
+Trading platforms, fintech products, bots and institutions routing client order flow over the API
+Direct with OKX — it is an API integration, with its own broker docs and its own account type
+No. Go to OKX's own broker programme docs.
+
+P2P merchant
+Super / Diamond merchants running P2P order books on OKX
+Through the P2P merchant route inside OKX, not through a referral channel
+No — different application entirely.
+The practical test: if you are sending people to OKX, you want the affiliate/sub-broker track. If you are sending orders to OKX, you want the Broker Program. Traffic vs order flow — that one distinction decides which form you fill in.
+Still deciding between applying to OKX yourself and coming in under an existing tier? The step-by-step version is here: how to become an OKX affiliate. JackTrader is an independent referral partner and is not affiliated with OKX.
+
 What's specific to OKX
 ## OKX prices one rate across every product — so headcount, not product mix, moves your number
 This is the part that genuinely differs from Binance, and it changes which audiences are worth bringing here.
