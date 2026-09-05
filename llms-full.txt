@@ -190,7 +190,7 @@ Share it in your group, content, bio. Existing Binance accounts can be assessed 
 
 4
 ### Get paid in real time
-Every trade your referrals make generates a rebate; your split is settled in real time, back-end visible.
+Every trade your referrals make generates a rebate; your split is settled in real time, back-end visible. (Binance: commissions stop once the referred user reaches VIP 3 or above; Futures-account commissions are capped at 12 months per referral.)
 
 Commission
 ## More volume, higher split — but high from day one
@@ -925,7 +925,7 @@ Summary: Crypto rebate sub-affiliate program for KOLs, signal channels & trading
 
 Sub-affiliate program · Recurring · Real-time payout
 Turn your traffic intopassive income
-Got a trading group, a signal audience, a community or content traffic? Send them to Binance / OKX rebates and earn a recurring share of every trade they make — settled in real time, paid in original currency, fully trackable. Zero cost, zero risk.
+Got a trading group, a signal audience, a community or content traffic? Send them to Binance / OKX rebates and earn a recurring share of every trade they make — settled in real time, paid in original currency, fully trackable. Zero cost, zero risk. (Binance: commissions stop once a referred user reaches VIP 3; Futures commissions are limited to 12 months per referral. OKX has no equivalent caps.)
 Apply on Telegram
 See how it works
 For group owners / signal callers / KOLs / communities / tool sites. Already have an audience? Fastest to onboard.
@@ -3051,7 +3051,7 @@ A Binance referral code is the single most valuable string of characters most tr
 
 ## What a Binance referral code actually does
 Most articles treat a referral code as a coupon — type it in, get a discount. That mental model is wrong, and the difference matters. A coupon is consumed once. A Binance referral code is a permanent binding: it tells Binance which partner introduced you, and from that moment every trading fee you ever pay is attributed to that partner in Binance's internal affiliate accounting. The partner never sees your balance, your positions, your password, or your withdrawals — only a back-office line that reads "this referred account paid X in fees this period." Binance pays the partner a commission on that line, and an honest partner forwards a share of it back to you as a rebate.
-So a referral code is not a one-time discount. It is the lever that turns a recurring cost — your fees — into a recurring rebate, for the entire life of the account. That is why the code you enter at registration is worth far more than any sign-up bonus banner. A bonus is paid once; a rebate compounds on every fill for years. We unpack the full accounting flow in crypto fee rebate explained; here the focus is the code and binding mechanics themselves.
+So a referral code is not a one-time discount. It is the lever that turns a recurring cost — your fees — into a recurring rebate that follows the account rather than the order. (Binance: commissions stop once the referred user reaches VIP 3 or above; Futures-account commissions are capped at 12 months per referral.) That is why the code you enter at registration is worth far more than any sign-up bonus banner. A bonus is paid once; a rebate compounds on every fill for as long as the referral remains eligible. We unpack the full accounting flow in crypto fee rebate explained; here the focus is the code and binding mechanics themselves.
 ### "Referral code" vs "referral link" — same thing, two doors
 You will see both. A referral link (for example, a partner's ?ref= URL) pre-fills the code for you so you can't fat-finger it. A referral code is the raw token you paste manually into the "Referral ID" box on the registration form. They bind your account identically — the link just removes a step. If a partner gives you only a code, paste it before you confirm sign-up. If they give you a link, use it and confirm the code shows up on the form before you submit. Either way, verify it landed: once you click "Create account," the binding is set.
 ## The kickback mechanics: where the money is actually made
@@ -3322,7 +3322,7 @@ Capital locked to qualify
 Vouchers are typically fee rebates or futures "bonus" credits — the futures bonus can be used as margin but generally cannot be withdrawn as cash until you meet trading conditions. Treat the headline number as a ceiling almost nobody reaches, not a signing cheque.
 None of this is a scam — the vouchers are real and worth claiming. But the gap between the headline "$600" and what a typical new user actually banks is large, because the tasks are time-gated and the rewards are constrained to specific uses. If you pick your exchange because of the bonus number, you're optimizing the wrong variable.
 ## What a promo code or referral code actually changes
-When you enter a referral or promo code during registration, one durable thing happens: your account is permanently bound to that referrer. That binding is what decides your fee kickback for the entire life of the account. The welcome vouchers are a side effect that expires in weeks; the fee link is the part that keeps paying.
+When you enter a referral or promo code during registration, one durable thing happens: your account is permanently bound to that referrer. That binding is what decides your fee kickback for as long as the referral remains eligible. (Binance publishes two limits on this: commissions stop once the referred user reaches VIP 3 or above, and Futures-account commissions are capped at 12 months per referral.) The welcome vouchers are a side effect that expires in weeks; the fee link is the part that keeps paying.
 This is why the code you sign up with matters more than the bonus it advertises. A plain referral link leaves you on Binance's standard referral mode, where the inviter takes a 20% base commission on your spot fees and decides whether any of it comes back to you — the published choices are 0%, 5% or 10%, and plenty of links pass back nothing at all. A sub-broker channel binds you at a much higher tier — the referrer sits on an affiliate or sub-broker rate and passes a larger share back to you. Same signup, same account, very different lifetime economics. We break the mechanics down in how Binance referral codes really work. If you are weighing whether to apply to Binance directly instead, the eligibility bar for the Binance affiliate program is worth reading first, the commission bands that decide what an approved partner actually earns are broken out separately, and our referral vs affiliate vs sub-broker comparison shows which of the three routes actually pays a solo trader. Our Binance affiliate program review covers whether that application is worth making in the first place.
 ## Sign-up bonus vs lifetime fee rebate — side by side
 
@@ -3386,7 +3386,7 @@ Why is the fee rebate worth more than the sign-up bonus for active traders?+
 The sign-up bonus is a one-time, capped, expiring amount. The fee rebate is a percentage of every fee you ever pay. A trader running even a modest $1M/month futures bot pays roughly $2,800 a year in fees; an up-to-40% rebate returns over $1,000 of that annually — more than most welcome-voucher pools, and it repeats every year with no tasks to complete.
 
 ## Skip the treasure hunt — lock in the rebate
-The bonus is a one-off. The rebate follows every trade you ever make. Bind your account right and see your number.
+The bonus is a one-off. The rebate follows the account, not the order — manual, scripted or bot. Bind your account right and see your number. (Binance: commissions stop once the referred user reaches VIP 3 or above; Futures-account commissions are capped at 12 months per referral.)
 Open Binance with rebateBinance rebate calculatorGet a tier assessment on Telegram
 Disclaimer: Sign-up bonus amounts, tasks and eligibility are set by Binance, vary by region, and change without notice — always check the current terms on Binance's own site. Rebate rates depend on platform policy, account status and review; displayed rates are a maximum reference and not a guarantee. This article is educational and not investment advice. JackTrader is an independent referral / sub-broker partner and is not Binance.
 
@@ -4587,7 +4587,7 @@ How to claim a fee rebate when you connect a bot via API key
 Here's the one fact that decides whether your bot earns a fee rebate: the rebate binds to your exchange account, not to your API key and not to your bot. Once you understand that, the whole picture clears up — a self-hosted bot like Freqtrade, Hummingbot or OctoBot can capture an up-to-40% rebate with zero code changes, while some hosted bots quietly spend your one-time binding on themselves. This is the setup guide for getting the rebate onto the account your bot trades.
 
 ## The short version
-The rebate lives on the account. When you bind a referral on Binance or OKX, the binding is recorded on the exchange account. Every trade that account makes — manual, scripted or bot — earns the rebate.
+The rebate lives on the account. When you bind a referral on Binance or OKX, the binding is recorded on the exchange account. Every trade that account makes — manual, scripted or bot — counts toward the rebate. (Binance note: commissions stop once the referred user reaches VIP 3 or above; Futures account rebates also have a 12-month time limit per referral. OKX has no equivalent restrictions.)
 The API key is just a door key. Your bot authenticates with an API key to place orders. Creating, deleting or rotating keys changes nothing about the rebate. The key carries no referral information.
 So the question is never "does my bot support rebates" — it's "is the account my bot trades on bound to one". Self-hosted bots win here because you own the account and the binding. The only thing that can go wrong is letting a hosted bot register the account for you under its referral.
 If you take one thing away: register the exchange account yourself under a rebate first, then connect the bot by API key. Never the other way around.
@@ -4639,10 +4639,10 @@ Binding a rebate is one of two levers that change every fee line for a bot; the 
 ## FAQ
 
 Does the fee rebate attach to my API key or my exchange account?+
-To your exchange account. A referral/rebate binding is recorded on the account itself at registration (or, on Binance and OKX, on an unbound existing account within the eligibility window). The API key is just a credential that lets your bot place orders on that account — creating, deleting or rotating keys does not change the rebate. So if your account is bound to a rebate, every order your bot sends through any of its API keys earns it; if the account is not bound, no API key can fix that.
+To your exchange account. A referral/rebate binding is recorded on the account itself at registration (or, on Binance and OKX, on an unbound existing account within the eligibility window). The API key is just a credential that lets your bot place orders on that account — creating, deleting or rotating keys does not change the rebate. So if your account is bound to a rebate, every order your bot sends through any of its API keys earns it; if the account is not bound, no API key can fix that. (Binance: commissions stop once the referred user reaches VIP 3; Futures rebates also have a 12-month limit. OKX has no such limits.)
 
 Can a self-hosted bot like Freqtrade or Hummingbot get the referral discount?+
-Yes, fully. Self-hosted and open-source bots connect to an exchange account that you registered yourself, so you control the referral binding. Register the account under a referral, generate an API key, paste it into the bot, and every trade the bot makes counts toward your rebate. The bot software has no idea a rebate exists — it just trades; the rebate is settled by the exchange on the bound account.
+Yes, fully. Self-hosted and open-source bots connect to an exchange account that you registered yourself, so you control the referral binding. Register the account under a referral, generate an API key, paste it into the bot, and every trade the bot makes counts toward your rebate. The bot software has no idea a rebate exists — it just trades; the rebate is settled by the exchange on the bound account. (Binance note: Futures commissions run for up to 12 months per referral, and stop if the referred user reaches VIP 3 or above. OKX has no equivalent caps.)
 
 Why can't some SaaS or copy-trading bots give me the rebate?+
 Some hosted bots and signal platforms ask you to register a new exchange account through their own referral link, which spends your one-time binding on them instead of you. After that the account is bound to the provider, and you cannot rebind it to a different rebate. If a bot connects to an account you already own via API key (the normal model), it does not touch your binding — so the issue is only with bots that funnel you through their own sign-up. Always register the exchange account yourself first, then connect the bot by API key.
@@ -5874,7 +5874,7 @@ How do I make Freqtrade trade as a maker to pay lower fees?+
 Set the entry and exit order_types to limit rather than market in your config, and price them to post into the book (Freqtrade's pricing section lets you use the order book side so orders rest as maker). Limit orders that don't cross the spread are charged the maker fee, which is lower than taker and on some venues/tiers can be a rebate. The trade-off is fill risk: a resting order may not execute, so strategies that must fill immediately will still pay taker. Many traders run limit entries with a small timeout and accept the occasional miss to capture the maker rate.
 
 Can I get a fee rebate on a Freqtrade bot?+
-Yes. Because Freqtrade connects via API key to an exchange account you registered yourself, you control the referral binding. Register the Binance or OKX account under a rebate, generate a trade-only API key, and paste it into Freqtrade's config. Every trade the bot makes on that account then earns an up-to-40% rebate, settled in real time in USDT, with no change to your strategy or code. The rebate binds to the account, not to the API key, so rotating keys for security never affects it.
+Yes. Because Freqtrade connects via API key to an exchange account you registered yourself, you control the referral binding. Register the Binance or OKX account under a rebate, generate a trade-only API key, and paste it into Freqtrade's config. Every trade the bot makes on that account then counts toward an up-to-40% rebate, settled in real time in USDT, with no change to your strategy or code. Two Binance-side limits apply: commissions stop once the referred user reaches VIP 3 or above, and Futures-account commissions are capped at 12 months per referral; OKX has no equivalent limits. The rebate binds to the account, not to the API key, so rotating keys for security never affects it.
 
 Does the BNB discount stack with a rebate on Freqtrade?+
 They are separate mechanisms and generally apply in sequence. The BNB discount lowers the fee Binance charges at the moment of the trade (paying fees in BNB); the rebate returns a share of the fees you were charged, settled later. A rebate is calculated on the commission attributed to your account, so combining a maker-routed strategy, the BNB discount and a rebate compounds three different reductions. Model your own numbers — the exact interaction depends on tier and product — but they are not mutually exclusive.
@@ -6831,7 +6831,7 @@ Why is a fee rebate worth more to a market maker?+
 Because a market maker earns a tiny spread on enormous turnover, the trading fee is the single largest cost line in the strategy — often larger than the edge itself before optimisation. A directional trader who doubles their money cares little about a 0.02% fee; a market maker capturing a few basis points per round-trip lives or dies on it. Returning up to 40% of that fee therefore lifts net margin far more, in percentage terms, than it would for almost any other trader. The same rebate rate is simply worth more when fees are your dominant cost.
 
 How do I get a rebate on a Hummingbot bot?+
-The rebate is bound to your exchange account, not to Hummingbot or its API key. Register your Binance or OKX account under a rebate first, generate a trade-only API key (withdrawals disabled), and paste it into Hummingbot's exchange connector. Every fill the bot posts on that account then earns an up-to-40% rebate, settled in real time in USDT, with no change to your strategy files. Rotating the API key for security never affects the binding, because the rebate follows the account.
+The rebate is bound to your exchange account, not to Hummingbot or its API key. Register your Binance or OKX account under a rebate first, generate a trade-only API key (withdrawals disabled), and paste it into Hummingbot's exchange connector. Every fill the bot posts on that account then counts toward an up-to-40% rebate, settled in real time in USDT, with no change to your strategy files. Two Binance-side limits apply: commissions stop once the referred user reaches VIP 3 or above, and Futures-account commissions are capped at 12 months per referral; OKX has no equivalent limits. Rotating the API key for security never affects the binding, because the rebate follows the account.
 
 Do maker rebates and a referral rebate stack on Hummingbot?+
 They are separate mechanisms. An exchange maker-rebate or negative-maker-fee program (usually VIP or market-maker tiers) lowers or reverses the fee at the moment of the trade based on your volume and maker ratio. A referral rebate returns a share of the net commission your account generates, settled later by the channel. Because they act at different stages, a maker-routed Hummingbot strategy that also qualifies for a good maker rate and is bound to a rebate compounds the reductions. Model your own numbers — the interaction depends on tier and product — but they are not mutually exclusive.
@@ -7383,7 +7383,7 @@ Why does self-hosting OctoBot matter for getting a rebate?+
 Because a rebate binds to the exchange account, and self-hosting means you register that account yourself. When you run OctoBot on your own machine or server, you open your own Binance or OKX account, choose the referral it binds to, and connect it with your own API key. A SaaS bot that makes you sign up through its link, or that trades on an account it registered, spends your one-time referral binding on itself. Self-hosting keeps that binding — and therefore the rebate — in your hands.
 
 How do I add a fee rebate to OctoBot on Binance or OKX?+
-Register your Binance or OKX account under a rebate first, then generate a trade-only API key (withdrawals disabled) and add it to OctoBot's exchange configuration. Every trade OctoBot makes on that account then earns an up-to-40% rebate, settled in real time in USDT, with no change to your profiles or strategies. The rebate binds to the account, not to the API key, so you can rotate or regenerate keys for security without ever losing it.
+Register your Binance or OKX account under a rebate first, then generate a trade-only API key (withdrawals disabled) and add it to OctoBot's exchange configuration. Every trade OctoBot makes on that account then counts toward an up-to-40% rebate, settled in real time in USDT, with no change to your profiles or strategies. Two Binance-side limits apply: commissions stop once the referred user reaches VIP 3 or above, and Futures-account commissions are capped at 12 months per referral; OKX has no equivalent limits. The rebate binds to the account, not to the API key, so you can rotate or regenerate keys for security without ever losing it.
 
 Can I set OctoBot to trade as a maker to lower fees?+
 It depends on the strategy. OctoBot's grid and DCA trading modes naturally place limit orders that can rest in the book as makers, which is the cheaper fee and stacks well with a rebate. Signal or technical-analysis modes that fire market orders on a trigger will pay the taker fee. Where your strategy allows limit entries, using them captures the maker rate; where it must fill immediately, budget for taker. Either way the rebate applies to the fees you do pay, so it lowers your effective cost regardless of maker/taker mix.
@@ -9605,7 +9605,7 @@ Is there any legitimate way to recover fees on past trades?+
 Not as a backdated rebate from the exchange. The only honest levers are forward-looking: bind a referral or sub-broker channel before your next trade so every future fee earns the maximum rebate, hold the exchange token for the standing fee discount where available, and use maker/post-only orders to lower the fee itself. Anyone promising to 'recover' or 'backdate' fees on trades you already settled is describing something the exchange rebate systems do not actually do — treat that as a warning sign, not an opportunity.
 
 ## Stop leaving future fees on the table
-You can't claw back the trades you already paid full fees on — but you can make sure every trade from here earns up to a 40% rebate, settled in real time in USDT, fully trackable and single-tier. JackTrader will check your account's binding status before you trade so the rebate actually attaches.
+You can't claw back the trades you already paid full fees on — but you can make sure every trade from here counts toward an up-to-40% rebate, settled in real time in USDT, fully trackable and single-tier. (Binance: commissions stop once the referred user reaches VIP 3 or above; Futures-account commissions are capped at 12 months per referral.) JackTrader will check your account's binding status before you trade so the rebate actually attaches.
 Open Binance with rebateOpen OKX with rebateBinance rebateOKX rebateAsk on Telegram
 Disclaimer: Rebate eligibility, binding windows and rates reflect Binance and OKX referral/sub-broker structures at the time of writing and depend on platform policy, your account status, region and review. Rebates are not paid retroactively on settled trades. "Up to 40%" is a maximum reference, not a guarantee of returns. JackTrader is an independent referral / sub-broker partner and is not affiliated with Binance or OKX. This article is educational and not investment advice; single-tier referrals only, no downline or multi-level structure.
 
@@ -9689,7 +9689,7 @@ $147,000
 At just $1M/month — modest for a grid operator running several pairs — the exchange fee is already three times the entire annual subscription. By $5M/month it's fifteen times. The subscription line you were optimising is a rounding error next to the fee line you weren't looking at. This is the same pattern we quantify across bot types in crypto trading bot fees 2026.
 ## The one leg you can actually cut
 You can't negotiate the subscription — it's a fixed price list. You can move the exchange fee, and there's exactly one lever for it that doesn't require you to trade differently: a rebate on your exchange account.
-Because 3Commas and Cryptohopper use your own API key, every fill settles on your Binance or OKX account. A rebate bound to that account returns a share of the trading fee you pay — whether the order was clicked by hand or triggered by the bot. The exchange doesn't distinguish bot fills from manual fills for rebate purposes; it only sees activity on your account. The mechanics of binding the rebate to the account behind an API key are in bot API key fee rebate.
+Because 3Commas and Cryptohopper use your own API key, every fill settles on your Binance or OKX account. A rebate bound to that account returns a share of the trading fee you pay — whether the order was clicked by hand or triggered by the bot. Two Binance-side limits apply: commissions stop once the referred user reaches VIP 3 or above, and Futures-account commissions are capped at 12 months per referral; OKX has no equivalent limits. The exchange doesn't distinguish bot fills from manual fills for rebate purposes; it only sees activity on your account. The mechanics of binding the rebate to the account behind an API key are in bot API key fee rebate.
 Here's the same table with an up-to-40% rebate applied to the exchange fee (a maximum reference, not a guarantee):
 
 Bot monthly volume
@@ -10494,7 +10494,7 @@ Summary: 幣安已上線美股通證：USDT 直接買美股、支援碎股、不
 
 新版塊 · 幣安已上線美股通證
 在幣安買美股手續費最高返 40%
-幣安已上線美股股票通證（tokenized stocks）：用 USDT 直接買熱門美股、支援碎股、不用電匯開戶。比複委託省手續費、比海外券商省入金麻煩。透過 JackTrader 返傭通道註冊，每一筆交易手續費最高返還 40%，實時以 USDT 結算。
+幣安已上線美股股票通證（tokenized stocks）：用 USDT 直接買熱門美股、支援碎股、不用電匯開戶。比複委託省手續費、比海外券商省入金麻煩。透過 JackTrader 返傭通道註冊，每一筆交易手續費最高返還 40%，實時以 USDT 結算。（幣安：被推薦人升至 VIP 3 或以上後佣金停止；合約帳戶的佣金每位推薦人最多計 12 個月。OKX 無此限制。）
 註冊幣安 · 拿返傭
 已有帳戶？Telegram 諮詢
 2 分鐘註冊 · KYC 後即可交易 · 無最低入金 · 不用電匯
@@ -10996,7 +10996,7 @@ Summary: JackTrader 返傭合作夥伴計畫：交易群群主、帶單員、KOL
 
 返傭合作夥伴招募 · 長期分成 · 實時結算
 把你的流量變成被動收入加密返傭合作夥伴計畫
-你有交易群、帶單粉絲、社群或內容流量？把他們引導到幣安 / OKX 返傭，他們每一筆交易，你都能拿到一份長期分成——實時結算、原幣到帳、後台透明可查，零成本、零風險。
+你有交易群、帶單粉絲、社群或內容流量？把他們引導到幣安 / OKX 返傭，他們每一筆交易，你都能拿到一份長期分成——實時結算、原幣到帳、後台透明可查，零成本、零風險。（幣安：被推薦人升至 VIP 3 後佣金停止；期貨帳戶另限 12 個月。OKX 無此限制。）
 Telegram 申請合作
 看合作模式
 適合群主 / 帶單員 / KOL / 社群營運 / 工具站。已有自己粉絲的，溝通最快。
@@ -11101,7 +11101,7 @@ Telegram 聯絡，說明你的通路類型、使用者量級和大致交易規�
 
 4
 ### 實時拿分成
-你推薦的交易者每一筆交易產生返傭，按比例分給你，實時結算、明細可查。
+你推薦的交易者每一筆交易產生返傭，按比例分給你，實時結算、明細可查。（幣安：被推薦人達 VIP 3 後停止；期貨帳戶限 12 個月。OKX 無此限制。）
 
 分成結構
 ## 分潤比例：帶得越多，分得越高
@@ -11951,16 +11951,16 @@ BNB 折扣
 
 URL: https://www.jacktrader.xyz/zh-tw/blog/binance-referral-code-2026.html
 
-Summary: 幣安邀請碼 2026 到底改變什麼？它綁的是你帳戶的永久返傭率，不是一次性紅包——每筆手續費最高退回 40%。本文拆解邀請碼 vs 手續費折扣 vs 簽到獎金的差別、怎麼填、已有帳戶的真實換綁條件（看近 90 天交易量、不是帳戶年齡），以及返傭實算。
+Summary: 幣安邀請碼 2026 到底改變什麼？它綁的是你帳戶的長期返傭率，不是一次性紅包——每筆手續費最高退回 40%。本文拆解邀請碼 vs 手續費折扣 vs 簽到獎金的差別、怎麼填、已有帳戶的真實換綁條件（看近 90 天交易量、不是帳戶年齡），以及返傭實算。
 
 首頁 / 部落格 / 幣安邀請碼 2026：填了拿回什麼
 返傭指南 · 2026 年 7 月更新
 幣安邀請碼 2026：填了拿回什麼？
-搜「幣安邀請碼」的人，多半以為填了會送一筆紅包。真相是：邀請碼綁定的不是一次性獎金，而是你這個帳戶的永久返傭率——之後每一筆手續費都按比例退回，最高 40%。這篇把三件常被混淆的事講清楚：邀請碼、手續費折扣、簽到獎金各自是什麼，邀請碼怎麼填、已有帳戶怎麼辦，以及一年下來實際能拿回多少。
+搜「幣安邀請碼」的人，多半以為填了會送一筆紅包。真相是：邀請碼綁定的不是一次性獎金，而是你這個帳戶的長期返傭率——之後每一筆手續費都按比例退回，最高 40%。這篇把三件常被混淆的事講清楚：邀請碼、手續費折扣、簽到獎金各自是什麼，邀請碼怎麼填、已有帳戶怎麼辦，以及一年下來實際能拿回多少。
 
 ## 幣安邀請碼到底改變了什麼
 先講最關鍵的一句：邀請碼綁的是「返傭率」，不是紅包。你在註冊時填入的那串碼，會把你的帳戶掛到一條獨立的推薦／sub-broker 通道上。從此以後，你每一筆現貨、合約手續費裡，都會有一部分（最高 40%）沿著這條通道退回給你。
-這件事之所以重要，是因為它長期複利。體驗金領一次就沒了，但返傭率只要帳戶還在交易就一直生效——一個月交易量越大、退得越多。對量化、網格、合約高頻這類高週轉玩家，一年下來的返傭金額，往往是任何「新手紅包」的好幾倍。
+這件事之所以重要，是因為它長期複利。體驗金領一次就沒了，但返傭率是綁在帳戶上的長期通道——一個月交易量越大、退得越多。不過幣安有兩道自家上限要先知道：被推薦人升至 VIP 3 或以上後佣金停止，合約帳戶的佣金每位推薦人最多計 12 個月（OKX 無此限制）。對量化、網格、合約高頻這類高週轉玩家，一年下來的返傭金額，往往是任何「新手紅包」的好幾倍。
 返傭只退「交易手續費」那一條，不會退資金費率（funding）或提幣費。它不改變你的策略，只是把一筆本來就要付、無法避免的成本拿回一部分。
 ## 邀請碼 vs 手續費折扣 vs 簽到獎金：別再混為一談
 搜尋結果常把這三個東西攪在一起，但它們機制完全不同、而且可以並存疊加：
@@ -12029,7 +12029,7 @@ $10,800
 ## 常見問題 FAQ
 
 幣安邀請碼 2026 到底有什麼用？+
-幣安邀請碼（推薦碼）在你註冊時填入，綁定的是你這個帳戶的永久返傭率——之後你每一筆現貨或合約手續費，都會按這個比例退回一部分（最高 40%）。它不是一次性紅包，而是一條長期通道：只要帳戶還在交易，返傭就一直退。所以真正該在意的不是「填碼有沒有送體驗金」，而是這個碼把你的返傭率綁到多高。
+幣安邀請碼（推薦碼）在你註冊時填入，綁定的是你這個帳戶的長期返傭率——之後你每一筆現貨或合約手續費，都會按這個比例退回一部分（最高 40%）。它不是一次性紅包，而是一條長期通道。但幣安有兩道自家上限：被推薦人升至 VIP 3 或以上後佣金停止，合約帳戶的佣金每位推薦人最多計 12 個月（OKX 無此限制）。所以真正該在意的不是「填碼有沒有送體驗金」，而是這個碼把你的返傭率綁到多高。
 
 邀請碼、手續費折扣、簽到獎金有什麼不同？+
 三者常被混為一談，但機制完全不同。邀請碼綁的是「返傭率」，退的是你已付手續費的比例，長期複利；手續費折扣（例如用 BNB 抵扣）是在你付費當下直接打折，兩者可以疊加；簽到獎金／體驗金多半是有任務門檻、會到期的券池，領完就沒了。對高週轉的量化、網格玩家來說，會複利的是返傭率，一次性獎金的金額通常一兩個月的返傭就超過了。
@@ -13039,7 +13039,7 @@ Summary: 返傭綁在你的交易所帳戶上，不是綁在 API 金鑰或機器
 決定你的機器人能不能拿返傭，只有一個關鍵事實：返傭綁在你的交易所帳戶上，不是綁在 API 金鑰、也不是綁在機器人上。想通這點，整個邏輯就清楚了——像 Freqtrade、Hummingbot、OctoBot 這類自架機器人，完全不用改一行程式就能拿到最高 40% 返傭；而部分託管機器人卻會悄悄把你那一次性的綁定花在它們自己身上。這篇就是教你把返傭綁到機器人實際交易的那個帳戶上。
 
 ## 先講結論
-返傭住在帳戶上。當你在幣安或 OKX 綁定推薦，綁定就記錄在交易所帳戶上。該帳戶做的每一筆交易——手動、腳本還是機器人——都拿得到返傭。
+返傭住在帳戶上。當你在幣安或 OKX 綁定推薦，綁定就記錄在交易所帳戶上。該帳戶做的每一筆交易——手動、腳本還是機器人——都算進返傭結算。（幣安注意：被推薦人升至 VIP 3 或以上後佣金停止；合約帳戶的返傭另有 12 個月計時限制。OKX 無此限制。）
 API 金鑰只是一把門鑰匙。機器人用 API 金鑰驗證身分去下單。建立、刪除或更換金鑰，對返傭毫無影響。金鑰本身不帶任何推薦資訊。
 所以該問的從來不是「我的機器人支不支援返傭」，而是「機器人交易的那個帳戶有沒有綁返傭」。自架機器人在這點上贏，因為帳戶和綁定都在你手上。唯一會出錯的，就是讓某個託管機器人用它的推薦連結幫你註冊帳戶。
 如果只記一句：先在返傭連結下自己註冊交易所帳戶，再用 API 金鑰接機器人。順序千萬別反過來。
@@ -13091,10 +13091,10 @@ API 金鑰只是一把門鑰匙。機器人用 API 金鑰驗證身分去下單�
 ## 常見問題
 
 返傭是綁在我的 API 金鑰上，還是綁在交易所帳戶上？+
-綁在交易所帳戶上。推薦／返傭綁定是在註冊時記錄在帳戶本身（或在幣安、OKX 上，於符合資格的期間內為一個尚未綁定的既有帳戶補綁）。API 金鑰只是讓機器人在該帳戶下單的憑證——建立、刪除或更換金鑰都不會改變返傭。所以只要帳戶綁了返傭，機器人透過任何一把 API 金鑰送出的每一筆委託都算數；如果帳戶沒綁，任何金鑰都補不回來。
+綁在交易所帳戶上。推薦／返傭綁定是在註冊時記錄在帳戶本身（或在幣安、OKX 上，於符合資格的期間內為一個尚未綁定的既有帳戶補綁）。API 金鑰只是讓機器人在該帳戶下單的憑證——建立、刪除或更換金鑰都不會改變返傭。所以只要帳戶綁了返傭，機器人透過任何一把 API 金鑰送出的每一筆委託都算數；如果帳戶沒綁，任何金鑰都補不回來。（幣安：被推薦人升至 VIP 3 後停止計算；合約帳戶另有 12 個月計時限制。OKX 無此限制。）
 
 像 Freqtrade、Hummingbot 這類自架機器人能拿到返傭嗎？+
-可以，完全可以。自架與開源機器人連接的是你自己註冊的交易所帳戶，所以綁定權在你手上。先在返傭連結下註冊帳戶、產生 API 金鑰、貼進機器人，之後機器人做的每一筆交易都算進你的返傭。機器人軟體根本不知道有返傭這回事——它只負責下單，返傭是交易所在已綁定的帳戶上結算的。
+可以，完全可以。自架與開源機器人連接的是你自己註冊的交易所帳戶，所以綁定權在你手上。先在返傭連結下註冊帳戶、產生 API 金鑰、貼進機器人，之後機器人做的每一筆交易都算進你的返傭。機器人軟體根本不知道有返傭這回事——它只負責下單，返傭是交易所在已綁定的帳戶上結算的。（幣安注意：合約帳戶返傭最多計 12 個月；被推薦人達 VIP 3 後佣金停止。OKX 無上述限制。）
 
 為什麼有些 SaaS 或跟單機器人不能給我返傭？+
 有些託管機器人或訊號平台會要你透過它們自己的推薦連結去註冊一個新的交易所帳戶，這等於把你那一次性的綁定花在它們身上而不是你身上。之後帳戶就綁在該服務商名下，你無法再重新綁到別的返傭。如果機器人是透過 API 金鑰連到你已經擁有的帳戶（正常模式），它不會動到你的綁定——問題只出在那些把你導去它自家註冊頁的機器人。永遠先自己註冊交易所帳戶，再用 API 金鑰接機器人。
@@ -15091,7 +15091,7 @@ Summary: 成为币安返佣代理（助力人）：挂在我们的经纪商档�
 
 币安返佣代理 · 免考核门槛 · 实时结算
 做币安助力人免考核门槛，首单即高分成
-有交易群、带单粉丝、社群或内容流量？把他们引导到币安，他们每一笔交易你都能拿一份长期分成。关键差别：你不用自己去过币安联盟的申请门槛、也不用持续冲交易量考核来拿高比例——我们已经是经纪商档，你第一个客户起就按高档分成。官方后台实时结算、原币到账、后台可查，零成本。单层（非多级）。
+有交易群、带单粉丝、社群或内容流量？把他们引导到币安，他们每一笔交易你都能拿一份长期分成。关键差别：你不用自己去过币安联盟的申请门槛、也不用持续冲交易量考核来拿高比例——我们已经是经纪商档，你第一个客户起就按高档分成。官方后台实时结算、原币到账、后台可查，零成本。单层（非多级）。（注：被推荐人升至 VIP 3 或以上后，推荐佣金停止；合约账户的返佣另有 12 个月期限限制。详见币安官方条款。）
 试算与申请
 为什么免考核
 适合群主 / 带单员 / KOL / 社群 / 工具站。海外渠道，单层。
@@ -15223,7 +15223,7 @@ Telegram 说明你的渠道类型、用户量级和大致交易规模。
 
 4
 ### 实时拿分成
-你推荐的交易者每一笔交易产生返佣，按比例分给你，实时结算、后台可查。
+你推荐的交易者每一笔交易产生返佣，按比例分给你，实时结算、后台可查。（被推荐人达 VIP 3 后停止；合约账户限 12 个月。）
 
 分成结构
 ## 带得越多，分得越高——但第一天就高
@@ -15422,7 +15422,7 @@ Summary: 币安已上线美股通证：USDT 直接买美股、支持碎股、无
 
 新版块 · 币安已上线美股通证
 在币安买美股手续费最高返 40%
-币安已上线美股股票通证（tokenized stocks）：用 USDT 直接买热门美股、支持碎股、无需电汇开户。通过 JackTrader 返佣通道注册，每一笔交易手续费最高返还 40%，实时以 USDT 结算。
+币安已上线美股股票通证（tokenized stocks）：用 USDT 直接买热门美股、支持碎股、无需电汇开户。通过 JackTrader 返佣通道注册，每一笔交易手续费最高返还 40%，实时以 USDT 结算。（币安：被推荐人达 VIP 3 后佣金停止；合约账户的佣金每位推荐人最多计 12 个月。OKX 无此限制。）
 注册币安 · 拿返佣
 已有账户？Telegram 咨询
 2 分钟注册 · KYC 后即可交易 · 无最低入金 · 无需电汇
@@ -16037,7 +16037,7 @@ Telegram 联系，说明你的渠道类型、用户量级和大致交易规模�
 
 4
 ### 实时拿分成
-你推荐的交易者每一笔交易产生返佣，按比例分给你，实时一结算、明细可查。
+你推荐的交易者每一笔交易产生返佣，按比例分给你，实时一结算、明细可查。（币安：被推荐人达 VIP 3 后佣金停止；合约账户的佣金每位推荐人最多计 12 个月。OKX 无此限制。）
 
 分成结构
 ## 分润比例：带得越多，分得越高
@@ -18882,7 +18882,7 @@ Summary: 자동매매·그리드봇을 직접 돌린다면 수수료가 가장 �
 ## 핵심: 페이백은 봇이 아니라 계정에 붙는다
 많은 사람이 "봇에 페이백을 붙일 수 있나?"라고 묻지만, 질문 자체가 살짝 어긋나 있습니다. 봇은 API 키로 당신의 거래소 계정에 접속해 주문을 낼 뿐이고, 실제 수수료는 그 계정에서 나갑니다. 그리고 페이백은 그 계정의 레퍼럴 연결에서 계산됩니다. 즉:
 봇이 만들어낸 모든 체결의 수수료는 당신의 거래소 계정에 기록됩니다.
-그 계정이 셀퍼럴·서브브로커 채널에 연결돼 있으면, 그 수수료의 일부가 페이백으로 되돌아옵니다.
+그 계정이 셀퍼럴·서브브로커 채널에 연결돼 있으면, 그 수수료의 일부가 페이백으로 되돌아옵니다. （바이낸스: 추천받은 사용자가 VIP 3 이상이 되면 커미션이 중단되고, 선물 계정 커미션은 추천당 12개월로 제한됩니다. OKX에는 동일한 제한이 없습니다.）
 봇의 코드·전략·주문 로직은 전혀 바뀌지 않습니다 — 연결은 계정 단위로 한 번만 하면 됩니다.
 그래서 "봇에 페이백을 연결한다"는 건 실제로는 "봇이 쓰는 거래소 계정을 페이백 채널에 연결한다"는 뜻입니다. 그 구조가 어떻게 값이 매겨지는지는 OKX 페이백 페이지와 바이낸스 페이백 페이지에 정리돼 있습니다.
 ## 자체 호스팅 봇 vs SaaS 봇 — 누가 연결을 통제하나
@@ -18917,7 +18917,7 @@ USDT 무기한 명목 기준 월 200만 달러를 돌리는 그리드봇을 봅�
 ## 자주 묻는 질문 FAQ
 
 자동매매 봇도 수수료 페이백을 받을 수 있나요?+
-네. 페이백은 봇이 아니라 거래소 계정에 붙습니다. 봇은 API 키로 당신의 거래소 계정에 접속해 주문을 낼 뿐이고, 실제 거래 수수료는 그 계정에서 나갑니다. 그 계정이 셀퍼럴·서브브로커 채널에 연결되어 있으면, 봇이 만들어내는 모든 체결의 수수료 일부가 페이백으로 되돌아옵니다. 봇의 코드나 전략은 전혀 건드리지 않으며, 연결은 계정 단위로 한 번만 하면 됩니다.
+네. 페이백은 봇이 아니라 거래소 계정에 붙습니다. 봇은 API 키로 당신의 거래소 계정에 접속해 주문을 낼 뿐이고, 실제 거래 수수료는 그 계정에서 나갑니다. 그 계정이 셀퍼럴·서브브로커 채널에 연결되어 있으면, 봇이 만들어내는 모든 체결의 수수료 일부가 페이백으로 되돌아옵니다. 봇의 코드나 전략은 전혀 건드리지 않으며, 연결은 계정 단위로 한 번만 하면 됩니다. 다만 바이낸스에는 두 가지 자체 상한이 있습니다: 추천받은 사용자가 VIP 3 이상이 되면 커미션이 중단되고, 선물 계정 커미션은 추천당 12개월로 제한됩니다. OKX에는 동일한 제한이 없습니다.
 
 자체 호스팅 봇과 SaaS 봇 중 어느 쪽이 페이백에 유리한가요?+
 자체 호스팅 봇이 유리합니다. Freqtrade·Hummingbot·OctoBot처럼 직접 돌리는 봇은 당신이 거래소에 직접 만든 API 키를 쓰기 때문에, 그 계정의 레퍼럴 연결을 당신이 선택할 수 있습니다. 반면 일부 SaaS·내장형 봇은 자기네 레퍼럴 코드를 계정에 미리 박아두는 경우가 있어, 당신이 낼 수수료의 페이백이 이미 그 업체 쪽으로 흘러가도록 잠겨 있을 수 있습니다. 직접 만든 API 계정은 페이백 연결이 비어 있어 당신 채널로 잡을 수 있습니다.
