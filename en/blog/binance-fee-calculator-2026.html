@@ -134,25 +134,17 @@
         <p class="hero-note">Schedule is approximate to the published rates at time of writing; Binance does adjust the bands occasionally. Pay with BNB to take an additional 25% off.</p>
 
         <h2>Binance USDT-M futures fee schedule</h2>
-        <p>USDT-M perpetuals and quarterly futures use a separate volume table — and the futures bands are easier to climb than spot, because the volume that counts is futures notional, which moves an order of magnitude faster than spot.</p>
+        <p>USDT-M perpetuals and quarterly futures use a separate volume table from spot — and the futures bands are easier to climb, because the volume that counts is futures notional, which moves an order of magnitude faster than spot. (Binance's app writes this product <strong>USDⓈ-M</strong>; USDT-M, USDT-margined and "USDT perpetual" all mean the same contracts and the same fee table.)</p>
 
         <table class="compare">
           <thead><tr><th>VIP tier</th><th>30-day futures volume (USDT)</th><th>Maker fee</th><th>Taker fee</th></tr></thead>
           <tbody>
             <tr><td>Regular</td><td>&lt; $15M</td><td>0.0200%</td><td>0.0500%</td></tr>
             <tr><td>VIP 1</td><td>≥ $15M</td><td>0.0160%</td><td>0.0400%</td></tr>
-            <tr><td>VIP 2</td><td>≥ $50M</td><td>0.0140%</td><td>0.0350%</td></tr>
-            <tr><td>VIP 3</td><td>≥ $250M</td><td>0.0120%</td><td>0.0320%</td></tr>
-            <tr><td>VIP 4</td><td>≥ $1B</td><td>0.0080%</td><td>0.0300%</td></tr>
-            <tr><td>VIP 5</td><td>≥ $5B</td><td>0.0060%</td><td>0.0270%</td></tr>
-            <tr><td>VIP 6</td><td>≥ $12.5B</td><td>0.0040%</td><td>0.0250%</td></tr>
-            <tr><td>VIP 7</td><td>≥ $25B</td><td>0.0020%</td><td>0.0220%</td></tr>
-            <tr><td>VIP 8</td><td>≥ $50B</td><td>0.0000%</td><td>0.0200%</td></tr>
-            <tr><td>VIP 9</td><td>≥ $100B</td><td>−0.0050%</td><td>0.0170%</td></tr>
           </tbody>
         </table>
-        <p class="hero-note">At VIP 9 maker the fee is negative — Binance pays you 0.005% to provide liquidity. The BNB futures discount (10% off, while the promo runs) sits on top.</p>
-        <p>Futures is where most high-volume traders pay the bulk of their fees, and the maker/taker split plus funding decide the real cost. For the full USDⓈ-M and Coin-M reference — every tier, the 10%-vs-25% BNB difference, and why funding is the line no fee schedule prints — see our dedicated <a href="/en/blog/binance-futures-fee-schedule-2026.html">Binance futures fee schedule 2026</a>.</p>
+        <p class="hero-note">This table stops at VIP 1 on purpose. Regular and VIP 1 cover essentially everyone who arrives at a fee calculator — every worked example below sits in the Regular band — and Binance revises the higher futures volume thresholds. A stale threshold is worse than no threshold, so we keep the full tier-by-tier futures reference on <strong>one page only</strong> rather than repeating a copy here that can drift out of sync. If you are near a tier boundary, confirm against Binance's own <a href="https://www.binance.com/en/fee/futureFee" rel="nofollow noopener">futures fee page</a> before you plan around it. The BNB futures discount (10% off, while the promo runs) sits on top of whatever tier you are in.</p>
+        <p>Futures is where most high-volume traders pay the bulk of their fees, and the maker/taker split plus funding decide the real cost. For the full <strong>USDT-M (USDⓈ-M) and Coin-M fee schedule</strong> — every VIP tier, the 10%-vs-25% BNB difference, and why funding is the line no fee schedule prints — see our dedicated <a href="/en/blog/binance-futures-fee-schedule-2026.html">Binance futures fee schedule 2026</a>.</p>
 
         <h2>Worked example #1 — a grid bot trader at $5M / month</h2>
         <p>Assume you run a Binance USDT-M grid bot at <strong>$5,000,000 notional volume per month</strong>. The bot is 85% maker, 15% taker (typical for a tight-grid range strategy).</p>

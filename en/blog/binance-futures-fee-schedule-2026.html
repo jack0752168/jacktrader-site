@@ -160,8 +160,22 @@
         </ol>
         <p>Tiers 1–4 compound; funding is a separate line. We work all of it below.</p>
 
+        <h2>USDⓈ-M, USDT-M, USDT perpetual, Coin-M — which fee schedule applies to you</h2>
+        <p>Half the confusion around the Binance futures fee schedule is naming, not rates. Binance's own interface writes the stablecoin-margined product with a circled S — <strong>USDⓈ-M</strong> — while its docs, most API wrappers and virtually every trader write the same thing as <strong>USDT-M</strong>, <strong>USDT-margined</strong> or simply a <strong>USDT perpetual</strong>. They are one product on one fee table. The genuine split is stablecoin-margined versus coin-margined:</p>
+
+        <table class="compare">
+          <thead><tr><th>What Binance calls it</th><th>Also written as</th><th>Margin &amp; settlement</th><th>Which fee table</th></tr></thead>
+          <tbody>
+            <tr><td>USDⓈ-M futures</td><td>USDT-M · USDT-margined · USDT perpetual · USDT-M perps</td><td>Stablecoin (USDT and USDC pairs both live here)</td><td>The USDⓈ-M table below</td></tr>
+            <tr><td>Coin-M futures</td><td>COIN-M · coin-margined · inverse perpetual</td><td>The underlying coin itself</td><td>The Coin-M section below</td></tr>
+          </tbody>
+        </table>
+        <p>Two practical consequences. First, if you are searching for a "USDT perpetual fee schedule" and only finding pages titled USDⓈ-M, you already have the right table — nothing is missing. Second, the two products sit behind <em>separate API bases</em>, so a bot wired to one will not see the other's positions or fees; check the current Binance API docs for the exact endpoints before you wire anything, because that mapping is the kind of detail that moves without announcement.</p>
+        <p>The volume ladder does not care which of the two you trade — USDⓈ-M and Coin-M notional pool together into the same 30-day futures volume, and spot volume stays out of it. That matters for anyone deciding whether to consolidate a book onto one contract type purely to climb tiers: you do not have to.</p>
+
         <h2>Binance USDⓈ-M perpetual futures fee schedule (Regular → VIP 9)</h2>
         <p>This is the table most people mean by "the Binance futures fee schedule". Volume that counts here is your 30-day USDⓈ-M plus Coin-M futures notional — spot volume does <em>not</em> pool into it. The maker fee compresses to zero at the top; the taker leg never goes free, which is why your maker/taker mix matters more than your tier once you are trading real size.</p>
+        <p class="hero-note">This is the one place on this site that prints the futures ladder tier by tier — deliberately, so there is a single version to keep current rather than several copies drifting apart. Binance does revise the volume thresholds, so if you are close to a boundary, confirm the row you are planning around against Binance's own <a href="https://www.binance.com/en/fee/futureFee" rel="nofollow noopener">futures fee page</a>. The maker/taker rates move far less often than the volume bands do.</p>
 
         <table class="compare">
           <thead><tr><th>Fee tier</th><th>30-day futures volume</th><th>Maker fee</th><th>Taker fee</th></tr></thead>

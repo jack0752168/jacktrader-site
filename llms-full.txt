@@ -2431,7 +2431,7 @@ VIP 9
 0.0240%
 Schedule is approximate to the published rates at time of writing; Binance does adjust the bands occasionally. Pay with BNB to take an additional 25% off.
 ## Binance USDT-M futures fee schedule
-USDT-M perpetuals and quarterly futures use a separate volume table — and the futures bands are easier to climb than spot, because the volume that counts is futures notional, which moves an order of magnitude faster than spot.
+USDT-M perpetuals and quarterly futures use a separate volume table from spot — and the futures bands are easier to climb, because the volume that counts is futures notional, which moves an order of magnitude faster than spot. (Binance's app writes this product USDⓈ-M; USDT-M, USDT-margined and "USDT perpetual" all mean the same contracts and the same fee table.)
 
 VIP tier
 30-day futures volume (USDT)
@@ -2447,48 +2447,8 @@ VIP 1
 ≥ $15M
 0.0160%
 0.0400%
-
-VIP 2
-≥ $50M
-0.0140%
-0.0350%
-
-VIP 3
-≥ $250M
-0.0120%
-0.0320%
-
-VIP 4
-≥ $1B
-0.0080%
-0.0300%
-
-VIP 5
-≥ $5B
-0.0060%
-0.0270%
-
-VIP 6
-≥ $12.5B
-0.0040%
-0.0250%
-
-VIP 7
-≥ $25B
-0.0020%
-0.0220%
-
-VIP 8
-≥ $50B
-0.0000%
-0.0200%
-
-VIP 9
-≥ $100B
-−0.0050%
-0.0170%
-At VIP 9 maker the fee is negative — Binance pays you 0.005% to provide liquidity. The BNB futures discount (10% off, while the promo runs) sits on top.
-Futures is where most high-volume traders pay the bulk of their fees, and the maker/taker split plus funding decide the real cost. For the full USDⓈ-M and Coin-M reference — every tier, the 10%-vs-25% BNB difference, and why funding is the line no fee schedule prints — see our dedicated Binance futures fee schedule 2026.
+This table stops at VIP 1 on purpose. Regular and VIP 1 cover essentially everyone who arrives at a fee calculator — every worked example below sits in the Regular band — and Binance revises the higher futures volume thresholds. A stale threshold is worse than no threshold, so we keep the full tier-by-tier futures reference on one page only rather than repeating a copy here that can drift out of sync. If you are near a tier boundary, confirm against Binance's own futures fee page before you plan around it. The BNB futures discount (10% off, while the promo runs) sits on top of whatever tier you are in.
+Futures is where most high-volume traders pay the bulk of their fees, and the maker/taker split plus funding decide the real cost. For the full USDT-M (USDⓈ-M) and Coin-M fee schedule — every VIP tier, the 10%-vs-25% BNB difference, and why funding is the line no fee schedule prints — see our dedicated Binance futures fee schedule 2026.
 ## Worked example #1 — a grid bot trader at $5M / month
 Assume you run a Binance USDT-M grid bot at $5,000,000 notional volume per month. The bot is 85% maker, 15% taker (typical for a tight-grid range strategy).
 Maker volume = $4.25M × 0.0200% = $850 in maker fees
@@ -2614,8 +2574,28 @@ The BNB discount — paying fees in BNB takes 10% off the futures fee (note: spo
 Funding — paid or received every 8 hours; not a Binance fee, but a real cost most models forget.
 Affiliate / sub-broker rebate — a channel like JackTrader's Binance channel returns up to 40% of the fee you paid, settled in real time in USDT.
 Tiers 1–4 compound; funding is a separate line. We work all of it below.
+## USDⓈ-M, USDT-M, USDT perpetual, Coin-M — which fee schedule applies to you
+Half the confusion around the Binance futures fee schedule is naming, not rates. Binance's own interface writes the stablecoin-margined product with a circled S — USDⓈ-M — while its docs, most API wrappers and virtually every trader write the same thing as USDT-M, USDT-margined or simply a USDT perpetual. They are one product on one fee table. The genuine split is stablecoin-margined versus coin-margined:
+
+What Binance calls it
+Also written as
+Margin & settlement
+Which fee table
+
+USDⓈ-M futures
+USDT-M · USDT-margined · USDT perpetual · USDT-M perps
+Stablecoin (USDT and USDC pairs both live here)
+The USDⓈ-M table below
+
+Coin-M futures
+COIN-M · coin-margined · inverse perpetual
+The underlying coin itself
+The Coin-M section below
+Two practical consequences. First, if you are searching for a "USDT perpetual fee schedule" and only finding pages titled USDⓈ-M, you already have the right table — nothing is missing. Second, the two products sit behind separate API bases, so a bot wired to one will not see the other's positions or fees; check the current Binance API docs for the exact endpoints before you wire anything, because that mapping is the kind of detail that moves without announcement.
+The volume ladder does not care which of the two you trade — USDⓈ-M and Coin-M notional pool together into the same 30-day futures volume, and spot volume stays out of it. That matters for anyone deciding whether to consolidate a book onto one contract type purely to climb tiers: you do not have to.
 ## Binance USDⓈ-M perpetual futures fee schedule (Regular → VIP 9)
 This is the table most people mean by "the Binance futures fee schedule". Volume that counts here is your 30-day USDⓈ-M plus Coin-M futures notional — spot volume does not pool into it. The maker fee compresses to zero at the top; the taker leg never goes free, which is why your maker/taker mix matters more than your tier once you are trading real size.
+This is the one place on this site that prints the futures ladder tier by tier — deliberately, so there is a single version to keep current rather than several copies drifting apart. Binance does revise the volume thresholds, so if you are close to a boundary, confirm the row you are planning around against Binance's own futures fee page. The maker/taker rates move far less often than the volume bands do.
 
 Fee tier
 30-day futures volume
@@ -11658,7 +11638,7 @@ VIP 9
 0.0240%
 以上接近撰稿時的公布費率，幣安偶爾會調整級距。再用 BNB 付費可額外打 75 折（省 25%）。
 ## 幣安 USDT 本位永續合約手續費表
-USDT 本位永續與季度合約用的是另一張量能表——而且合約的級距比現貨好爬，因為計入的是合約名目量（notional），它累積的速度比現貨快上一個數量級。對跑網格機器人或量化策略的人來說，光靠合約量就能比現貨更快升級。
+USDT 本位永續與季度合約用的是另一張量能表——而且合約的級距比現貨好爬，因為計入的是合約名目量（notional），它累積的速度比現貨快上一個數量級。對跑網格機器人或量化策略的人來說，光靠合約量就能比現貨更快升級。（幣安 App 裡把這個產品寫成 USDⓈ-M；USDT-M、USDT 本位、「USDT perpetual」指的都是同一批合約、同一張費率表。）
 
 VIP 等級
 30 天合約量（USDT）
@@ -11674,47 +11654,8 @@ VIP 1
 ≥ $15M
 0.0160%
 0.0400%
-
-VIP 2
-≥ $50M
-0.0140%
-0.0350%
-
-VIP 3
-≥ $250M
-0.0120%
-0.0320%
-
-VIP 4
-≥ $1B
-0.0080%
-0.0300%
-
-VIP 5
-≥ $5B
-0.0060%
-0.0270%
-
-VIP 6
-≥ $12.5B
-0.0040%
-0.0250%
-
-VIP 7
-≥ $25B
-0.0020%
-0.0220%
-
-VIP 8
-≥ $50B
-0.0000%
-0.0200%
-
-VIP 9
-≥ $100B
-−0.0050%
-0.0170%
-到 VIP 9 的掛單費是負的——幣安反而付你 0.005% 來提供流動性。BNB 合約折扣（活動期間 9 折）還能再疊在上面。
+這張表刻意只列到 VIP 1。會來查手續費計算機的人幾乎都落在一般用戶與 VIP 1 這兩檔（下面每一個實算範例也都在一般用戶級距），而幣安會調整更上層的合約量門檻——列一個過期的門檻比不列還糟。所以完整的逐級合約費率表我們只放在一個頁面，不在這裡再複製一份、讓兩邊對不上。若你已經接近某個級距的邊界，動手規劃前請以幣安官方的合約手續費頁為準。BNB 合約折扣（活動期間 9 折）則是疊在你所在級距之上。
+完整的 USDT-M（USDⓈ-M）與幣本位 Coin-M 費率表——每一個 VIP 級距、BNB 折扣現貨 25% 對合約 10% 的差別，以及沒有任何費率表會印出來的資金費率——見我們的英文完整版：Binance futures fee schedule 2026。
 ## 實算範例 #1——每月 $5M 的網格機器人玩家
 假設你在幣安 USDT 本位上跑網格機器人，每月名目成交量 $5,000,000。這支機器人 85% 掛單、15% 吃單（緊密區間網格策略的典型比例）。
 掛單量 = $4.25M × 0.0200% = $850 掛單費
@@ -12735,7 +12676,7 @@ OKX 的自助聯盟路徑門檻很低——通常一個完成 KYC 的帳戶就�
 兩者都在綁定當下把返傭掛上，且都很難為一個已經大量交易過、卻沒帶推薦的帳戶重新綁定。關鍵差別在於「這條測試量的是什麼」：幣安有官方的換綁（win-back）通道——尚未綁過推薦的母帳戶、已完成 KYC，只要申請前 90 天總交易量在 5,000 USD 以內就仍可補綁；那是交易量上限，不是從註冊起算的倒數計時，帳戶開多久並不影響資格。綁定還要在 30 天內做滿 150,000 USD 交易量才生效。OKX 並未公布對等的換綁通道，所以請當作「註冊當下就要綁好」，並直接向 OKX 確認。兩種情況下，最安全的做法都是在交易前先確認綁定資格，或從第一天就透過通道開戶。
 
 我可以同時加入幣安和 OKX 的聯盟計劃嗎？+
-可以。它們是不同交易所上的獨立計劃，所以你可以同時在兩邊都持有返傭關係，再把每一筆交易導到你偏好的交易所。許多高交易量的人正是這樣做——在兩邊各保留一個已綁定的帳戶，然後依手續費、流動性或產品把交易放到合適的地方，兩邊都收返傭。一個同時涵蓋兩個交易所的通道會讓這件事更簡單，因為結算與追蹤都集中在一處。
+可以。它們是不同交易所上的獨立計劃，所以你可以同時在兩邊都持有返傭關係，再把每一筆交易導到你偏好的交易所。許多高交易量的人正是這樣做——在兩邊各保留一個已綁定的帳戶，然後依手續費、流動性或產品把交易放到合適的地方，兩邊都收返傭。一個同時涵蓋兩個交易所的通道會讓這件事更簡單，因為結算與追蹤都集中在一處。注意：幣安的佣金在被推薦人達 VIP 3 後停止，合約佣金每位推薦人上限 12 個月；OKX 無此限制。
 
 幣安和 OKX 聯盟計劃允許下線或多層嗎？+
 不允許。兩者都是單層：你只賺你直接推薦的交易者，而非招募你下面的其他聯盟者。兩家都沒有合規的開放式多層架構，任何以堆疊下線抽成為賣點的說法，在哪個交易所都是警訊。兩邊合法的模式是一樣的——推薦交易者、分享返傭、透明結算。
