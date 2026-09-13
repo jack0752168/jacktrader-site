@@ -43,6 +43,8 @@
 - About (zh-TW): https://www.jacktrader.xyz/zh-tw/about.html
 - Blog hub (en): https://www.jacktrader.xyz/en/blog/
 - Blog hub (zh-TW): https://www.jacktrader.xyz/zh-tw/blog/
+- Partner program (zh-CN, 助力人): https://www.jacktrader.xyz/partner.html
+- Partner program (zh-TW, 合作夥伴): https://www.jacktrader.xyz/zh-tw/partner.html
 
 ## Deep dives (English cornerstone content)
 - Binance Fee Calculator 2026 — maker, taker, every VIP tier, BNB discount stack, and how a 40% sub-broker rebate compounds. Worked examples for grid bots and HFT desks. https://www.jacktrader.xyz/en/blog/binance-fee-calculator-2026.html
@@ -95,6 +97,18 @@
 - HFT Fees on Binance & OKX 2026: Real Cost Breakdown — high-frequency trading is the one style where the fee, not the signal, is usually the biggest number on the P&L, because a small per-fill fee is multiplied by an enormous fill count; both venues price liquidity aggressively at the top so the maker fee steps down to 0.0000% and then slightly negative at the highest VIP tiers, but those gates need tens of billions/month and the taker legs (aggressive fills HFT can't avoid) stay firmly positive at every tier; a $100M/month book at ~0.0200% blended still pays ~$240,000/year in fees and an up-to-40% rebate returns up to ~$96,000/year with no strategy change; the three levers are climbing VIP (mostly spent), maker routing (capped by latency/fill risk), and binding a rebate on the stubborn taker residue — the lever most desks leave on the table; the rebate scales one-to-one with turnover. https://www.jacktrader.xyz/en/blog/hft-fees-binance-okx-2026.html
 - DCA Bot Fees 2026: How Recurring Buys Quietly Cost You — dollar-cost averaging feels free but every scheduled buy is a real order paying a real fee, and because DCA is a buy-and-hold thesis that fee is pure drag with no offsetting alpha (money that never gets invested, so it never compounds); on spot maker and taker are identical at the standard 0.10% tier, so the order-type lever that saves perp traders does nothing here, leaving only two levers — paying fees with BNB (25% off spot) and a rebate; convenience auto-invest/recurring-buy products can carry a flat fee ABOVE the standard spot schedule, so a self-hosted DCA bot on plain spot orders is often cheaper; a $3,000/day bot ($1.08M/yr volume) pays ~$1,080/yr headline, cut to ~$486 after the BNB discount and an up-to-40% rebate (~$594 kept, over half) with no change to the schedule. https://www.jacktrader.xyz/en/blog/dca-bot-fees.html
 - Binance Sign-Up Bonus 2026: What the $600 Promo Really Gives You — the advertised "$600 sign-up bonus / promo code" is a maximum task-based voucher pool (KYC, first deposit, first trade, volume targets), not guaranteed cash; each piece is usually an expiring fee-rebate voucher or a futures "bonus" credit that's usable as margin but not withdrawable, so the amount a typical new user actually banks is far below the headline; the durable thing a promo/referral code changes is that it permanently binds your account to a referrer's fee-kickback rate — the vouchers expire in weeks, the fee link pays on every trade for the life of the account; a $1M/month grid bot pays ~$3,120/yr in fees, an up-to-40% rebate returns ~$1,200/yr, out-earning the whole welcome pool within a month or two and repeating every year with no tasks; you can claim the welcome vouchers AND the lifetime rebate at once — bind through a sub-broker channel from day one, or rebind an existing account within Binance's window. https://www.jacktrader.xyz/en/blog/binance-sign-up-bonus-2026.html
+- Maker vs Taker Fees Explained 2026: Flip to Maker, Pay Less — what each side costs on Binance and OKX, why the gap matters at volume, how to fill as a maker with post-only orders, and where a rebate stacks on top. Worked example. https://www.jacktrader.xyz/en/blog/maker-vs-taker-fees-explained.html
+- Binance VIP Fee Tiers 2026: Reach VIP 1–9 + What Each Saves — the volume and BNB gates per VIP tier, what each tier saves on spot and futures, a worked example and how an up-to-40% rebate stacks. Always confirm current thresholds on Binance's own fee page. https://www.jacktrader.xyz/en/blog/binance-vip-fee-tiers-2026.html
+- OKX VIP Fee Tiers 2026: Full Breakdown + How to Climb — the VIP1-9 futures table, the asset-OR-volume qualification rule, a step-by-step climb playbook, and where a rebate fits. https://www.jacktrader.xyz/en/blog/okx-vip-fee-tiers-2026.html
+- BNB Fee Discount 2026: Is Holding BNB Worth It? — the spot vs futures BNB discount explained with real math: does holding BNB to cut fees beat the price risk? Worked example, VIP + up-to-40% rebate stack. https://www.jacktrader.xyz/en/blog/bnb-fee-discount-2026.html
+- Binance Referral Code 2026: How Rebates Really Work — what binding actually does, how the kickback is calculated, why a sub-broker channel pays more, and the real rebind test for existing accounts (trailing 90-day volume, not account age). https://www.jacktrader.xyz/en/blog/binance-referral-code-2026.html
+- Negative Maker Fees: How Maker Rebates Pay You (Binance vs OKX, 2026) — where the maker fee flips from a cost into a rebate on Binance and OKX, VIP ladder vs dedicated market-maker programs, and the math. https://www.jacktrader.xyz/en/blog/crypto-market-maker-rebates.html
+- Best Crypto Exchange for High-Volume Traders 2026 — fees at scale, VIP and sub-broker tiers, and rebate stacking — Binance vs OKX, with real numbers. https://www.jacktrader.xyz/en/blog/best-exchange-high-volume-traders.html
+- How to Bind a Binance Referral on an Existing Account (2026) — the official rebind rule: KYC required, 90-day volume cap of 5,000 USD, and the relationship only takes effect after 150,000 USD volume within 30 days. Eligibility, what changes, safety, and the in-app steps. https://www.jacktrader.xyz/en/blog/binance-rebind-existing-account.html
+- OKX Copy-Trading Fees: What You Actually Pay — the lead-trader profit share, the trading fees underneath, what's rebatable, and a full worked example. https://www.jacktrader.xyz/en/blog/okx-copy-trading-fees.html
+- Spot vs Futures Fees: Which Is Cheaper on Binance & OKX — why futures looks cheaper than spot per fill but leverage inverts the real cost. Worked examples + rebate stack. https://www.jacktrader.xyz/en/blog/spot-vs-futures-fees.html
+- Binance 20% Trading Fee Discount 2026: How to Get It (and Beat It) — what the 20% discount actually is (a referral kickback), how it differs from the BNB discount, how to switch it on, and how a sub-broker channel pushes it up to 40% (a maximum, not guaranteed). https://www.jacktrader.xyz/en/blog/binance-20-fee-discount-2026.html
+- What Is a Crypto Sub-Broker? Institutional Rebate Tiers Explained 2026 — how a sub-broker differs from an affiliate and an introducing broker, the rebate tiers, and how to use one — or become one. https://www.jacktrader.xyz/en/blog/crypto-sub-broker-explained.html
 
 ## Deep dives (Korean / 한국어)
 - 셀퍼럴이란? 바이낸스·OKX 셀퍼럴 사이트 고르는 법 2026 — 셀퍼럴(self-referral)의 정의(거래소가 추천인에게 주는 커미션 몫을 트레이더 본인이 받도록 연결하는 구조)와 일반 레퍼럴 코드(소액 할인만)의 결정적 차이; 레퍼럴·제휴·셀퍼럴/서브브로커 3구조 비교표; 안전한 셀퍼럴 사이트 체크리스트(비밀번호·출금 API·선입금·보장 수익·하부 모집 요구는 거를 것, 실시간 공식 후백엔드 정산·건별 대조·'최대'표기는 있어야 함); 바이낸스 vs OKX 어디가 유리한지(perp 회전율 높으면 OKX, 현물·상품군은 바이낸스); 월 1,000만 달러 실전 예시(코드만 = 미미 vs 셀퍼럴 40% = 연 약 $13,920 환급, 계정별 검토·보장 아님). 이 클러스터의 허브 글로 OKX·바이낸스 레퍼럴 코드 가이드와 페이백 페이지로 연결. 단일 단계, 총판·다단계 아님. https://www.jacktrader.xyz/ko/blog/selfreferral-guide-2026.html
@@ -103,6 +117,7 @@
 - OKX 레퍼럴 코드·셀퍼럴 2026: 수수료 페이백 최대 40% 받는 법 — OKX 레퍼럴(추천인) 코드 자체가 주는 건 소액 할인뿐이고, 진짜 페이백은 그 코드가 어느 등급(일반 레퍼럴 / 제휴 / 셀퍼럴·서브브로커 트리)에 연결됐느냐에서 갈림; 셀퍼럴 채널 연결 시 거래 수수료의 최대 40% 페이백(계정별 검토, 보장 아님); 무기한 거래는 회전율이 높아 페이백 기반이 큼; 위험 신호(비밀번호·출금 API·선입금·보장 수익·하부 모집 요구는 피하라), 월 1,000만 달러 실전 예시. 단일 단계, 총판·다단계 아님. https://www.jacktrader.xyz/ko/blog/okx-referral-code-2026.html
 - 바이낸스 레퍼럴 코드 2026: 추천인·셀퍼럴 페이백 진짜 작동 원리 — 바이낸스 레퍼럴(추천인) 코드 자체가 주는 건 소액 할인뿐이고, 진짜 페이백은 그 코드가 어느 등급(일반 레퍼럴 / 제휴 / 셀퍼럴·서브브로커 트리)에 연결됐느냐에서 갈림; 셀퍼럴 채널 연결 시 거래 수수료의 최대 40% 페이백(계정별 검토, 보장 아님); 가입 전 90일 연결 규칙, 위험 신호(비밀번호·출금 API·선입금·보장 수익 요구는 피하라), 월 1,000만 달러 실전 예시. 단일 단계, 다단계 아님. https://www.jacktrader.xyz/ko/blog/binance-referral-code-2026.html
 - 바이낸스 vs OKX 레퍼럴·페이백 2026: 어느 쪽이 더 돌려주나 — 두 거래소를 나란히 비교; 핵심은 두 거래소의 트레이더 페이백 상한(수수료의 최대 40%, 보장 아님)이 거의 같다는 것 — 실제 수령액을 가르는 건 상한이 아니라 어느 등급에 연결됐느냐(직접 신청한 얇은 레퍼럴 ~20~25% vs 서브브로커 트리 연결 최대 40% 부근); 총 커미션 vs 페이백(pass-through) 구분, 나란히 비교표(상한·정산 USDT·토큰 할인 BNB/OKB·등급 조건), 바이낸스 300만+OKX 200만 달러/월 실전 예시(얇은 20% = 연 ~$6,000 vs 트리 40% = 연 ~$12,000); 두 계정은 독립적이라 고를 문제가 아니라 실제 거래하는 모든 거래소에 붙일 문제; 위험 신호(비밀번호·출금 API·선입금·하위 모집 요구는 피하라). 단일 단계, 다단계 아님. https://www.jacktrader.xyz/ko/blog/binance-vs-okx-referral-payback.html
+- 암호화폐 수수료·페이백 블로그 (index) — 바이낸스·OKX 거래 수수료, OKX 파트너·서브브로커 페이백 글 모음. 단일 단계, 다단계 아님.: https://www.jacktrader.xyz/ko/blog/
 
 ## Deep dives (Traditional Chinese / 繁體中文)
 - 有效手續費率完整解析 2026：你真正付的手續費是多少（費率頁上的「掛單 0.02%/吃單 0.05%」不是你真正付的錢；有效手續費率＝總手續費÷總成交量，是把掛單/吃單成交、折扣與返傭全部混合後你實際付出的單一百分比，幾乎一定比掛單牌價高——0.0200% 掛單/0.0500% 吃單下，50% 吃單占比＝0.0350%（比掛單牌價高 75%）；三個可疊加的槓桿把它往下壓＝VIP 等級（壓低兩個牌價）、BNB/OKB 折扣（源頭打折）、返傭（手續費被扣後退回最高 40%）；每月 300 萬美元實算從真實混合 0.0380% 一路降到疊完折扣+返傭的淨 ~0.0205%；有效費率不含價差、滑價與資金費——那正是返傭唯一能移動的那一塊）: https://www.jacktrader.xyz/zh-tw/blog/effective-fee-rate-explained.html
@@ -125,6 +140,7 @@
 - OKX Sub-broker vs 聯盟分傭: https://www.jacktrader.xyz/zh-tw/blog/okx-sub-broker-affiliate-program.html
 - 網格機器人手續費優化: https://www.jacktrader.xyz/zh-tw/blog/grid-bot-fee-optimization.html
 - 加密貨幣手續費怎麼省：7 個多數人多付的地方 2026: https://www.jacktrader.xyz/zh-tw/blog/reduce-crypto-trading-fees.html
+- 幣安 vs OKX 手續費 2026：哪一家真的比較便宜？（現貨、合約掛單吃單費率、VIP 等級、BNB 與 OKB 折扣全部攤開比，再加上能疊在兩者之上的 Sub-broker 返傭（最高 40%，非保證）。）: https://www.jacktrader.xyz/zh-tw/blog/binance-vs-okx-fees-2026.html
 
 
 ## US Stocks on Binance (new line, June 2026)
@@ -150,6 +166,9 @@
 - 币安美股通证分红怎么处理？拆股、并购等公司行动规则解读 (zh-CN): https://www.jacktrader.xyz/blog/binance-stock-tokens-dividends.html
 - 幣安美股通證配息怎麼處理？拆股、併購等公司行動規則解讀 (zh-TW): https://www.jacktrader.xyz/zh-tw/blog/binance-stock-tokens-dividends.html
 - Blog hub (zh-CN): https://www.jacktrader.xyz/blog/
+- 幣安買美股完整教學：股票通證開戶、交易、費用 2026 (zh-TW): https://www.jacktrader.xyz/zh-tw/blog/binance-us-stocks-guide.html
+- 美股券商对比2026：币安通证vs富途/老虎/盈透 (zh-CN): https://www.jacktrader.xyz/blog/binance-us-stocks-vs-brokers.html
+- 美股券商比較2026：富途牛牛、盈透、複委託與幣安怎麼選 (zh-TW): https://www.jacktrader.xyz/zh-tw/blog/binance-us-stocks-vs-brokers.html
 
 
 ## US Stocks on OKX (xStocks, new line June 2026)
@@ -168,6 +187,8 @@
 - 台灣/香港用 OKX 買美股：複委託 vs xStocks 怎麼選 (zh-TW): https://www.jacktrader.xyz/zh-tw/blog/okx-us-stocks-from-taiwan.html
 - OKX 24/7 stock trading: the edge (react before the open, no gap risk) and the liquidity catch (thin off-hours) (en): https://www.jacktrader.xyz/en/blog/okx-24-7-stock-trading.html
 - Note: OKX xStocks = tokenized US stocks via Ondo Finance (~263 names), 24/7, USDT-settled; ICE (NYSE owner) strategically invested in OKX. Up-to-40% fee rebate via JackTrader.
+- OKX 買美股教學：xStocks 通證開戶交易費用 2026 (zh-TW): https://www.jacktrader.xyz/zh-tw/blog/okx-us-stocks-guide.html
+- 幣安 vs OKX 美股通證對比 2026：費用、覆蓋、怎麼選 (zh-TW): https://www.jacktrader.xyz/zh-tw/blog/binance-vs-okx-us-stocks.html
 
 ## Social
 - X / Twitter: https://twitter.com/trader_j888
