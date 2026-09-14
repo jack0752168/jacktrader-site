@@ -13,7 +13,7 @@
     gtag('config','G-NK1VSBED5T');
   </script>
   <title>Arbitrage Bot Fees 2026: The Hidden Margin Killer (and How to Survive It) | JackTrader</title>
-  <meta name="description" content="Arbitrage bots win on tiny spreads but pay fees on every leg — taker fees alone can erase the edge. The real cost math for spot, funding-rate and cross-exchange arb, plus the three levers (maker routing, venue, up-to-40% rebate) that keep arb profitable." />
+  <meta name="description" content="Arbitrage bots pay fees on every leg — taker fees can erase the edge. Cost math for spot, funding and cross-exchange arb, plus three levers that keep it profitable." />
   <meta name="keywords" content="arbitrage bot fees,crypto arbitrage fees,arbitrage trading fees,funding rate arbitrage,cross exchange arbitrage,taker fee arbitrage,arbitrage bot crypto,arbitrage rebate" />
   <meta name="author" content="JackTrader" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
@@ -92,7 +92,7 @@
       "name": "Does a fee rebate help arbitrage bots?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — directly. A rebate gives back a percentage of the trading fees you pay, which lowers your all-in cost per leg and therefore lowers your break-even spread. A lower break-even means more observed gaps become profitable, so the same market produces more executable opportunities. Up to 40% of fees back, settled in real time in USDT, can be the difference between a marginal arb book and a profitable one — without touching the strategy."
+        "text": "Yes — directly. A rebate gives back a percentage of the trading fees you pay, which lowers your all-in cost per leg and therefore lowers your break-even spread. A lower break-even means more observed gaps become profitable, so the same market produces more executable opportunities. On a thin-margin book, getting part of that fee bill back can be the difference between a marginal arb book and a profitable one — without touching the strategy. Through JackTrader, traders with $50,000 or more in funds can get an above-market rebate rate, assessed one-on-one."
       }
     },
     {
@@ -123,11 +123,11 @@
       <nav class="site-nav" aria-label="Main navigation" id="primary-nav">
         <a href="/en/">Home</a>
         <a href="/en/binance-us-stocks.html">Binance Stocks 🔥</a>
-        <a href="/en/okx-us-stocks.html">OKX Stocks</a>
+        
         <a href="/en/binance-rebate.html">Binance</a>
-        <a href="/en/okx-rebate.html">OKX</a>
+        
         <a href="/en/binance-partner.html">Binance Partner</a>
-        <a href="/en/okx-partner.html">OKX Partner</a>
+        
         <a href="/en/blog/">Blog</a>
       </nav>
       <div class="nav-right">
@@ -186,18 +186,14 @@
           <li>If the average captured gross spread is 0.12%, gross revenue ≈ $10M × 0.12% = $12,000 — but you only count notional once for revenue, so on ~$5M of round trips that's ≈ $6,000.</li>
           <li>Net before fees ≈ $6,000; <strong>after $5,000 in fees, ~$1,000/month survives.</strong> Fees are eating ~83% of the gross edge.</li>
         </ul>
-        <p>Now apply an up-to-40% rebate on those fees:</p>
-        <ul>
-          <li>Rebate ≈ $5,000 × 40% = <strong>$2,000 / month back</strong>, settled in real time in USDT.</li>
-          <li>Net jumps from ~$1,000 to ~<strong>$3,000 / month</strong> — a 3× improvement in take-home P&L, with zero change to the strategy, the signal, or the infrastructure.</li>
-        </ul>
-        <p>That is the whole point: on a thin-margin strategy, the rebate isn't a nice-to-have — it can be the majority of your net profit. See the mechanism on the <a href="/en/okx-rebate.html">OKX rebate</a> and <a href="/en/binance-rebate.html">Binance rebate</a> pages.</p>
+        <p>Read that last line again. The fee bill is five times the take-home, so any part of it you get back lands straight on a net that is only ~$1,000 to begin with — with zero change to the strategy, the signal, or the infrastructure.</p>
+        <p>That is the whole point: on a thin-margin strategy, the rebate isn't a nice-to-have — the fee line is the biggest number you can still move. If your book runs on $50,000 or more in funds, we offer an above-market rebate rate; the exact rate is assessed one-on-one. See how it works on the <a href="/en/binance-rebate.html">Binance rebate</a> page.</p>
 
         <h2>The three levers that keep arb alive</h2>
         <ol>
           <li><strong>Maker routing wherever the trade tolerates it.</strong> Funding-rate and some triangular legs can post limit orders. Moving even one leg from taker (0.05%) to maker (0.02% or rebated negative) meaningfully drops break-even. This is the same maker-over-taker logic from our <a href="/en/blog/maker-vs-taker-fees-explained.html">maker vs taker breakdown</a>.</li>
-          <li><strong>Venue choice.</strong> A 0.01% difference in taker fee is enormous when you're turning over $10M+/month. Compare real rates in the <a href="/en/blog/cheapest-crypto-exchange-2026.html">cheapest exchange ranking</a> and the <a href="/en/blog/binance-vs-okx-fees-2026.html">Binance vs OKX comparison</a>.</li>
-          <li><strong>Rebate the taker legs you can't avoid.</strong> Cross-exchange latency arb is all-taker by nature — you can't maker your way out of it. The rebate is the only lever left, and it gives back up to 40% of those unavoidable fees.</li>
+          <li><strong>Venue choice.</strong> A 0.01% difference in taker fee is enormous when you're turning over $10M+/month. Compare real rates in the <a href="/en/blog/cheapest-crypto-exchange-2026.html">cheapest exchange ranking</a> and the <a href="/en/blog/binance-vs-bybit-fees-2026.html">Binance vs Bybit comparison</a>.</li>
+          <li><strong>Rebate the taker legs you can't avoid.</strong> Cross-exchange latency arb is all-taker by nature — you can't maker your way out of it. The rebate is the only lever left, and it gives back part of those unavoidable fees.</li>
         </ol>
         <p>For a broader view of how fees vary by bot type, see our <a href="/en/blog/crypto-trading-bot-fees-2026.html">crypto trading bot fee comparison</a>; the arb profile is simply the most fee-exposed corner of that map.</p>
 
@@ -208,7 +204,7 @@
         <div class="faq-list">
           <details class="faq-item" open><summary class="faq-q">Why do fees matter so much for arbitrage bots?<span class="plus">+</span></summary><div class="faq-a">Arbitrage captures tiny price discrepancies — often a few basis points — but it pays a fee on every leg of every round trip, and those legs are usually market (taker) orders because arb has to execute now or the gap closes. A two-leg arb at 0.05% taker per side costs 0.10% in fees, which can be larger than the spread it is trying to capture. Unlike a directional trade where fees are a small fraction of the move, in arb the fee is often the single biggest line in the P&L.</div></details>
           <details class="faq-item"><summary class="faq-q">How do I calculate the break-even spread for an arbitrage trade?<span class="plus">+</span></summary><div class="faq-a">Add up the fees on every leg plus expected slippage, and that sum is your break-even. For a two-venue spot arb at 0.05% taker each side, break-even is at least 0.10% before slippage and transfer costs. For a cash-and-carry (spot plus perp) trade you also factor funding payments over the holding period. If the observed spread is below your all-in cost, the trade loses money even though it looks profitable on the screen.</div></details>
-          <details class="faq-item"><summary class="faq-q">Does a fee rebate help arbitrage bots?<span class="plus">+</span></summary><div class="faq-a">Yes — directly. A rebate gives back a percentage of the trading fees you pay, which lowers your all-in cost per leg and therefore lowers your break-even spread. A lower break-even means more observed gaps become profitable, so the same market produces more executable opportunities. Up to 40% of fees back, settled in real time in USDT, can be the difference between a marginal arb book and a profitable one — without touching the strategy.</div></details>
+          <details class="faq-item"><summary class="faq-q">Does a fee rebate help arbitrage bots?<span class="plus">+</span></summary><div class="faq-a">Yes — directly. A rebate gives back a percentage of the trading fees you pay, which lowers your all-in cost per leg and therefore lowers your break-even spread. A lower break-even means more observed gaps become profitable, so the same market produces more executable opportunities. On a thin-margin book, getting part of that fee bill back can be the difference between a marginal arb book and a profitable one — without touching the strategy. Through JackTrader, traders with $50,000 or more in funds can get an above-market rebate rate, assessed one-on-one.</div></details>
           <details class="faq-item"><summary class="faq-q">Is maker or taker better for arbitrage?<span class="plus">+</span></summary><div class="faq-a">Maker is far cheaper and sometimes even pays you, but arbitrage usually demands speed, which pushes you toward taker orders that cross the spread immediately. Some strategies — like funding-rate (cash-and-carry) arb where one leg is held — can post the non-time-critical leg as a maker order to cut cost. Cross-exchange latency arb is typically all-taker. The practical answer: post maker wherever the trade allows it, route taker where it doesn't, and rebate the taker legs you can't avoid.</div></details>
           <details class="faq-item"><summary class="faq-q">Do cross-exchange arbitrage transfers add hidden costs?<span class="plus">+</span></summary><div class="faq-a">Yes. Beyond trading fees, cross-exchange arb can incur withdrawal/network fees, on-chain confirmation delays, and the risk that the spread closes before assets settle. Many desks avoid physical transfers by pre-funding both venues and rebalancing periodically, which trades transfer cost for capital cost. Either way, model these alongside trading fees — they are part of the all-in number that defines your break-even.</div></details>
         </div>
@@ -217,17 +213,14 @@
 
         <div class="cta-band" style="margin-top:48px">
           <h2>Lower your break-even spread</h2>
-          <p>Get up to 40% of your trading fees back on the taker legs you can't avoid — settled in real time in USDT, fully reconcilable, no strategy change. On a thin-margin arb book, that's often the majority of your net.</p>
+          <p>Running your arb book on $50,000 or more in funds? We offer an above-market rebate rate on the taker legs you can't avoid — the exact rate is assessed one-on-one, with no strategy change. New to Binance? $20 cash for new Binance users (first 15 sign-ups each quarter), plus a free Alpha members group for everyone who signs up through JackTrader.</p>
           <div class="hero-actions" style="justify-content:center">
-<a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener nofollow sponsored">Open Binance with rebate</a>
-<a class="btn btn-okx" href="https://www.promooboost.com/join/TRADERJACK" target="_blank" rel="noopener nofollow sponsored">Open OKX with rebate</a>
-            <a class="btn btn-binance" href="/en/binance-rebate.html">Binance rebate</a>
-            <a class="btn btn-okx" href="/en/okx-rebate.html">OKX rebate</a>
-            <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">Get a tier assessment</a>
+            <a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener nofollow sponsored">Sign up on Binance</a>
+            <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">Get a rate quote on Telegram</a>
           </div>
         </div>
 
-        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Fee schedules and rebate rates reflect published rates at the time of writing and may change without notice. Examples are illustrative; your real costs depend on venue, product, maker/taker split and VIP tier. This article is educational and not investment advice. JackTrader is an independent referral / sub-broker partner and is not Binance or OKX. Single-tier referrals only, no downline or multi-level structure.</p>
+        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Fee schedules reflect published rates at the time of writing and may change without notice; rebate rates for $50K+ accounts are assessed one-on-one. Examples are illustrative; your real costs depend on venue, product, maker/taker split and VIP tier. This article is educational and not investment advice. JackTrader is an independent referral partner and is not affiliated with Binance. Single-tier referrals only, no downline or multi-level structure.</p>
 
       </div>
     </section>
@@ -239,14 +232,14 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a class="brand" href="/en/"><span class="brand-mark">J</span><span>JackTrader</span></a>
-          <p>Trading fee rebates and channel partnerships across Binance, OKX, wallet and DEX ecosystems. Real-time settlement, fully trackable.</p>
+          <p>Binance rebates and a free Alpha members group: $20 cash for new users, premium rebates for $50K+ accounts.</p>
         </div>
         <div class="footer-col">
           <h4>Rebate plans</h4>
           <a href="/en/binance-rebate.html">Binance Rebate</a>
-          <a href="/en/okx-rebate.html">OKX Rebate</a>
+          
           <a href="/en/wallet-rebate.html">Wallet &amp; DEX</a>
-          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a><a href="/en/okx-partner.html">OKX partner</a>
+          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a>
         </div>
         <div class="footer-col">
           <h4>Deep dives</h4>
@@ -256,7 +249,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance or OKX. Rebate rates, eligibility and rules depend on platform policy, account status, review and local regulations; displayed rates are a maximum reference and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
+        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance. Rewards and rebates depend on available spots, account status and Binance's official rules, and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
         <p class="copyright">© 2026 JackTrader · Independent referral partner.</p>
       </div>
     </div>

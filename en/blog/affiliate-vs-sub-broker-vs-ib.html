@@ -85,7 +85,7 @@
       "name": "What is the difference between an affiliate and a sub-broker?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "An affiliate signs up through a self-serve program and earns a percentage of referred-trader fees that scales with volume, then passes back to traders whatever share of that it chooses to give up. A sub-broker is the tier above: individually onboarded after a volume and KYB review, with a larger gross commission share, a per-trade reconciliation API and a dedicated exchange contact, which lets the pass-through ceiling reach up to 40% on futures fees."
+        "text": "An affiliate signs up through a self-serve program and earns a percentage of referred-trader fees that scales with volume, then passes back to traders whatever share of that it chooses to give up. A sub-broker is the tier above: individually onboarded after a volume and KYB review, with a larger gross commission share, a per-trade reconciliation API and a dedicated exchange contact, which leaves room to pass a larger share of each fee back to traders."
       }
     },
     {
@@ -93,7 +93,7 @@
       "name": "Which channel passes the highest rebate back to the trader?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The sub-broker or introducing-broker channel, because it starts from a larger gross commission share than a standard affiliate. Even after the operator keeps a margin for settlement and support, a sub-broker can pass up to 40% of your futures fees back, versus whatever an affiliate site can carve out of the exchange's smaller default share. The headline percentage an operator advertises matters less than which tier they actually sit on."
+        "text": "The sub-broker or introducing-broker channel, because it starts from a larger gross commission share than a standard affiliate. Even after the operator keeps a margin for settlement and support, a sub-broker can pass a bigger slice of your fees back than an affiliate site can carve out of the exchange's smaller default share. The headline percentage an operator advertises matters less than which tier they actually sit on."
       }
     },
     {
@@ -109,7 +109,7 @@
       "name": "Do affiliate, sub-broker and IB rebates change how my trades execute?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Across all three channels the rebate is a cash-back on fees the exchange already charged you, paid separately — usually weekly in USDT. Your order routing, fills, leverage and account behave identically with or without a rebate channel attached. The only difference between the channels is how much of your fee comes back and how cleanly it is reconciled."
+        "text": "No. Across all three channels the rebate is a cash-back on fees the exchange already charged you, paid separately on terms the channel agrees with you. Your order routing, fills, leverage and account behave identically with or without a rebate channel attached. The only difference between the channels is how much of your fee comes back and how cleanly it is reconciled."
       }
     }
   ]
@@ -124,11 +124,11 @@
       <nav class="site-nav" aria-label="Main navigation" id="primary-nav">
         <a href="/en/">Home</a>
         <a href="/en/binance-us-stocks.html">Binance Stocks 🔥</a>
-        <a href="/en/okx-us-stocks.html">OKX Stocks</a>
+        
         <a href="/en/binance-rebate.html">Binance</a>
-        <a href="/en/okx-rebate.html">OKX</a>
+        
         <a href="/en/binance-partner.html">Binance Partner</a>
-        <a href="/en/okx-partner.html">OKX Partner</a>
+        
         <a href="/en/blog/">Blog</a>
       </nav>
       <div class="nav-right">
@@ -152,10 +152,10 @@
       <div class="container" style="max-width:820px">
 
         <h2>The three terms, defined without the jargon</h2>
-        <p><strong>Affiliate.</strong> A self-serve referral partner. You apply through an exchange's affiliate portal, get approved, and earn a percentage of the fees your referred traders pay. The percentage scales with your tree's total volume. This is the layer most "crypto rebate" sites on Google run on.</p>
+        <p><strong>Affiliate.</strong> A self-serve referral partner. You apply through an exchange's affiliate portal, get approved, and earn a percentage of the fees your referred traders pay. The percentage scales with the total volume you refer. This is the layer most "crypto rebate" sites on Google run on.</p>
         <p><strong>Sub-broker.</strong> The tier above affiliate. Onboarded individually by the exchange after a volume and KYB (know-your-business) review. You get a larger, custom commission band, plus operational extras — a per-trade reconciliation API, a dedicated business contact at the exchange, and a higher pass-through ceiling.</p>
         <p><strong>Introducing broker (IB).</strong> A term borrowed from traditional finance, where an IB introduces clients to a clearing broker and earns on their activity. In crypto it maps almost exactly onto the sub-broker / institutional channel — a formal, contractual relationship to introduce traders and earn a share of their fees. Different exchanges pick different words; the substance is the same tier.</p>
-        <p>So the practical hierarchy is: <em>default referral &lt; affiliate &lt; sub-broker / introducing broker &lt; market maker</em>. The big rebate jump happens at the sub-broker / IB line. The full pricing mechanics of that jump are in our <a href="/en/blog/okx-sub-broker-affiliate-program.html">OKX sub-broker vs affiliate breakdown</a>.</p>
+        <p>So the practical hierarchy is: <em>default referral &lt; affiliate &lt; sub-broker / introducing broker &lt; market maker</em>. The big rebate jump happens at the sub-broker / IB line. The full mechanics of that jump are in our <a href="/en/blog/crypto-sub-broker-explained.html">crypto sub-broker explainer</a>.</p>
 
         <h2>Side by side</h2>
         <table class="compare">
@@ -163,17 +163,17 @@
           <tbody>
             <tr><td>How you get it</td><td>Self-serve application</td><td>Individual onboarding + KYB review</td><td>Negotiated quoting contract</td></tr>
             <tr><td>Commission layer</td><td>Referral layer</td><td>Referral layer (higher band)</td><td>Exchange-fee layer</td></tr>
-            <tr><td>Gross share</td><td>30% default, rising by monthly assessment</td><td>Custom band above affiliate</td><td>Negative maker fees</td></tr>
-            <tr><td>Trader pass-through</td><td>Carved out of the default share (30% at OKX)</td><td>Up to 40% of futures fees</td><td>You are paid to quote</td></tr>
+            <tr><td>Gross share</td><td>Exchange default band, rising with referred volume</td><td>Custom band above affiliate</td><td>Negative maker fees</td></tr>
+            <tr><td>Trader pass-through</td><td>Carved out of the affiliate's own share</td><td>Larger slice of a bigger gross band</td><td>You are paid to quote</td></tr>
             <tr><td>Reconciliation</td><td>Aggregate dashboard</td><td>Per-trade API</td><td>Exchange MM reports</td></tr>
             <tr><td>Who it suits</td><td>Small referrers</td><td>High-volume traders &amp; communities</td><td>Quoting desks</td></tr>
           </tbody>
         </table>
-        <p class="hero-note">Figures follow the published Binance and OKX structures at the time of writing; actual rates depend on platform policy, your 30-day volume and review status. "Up to 40%" is a maximum reference, not a guarantee.</p>
+        <p class="hero-note">The structure follows published exchange referral programs at the time of writing; actual rates depend on platform policy, your 30-day volume and review status.</p>
 
         <h2>Why the sub-broker / IB rung pays more</h2>
-        <p>It comes down to the gross share the exchange sends upstream. An affiliate's gross commission is throttled by their tree's volume; a sub-broker negotiates a larger gross band as part of onboarding. Both operators keep a margin to cover settlement engineering, support, compliance and their own acquisition — but the sub-broker starts from a bigger pie, so the slice that reaches you is bigger too.</p>
-        <p>Concretely: if an affiliate earns a 50% gross share and passes half on, that's a 25% effective rebate. A sub-broker on a larger gross band passing the same proportion through lands near 40%. Identical trading, different rung, roughly double the cash back. This is the same arithmetic we walk through in <a href="/en/blog/highest-rebate-crypto-exchange-2026.html">the highest-rebate exchange comparison</a> — the headline percentage is meaningless until you know which base it sits on.</p>
+        <p>It comes down to the gross share the exchange sends upstream. An affiliate's gross commission is throttled by the volume they refer; a sub-broker negotiates a larger gross band as part of onboarding. Both operators keep a margin to cover settlement engineering, support, compliance and their own acquisition — but the sub-broker starts from a bigger pie, so the slice that reaches you is bigger too.</p>
+        <p>Concretely: if an affiliate earns a 50% gross share and passes half on, that's a 25% effective rebate. A sub-broker on a larger gross band passing the same proportion through lands noticeably higher. Identical trading, different rung, more cash back. This is the same arithmetic we walk through in <a href="/en/blog/highest-rebate-crypto-exchange-2026.html">the highest-rebate exchange comparison</a> — the headline percentage is meaningless until you know which base it sits on.</p>
 
         <h2>The single-tier line that matters legally</h2>
         <p>One thing every legitimate version of these three shares: they are <strong>single-tier</strong>. The partner earns on the trading fees of the traders it directly introduces. The trader gets a rebate on their own fees. Nobody earns by recruiting a chain of sub-referrers under them.</p>
@@ -183,42 +183,39 @@
         <ol>
           <li><strong>Ask the tier directly.</strong> "Are you an affiliate, a sub-broker, or an introducing broker?" A specific answer tells you the ceiling. Vagueness usually means affiliate.</li>
           <li><strong>Ask for per-trade reconciliation.</strong> Sub-broker / IB channels can show the exact fee per trade through the ledger. If all they can show is a weekly aggregate, they're on the thinner layer.</li>
-          <li><strong>Check the settlement currency and cadence.</strong> USDT, settled in real time on the exchange's own back office, is the serious-channel standard. Token points and "campaign rewards" are not the same as a fee rebate.</li>
+          <li><strong>Ask how and when it is paid.</strong> A real fee rebate comes in a stated currency on a stated schedule that you can reconcile against your own fee history. Token points and "campaign rewards" are not the same as a fee rebate.</li>
           <li><strong>Confirm it's single-tier.</strong> If recruiting other referrers is part of the pitch, walk away.</li>
-          <li><strong>Check who keeps the exchange discounts.</strong> Your BNB / OKB and VIP-tier discounts belong to you, on top of the rebate — not to the channel.</li>
+          <li><strong>Check who keeps the exchange discounts.</strong> Your BNB and VIP-tier discounts belong to you, on top of the rebate — not to the channel.</li>
         </ol>
 
         <h2>Which one should you actually pick?</h2>
         <ul>
-          <li><strong>You just want the best rebate on your own trading.</strong> Bind into an established sub-broker / IB channel — you get the up-to-40% ceiling with no application and no quota. See <a href="/en/okx-rebate.html">OKX rebate</a> and <a href="/en/binance-rebate.html">Binance rebate</a>.</li>
-          <li><strong>You have an audience and want to earn from referrals.</strong> Apply as an affiliate first; graduate to your own sub-broker tree once your volume justifies it. Our <a href="/en/blog/how-to-become-okx-affiliate.html">how to become an OKX affiliate</a> guide walks the path.</li>
+          <li><strong>You just want the best deal on your own trading.</strong> Sign up through an established channel instead of applying for anything yourself. Through JackTrader, the first 15 new Binance users each quarter receive a $20 cash reward (spots are limited and first-come, first-served — message us on Telegram to confirm how to claim); traders with $50,000 or more in funds get an above-market rebate rate, assessed one-on-one; and everyone who signs up can join our Alpha members group for free — a real-time feed aggregating alpha from major secondary-market communities and leading crypto voices. For information only, not investment advice. See <a href="/en/binance-rebate.html">Binance rebate</a>.</li>
+          <li><strong>You have an audience and want to earn from referrals.</strong> Apply as an affiliate first; move up to a sub-broker tier once your volume justifies it. Our <a href="/en/blog/binance-referral-vs-affiliate-program-2026.html">Binance referral vs affiliate program</a> guide walks the path.</li>
           <li><strong>You run a quoting desk.</strong> The market-maker program is a separate, exchange-fee-layer application — you can stack it under a rebate channel.</li>
         </ul>
 
         <h2>FAQ</h2>
         <div class="faq-list">
           <details class="faq-item" open><summary class="faq-q">What is an introducing broker in crypto?<span class="plus">+</span></summary><div class="faq-a">An introducing broker (IB) is a partner that brings traders to an exchange under a formal, often contractual relationship and earns a share of the fees those traders generate. The term comes from traditional finance. In crypto the role overlaps heavily with what exchanges call a sub-broker or institutional channel: an onboarded entity with a custom commission band and reporting duties, sitting above the self-serve affiliate program.</div></details>
-          <details class="faq-item"><summary class="faq-q">What is the difference between an affiliate and a sub-broker?<span class="plus">+</span></summary><div class="faq-a">An affiliate signs up through a self-serve program and earns a percentage of referred-trader fees that scales with volume, then passes back to traders whatever share of that it chooses to give up. A sub-broker is the tier above: individually onboarded after a volume and KYB review, with a larger gross commission share, a per-trade reconciliation API and a dedicated exchange contact, which lets the pass-through ceiling reach up to 40% on futures fees.</div></details>
-          <details class="faq-item"><summary class="faq-q">Which channel passes the highest rebate back to the trader?<span class="plus">+</span></summary><div class="faq-a">The sub-broker or introducing-broker channel, because it starts from a larger gross commission share than a standard affiliate. Even after the operator keeps a margin for settlement and support, a sub-broker can pass up to 40% of your futures fees back, versus whatever an affiliate site can carve out of the exchange's smaller default share. The headline percentage an operator advertises matters less than which tier they actually sit on.</div></details>
+          <details class="faq-item"><summary class="faq-q">What is the difference between an affiliate and a sub-broker?<span class="plus">+</span></summary><div class="faq-a">An affiliate signs up through a self-serve program and earns a percentage of referred-trader fees that scales with volume, then passes back to traders whatever share of that it chooses to give up. A sub-broker is the tier above: individually onboarded after a volume and KYB review, with a larger gross commission share, a per-trade reconciliation API and a dedicated exchange contact, which leaves room to pass a larger share of each fee back to traders.</div></details>
+          <details class="faq-item"><summary class="faq-q">Which channel passes the highest rebate back to the trader?<span class="plus">+</span></summary><div class="faq-a">The sub-broker or introducing-broker channel, because it starts from a larger gross commission share than a standard affiliate. Even after the operator keeps a margin for settlement and support, a sub-broker can pass a bigger slice of your fees back than an affiliate site can carve out of the exchange's smaller default share. The headline percentage an operator advertises matters less than which tier they actually sit on.</div></details>
           <details class="faq-item"><summary class="faq-q">Is an introducing broker the same as a multi-level or downline scheme?<span class="plus">+</span></summary><div class="faq-a">No. A legitimate crypto introducing-broker or sub-broker relationship is single-tier: the partner earns on the trading fees of the traders it directly introduces, and the trader receives a rebate on their own fees. It is not a downline, not a multi-level structure, and you do not earn from recruiting other referrers. Any program that pays you to recruit a chain of sub-referrers is a different and riskier thing entirely.</div></details>
-          <details class="faq-item"><summary class="faq-q">Do affiliate, sub-broker and IB rebates change how my trades execute?<span class="plus">+</span></summary><div class="faq-a">No. Across all three channels the rebate is a cash-back on fees the exchange already charged you, paid separately — usually weekly in USDT. Your order routing, fills, leverage and account behave identically with or without a rebate channel attached. The only difference between the channels is how much of your fee comes back and how cleanly it is reconciled.</div></details>
+          <details class="faq-item"><summary class="faq-q">Do affiliate, sub-broker and IB rebates change how my trades execute?<span class="plus">+</span></summary><div class="faq-a">No. Across all three channels the rebate is a cash-back on fees the exchange already charged you, paid separately on terms the channel agrees with you. Your order routing, fills, leverage and account behave identically with or without a rebate channel attached. The only difference between the channels is how much of your fee comes back and how cleanly it is reconciled.</div></details>
         </div>
 
-        <div class="related-note" style="margin-top:40px;padding:16px 20px;border-left:3px solid var(--yellow);background:rgba(255,255,255,0.03);border-radius:8px;color:var(--text-2);font-size:15px"><strong>Naming the model is only half the job — the other half is which door you can actually walk through.</strong> Once you know whether you are an affiliate, a sub-broker or an IB, the next question is what each one requires of you at a specific exchange. Worked through end to end at <a href="/en/blog/binance-affiliate-program-requirements.html">which of the two Binance programs a given applicant is actually eligible for</a>.</div>
+        <div class="related-note" style="margin-top:40px;padding:16px 20px;border-left:3px solid var(--yellow);background:rgba(255,255,255,0.03);border-radius:8px;color:var(--text-2);font-size:15px"><strong>Naming the model is only half the job — the other half is which door you can actually walk through.</strong> Once you know whether you are an affiliate, a sub-broker or an IB, the next question is what each one requires of you at a specific exchange. We work through it end to end in the guide on <a href="/en/blog/binance-affiliate-program-requirements.html">which of the two Binance programs a given applicant is actually eligible for</a>.</div>
 
         <div class="cta-band" style="margin-top:48px">
-          <h2>Get the highest-rung rebate without the paperwork</h2>
-          <p>JackTrader runs a sub-broker channel on both Binance and OKX — bind your account and receive up to 40% of your trading fees back in USDT, settled in real time, single-tier and fully trackable.</p>
+          <h2>Skip the paperwork: sign up to Binance through JackTrader</h2>
+          <p>$20 cash for new Binance users · Premium rebates for $50K+ accounts · Free Alpha members group. The $20 reward goes to the first 15 new users each quarter, first-come, first-served — message us on Telegram to confirm how to claim, or to get a rebate quote for a $50K+ account. Single-tier referrals only.</p>
           <div class="hero-actions" style="justify-content:center">
-<a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener nofollow sponsored">Open Binance with rebate</a>
-<a class="btn btn-okx" href="https://www.promooboost.com/join/TRADERJACK" target="_blank" rel="noopener nofollow sponsored">Open OKX with rebate</a>
-            <a class="btn btn-binance" href="/en/binance-rebate.html">Binance rebate</a>
-            <a class="btn btn-okx" href="/en/okx-rebate.html">OKX rebate</a>
+<a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener nofollow sponsored">Sign up to Binance</a>
             <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">Ask on Telegram</a>
           </div>
         </div>
 
-        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Commission and rebate figures reflect the published Binance and OKX structures at the time of writing. Actual rates depend on platform policy, your account volume and review status. "Up to 40%" is a maximum reference, not a guarantee of returns. JackTrader is an independent referral / sub-broker partner and is not affiliated with Binance or OKX. This article is educational and not investment advice; single-tier referrals only, no downline or multi-level structure.</p>
+        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Commission structures described here reflect published exchange referral programs at the time of writing. Actual rates depend on platform policy, your account status and review. Rewards and rebates depend on available spots, account status and Binance's official rules, and are not a guarantee of returns. JackTrader is an independent referral partner and is not affiliated with Binance. This article is educational and not investment advice; single-tier referrals only, no downline or multi-level structure.</p>
 
       </div>
     </section>
@@ -230,24 +227,24 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a class="brand" href="/en/"><span class="brand-mark">J</span><span>JackTrader</span></a>
-          <p>Trading fee rebates and channel partnerships across Binance, OKX, wallet and DEX ecosystems. Real-time settlement, fully trackable.</p>
+          <p>Binance rebates and a free Alpha members group: $20 cash for new users, premium rebates for $50K+ accounts.</p>
         </div>
         <div class="footer-col">
           <h4>Rebate plans</h4>
           <a href="/en/binance-rebate.html">Binance Rebate</a>
-          <a href="/en/okx-rebate.html">OKX Rebate</a>
+          
           <a href="/en/wallet-rebate.html">Wallet &amp; DEX</a>
-          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a><a href="/en/okx-partner.html">OKX partner</a>
+          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a>
         </div>
         <div class="footer-col">
           <h4>Deep dives</h4>
-          <a href="/en/blog/okx-sub-broker-affiliate-program.html">OKX sub-broker explained</a>
-          <a href="/en/blog/how-to-become-okx-affiliate.html">How to become an OKX affiliate</a>
+          
+          
           <a href="/en/blog/highest-rebate-crypto-exchange-2026.html">Highest-rebate exchange 2026</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance or OKX. Rebate rates, eligibility and rules depend on platform policy, account status, review and local regulations; displayed rates are a maximum reference and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
+        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance. Rewards and rebates depend on available spots, account status and Binance's official rules, and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
         <p class="copyright">© 2026 JackTrader · Independent referral partner.</p>
       </div>
     </div>
