@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Crypto Fee & Rebate Calculator — JackTrader</title>
+<title>Binance Fee Calculator — JackTrader</title>
 <style>
   :root{--bg:#0e1116;--card:#161b22;--tx1:#e6edf3;--tx2:#9aa4b2;--tx3:#6b7684;--acc:#f0b90b;--acc2:#2ea043;--line:rgba(255,255,255,.10)}
   *{box-sizing:border-box;margin:0;padding:0}
@@ -33,17 +33,10 @@
 </head>
 <body>
 <div class="wrap">
-  <h2>Crypto Fee &amp; Rebate Calculator</h2>
-  <div class="sub">See how much of your trading fees you could get back.</div>
+  <h2>Binance Fee Calculator</h2>
+  <div class="sub">See what your Binance trading fees really cost each month.</div>
 
   <div class="row">
-    <div>
-      <label>Exchange</label>
-      <select id="ex">
-        <option value="Binance">Binance</option>
-        <option value="OKX">OKX</option>
-      </select>
-    </div>
     <div>
       <label>Product</label>
       <select id="prod">
@@ -51,25 +44,29 @@
         <option value="10">Spot (taker ~0.10%)</option>
       </select>
     </div>
+    <div>
+      <label>Order mix</label>
+      <select id="mix">
+        <option value="1">Mostly taker</option>
+        <option value="0.7">Mixed</option>
+        <option value="0.4">Mostly maker</option>
+      </select>
+    </div>
   </div>
 
   <label>Monthly trading volume (USD)</label>
   <input type="number" id="vol" value="500000" min="0" step="10000">
 
-  <label>Rebate you receive <span class="rv" id="rbv">up to 40%</span></label>
-  <input type="range" id="rb" min="0" max="40" value="40" step="1">
-
   <div class="out">
     <div class="line">Effective fee rate<b id="bps">0.050%</b></div>
-    <div class="line">Fees you pay / month<b id="fee">$0</b></div>
-    <div class="line hl">Rebate back / month<b id="reb">$0</b></div>
-    <div class="line">Rebate / year<b id="yr">$0</b></div>
+    <div class="line hl">Fees you pay / month<b id="fee">$0</b></div>
+    <div class="line">Fees you pay / year<b id="yr">$0</b></div>
   </div>
 
-  <a class="cta" id="cta" href="https://www.jacktrader.xyz/en/?utm_source=embed&utm_medium=widget&utm_campaign=fee-calc" target="_blank" rel="noopener">Get up to 40% back →</a>
+  <a class="cta" id="cta" href="https://www.jacktrader.xyz/en/?utm_source=embed&utm_medium=widget&utm_campaign=fee-calc" target="_blank" rel="noopener">New to Binance? $20 cash · $50K+ premium rebates →</a>
   <div class="foot">
-    Estimates only, not financial advice. Rebate is a share of fees you generate — “up to 40%” is a maximum, not a guarantee.<br>
-    Widget by <a href="https://www.jacktrader.xyz/en/?utm_source=embed&utm_medium=attribution&utm_campaign=fee-calc" target="_blank" rel="noopener"><b>JackTrader</b></a> — independent Binance &amp; OKX rebate partner.
+    Estimates only, based on Binance regular-tier rates; VIP tiers and BNB discounts lower them. Not financial advice.<br>
+    Widget by <a href="https://www.jacktrader.xyz/en/?utm_source=embed&utm_medium=attribution&utm_campaign=fee-calc" target="_blank" rel="noopener"><b>JackTrader</b></a> — independent Binance referral partner.
   </div>
 </div>
 
@@ -78,15 +75,13 @@
   var $=function(id){return document.getElementById(id)};
   function fmt(n){return '$'+Math.round(n).toLocaleString()}
   function calc(){
-    var bps=+$('prod').value, vol=+$('vol').value||0, rb=+$('rb').value;
-    $('rbv').textContent = rb>=40 ? 'up to 40%' : rb+'%';
+    var bps=+$('prod').value*(+$('mix').value), vol=+$('vol').value||0;
     $('bps').textContent=(bps/100).toFixed(3)+'%';
-    var fee=vol*bps/10000, reb=fee*rb/100;
+    var fee=vol*bps/10000;
     $('fee').textContent=fmt(fee);
-    $('reb').textContent=fmt(reb);
-    $('yr').textContent=fmt(reb*12);
+    $('yr').textContent=fmt(fee*12);
   }
-  ['ex','prod','vol','rb'].forEach(function(id){$(id).addEventListener('input',calc)});
+  ['prod','mix','vol'].forEach(function(id){$(id).addEventListener('input',calc)});
   calc();
 })();
 </script>

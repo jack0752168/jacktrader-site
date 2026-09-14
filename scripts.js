@@ -29,13 +29,10 @@
 
   if (input && slider && savingsEl && yearEl) {
     // fee tables (decimal) as [maker, taker] by exchange + market
+    // 2026-09-14: Binance-only. The calculator shows what trading fees COST; it no longer
+    // promises a rebate amount (end-user offer = $20 new-user cash / $50K+ quote on request).
     var FEES = {
-      binance: { futures: [0.0002, 0.0005], spot: [0.001, 0.001] },
-      okx: { futures: [0.0002, 0.0005], spot: [0.0008, 0.001] }
-    };
-    var META = {
-      binance: { rebate: 0.4, link: "https://www.bsmkweb.cc/join?ref=MPZQWSDC", btn: "btn-binance" },
-      okx: { rebate: 0.4, link: "https://www.promooboost.com/join/TRADERJACK", btn: "btn-okx" }
+      binance: { futures: [0.0002, 0.0005], spot: [0.001, 0.001] }
     };
     // share of volume executed as maker by trading style
     var MAKER_RATIO = { maker: 0.8, mixed: 0.5, taker: 0.2 };
@@ -52,12 +49,11 @@
       var fees = FEES[current][market];
       var mr = MAKER_RATIO[style];
       var eff = mr * fees[0] + (1 - mr) * fees[1];
-      var rebate = META[current].rebate;
-      var monthly = vol * eff * rebate;
+      var monthly = vol * eff;
       savingsEl.textContent = fmt(monthly);
       yearEl.textContent = fmt(monthly * 12);
       if (grossEl) grossEl.textContent = pct(eff);
-      if (netEl) netEl.textContent = pct(eff * (1 - rebate));
+      if (netEl) netEl.textContent = pct(eff);
     }
 
     function readVol() {
@@ -82,17 +78,10 @@
     var tabs = document.querySelectorAll(".calc-tab");
     Array.prototype.forEach.call(tabs, function (tab) {
       tab.addEventListener("click", function () {
-        current = tab.getAttribute("data-ex");
+        var ex = tab.getAttribute("data-ex");
+        current = FEES[ex] ? ex : "binance";
         Array.prototype.forEach.call(tabs, function (t) { t.classList.remove("active"); });
         tab.classList.add("active");
-        slider.classList.toggle("okx", current === "okx");
-        if (card) card.classList.toggle("okx-active", current === "okx");
-        if (cta) {
-          var c = META[current];
-          cta.setAttribute("href", c.link);
-          cta.classList.remove("btn-binance", "btn-okx");
-          cta.classList.add(c.btn);
-        }
         calc(readVol());
       });
     });
@@ -134,12 +123,9 @@
     // 社区主页关注（站内 → 交易所社区，与 /sq /xq 的反向；用于测「站内访客有多少去关注」）
     if (href.indexOf("square/profile") > -1 || href.indexOf("uni-qr/cpro") > -1)
       track("cta_follow_binance_square", { page: page });
-    else if (href.indexOf("okx.com/") > -1 && href.indexOf("orbit") > -1 || href.indexOf("oyidl.net") > -1)
-      track("cta_follow_okx_orbit", { page: page });
     // 换绑(rebind)链接也在 bsmkweb.cc 域下，必须先判它，否则会被计成普通注册
     else if (href.indexOf("bind-ref") > -1) track("cta_rebind_binance", { page: page });
     else if (href.indexOf("bsmkweb.cc") > -1) track("cta_register_binance", { page: page });
-    else if (href.indexOf("promooboost.com") > -1) track("cta_register_okx", { page: page });
     else if (href.indexOf("t.me/") > -1) track("cta_telegram", { page: page });
   }, true);
 })();
