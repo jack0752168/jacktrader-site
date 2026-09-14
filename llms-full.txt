@@ -4105,7 +4105,7 @@ Trade mostly futures? The ceilings tie at 30% — pick the exchange with better 
 Trade a lot of spot? Binance is the one publishing a spot-specific affiliate band (41–50%); OKX applies one rate to every product.
 Want maximum rebate overall? Don't choose — bind both, route each trade to the better venue, and collect on both.
 Want to refer others? Binance brand recognition converts; OKX entry is easier for you as the referrer. Many partners offer both.
-For the broader "what even is a sub-broker vs affiliate vs IB" question that sits underneath both, see affiliate vs sub-broker vs introducing broker. And if you're weighing these programs against the flashy welcome offers, note that an affiliate rebate and a Binance sign-up bonus are different things — the bonus is a one-time, expiring voucher pool, while the rebate pays on every trade for the life of the account. Before you apply to either, check whether you actually clear the bar: we document what Binance asks of affiliate applicants and the equivalent OKX affiliate application route, including the gates each one enforces. For a straight yes-or-no on the Binance side, our review of whether the Binance affiliate program is worth it gives the verdict and the two cases where it clearly is not.
+For the broader "what even is a sub-broker vs affiliate vs IB" question that sits underneath both, see affiliate vs sub-broker vs introducing broker. And if you're weighing these programs against the flashy welcome offers, note that an affiliate rebate and a Binance sign-up bonus are different things — the bonus is a one-time, expiring voucher pool, while the rebate pays on every trade for the life of the account. (Binance: commissions stop once a referred user reaches VIP 3; Futures commissions are limited to 12 months per referral. OKX has no equivalent caps.) Before you apply to either, check whether you actually clear the bar: we document what Binance asks of affiliate applicants and the equivalent OKX affiliate application route, including the gates each one enforces. For a straight yes-or-no on the Binance side, our review of whether the Binance affiliate program is worth it gives the verdict and the two cases where it clearly is not.
 ## FAQ
 
 Does the Binance or OKX affiliate program pay more in 2026?+
@@ -4118,7 +4118,7 @@ What is the difference in binding rules between Binance and OKX?+
 Both attach your rebate at the moment of binding, and both struggle to re-bind an account that has already traded heavily without a referral. The key difference is what the test measures. Binance operates an official win-back route: an unbound master account with completed KYC can still bind later, provided its total trading volume over the previous 90 days is 5,000 USD or less — that is a volume cap, not a clock running from registration, and account age is irrelevant. The binding then only takes effect once the account trades 150,000 USD within 30 days. OKX has not published an equivalent win-back route, so treat OKX as bind-at-sign-up and confirm with OKX directly. In both cases the safest route is to confirm binding eligibility before you trade, or open through a channel from day one.
 
 Can I be in both the Binance and OKX affiliate programs at once?+
-Yes. They are separate programs on separate exchanges, so you can hold a rebate relationship on both at the same time and route each trade to whichever exchange you prefer. Many high-volume traders do exactly this — they keep a bound account on each, then trade where the fee, liquidity or product suits them, collecting the rebate on both. A single channel that covers both exchanges makes this simpler because settlement and tracking stay in one place.
+Yes. They are separate programs on separate exchanges, so you can hold a rebate relationship on both at the same time and route each trade to whichever exchange you prefer. Many high-volume traders do exactly this — they keep a bound account on each, then trade where the fee, liquidity or product suits them, collecting the rebate on both. A single channel that covers both exchanges makes this simpler because settlement and tracking stay in one place. (Binance: commissions stop once a referred user reaches VIP 3; Futures commissions are limited to 12 months per referral. OKX has no equivalent caps.)
 
 Do Binance and OKX affiliate programs allow downlines or multiple levels?+
 No. Both are single-tier: you earn on the traders you directly refer, not on recruiting other affiliates beneath you. Neither runs a compliant open multi-level structure, and any pitch built on stacking downlines for a personal cut is a red flag on either exchange. The legitimate model on both is the same — refer traders, share the rebate, settle transparently.
@@ -18136,7 +18136,7 @@ Web3 트레이딩 7년차 Jack이 직접 응대 — 단발성이 아니라 장�
 OKX 쪽 셀퍼럴 조건이 궁금하다면? 코드 입력 위치와 바인딩이 언제 확정되는지, 페이백이 실제로 어떤 숫자로 들어오는지는 OKX 레퍼럴 코드·셀퍼럴 적용 방법 정리에서 단계별로 다룹니다.
 
 ## 청중이 있다면 — 직접 받지 말고 분배를 받으세요
-트레이딩 그룹·채널·청중이 있다면 레퍼럴 파트너(셀퍼럴)로 등록해 추천한 사용자들의 수수료에서 장기 분배를 받을 수 있습니다. 단일 단계이며 다단계가 아닙니다.
+트레이딩 그룹·채널·청중이 있다면 레퍼럴 파트너(셀퍼럴)로 등록해 추천한 사용자들의 수수료에서 장기 분배를 받을 수 있습니다. 단일 단계이며 다단계가 아닙니다.(바이낸스: 추천한 사용자가 VIP 3에 도달하면 커미션이 중단되며, 선물 커미션은 추천 1인당 최대 12개월입니다. 자세한 내용은 바이낸스 약관 참조.)
 바이낸스만 운영하는 게 아니라면 OKX 쪽도 같이 보세요. OKX는 파트너 심사를 저희 채널이 대신 짊어지는 구조라, 본인에게 붙는 인원·거래량 목표 없이 첫 추천부터 시작할 수 있습니다 — 신청부터 장기 분배까지의 OKX 파트너 등록 조건을 4단계로 정리해 두었습니다.
 바이낸스 파트너 되는법 보기텔레그램 문의
 
@@ -18174,7 +18174,7 @@ OKX 쪽 셀퍼럴 조건이 궁금하다면? 코드 입력 위치와 바인딩�
 아니요. 페이백은 거래소가 추천 채널에 주는 수수료 환급을 다시 돌려드리는 구조라, 당신의 자산·비밀번호·API 키에 접근하지 않습니다. 자금은 항상 본인 바이낸스 계정에 있습니다. JackTrader는 독립 추천 파트너이며 바이낸스와 제휴 관계가 아닙니다.
 
 청중이나 그룹이 있으면 파트너로 더 받을 수 있나요?+
-네. 트레이딩 그룹·채널·청중이 있다면 레퍼럴 파트너(셀퍼럴)로 등록해 추천한 사용자들의 수수료에서 장기 분배를 받을 수 있습니다. 단일 단계이며 다단계가 아닙니다. 레퍼럴 파트너 페이지를 참고하세요.
+네. 트레이딩 그룹·채널·청중이 있다면 레퍼럴 파트너(셀퍼럴)로 등록해 추천한 사용자들의 수수료에서 장기 분배를 받을 수 있습니다. 단일 단계이며 다단계가 아닙니다. 레퍼럴 파트너 페이지를 참고하세요. (바이낸스: 추천한 사용자가 VIP 3에 도달하면 커미션이 중단되며, 선물 커미션은 추천 1인당 최대 12개월입니다.)
 
 바이낸스 페이백은 얼마나 되나요? 계산 예시를 보여주세요.+
 페이백은 당신이 낸 거래 수수료의 일정 비율입니다. 예를 들어 한 달에 수수료를 100 USDT 냈고 페이백 비율이 30%라면 약 30 USDT가 실시간 정산되어 돌아옵니다. 거래량(수수료)이 클수록 페이백 금액도 비례해 커집니다. 정확한 비율은 등급·거래량에 따라 다르며 '최대'는 보장이 아닙니다.
@@ -18509,7 +18509,7 @@ Summary: 거래소 레퍼럴 파트너(셀퍼럴) 되는법 — 청중이 있으
 
 레퍼럴 파트너 · 단일 단계 · 공식 대시보드 실시간 정산
 거래소 레퍼럴 파트너 되는법셀퍼럴 수익, 단일 단계 (다단계 아님)
-트레이딩 그룹·시그널 채널·KOL·커뮤니티가 있으신가요? 청중을 거래소로 안내하고 추천한 트레이더의 수수료에서 장기 분배를 받으세요. OKX는 거래량 심사 없이 첫 추천부터 높은 요율. 단일 단계(1단계)이며 총판·다단계가 아닙니다. 실시간 정산, 가입 비용 0원.
+트레이딩 그룹·시그널 채널·KOL·커뮤니티가 있으신가요? 청중을 거래소로 안내하고 추천한 트레이더의 수수료에서 장기 분배를 받으세요.(바이낸스: 추천한 사용자가 VIP 3에 도달하면 커미션이 중단되며, 선물 커미션은 추천 1인당 최대 12개월입니다. 자세한 내용은 바이낸스 약관 참조.) OKX는 거래량 심사 없이 첫 추천부터 높은 요율. 단일 단계(1단계)이며 총판·다단계가 아닙니다. 실시간 정산, 가입 비용 0원.
 텔레그램으로 신청
 어느 거래소?
 그룹 운영자 / 시그널 / KOL / 커뮤니티 / 도구 사이트. 해외 채널, 단일 단계.
@@ -18816,7 +18816,7 @@ OKX 수수료 = 200만 × 0.05% = $1,000/월
 둘 다 거래소 공식 시스템이 커미션 귀속을 처리하며, 신뢰할 만한 채널은 페이백을 USDT로 정산합니다. 중요한 것은 정산의 '투명성'입니다. 서브브로커 채널은 건별 수수료와 페이백을 대조해 보여줄 수 있지만, 얇은 레퍼럴 등급은 보통 주간 합계만 봅니다. 어느 거래소든 토큰 포인트나 캠페인 리워드는 수수료 페이백이 아니며, 실제 현금(USDT) 정산인지 반드시 확인하세요.
 
 두 거래소에 동시에 페이백을 연결할 수 있나요?+
-네. 바이낸스 계정과 OKX 계정은 서로 독립적이므로, 각각의 거래소에서 페이백을 연결할 수 있습니다. 바이낸스에서 트레이딩하는 물량에는 바이낸스 페이백이, OKX에서 트레이딩하는 물량에는 OKX 페이백이 각각 붙습니다. 한쪽을 고르는 문제가 아니라, 실제로 거래하는 모든 거래소에 페이백을 붙여 두는 것이 순수수료를 가장 낮추는 방법입니다.
+네. 바이낸스 계정과 OKX 계정은 서로 독립적이므로, 각각의 거래소에서 페이백을 연결할 수 있습니다. 바이낸스에서 트레이딩하는 물량에는 바이낸스 페이백이, OKX에서 트레이딩하는 물량에는 OKX 페이백이 각각 붙습니다. (바이낸스: 추천한 사용자가 VIP 3에 도달하면 커미션이 중단되며, 선물 커미션은 추천 1인당 최대 12개월입니다.) 한쪽을 고르는 문제가 아니라, 실제로 거래하는 모든 거래소에 페이백을 붙여 두는 것이 순수수료를 가장 낮추는 방법입니다.
 
 페이백을 연결하면 바이낸스나 OKX 계정에 영향이 있나요?+
 없습니다. 페이백은 거래소가 이미 부과한 수수료 중 일부를 나중에 현금으로 돌려주는 구조라, 주문 체결·레버리지·VIP 등급·토큰 할인 어느 것도 바뀌지 않습니다. 정상적인 페이백 연결은 비밀번호나 출금 권한 API를 요구하지 않으며, 거래소 공식 레퍼럴/서브브로커 시스템 안에서만 이뤄집니다. 만약 비밀번호·출금 API·선입금을 요구한다면 위험 신호이니 즉시 중단하세요.
