@@ -13,8 +13,8 @@
     gtag('config','G-NK1VSBED5T');
   </script>
   <title>掛單 vs 吃單手續費完整解析 2026：切到掛單，少付手續費 | JackTrader</title>
-  <meta name="description" content="2026 幣安與 OKX 的掛單（maker）vs 吃單（taker）手續費怎麼算：兩者差多少、量大時差距如何滾大、用 post-only 保證掛單成交、再疊一層返傭。含實算範例。" />
-  <meta name="keywords" content="掛單 吃單 手續費,maker taker 手續費,掛單費率,吃單費率,什麼是掛單,post only,幣安掛單費,OKX掛單費,幣安吃單費,返傭,降低手續費" />
+  <meta name="description" content="2026 幣安掛單（maker）vs 吃單（taker）手續費怎麼算：兩者差多少、量大時差距如何滾大、用 post-only 保證掛單成交、再疊一層返傭。含實算範例。" />
+  <meta name="keywords" content="掛單 吃單 手續費,maker taker 手續費,掛單費率,吃單費率,什麼是掛單,post only,幣安掛單費,幣安吃單費,返傭,降低手續費" />
   <meta name="author" content="JackTrader" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
   <meta name="theme-color" content="#0b0d12" />
@@ -29,14 +29,14 @@
   <meta property="og:site_name" content="JackTrader" />
   <meta property="og:locale" content="zh_TW" />
   <meta property="og:title" content="掛單 vs 吃單手續費完整解析 2026：切到掛單，少付手續費" />
-  <meta property="og:description" content="幣安與 OKX 的掛單/吃單費率、量大時差距如何滾大、用 post-only 保證掛單成交，再疊一層返傭。含實算範例。" />
+  <meta property="og:description" content="幣安的掛單/吃單費率、量大時差距如何滾大、用 post-only 保證掛單成交，再疊一層返傭。含實算範例。" />
   <meta property="og:url" content="https://www.jacktrader.xyz/zh-tw/blog/maker-vs-taker-fees-explained.html" />
   <meta property="og:image" content="https://www.jacktrader.xyz/assets/rebate/binance-fees.jpg" />
-  <meta property="og:image:alt" content="幣安與 OKX 掛單 vs 吃單手續費比較 2026" />
+  <meta property="og:image:alt" content="幣安掛單 vs 吃單手續費比較 2026" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@trader_j888" />
   <meta name="twitter:title" content="掛單 vs 吃單手續費完整解析 2026" />
-  <meta name="twitter:description" content="掛單/吃單差距是你能自己控制、最便宜的一刀。幣安+OKX 費率、實算範例、返傭怎麼疊。" />
+  <meta name="twitter:description" content="掛單/吃單差距是你能自己控制、最便宜的一刀。幣安費率、實算範例、返傭怎麼疊。" />
   <meta name="twitter:image" content="https://www.jacktrader.xyz/assets/rebate/binance-fees.jpg" />
   <script type="application/ld+json">
   {
@@ -44,7 +44,7 @@
     "@type":"Article",
     "@id":"https://www.jacktrader.xyz/zh-tw/blog/maker-vs-taker-fees-explained.html#article",
     "headline":"掛單 vs 吃單手續費完整解析 2026：切到掛單，少付手續費",
-    "description":"2026 幣安與 OKX 掛單（maker）與吃單（taker）手續費怎麼算、量大時差距如何滾大、用 post-only 保證掛單成交，以及返傭如何再疊一層。",
+    "description":"2026 幣安掛單（maker）與吃單（taker）手續費怎麼算、量大時差距如何滾大、用 post-only 保證掛單成交，以及返傭如何再疊一層。",
     "author":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/zh-tw/"},
     "publisher":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/zh-tw/","logo":{"@type":"ImageObject","url":"https://www.jacktrader.xyz/assets/brand/favicon.svg"}},
     "datePublished":"2026-07-05",
@@ -53,7 +53,7 @@
     "mainEntityOfPage":"https://www.jacktrader.xyz/zh-tw/blog/maker-vs-taker-fees-explained.html",
     "image":"https://www.jacktrader.xyz/assets/rebate/binance-fees.jpg",
     "articleSection":"加密貨幣手續費",
-    "keywords":"掛單 吃單 手續費, maker taker 手續費, post only, 幣安掛單費, OKX掛單費, 返傭",
+    "keywords":"掛單 吃單 手續費, maker taker 手續費, post only, 幣安掛單費, 幣安吃單費, 返傭",
     "about":[{"@type":"Thing","name":"掛單手續費"},{"@type":"Thing","name":"吃單手續費"},{"@type":"Thing","name":"post-only 訂單"},{"@type":"Thing","name":"加密貨幣手續費返傭"}]
   }
   </script>
@@ -75,9 +75,9 @@
     "mainEntity":[
       {"@type":"Question","name":"掛單費與吃單費有什麼差別？","acceptedAnswer":{"@type":"Answer","text":"掛單（maker）訂單為盤口提供流動性——它以限價單掛在盤上等待成交，所以交易所收較低的掛單費。吃單（taker）訂單則立即撮合現有掛單、移除流動性（市價單，或穿越價差的積極限價單），因此付較高的吃單費。合約上這個差距很大：幣安 USDT 本位合約在普通等級收 0.0200% 掛單、0.0500% 吃單。"}},
       {"@type":"Question","name":"為什麼掛單費比吃單費低？","acceptedAnswer":{"@type":"Answer","text":"交易所想要一個又深又有流動性的盤口。掛單者透過掛出等待成交的限價單提供流動性，所以平台以較便宜的費率回饋他們——高 VIP 等級甚至可能是負費率（返還）。吃單者消耗流動性，因此付得比較多。費率表本身就是維持盤口飽滿的誘因。"}},
-      {"@type":"Question","name":"我怎麼確定我的單被當成掛單？","acceptedAnswer":{"@type":"Answer","text":"用一張不會立即穿越價差的限價單，並在交易所提供時開啟 post-only（只掛單）旗標。post-only 保證你的單要嘛以掛單身分掛上盤口、要嘛被拒絕——它永遠不會以吃單成交。在幣安與 OKX 上，這是限價單下單面板上的一個勾選框、以及 API 上的一個 time-in-force 選項。"}},
+      {"@type":"Question","name":"我怎麼確定我的單被當成掛單？","acceptedAnswer":{"@type":"Answer","text":"用一張不會立即穿越價差的限價單，並在交易所提供時開啟 post-only（只掛單）旗標。post-only 保證你的單要嘛以掛單身分掛上盤口、要嘛被拒絕——它永遠不會以吃單成交。在幣安上，這是限價單下單面板上的一個勾選框、以及 API 上的一個 time-in-force 選項。"}},
       {"@type":"Question","name":"網格機器人付掛單費還是吃單費？","acceptedAnswer":{"@type":"Answer","text":"看設定。在每個網格層掛出等待成交限價單的網格機器人，大多以掛單成交，這正是網格策略對手續費極度敏感的原因。若機器人被設成用市價單追價，就會在每次成交都付吃單費，可能悄悄吃光網格的利潤。"}},
-      {"@type":"Question","name":"返傭對掛單費和吃單費都適用嗎？","acceptedAnswer":{"@type":"Answer","text":"是。sub-broker 或聯盟返傭是以交易所實際向你收取的費用計算，無論掛單或吃單。所以返傭是疊在你已經靠掛限價單拿到的掛單折扣之上——兩層節省是相乘累加，而非互相取代。"}}
+      {"@type":"Question","name":"返傭對掛單費和吃單費都適用嗎？","acceptedAnswer":{"@type":"Answer","text":"是。推薦／聯盟返傭是以交易所實際向你收取的費用計算，無論掛單或吃單。所以返傭是疊在你已經靠掛限價單拿到的掛單折扣之上——兩層節省是相乘累加，而非互相取代。"}}
     ]
   }
   </script>
@@ -90,9 +90,9 @@
       <nav class="site-nav" aria-label="主導航" id="primary-nav">
         <a href="/zh-tw/">首頁</a>
         <a href="/zh-tw/binance-us-stocks.html">幣安美股 🔥</a>
-        <a href="/zh-tw/okx-us-stocks.html">OKX美股</a>
+        
         <a href="/zh-tw/binance-rebate.html">幣安返傭</a>
-        <a href="/zh-tw/okx-rebate.html">OKX返傭</a>
+        
         <a href="/zh-tw/partner.html">助力人</a>
         <a href="/zh-tw/blog/">部落格</a>
       </nav>
@@ -109,7 +109,7 @@
         <div class="breadcrumb"><a href="/zh-tw/">首頁</a> / <a href="/zh-tw/blog/">部落格</a> / 掛單 vs 吃單手續費完整解析</div>
         <p class="eyebrow">加密貨幣手續費 · 2026 年 7 月更新</p>
         <h1>掛單 vs 吃單手續費完整解析：切到掛單，2026 年少付手續費</h1>
-        <p class="page-lede">多數交易者從來沒碰過離自己最近、也最便宜的一個手續費折扣。它不用錢、不用達到任何交易量等級、也不用囤 BNB——你只要成交在盤口的另一邊就好。這篇會講清楚 2026 年幣安與 OKX 的掛單、吃單費率各是多少、為什麼交易量越大差距滾得越兇、怎麼用 post-only 保證以掛單成交，以及返傭如何疊在這一切之上。</p>
+        <p class="page-lede">多數交易者從來沒碰過離自己最近、也最便宜的一個手續費折扣。它不用錢、不用達到任何交易量等級、也不用屯 BNB——你只要成交在盤口的另一邊就好。這篇會講清楚 2026 年幣安的掛單、吃單費率各是多少、為什麼交易量越大差距滾得越兇、怎麼用 post-only 保證以掛單成交，以及返傭如何疊在這一切之上。</p>
       </div>
     </section>
 
@@ -122,7 +122,7 @@
           <li><strong>掛單</strong>——你掛出一張<em>停在盤上等待</em>的限價單。你提供流動性，所以付較低的掛單費。</li>
           <li><strong>吃單</strong>——你送出一張<em>立即</em>撮合現有掛單的單（市價單，或報價穿越價差的限價單）。你移除流動性，所以付較高的吃單費。</li>
         </ul>
-        <p>現貨上這個差距很小甚至為零。但在<strong>合約上差距很大</strong>：幣安收 0.0200% 掛單 vs 0.0500% 吃單——吃單那邊貴 <strong>2.5 倍</strong>。如果你交易量夠大，決定用掛單成交，就是你能自己控制、報酬最高、力氣最省的一刀。接著再用一層 <a href="/zh-tw/binance-rebate.html">sub-broker 返傭</a> 把剩下的費用退回一部分。</p>
+        <p>現貨上這個差距很小甚至為零。但在<strong>合約上差距很大</strong>：幣安收 0.0200% 掛單 vs 0.0500% 吃單——吃單那邊貴 <strong>2.5 倍</strong>。如果你交易量夠大，決定用掛單成交，就是你能自己控制、報酬最高、力氣最省的一刀。接著再用一層 <a href="/zh-tw/binance-rebate.html">幣安推薦返傭</a> 把剩下的費用退回一部分。</p>
 
         <h2>掛單與吃單到底是什麼</h2>
         <p>盤口有兩側——低於現價的買方掛單、高於現價的賣方掛單。最佳買價與最佳賣價之間的距離就是<em>價差</em>。</p>
@@ -132,19 +132,17 @@
         </ul>
         <p>身分是在<em>成交當下</em>決定的，不是看你的意圖。一張限價單<em>不會</em>自動變成掛單——如果它穿越了價差，就會以吃單成交。唯一能確定的方法是 <strong>post-only</strong> 旗標（下面會講）。</p>
 
-        <h2>幣安與 OKX 的掛單/吃單費率（普通等級，2026）</h2>
-        <p>這些是普通 / Level-1 帳戶在任何 VIP 折扣、BNB/OKB 折扣或返傭之前的公告費率。注意哪裡掛單吃單相等（現貨）、哪裡分裂得很開（合約）。</p>
+        <h2>幣安的掛單/吃單費率（普通等級，2026）</h2>
+        <p>這些是普通 / Level-1 帳戶在任何 VIP 折扣、BNB 折扣或返傭之前的公告費率。注意哪裡掛單吃單相等（現貨）、哪裡分裂得很開（合約）。</p>
 
         <table class="compare">
           <thead><tr><th>市場</th><th>掛單費</th><th>吃單費</th><th>吃單溢價</th></tr></thead>
           <tbody>
             <tr><td>幣安現貨</td><td>0.1000%</td><td>0.1000%</td><td>—</td></tr>
             <tr><td>幣安 USDT 本位合約</td><td>0.0200%</td><td>0.0500%</td><td>+150%</td></tr>
-            <tr><td>OKX 現貨</td><td>0.0800%</td><td>0.1000%</td><td>+25%</td></tr>
-            <tr><td>OKX 永續 / 合約</td><td>0.0200%</td><td>0.0500%</td><td>+150%</td></tr>
           </tbody>
         </table>
-        <p>兩個重點。第一，幣安<strong>現貨</strong>在普通等級沒有掛單折扣——差距要到 VIP 1 以上才拉開。第二，在<strong>合約</strong>（高交易量與機器人流量大多在這裡）上，兩家的吃單費都是掛單費的 2.5 倍。這就是值得動腦去繞過的差距。完整 VIP 階梯見我們的 <a href="/zh-tw/blog/binance-fee-calculator-2026.html">幣安手續費計算機</a> 與 <a href="/zh-tw/blog/binance-vs-okx-fees-2026.html">幣安 vs OKX 手續費比較</a>。</p>
+        <p>兩個重點。第一，幣安<strong>現貨</strong>在普通等級沒有掛單折扣——差距要到 VIP 1 以上才拉開。第二，在<strong>合約</strong>（高交易量與機器人流量大多在這裡）上，吃單費是掛單費的 2.5 倍。這就是值得動腦去繞過的差距。完整 VIP 階梯見我們的 <a href="/zh-tw/blog/binance-fee-calculator-2026.html">幣安手續費計算機</a>。</p>
 
         <h2>實算範例：量大時這個差距要付多少</h2>
         <p>假設你每月跑 <strong>1,000 萬美元</strong> 的 USDT 本位合約交易量——一個中型網格或量化桌的規模。比較全吃單 vs 全掛單：</p>
@@ -156,55 +154,53 @@
             <tr><td><strong>切到掛單省下</strong></td><td>—</td><td><strong>$3,000</strong></td><td><strong>$36,000</strong></td></tr>
           </tbody>
         </table>
-        <p>從吃單切到掛單，手續費帳單砍掉 <strong>60%</strong>——每月 1,000 萬美元的盤口一年省 3.6 萬美元——而且你沒少交易、也沒改變你的策略優勢。接著再疊一層返傭：如果你的通道退還你<strong>最高 40%</strong> 你仍要付的費用，那 2.4 萬美元的掛單帳單再往下掉最多約 9,600 美元。掛單折扣與返傭是<em>相乘累加</em>，不會互相抵消。</p>
+        <p>從吃單切到掛單，手續費帳單砍掉 <strong>60%</strong>——每月 1,000 萬美元的盤口一年省 3.6 萬美元——而且你沒少交易、也沒改變你的策略優勢。接著再疊一層返傭：返傭按你實際付的費用計算，會直接作用在這 2.4 萬美元的掛單帳單上，掛單折扣與返傭是<em>相乘累加</em>，不會互相抵消。資金 5 萬美元以上的中大戶，我們提供高於市面水準的超高比例返傭，具體比例一對一評估，<a href="https://t.me/Jack168668" target="_blank" rel="noopener">歡迎 Telegram 諮詢</a>。</p>
 
         <h2>怎麼真的以掛單成交</h2>
         <ol>
           <li><strong>用限價單，別用市價單。</strong>市價單永遠是吃單。限價單可以是掛單——只要它不穿越價差。</li>
-          <li><strong>開啟 post-only。</strong>幣安與 OKX 都提供 <code>post-only</code>（只掛單）旗標（下單面板上的勾選框、API 上的一個 time-in-force 選項）。它保證你的單要嘛以掛單掛上盤口、要嘛被拒絕——它<em>永遠不會</em>以吃單成交。這是鎖定掛單費最安全的方法。</li>
+          <li><strong>開啟 post-only。</strong>幣安提供 <code>post-only</code>（只掛單）旗標（下單面板上的勾選框、API 上的一個 time-in-force 選項）。它保證你的單要嘛以掛單掛上盤口、要嘛被拒絕——它<em>永遠不會</em>以吃單成交。這是鎖定掛單費最安全的方法。</li>
           <li><strong>報價在盤內，別穿越。</strong>要買，掛在最佳買價或更低；要賣，掛在最佳賣價或更高。你用即時性換來更便宜的費率、而且常常還換到更好的價格。</li>
           <li><strong>把機器人設定成掛單成交。</strong>在每個網格層掛出等待成交限價單的網格機器人，天生就是掛單方——這正是網格為什麼省手續費的一大原因。如果你的機器人用市價單追價，你每次成交都在付吃單費。見 <a href="/zh-tw/blog/grid-bot-fee-optimization.html">網格機器人手續費優化</a>。</li>
           <li><strong>接受這個取捨。</strong>如果行情跑離你的價位，掛單可能不會成交。對被動、均值回歸與網格策略而言這沒問題。對於「成交確定性比省 3 個基點更重要」的動量進場，有時吃單才是對的選擇——只要你清楚它的成本就好。</li>
         </ol>
 
         <h2>返傭怎麼疊在最上面</h2>
-        <p>切到掛單降低的是交易所向你收的<em>毛費用</em>。<strong>sub-broker / 聯盟返傭</strong> 則退還你仍要付的那筆費用的一部分——掛單或吃單都算。因為返傭是以你實際付的費用計算，它作用在你的掛單折扣之後，所以兩層節省相乘累加：</p>
+        <p>切到掛單降低的是交易所向你收的<em>毛費用</em>。<strong>推薦／聯盟返傭</strong> 則退還你仍要付的那筆費用的一部分——掛單或吃單都算。因為返傭是以你實際付的費用計算，它作用在你的掛單折扣之後，所以兩層節省相乘累加：</p>
         <ul>
           <li>掛限價 / post-only → 你付掛單費率而不是吃單費率。</li>
-          <li>透過 <a href="/zh-tw/binance-rebate.html">幣安</a> 或 <a href="/zh-tw/okx-rebate.html">OKX</a> 返傭通道註冊 → 那筆掛單費最高 40% 退回給你，實時結算。</li>
+          <li>透過 JackTrader 邀請註冊 <a href="/zh-tw/binance-rebate.html">幣安</a> → 新戶註冊領 $20 現金；資金 5 萬美元以上的中大戶另享超高比例返傭，具體比例與發放方式一對一確認。</li>
           <li>不用 API 金鑰、不用託管——返傭記在交易所自己的聯盟帳本上。見 <a href="/zh-tw/blog/bot-api-key-fee-rebate.html">自架機器人怎麼綁返傭</a>。</li>
         </ul>
 
         <h2>快速檢查清單</h2>
         <ul>
           <li><strong>預設用限價單</strong>，只要成交時機允許就開 <strong>post-only</strong>。</li>
-          <li><strong>記住你的合約差距</strong>——幣安與 OKX 上吃單是掛單的 2.5 倍；那是你每次吃單時選擇花掉的基點。</li>
+          <li><strong>記住你的合約差距</strong>——幣安合約上吃單是掛單的 2.5 倍；那是你每次吃單時選擇花掉的基點。</li>
           <li><strong>稽核你機器人的訂單類型</strong>——確認它是在掛單、不是在穿越價差。</li>
-          <li><strong>疊一層返傭</strong>在掛單費率之上，讓兩個折扣相乘累加。</li>
-          <li><strong>每次結算對帳</strong>——把你的手續費紀錄對照返傭儀表板核一遍。</li>
+          <li><strong>資金量大就再疊一層返傭</strong>在掛單費率之上，讓兩個折扣相乘累加。</li>
+          <li><strong>定期對帳</strong>——把你的手續費紀錄拉出來核一遍，確認掛單成交的占比真的有提高。</li>
         </ul>
 
         <h2>常見問題 FAQ</h2>
         <div class="faq-list">
           <details class="faq-item" open><summary class="faq-q">掛單費與吃單費有什麼差別？<span class="plus">+</span></summary><div class="faq-a">掛單（maker）訂單為盤口提供流動性——它以限價單掛在盤上等待成交，所以交易所收較低的掛單費。吃單（taker）訂單則立即撮合現有掛單、移除流動性（市價單，或穿越價差的積極限價單），因此付較高的吃單費。合約上這個差距很大：幣安 USDT 本位合約在普通等級收 0.0200% 掛單、0.0500% 吃單。</div></details>
           <details class="faq-item"><summary class="faq-q">為什麼掛單費比吃單費低？<span class="plus">+</span></summary><div class="faq-a">交易所想要一個又深又有流動性的盤口。掛單者透過掛出等待成交的限價單提供流動性，所以平台以較便宜的費率回饋他們——高 VIP 等級甚至可能是負費率（返還）。吃單者消耗流動性，因此付得比較多。費率表本身就是維持盤口飽滿的誘因。</div></details>
-          <details class="faq-item"><summary class="faq-q">我怎麼確定我的單被當成掛單？<span class="plus">+</span></summary><div class="faq-a">用一張不會立即穿越價差的限價單，並在交易所提供時開啟 post-only（只掛單）旗標。post-only 保證你的單要嘛以掛單身分掛上盤口、要嘛被拒絕——它永遠不會以吃單成交。在幣安與 OKX 上，這是限價單下單面板上的一個勾選框、以及 API 上的一個 time-in-force 選項。</div></details>
+          <details class="faq-item"><summary class="faq-q">我怎麼確定我的單被當成掛單？<span class="plus">+</span></summary><div class="faq-a">用一張不會立即穿越價差的限價單，並在交易所提供時開啟 post-only（只掛單）旗標。post-only 保證你的單要嘛以掛單身分掛上盤口、要嘛被拒絕——它永遠不會以吃單成交。在幣安上，這是限價單下單面板上的一個勾選框、以及 API 上的一個 time-in-force 選項。</div></details>
           <details class="faq-item"><summary class="faq-q">網格機器人付掛單費還是吃單費？<span class="plus">+</span></summary><div class="faq-a">看設定。在每個網格層掛出等待成交限價單的網格機器人，大多以掛單成交，這正是網格策略對手續費極度敏感的原因。若機器人被設成用市價單追價，就會在每次成交都付吃單費，可能悄悄吃光網格的利潤。</div></details>
-          <details class="faq-item"><summary class="faq-q">返傭對掛單費和吃單費都適用嗎？<span class="plus">+</span></summary><div class="faq-a">是。sub-broker 或聯盟返傭是以交易所實際向你收取的費用計算，無論掛單或吃單。所以返傭是疊在你已經靠掛限價單拿到的掛單折扣之上——兩層節省是相乘累加，而非互相取代。</div></details>
+          <details class="faq-item"><summary class="faq-q">返傭對掛單費和吃單費都適用嗎？<span class="plus">+</span></summary><div class="faq-a">是。推薦／聯盟返傭是以交易所實際向你收取的費用計算，無論掛單或吃單。所以返傭是疊在你已經靠掛限價單拿到的掛單折扣之上——兩層節省是相乘累加，而非互相取代。</div></details>
         </div>
 
         <div class="cta-band" style="margin-top:48px">
-          <h2>在你的掛單成交上再疊一層返傭</h2>
-          <p>把你真實的每月交易量填進頁面上的計算器，看看每週能退回多少——疊在你已經賺到的掛單費率之上。</p>
+          <h2>掛單省下一刀，註冊幣安再拿福利</h2>
+          <p>新戶註冊領 $20 現金 · 中大戶超高比例返傭 · 免費加入 Alpha 會員群。資金 5 萬美元以上的量化／網格交易者，具體返傭比例一對一評估，請 Telegram 諮詢。</p>
           <div class="hero-actions" style="justify-content:center">
-<a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener nofollow sponsored">註冊幣安返傭</a>
-            <a class="btn btn-binance" href="/zh-tw/binance-rebate.html">幣安返傭計算器</a>
-            <a class="btn btn-okx" href="/zh-tw/okx-rebate.html">OKX 返傭</a>
-            <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">用 Telegram 諮詢等級評估</a>
+            <a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener nofollow sponsored">註冊幣安</a>
+            <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">Telegram 諮詢</a>
           </div>
         </div>
 
-        <p style="margin-top:32px;color:var(--text-3);font-size:13px">免責聲明：費率以幣安與 OKX 公告的即時費率為準，可能隨時變動。本文為教育性內容，非投資建議。JackTrader 為獨立推薦 / sub-broker 合作夥伴，與幣安、OKX 均無官方隸屬關係；返傭比例受平台政策影響，所示為上限參考、非收益保證。單層推薦，無下線或多層架構。</p>
+        <p style="margin-top:32px;color:var(--text-3);font-size:13px">免責聲明：費率以幣安公告的即時費率為準，可能隨時變動。本文為教育性內容，非投資建議。JackTrader 為獨立推薦夥伴，與幣安（Binance）無隸屬關係；新戶 $20 現金獎勵以每季名額為準，中大戶返傭比例以一對一評估為準，皆受幣安官方規則與帳戶狀態影響，不構成收益保證。單層推薦，無下線或多層架構。</p>
 
       </div>
     </section>
@@ -216,23 +212,21 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a class="brand" href="/zh-tw/"><span class="brand-mark">J</span><span>JackTrader</span></a>
-          <p>橫跨幣安、OKX、錢包與 DEX 生態的交易手續費返傭與通道合作。官方後台實時結算、全程可查。</p>
+          <p>幣安返傭與 Alpha 會員群服務：新戶註冊領 $20 現金，中大戶超高比例返傭。</p>
         </div>
         <div class="footer-col">
           <h4>返傭方案</h4>
           <a href="/zh-tw/binance-rebate.html">幣安返傭</a>
-          <a href="/zh-tw/okx-rebate.html">OKX 返傭</a>
           <a href="/zh-tw/partner.html">助力人計劃</a>
         </div>
         <div class="footer-col">
           <h4>深度文章</h4>
-          <a href="/zh-tw/blog/binance-vs-okx-fees-2026.html">幣安 vs OKX 手續費</a>
           <a href="/zh-tw/blog/grid-bot-fee-optimization.html">網格機器人手續費優化</a>
           <a href="/zh-tw/blog/bot-api-key-fee-rebate.html">自架機器人綁返傭</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="disclaimer">JackTrader 為獨立推薦合作夥伴，與幣安、OKX 均無官方隸屬關係。返傭比例、資格與規則受平台政策、帳戶狀態、審核與當地法規影響；所示比例為上限參考，非收益保證。數位資產交易具風險，本站內容皆非投資建議。</p>
+        <p class="disclaimer">JackTrader 為獨立推薦夥伴，與幣安（Binance）無隸屬關係。獎勵與返傭以名額、帳戶狀態及幣安官方規則為準，不構成收益保證；數位資產交易有風險，本站內容不構成投資建議。</p>
         <p class="copyright">© 2026 JackTrader · 獨立推薦合作夥伴。</p>
       </div>
     </div>
