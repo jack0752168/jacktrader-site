@@ -76,7 +76,7 @@
       "name": "How much do crypto trading bots pay in fees?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It depends entirely on bot type and order style, not on the bot software itself. Bots pay the exchange's standard maker/taker fees on every fill — typically around 0.0200% maker and 0.0500% taker on USDT perpetuals, or 0.0800%–0.1000% on spot at non-VIP tiers. Because bots turn over far more notional than manual traders, fees are usually a strategy's single largest recurring cost. A maker-heavy bot can pay a fraction of what a taker-heavy bot pays on identical volume, and binding a rebate returns up to 40% of whatever it pays."
+        "text": "It depends entirely on bot type and order style, not on the bot software itself. Bots pay the exchange's standard maker/taker fees on every fill — typically around 0.0200% maker and 0.0500% taker on USDT perpetuals, or 0.0800%–0.1000% on spot at non-VIP tiers. Because bots turn over far more notional than manual traders, fees are usually a strategy's single largest recurring cost. A maker-heavy bot can pay a fraction of what a taker-heavy bot pays on identical volume, and a fee rebate cuts whatever it still pays."
       }
     },
     {
@@ -100,7 +100,7 @@
       "name": "Can a fee rebate make a losing bot profitable?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sometimes, and that is the point. For high-turnover strategies, fees are often the difference between a positive and negative expectancy. Returning up to 40% of trading fees via a rebate directly lifts net expectancy without changing the strategy at all — it is the cheapest edge a bot operator can add. It will not rescue a strategy with no real signal, but for marginally profitable high-frequency or grid bots, the rebate can be the line between bleeding and breaking even."
+        "text": "Sometimes, and that is the point. For high-turnover strategies, fees are often the difference between a positive and negative expectancy. Returning a share of trading fees via a rebate directly lifts net expectancy without changing the strategy at all — it is the cheapest edge a bot operator can add. It will not rescue a strategy with no real signal, but for marginally profitable high-frequency or grid bots, the rebate can be the line between bleeding and breaking even."
       }
     },
     {
@@ -123,11 +123,11 @@
       <nav class="site-nav" aria-label="Main navigation" id="primary-nav">
         <a href="/en/">Home</a>
         <a href="/en/binance-us-stocks.html">Binance Stocks 🔥</a>
-        <a href="/en/okx-us-stocks.html">OKX Stocks</a>
+        
         <a href="/en/binance-rebate.html">Binance</a>
-        <a href="/en/okx-rebate.html">OKX</a>
+        
         <a href="/en/binance-partner.html">Binance Partner</a>
-        <a href="/en/okx-partner.html">OKX Partner</a>
+        
         <a href="/en/blog/">Blog</a>
       </nav>
       <div class="nav-right">
@@ -174,10 +174,9 @@
             <tr><td>Blended rate</td><td>~0.0230%</td><td>~0.0350%</td><td>~0.0470%</td></tr>
             <tr><td>Monthly fees</td><td>$1,150</td><td>$1,750</td><td>$2,350</td></tr>
             <tr><td>Per year</td><td>$13,800</td><td>$21,000</td><td>$28,200</td></tr>
-            <tr><td>Year after up-to-40% rebate</td><td><strong>~$8,280</strong></td><td><strong>~$12,600</strong></td><td><strong>~$16,920</strong></td></tr>
           </tbody>
         </table>
-        <p>Identical volume, but the scalper pays <strong>more than double</strong> the grid bot — purely on order style. And on every profile, the rebate strips up to 40% off whatever remains: the scalper alone saves over <strong>$11,000/year</strong>. For a thin-margin strategy, that saving is often the gap between negative and positive expectancy. See the bigger picture in <a href="/en/blog/grid-bot-fee-optimization.html">grid bot fee optimization</a> and <a href="/en/blog/reduce-crypto-trading-fees.html">how to reduce crypto trading fees</a>, or go deep on the two ends of the spectrum: <a href="/en/blog/dca-bot-fees.html">DCA bot fees</a> (the quietest drag) and <a href="/en/blog/hft-fees-binance-okx-2026.html">HFT fees on Binance &amp; OKX</a> (the heaviest bill).</p>
+        <p>Identical volume, but the scalper pays <strong>more than double</strong> the grid bot — purely on order style, which works out to <strong>$14,400/year</strong> more on the same notional. For a thin-margin strategy, that gap is often the difference between negative and positive expectancy. See the bigger picture in <a href="/en/blog/grid-bot-fee-optimization.html">grid bot fee optimization</a> and <a href="/en/blog/reduce-crypto-trading-fees.html">how to reduce crypto trading fees</a>, or go deep on the two ends of the spectrum: <a href="/en/blog/dca-bot-fees.html">DCA bot fees</a> (the quietest drag) and <a href="/en/blog/scalping-fees-crypto.html">scalping fees</a> (the heaviest bill).</p>
         <p class="hero-note">Rates reflect standard non-VIP schedules at the time of writing and depend on platform policy, your 30-day volume, balances, promotions and region. Blended rates are illustrative; confirm the live schedule.</p>
 
         <h2>Don't forget the platform fee</h2>
@@ -186,21 +185,21 @@
           <li><strong>Exchange fee</strong> — the one you can engineer down with maker routing and cut further with a rebate.</li>
           <li><strong>Platform fee</strong> — a fixed cost of the tool; only avoidable by changing tools.</li>
         </ul>
-        <p>The exchange fee is where the structural savings live, because it scales with your volume and a rebate attacks it directly. If you run a copy bot, also read <a href="/en/blog/okx-copy-trading-fees.html">OKX copy-trading fees: what you actually pay</a>.</p>
+        <p>The exchange fee is where the structural savings live, because it scales with your volume and a rebate attacks it directly. If your bot trades through an exchange API key, see <a href="/en/blog/bot-api-key-fee-rebate.html">how fee rebates work for API-key bots</a>.</p>
 
         <h2>The two levers every bot operator should pull</h2>
         <ol>
           <li><strong>Route to maker.</strong> Use post-only orders wherever the strategy allows. Moving fills from taker (0.0500%) to maker (0.0200%) more than halves the perp fee — the single biggest free saving in bot trading.</li>
-          <li><strong>Bind a rebate.</strong> After you've minimised taker volume, a rebate returns up to 40% of the fees you still pay, settled in USDT. It changes nothing about the strategy and compounds on every fill — which is why high-turnover operators treat it as standard infrastructure. Start on <a href="/en/binance-rebate.html">Binance</a> or <a href="/en/okx-rebate.html">OKX</a>.</li>
+          <li><strong>Bind a rebate.</strong> After you've minimised taker volume, a fee rebate cuts what you still pay. It changes nothing about the strategy and compounds on every fill — which is why high-turnover operators treat it as standard infrastructure. For traders with $50,000 or more in funds, JackTrader offers an above-market rebate rate on <a href="/en/binance-rebate.html">Binance</a>; the exact rate is assessed one-on-one.</li>
         </ol>
         <p>For where to run a bot in the first place, see <a href="/en/blog/best-exchange-grid-bots-2026.html">the best exchanges for grid/trading bots 2026</a>.</p>
 
         <h2>FAQ</h2>
         <div class="faq-list">
-          <details class="faq-item" open><summary class="faq-q">How much do crypto trading bots pay in fees?<span class="plus">+</span></summary><div class="faq-a">It depends entirely on bot type and order style, not on the bot software itself. Bots pay the exchange's standard maker/taker fees on every fill — typically around 0.0200% maker and 0.0500% taker on USDT perpetuals, or 0.0800%–0.1000% on spot at non-VIP tiers. Because bots turn over far more notional than manual traders, fees are usually a strategy's single largest recurring cost. A maker-heavy bot can pay a fraction of what a taker-heavy bot pays on identical volume, and binding a rebate returns up to 40% of whatever it pays.</div></details>
+          <details class="faq-item" open><summary class="faq-q">How much do crypto trading bots pay in fees?<span class="plus">+</span></summary><div class="faq-a">It depends entirely on bot type and order style, not on the bot software itself. Bots pay the exchange's standard maker/taker fees on every fill — typically around 0.0200% maker and 0.0500% taker on USDT perpetuals, or 0.0800%–0.1000% on spot at non-VIP tiers. Because bots turn over far more notional than manual traders, fees are usually a strategy's single largest recurring cost. A maker-heavy bot can pay a fraction of what a taker-heavy bot pays on identical volume, and a fee rebate cuts whatever it still pays.</div></details>
           <details class="faq-item"><summary class="faq-q">Do trading bot platforms add their own fees on top of exchange fees?<span class="plus">+</span></summary><div class="faq-a">Often, yes. Many hosted bot platforms charge a subscription or a small performance/spread fee in addition to the exchange's trading fees, and copy-trading bots typically take a profit share. Those platform costs are separate from — and stack on top of — the maker/taker fees you pay the exchange on every fill. When you compare bots, separate the two: the exchange fee is the one you can cut structurally with maker orders and a rebate; the platform fee is a fixed cost of using that tool.</div></details>
           <details class="faq-item"><summary class="faq-q">Which bot type pays the most in fees?<span class="plus">+</span></summary><div class="faq-a">Scalping and high-frequency bots pay the most, because they trade constantly and often cross the spread as takers — paying the higher taker fee on enormous turnover. Arbitrage bots are close behind, since at least one leg is usually a taker. Grid and DCA bots pay the least per dollar of volume because they post maker (post-only) orders, qualifying for the lower maker fee. The fix for the expensive types is the same: route as many fills as possible to maker, and bind a rebate.</div></details>
-          <details class="faq-item"><summary class="faq-q">Can a fee rebate make a losing bot profitable?<span class="plus">+</span></summary><div class="faq-a">Sometimes, and that is the point. For high-turnover strategies, fees are often the difference between a positive and negative expectancy. Returning up to 40% of trading fees via a rebate directly lifts net expectancy without changing the strategy at all — it is the cheapest edge a bot operator can add. It will not rescue a strategy with no real signal, but for marginally profitable high-frequency or grid bots, the rebate can be the line between bleeding and breaking even.</div></details>
+          <details class="faq-item"><summary class="faq-q">Can a fee rebate make a losing bot profitable?<span class="plus">+</span></summary><div class="faq-a">Sometimes, and that is the point. For high-turnover strategies, fees are often the difference between a positive and negative expectancy. Returning a share of trading fees via a rebate directly lifts net expectancy without changing the strategy at all — it is the cheapest edge a bot operator can add. It will not rescue a strategy with no real signal, but for marginally profitable high-frequency or grid bots, the rebate can be the line between bleeding and breaking even.</div></details>
           <details class="faq-item"><summary class="faq-q">Why are taker fees so damaging to bots?<span class="plus">+</span></summary><div class="faq-a">Because bots compound them. A 0.0500% taker fee sounds trivial, but a bot doing $5,000,000 of taker volume a month pays $2,500 in fees monthly — $30,000 a year — before a single trade decision is judged. The same notional traded as maker at 0.0200% costs $1,000 a month instead. That is why serious bot operators design for post-only execution where possible and treat the taker fee as a cost to be engineered down, then bind a rebate to cut what remains.</div></details>
         </div>
 
@@ -208,17 +207,14 @@
 
         <div class="cta-band" style="margin-top:48px">
           <h2>Cut the biggest line on your bot's books</h2>
-          <p>Fees are the largest recurring cost most bots carry. Bind your Binance or OKX account to JackTrader's channel and get up to 40% of your trading fees back in USDT, settled in real time, single-tier and fully trackable.</p>
+          <p>Fees are the largest recurring cost most bots carry. Sign up to Binance through JackTrader for premium rebates for $50K+ accounts (exact rate assessed one-on-one), $20 cash for new Binance users (first 15 each quarter) and a free Alpha members group.</p>
           <div class="hero-actions" style="justify-content:center">
-<a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener nofollow sponsored">Open Binance with rebate</a>
-<a class="btn btn-okx" href="https://www.promooboost.com/join/TRADERJACK" target="_blank" rel="noopener nofollow sponsored">Open OKX with rebate</a>
-            <a class="btn btn-binance" href="/en/binance-rebate.html">Binance rebate</a>
-            <a class="btn btn-okx" href="/en/okx-rebate.html">OKX rebate</a>
+            <a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener nofollow sponsored">Register Binance</a>
             <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">Ask on Telegram</a>
           </div>
         </div>
 
-        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Fee rates reflect each exchange's published standard schedule at the time of writing and depend on platform policy, your account, 30-day volume, balances, promotions and region. "Up to 40%" is a maximum reference, not a guarantee of returns. JackTrader is an independent referral / sub-broker partner and is not affiliated with Binance, OKX or Bybit. This article is educational and not investment advice; single-tier referrals only, no downline or multi-level structure.</p>
+        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Fee rates reflect each exchange's published standard schedule at the time of writing and depend on platform policy, your account, 30-day volume, balances, promotions and region. Rewards and rebates depend on available spots, account status and Binance's official rules. JackTrader is an independent referral partner and is not affiliated with Binance. This article is educational and not investment advice; single-tier referrals only, no downline or multi-level structure.</p>
 
       </div>
     </section>
@@ -230,14 +226,14 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a class="brand" href="/en/"><span class="brand-mark">J</span><span>JackTrader</span></a>
-          <p>Trading fee rebates and channel partnerships across Binance, OKX, wallet and DEX ecosystems. Real-time settlement, fully trackable.</p>
+          <p>Binance rebates and a free Alpha members group: $20 cash for new users, premium rebates for $50K+ accounts.</p>
         </div>
         <div class="footer-col">
           <h4>Rebate plans</h4>
           <a href="/en/binance-rebate.html">Binance Rebate</a>
-          <a href="/en/okx-rebate.html">OKX Rebate</a>
+          
           <a href="/en/wallet-rebate.html">Wallet &amp; DEX</a>
-          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a><a href="/en/okx-partner.html">OKX partner</a>
+          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a>
         </div>
         <div class="footer-col">
           <h4>Deep dives</h4>
@@ -247,7 +243,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance, OKX or Bybit. Rebate rates, eligibility and rules depend on platform policy, account status, review and local regulations; displayed rates are a maximum reference and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
+        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance. Rewards and rebates depend on available spots, account status and Binance's official rules, and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
         <p class="copyright">© 2026 JackTrader · Independent referral partner.</p>
       </div>
     </div>

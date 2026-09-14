@@ -14,7 +14,7 @@
   </script>
   <title>Hummingbot Fee Rebate 2026: Market-Maker Setup That Pays You Back | JackTrader</title>
   <meta name="description" content="Hummingbot is free and open-source, so exchange fees are your dominant cost. How maker rates, VIP levels and rebates stack for a market-making book." />
-  <meta name="keywords" content="hummingbot fees,hummingbot rebate,hummingbot binance fees,hummingbot okx fees,market maker rebate crypto,hummingbot maker fee,self hosted bot rebate,hummingbot fee config" />
+  <meta name="keywords" content="hummingbot fees,hummingbot rebate,hummingbot binance fees,market maker rebate crypto,hummingbot maker fee,self hosted bot rebate,hummingbot fee config" />
   <meta name="author" content="JackTrader" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
   <meta name="theme-color" content="#0b0d12" />
@@ -31,11 +31,11 @@
   <meta property="og:description" content="Hummingbot is free and open-source, so exchange fees are your dominant cost. How maker rates, VIP levels and rebates stack for a market-making book." />
   <meta property="og:url" content="https://www.jacktrader.xyz/en/blog/hummingbot-fee-rebate.html" />
   <meta property="og:image" content="https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg" />
-  <meta property="og:image:alt" content="Hummingbot market-maker fee rebate on Binance and OKX 2026" />
+  <meta property="og:image:alt" content="Hummingbot market-maker fee rebate on Binance 2026" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@trader_j888" />
   <meta name="twitter:title" content="Hummingbot Fee Rebate 2026: Market-Maker Setup That Pays You Back" />
-  <meta name="twitter:description" content="Why a rebate is worth more to a Hummingbot market maker than to almost any other trader — plus how to bind an up-to-40% rebate on your account." />
+  <meta name="twitter:description" content="Why a rebate is worth more to a Hummingbot market maker than to almost any other trader — and how to bind one to your Binance account." />
   <meta name="twitter:image" content="https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg" />
   <script type="application/ld+json">
   {
@@ -43,7 +43,7 @@
     "@type":"Article",
     "@id":"https://www.jacktrader.xyz/en/blog/hummingbot-fee-rebate.html#article",
     "headline":"Hummingbot Fee Rebate 2026: The Market-Maker Setup That Pays You Back",
-    "description":"Hummingbot is free, open-source market-making software with no fees of its own. Because market makers turn over enormous maker volume at thin margins, the fee line dominates P&L — which is exactly why a rebate is worth disproportionately more to a Hummingbot operator. The fee-relevant config and how to bind an up-to-40% rebate on the underlying account.",
+    "description":"Hummingbot is free, open-source market-making software with no fees of its own. Because market makers turn over enormous maker volume at thin margins, the fee line dominates P&L — which is exactly why a rebate is worth disproportionately more to a Hummingbot operator. The fee-relevant config and how to bind a rebate to the underlying Binance account.",
     "author":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/en/"},
     "publisher":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/en/","logo":{"@type":"ImageObject","url":"https://www.jacktrader.xyz/assets/brand/favicon.svg"}},
     "datePublished":"2026-07-01",
@@ -76,7 +76,7 @@
       "name": "Does Hummingbot charge fees?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Hummingbot is free, open-source software you self-host, so it has no fees of its own. Every cost you pay goes to the exchange your API key trades on. Historically some strategies could opt into a small maker-rebate share tied to the project's own token mechanics, but the core bot is free to run. On Binance and OKX your account pays roughly 0.10% spot and 0.02% maker / 0.05% taker on USDT perps at the regular tier, before any discount or rebate. What Hummingbot controls, through its strategy and spreads, is whether your orders rest in the book as makers — and for a market-making bot that is nearly all of them."
+        "text": "Hummingbot is free, open-source software you self-host, so it has no fees of its own. Every cost you pay goes to the exchange your API key trades on. Historically some strategies could opt into a small maker-rebate share tied to the project's own token mechanics, but the core bot is free to run. On Binance your account pays roughly 0.10% spot and 0.02% maker / 0.05% taker on USDT perps at the regular tier, before any discount or rebate. What Hummingbot controls, through its strategy and spreads, is whether your orders rest in the book as makers — and for a market-making bot that is nearly all of them."
       }
     },
     {
@@ -84,7 +84,7 @@
       "name": "Why is a fee rebate worth more to a market maker?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Because a market maker earns a tiny spread on enormous turnover, the trading fee is the single largest cost line in the strategy — often larger than the edge itself before optimisation. A directional trader who doubles their money cares little about a 0.02% fee; a market maker capturing a few basis points per round-trip lives or dies on it. Returning up to 40% of that fee therefore lifts net margin far more, in percentage terms, than it would for almost any other trader. The same rebate rate is simply worth more when fees are your dominant cost."
+        "text": "Because a market maker earns a tiny spread on enormous turnover, the trading fee is the single largest cost line in the strategy — often larger than the edge itself before optimisation. A directional trader who doubles their money cares little about a 0.02% fee; a market maker capturing a few basis points per round-trip lives or dies on it. Returning even part of that fee therefore lifts net margin far more, in percentage terms, than it would for almost any other trader. The same rebate rate is simply worth more when fees are your dominant cost."
       }
     },
     {
@@ -92,7 +92,7 @@
       "name": "How do I get a rebate on a Hummingbot bot?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The rebate is bound to your exchange account, not to Hummingbot or its API key. Register your Binance or OKX account under a rebate first, generate a trade-only API key (withdrawals disabled), and paste it into Hummingbot's exchange connector. Every fill the bot posts on that account then counts toward an up-to-40% rebate, settled in real time in USDT, with no change to your strategy files. Two Binance-side limits apply: commissions stop once the referred user reaches VIP 3 or above, and Futures-account commissions are capped at 12 months per referral; OKX has no equivalent limits. Rotating the API key for security never affects the binding, because the rebate follows the account."
+        "text": "The rebate is bound to your exchange account, not to Hummingbot or its API key. Register your Binance account under a referral first, generate a trade-only API key (withdrawals disabled), and paste it into Hummingbot's exchange connector. Every fill the bot posts on that account then counts toward the referral commission a rebate is paid from, with no change to your strategy files. For traders with $50,000 or more in funds, JackTrader offers an above-market rebate rate; the exact rate is assessed one-on-one. Two Binance-side limits apply: commissions stop once the referred user reaches VIP 3 or above, and Futures-account commissions are capped at 12 months per referral. Rotating the API key for security never affects the binding, because the rebate follows the account."
       }
     },
     {
@@ -123,11 +123,11 @@
       <nav class="site-nav" aria-label="Main navigation" id="primary-nav">
         <a href="/en/">Home</a>
         <a href="/en/binance-us-stocks.html">Binance Stocks 🔥</a>
-        <a href="/en/okx-us-stocks.html">OKX Stocks</a>
+        
         <a href="/en/binance-rebate.html">Binance</a>
-        <a href="/en/okx-rebate.html">OKX</a>
+        
         <a href="/en/binance-partner.html">Binance Partner</a>
-        <a href="/en/okx-partner.html">OKX Partner</a>
+        
         <a href="/en/blog/">Blog</a>
       </nav>
       <div class="nav-right">
@@ -143,7 +143,7 @@
         <div class="breadcrumb"><a href="/en/">Home</a> / <a href="/en/blog/">Blog</a> / Hummingbot Fee Rebate</div>
         <p class="eyebrow">Bot trading · Hummingbot · Updated July 2026</p>
         <h1>Hummingbot fee rebate 2026: the market-maker setup that pays you back</h1>
-        <p class="page-lede">Hummingbot is free, open-source and self-hosted, so it charges you <em>nothing</em> — every cost goes to the exchange. But market making is the one strategy where fees aren't a footnote, they're the <strong>main event</strong>: you're capturing a few basis points of spread on massive turnover, so the trading-fee line is often bigger than your edge before you optimise it. That's exactly why a rebate is worth more to a Hummingbot operator than to almost any other trader. Here's how the fees land, and how to bind an up-to-40% rebate on the account your bot runs.</p>
+        <p class="page-lede">Hummingbot is free, open-source and self-hosted, so it charges you <em>nothing</em> — every cost goes to the exchange. But market making is the one strategy where fees aren't a footnote, they're the <strong>main event</strong>: you're capturing a few basis points of spread on massive turnover, so the trading-fee line is often bigger than your edge before you optimise it. That's exactly why a rebate is worth more to a Hummingbot operator than to almost any other trader. Here's how the fees land, and how to bind a rebate to the Binance account your bot runs on.</p>
       </div>
     </section>
 
@@ -154,12 +154,12 @@
         <ol>
           <li><strong>Hummingbot has no fees of its own.</strong> It's free open-source software; your account pays the exchange's schedule — ~0.10% spot, ~0.02% maker / 0.05% taker on USDT perps at the regular tier.</li>
           <li><strong>Market making is nearly all maker volume.</strong> A pure-market-making config rests bids and asks in the book, so most fills are makers — the cheapest fee, and on some tiers a maker rebate.</li>
-          <li><strong>Fees dominate a market maker's P&amp;L</strong>, so returning up to 40% of them via an account-bound rebate lifts net margin more, in percentage terms, than for almost anyone else.</li>
+          <li><strong>Fees dominate a market maker's P&amp;L</strong>, so returning even part of them via an account-bound rebate lifts net margin more, in percentage terms, than for almost anyone else.</li>
         </ol>
         <p>Three reductions stack: maker routing (already native to market making), a good maker/VIP rate, and the account rebate. None of them touch your strategy logic.</p>
 
         <h2>Why fees are the market maker's biggest enemy</h2>
-        <p>A directional trader chasing a 5% move barely notices a 0.02% fee. A market maker is the opposite animal: you quote a tight two-sided spread, get filled thousands of times, and pocket a sliver each round-trip. Turn over $20M of notional to net a fraction of a percent, and the fee on that $20M is your <em>largest single expense</em> — frequently larger than the gross spread you captured before costs. This is the asymmetry that defines the strategy: <strong>the thinner your margin and the higher your churn, the more a fee cut is worth.</strong> A rebate that returns up to 40% of fees isn't a nice-to-have for a market maker; it can be the difference between a strategy that clears and one that bleeds.</p>
+        <p>A directional trader chasing a 5% move barely notices a 0.02% fee. A market maker is the opposite animal: you quote a tight two-sided spread, get filled thousands of times, and pocket a sliver each round-trip. Turn over $20M of notional to net a fraction of a percent, and the fee on that $20M is your <em>largest single expense</em> — frequently larger than the gross spread you captured before costs. This is the asymmetry that defines the strategy: <strong>the thinner your margin and the higher your churn, the more a fee cut is worth.</strong> A rebate that returns part of those fees isn't a nice-to-have for a market maker; it can be the difference between a strategy that clears and one that bleeds.</p>
 
         <h2>Where fees land in a Hummingbot strategy</h2>
         <p>Hummingbot places your quotes as orders on the exchange; the fee on each fill is set by the venue's schedule and by whether the order rested as a maker or crossed as a taker. A few config parameters govern that:</p>
@@ -177,7 +177,7 @@
           <tbody>
             <tr><td>Maker routing</td><td>Native to market making (spreads/refresh)</td><td>Most fills rest as makers (~0.02% perp) instead of taker (~0.05%)</td><td>No — it's the strategy</td></tr>
             <tr><td>Maker / VIP tier</td><td>Exchange account (volume + maker ratio)</td><td>Lowers the maker fee, sometimes to a maker rebate at higher tiers</td><td>No</td></tr>
-            <tr><td>Referral rebate</td><td>Account referral binding</td><td>Returns up to 40% of net fees, settled in real time in USDT</td><td>No</td></tr>
+            <tr><td>Referral rebate</td><td>Account referral binding</td><td>Returns a share of net fees; for $50K+ accounts, our rate is quoted one-on-one</td><td>No</td></tr>
           </tbody>
         </table>
         <p class="hero-note">Reference rates are regular-tier and illustrative; real numbers depend on venue, product, VIP/maker tier and your maker ratio. The point isn't the exact basis points — it's that these are three independent reductions a market maker can run at once.</p>
@@ -186,15 +186,15 @@
         <p>A pure-market-making config quotes both sides on a couple of liquid perps, turning over <strong>$20,000,000 notional per month</strong>, with roughly 90% of fills resting as makers:</p>
         <ul>
           <li><strong>Blended fee, no rebate:</strong> (0.90 × 0.02%) + (0.10 × 0.05%) = 0.023% → $20M × 0.023% = <strong>$4,600/month</strong> in fees (~$55,200/year).</li>
-          <li><strong>With up-to-40% rebate:</strong> rebate ≈ $4,600 × 40% = $1,840 back → net ≈ <strong>$2,760/month</strong> (~$33,120/year).</li>
-          <li><strong>The saving:</strong> about <strong>$1,840/month, ~$22,000/year</strong>, on identical volume and an unchanged strategy.</li>
+          <li><strong>What a rebate acts on:</strong> that $4,600 fee line. Whatever rate you bind is paid on it, on identical volume and an unchanged strategy.</li>
+          <li><strong>Getting a rate:</strong> for traders with $50,000 or more in funds, we offer an above-market rebate rate. The exact rate is assessed one-on-one — contact us for a quote.</li>
         </ul>
-        <p>For a strategy netting a thin spread on that turnover, $22,000/year of recovered fees can be a large fraction of the whole year's profit. That's the market-maker asymmetry in numbers: the rebate is a rounding error to a swing trader and a make-or-break line to you. For how this compares to other bot styles, see the <a href="/en/blog/crypto-trading-bot-fees-2026.html">crypto trading bot fee comparison</a>; for the broader mechanics, <a href="/en/blog/crypto-market-maker-rebates.html">crypto market-maker rebates</a>.</p>
+        <p>For a strategy netting a thin spread on that turnover, recovering even a slice of ~$55,200/year in fees can be a large fraction of the whole year's profit. That's the market-maker asymmetry in numbers: the rebate is a rounding error to a swing trader and a make-or-break line to you. For how this compares to other bot styles, see the <a href="/en/blog/crypto-trading-bot-fees-2026.html">crypto trading bot fee comparison</a>; for the broader mechanics, <a href="/en/blog/crypto-market-maker-rebates.html">crypto market-maker rebates</a>.</p>
 
         <h2>How to bind the rebate (the step outside the bot)</h2>
         <p>This is the lever most Hummingbot users leave on the table, because it happens <em>outside</em> the software. The rebate binds to your exchange <strong>account</strong>, not to the API key or the bot — so the sequence is:</p>
         <ol>
-          <li>Register your Binance or OKX account under a rebate via the <a href="/en/binance-rebate.html">Binance rebate</a> or <a href="/en/okx-rebate.html">OKX rebate</a> page, <em>before</em> you generate the API key.</li>
+          <li>Register your Binance account through the link on the <a href="/en/binance-rebate.html">Binance rebate</a> page, <em>before</em> you generate the API key.</li>
           <li>Create a trade-only API key (withdrawals disabled; IP allowlist if your VPS has a fixed IP).</li>
           <li>Add the key to Hummingbot's exchange connector and run your strategy as normal.</li>
         </ol>
@@ -205,26 +205,23 @@
 
         <h2>FAQ</h2>
         <div class="faq-list">
-          <details class="faq-item" open><summary class="faq-q">Does Hummingbot charge fees?<span class="plus">+</span></summary><div class="faq-a">Hummingbot is free, open-source software you self-host, so it has no fees of its own. Every cost you pay goes to the exchange your API key trades on. Historically some strategies could opt into a small maker-rebate share tied to the project's own token mechanics, but the core bot is free to run. On Binance and OKX your account pays roughly 0.10% spot and 0.02% maker / 0.05% taker on USDT perps at the regular tier, before any discount or rebate. What Hummingbot controls, through its strategy and spreads, is whether your orders rest in the book as makers — and for a market-making bot that is nearly all of them.</div></details>
-          <details class="faq-item"><summary class="faq-q">Why is a fee rebate worth more to a market maker?<span class="plus">+</span></summary><div class="faq-a">Because a market maker earns a tiny spread on enormous turnover, the trading fee is the single largest cost line in the strategy — often larger than the edge itself before optimisation. A directional trader who doubles their money cares little about a 0.02% fee; a market maker capturing a few basis points per round-trip lives or dies on it. Returning up to 40% of that fee therefore lifts net margin far more, in percentage terms, than it would for almost any other trader. The same rebate rate is simply worth more when fees are your dominant cost.</div></details>
-          <details class="faq-item"><summary class="faq-q">How do I get a rebate on a Hummingbot bot?<span class="plus">+</span></summary><div class="faq-a">The rebate is bound to your exchange account, not to Hummingbot or its API key. Register your Binance or OKX account under a rebate first, generate a trade-only API key (withdrawals disabled), and paste it into Hummingbot's exchange connector. Every fill the bot posts on that account then counts toward an up-to-40% rebate, settled in real time in USDT, with no change to your strategy files. Two Binance-side limits apply: commissions stop once the referred user reaches VIP 3 or above, and Futures-account commissions are capped at 12 months per referral; OKX has no equivalent limits. Rotating the API key for security never affects the binding, because the rebate follows the account.</div></details>
+          <details class="faq-item" open><summary class="faq-q">Does Hummingbot charge fees?<span class="plus">+</span></summary><div class="faq-a">Hummingbot is free, open-source software you self-host, so it has no fees of its own. Every cost you pay goes to the exchange your API key trades on. Historically some strategies could opt into a small maker-rebate share tied to the project's own token mechanics, but the core bot is free to run. On Binance your account pays roughly 0.10% spot and 0.02% maker / 0.05% taker on USDT perps at the regular tier, before any discount or rebate. What Hummingbot controls, through its strategy and spreads, is whether your orders rest in the book as makers — and for a market-making bot that is nearly all of them.</div></details>
+          <details class="faq-item"><summary class="faq-q">Why is a fee rebate worth more to a market maker?<span class="plus">+</span></summary><div class="faq-a">Because a market maker earns a tiny spread on enormous turnover, the trading fee is the single largest cost line in the strategy — often larger than the edge itself before optimisation. A directional trader who doubles their money cares little about a 0.02% fee; a market maker capturing a few basis points per round-trip lives or dies on it. Returning even part of that fee therefore lifts net margin far more, in percentage terms, than it would for almost any other trader. The same rebate rate is simply worth more when fees are your dominant cost.</div></details>
+          <details class="faq-item"><summary class="faq-q">How do I get a rebate on a Hummingbot bot?<span class="plus">+</span></summary><div class="faq-a">The rebate is bound to your exchange account, not to Hummingbot or its API key. Register your Binance account under a referral first, generate a trade-only API key (withdrawals disabled), and paste it into Hummingbot's exchange connector. Every fill the bot posts on that account then counts toward the referral commission a rebate is paid from, with no change to your strategy files. For traders with $50,000 or more in funds, JackTrader offers an above-market rebate rate; the exact rate is assessed one-on-one. Two Binance-side limits apply: commissions stop once the referred user reaches VIP 3 or above, and Futures-account commissions are capped at 12 months per referral. Rotating the API key for security never affects the binding, because the rebate follows the account.</div></details>
           <details class="faq-item"><summary class="faq-q">Do maker rebates and a referral rebate stack on Hummingbot?<span class="plus">+</span></summary><div class="faq-a">They are separate mechanisms. An exchange maker-rebate or negative-maker-fee program (usually VIP or market-maker tiers) lowers or reverses the fee at the moment of the trade based on your volume and maker ratio. A referral rebate returns a share of the net commission your account generates, settled later by the channel. Because they act at different stages, a maker-routed Hummingbot strategy that also qualifies for a good maker rate and is bound to a rebate compounds the reductions. Model your own numbers — the interaction depends on tier and product — but they are not mutually exclusive.</div></details>
           <details class="faq-item"><summary class="faq-q">Does a rebate cover funding on a Hummingbot perp market-making strategy?<span class="plus">+</span></summary><div class="faq-a">No. A rebate only returns a share of trading fees. On perpetual futures you also pay or receive funding on any inventory you are left holding, and a rebate cannot touch that — funding is a transfer between long and short traders, not an exchange fee. A perp market maker that accumulates directional inventory should manage and budget funding separately from the fee optimisation. The rule is the same as for any bot: cut the trading-fee line with maker routing plus a rebate, and treat funding as its own line item.</div></details>
         </div>
 
         <div class="cta-band" style="margin-top:48px">
           <h2>Run the same Hummingbot strategy on a lower cost base</h2>
-          <p>Market making is where a rebate pays off most. Bind an up-to-40% rebate on your Binance or OKX account, keep quoting as maker, and settle in real time in USDT. No strategy change, no code change, no extra permissions.</p>
+          <p>Market making is where a rebate pays off most. Register your Binance account through JackTrader and keep quoting as maker — no strategy change, no code change, no extra permissions. Premium rebates for $50K+ accounts, with the exact rate assessed one-on-one. New to Binance? $20 cash for new Binance users (the first 15 each quarter), plus a free Alpha members group.</p>
           <div class="hero-actions" style="justify-content:center">
-<a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener nofollow sponsored">Open Binance with rebate</a>
-<a class="btn btn-okx" href="https://www.promooboost.com/join/TRADERJACK" target="_blank" rel="noopener nofollow sponsored">Open OKX with rebate</a>
-            <a class="btn btn-binance" href="/en/binance-rebate.html">Binance rebate</a>
-            <a class="btn btn-okx" href="/en/okx-rebate.html">OKX rebate</a>
-            <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">Get a tier assessment</a>
+            <a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener nofollow sponsored">Register Binance</a>
+            <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">Get a rate quote on Telegram</a>
           </div>
         </div>
 
-        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Fee schedules and rebate rates reflect published rates at the time of writing and may change without notice. Examples are illustrative; your real costs depend on venue, product, maker/taker split, maker ratio and VIP tier. Hummingbot is independent open-source software referenced neutrally for context; this page is not affiliated with or endorsed by it. This article is educational and not investment advice. JackTrader is an independent referral / sub-broker partner and is not Binance or OKX. Single-tier referrals only, no downline or multi-level structure.</p>
+        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Fee schedules reflect Binance's published rates at the time of writing and may change without notice. Examples are illustrative; your real costs depend on venue, product, maker/taker split, maker ratio and VIP tier. Hummingbot is independent open-source software referenced neutrally for context; this page is not affiliated with or endorsed by it. This article is educational and not investment advice. JackTrader is an independent referral partner and is not affiliated with Binance; rewards and rebates depend on available spots, account status and Binance's official rules, and are not a guarantee of returns. Single-tier referrals only, no downline or multi-level structure.</p>
 
       </div>
     </section>
@@ -236,14 +233,14 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a class="brand" href="/en/"><span class="brand-mark">J</span><span>JackTrader</span></a>
-          <p>Trading fee rebates and channel partnerships across Binance, OKX, wallet and DEX ecosystems. Real-time settlement, fully trackable.</p>
+          <p>Binance rebates and a free Alpha members group: $20 cash for new users, premium rebates for $50K+ accounts.</p>
         </div>
         <div class="footer-col">
           <h4>Rebate plans</h4>
           <a href="/en/binance-rebate.html">Binance Rebate</a>
-          <a href="/en/okx-rebate.html">OKX Rebate</a>
+          
           <a href="/en/wallet-rebate.html">Wallet &amp; DEX</a>
-          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a><a href="/en/okx-partner.html">OKX partner</a>
+          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a>
         </div>
         <div class="footer-col">
           <h4>Deep dives</h4>
@@ -253,7 +250,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance or OKX. Rebate rates, eligibility and rules depend on platform policy, account status, review and local regulations; displayed rates are a maximum reference and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
+        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance. Rewards and rebates depend on available spots, account status and Binance's official rules, and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
         <p class="copyright">© 2026 JackTrader · Independent referral partner.</p>
       </div>
     </div>

@@ -92,7 +92,7 @@
       "name": "Can I get a rebate while using 3Commas or Cryptohopper?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. 3Commas and Cryptohopper both use a bring-your-own-exchange model: they connect to your Binance or OKX account through your own API key and place orders there. Because the trades settle on your exchange account, a rebate that is bound to that account returns a share of the fees regardless of whether you or a bot placed the order. The exchange only sees fills on your account; it does not distinguish bot orders from manual ones for rebate purposes."
+        "text": "Yes. 3Commas and Cryptohopper both use a bring-your-own-exchange model: they connect to your exchange account (Binance, for example) through your own API key and place orders there. Because the trades settle on your exchange account, a rebate that is bound to that account returns a share of the fees regardless of whether you or a bot placed the order. The exchange only sees fills on your account; it does not distinguish bot orders from manual ones for rebate purposes."
       }
     },
     {
@@ -100,7 +100,7 @@
       "name": "What about Pionex — is it cheaper because the bots are free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Pionex is different from 3Commas and Cryptohopper: it bundles the bots into its own exchange, so there is no separate subscription and the bots are free to use. The trade-off is that you trade on Pionex's own fee schedule and cannot bind an external rebate to a bring-your-own account there. So 'free bots' is only free on the software line — you still pay Pionex's trading fees on every fill, and that leg is not reducible with an external rebate the way a Binance or OKX account is."
+        "text": "Pionex is different from 3Commas and Cryptohopper: it bundles the bots into its own exchange, so there is no separate subscription and the bots are free to use. The trade-off is that you trade on Pionex's own fee schedule and cannot bind an external rebate to a bring-your-own account there. So 'free bots' is only free on the software line — you still pay Pionex's trading fees on every fill, and that leg is not reducible with an external rebate the way a Binance account is."
       }
     },
     {
@@ -108,7 +108,7 @@
       "name": "Does connecting a bot API key void my rebate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. The rebate is tied to how the exchange account was created and reviewed, not to whether a human or a bot API key places the orders. Connecting a read-and-trade API key to 3Commas or Cryptohopper does not change your account's rebate status. What matters is that the account itself was opened or bound under a referral or sub-broker channel; after that, every eligible fill counts toward the rebate whether it was clicked by hand or triggered by the bot."
+        "text": "No. The rebate is tied to the referral link the exchange account was opened or bound under, not to whether a human or a bot API key places the orders. Connecting a read-and-trade API key to 3Commas or Cryptohopper does not change your account's referral attribution. What matters is that the account itself was opened or bound under a referral link; after that, every eligible fill counts toward the rebate whether it was clicked by hand or triggered by the bot."
       }
     }
   ]
@@ -124,11 +124,11 @@
       <nav class="site-nav" aria-label="Main navigation" id="primary-nav">
         <a href="/en/">Home</a>
         <a href="/en/binance-us-stocks.html">Binance Stocks 🔥</a>
-        <a href="/en/okx-us-stocks.html">OKX Stocks</a>
+        
         <a href="/en/binance-rebate.html">Binance</a>
-        <a href="/en/okx-rebate.html">OKX</a>
+        
         <a href="/en/binance-partner.html">Binance Partner</a>
-        <a href="/en/okx-partner.html">OKX Partner</a>
+        
         <a href="/en/blog/">Blog</a>
       </nav>
       <div class="nav-right">
@@ -160,7 +160,7 @@
         <p>The second line is the one that matters. A bot exists to trade frequently; frequent trading means volume; volume is exactly what exchange fees scale with. The subscription is fixed no matter how much the bot trades, so the more work the bot does — the more valuable it is to you — the more the exchange fee dominates. The two costs move in opposite directions with activity, and that's the whole story.</p>
 
         <h2>What the subscriptions actually cost (2026)</h2>
-        <p>Both 3Commas and Cryptohopper are <strong>bring-your-own-exchange</strong> tools: you connect your Binance or OKX account by API key, and the bot places orders there. The subscription buys the software and the strategy features, not any change to your trading fees. Representative published tiers at the time of writing:</p>
+        <p>Both 3Commas and Cryptohopper are <strong>bring-your-own-exchange</strong> tools: you connect your exchange account (Binance, for example) by API key, and the bot places orders there. The subscription buys the software and the strategy features, not any change to your trading fees. Representative published tiers at the time of writing:</p>
         <table class="compare">
           <thead><tr><th>Bot</th><th>Entry plan</th><th>Mid plan</th><th>Top plan</th><th>Fee model</th></tr></thead>
           <tbody>
@@ -188,24 +188,15 @@
 
         <h2>The one leg you can actually cut</h2>
         <p>You can't negotiate the subscription — it's a fixed price list. You <em>can</em> move the exchange fee, and there's exactly one lever for it that doesn't require you to trade differently: a rebate on your exchange account.</p>
-        <p>Because 3Commas and Cryptohopper use your own API key, every fill settles on your Binance or OKX account. A rebate bound to that account returns a share of the trading fee you pay — whether the order was clicked by hand or triggered by the bot. Two Binance-side limits apply: commissions stop once the referred user reaches VIP 3 or above, and Futures-account commissions are capped at 12 months per referral; OKX has no equivalent limits. The exchange doesn't distinguish bot fills from manual fills for rebate purposes; it only sees activity on your account. The mechanics of binding the rebate to the account behind an API key are in <a href="/en/blog/bot-api-key-fee-rebate.html">bot API key fee rebate</a>.</p>
-        <p>Here's the same table with an up-to-40% rebate applied to the exchange fee (a maximum reference, not a guarantee):</p>
-        <table class="compare">
-          <thead><tr><th>Bot monthly volume</th><th>Exchange fees / yr</th><th>Rebate returned (up to 40%)</th><th>Rebate vs top subscription</th></tr></thead>
-          <tbody>
-            <tr><td>$1,000,000</td><td>$2,940</td><td>~$1,176</td><td>Rebate alone &gt; the whole subscription</td></tr>
-            <tr><td>$5,000,000</td><td>$14,700</td><td>~$5,880</td><td>≈ 6× the subscription</td></tr>
-            <tr><td>$20,000,000</td><td>$58,800</td><td>~$23,520</td><td>≈ 24× the subscription</td></tr>
-            <tr><td>$50,000,000</td><td>$147,000</td><td>~$58,800</td><td>≈ 59× the subscription</td></tr>
-          </tbody>
-        </table>
-        <p>At every volume level, the rebate returns more than the entire bot subscription costs — often many times more. So the honest optimisation order is backwards from how most people do it: stop haggling over the $19-vs-$49 plan, and cut the exchange leg that's three-to-a-hundred times larger. Same bot, same strategy, same fills — a lower net cost. That's the through-line of <a href="/en/blog/reduce-crypto-trading-fees.html">how to reduce crypto trading fees</a>.</p>
+        <p>Because 3Commas and Cryptohopper use your own API key, every fill settles on your own exchange account. A rebate bound to that account returns a share of the trading fee you pay — whether the order was clicked by hand or triggered by the bot. Two Binance-side limits apply: commissions stop once the referred user reaches VIP 3 or above, and Futures-account commissions are capped at 12 months per referral. The exchange doesn't distinguish bot fills from manual fills for rebate purposes; it only sees activity on your account. The mechanics of binding the rebate to the account behind an API key are in <a href="/en/blog/bot-api-key-fee-rebate.html">bot API key fee rebate</a>.</p>
+        <p>How much comes back depends on the rebate rate on the account, so we won't print a dollar figure here. The fee table above already shows where the money is: at $5M a month of bot volume the exchange leg is $14,700 a year, and at $20M it's $58,800 — even a partial share of a fee line that large can outweigh the whole software bill. For traders with $50,000 or more in funds, we offer an above-market rebate rate. The exact rate is assessed one-on-one — <a href="https://t.me/Jack168668" target="_blank" rel="noopener">contact us for a quote</a>.</p>
+        <p>So the honest optimisation order is backwards from how most people do it: stop haggling over the $19-vs-$49 plan, and look at the exchange leg that's three-to-a-hundred times larger. Same bot, same strategy, same fills — a lower net cost. That's the through-line of <a href="/en/blog/reduce-crypto-trading-fees.html">how to reduce crypto trading fees</a>.</p>
 
         <h2>Where Pionex fits — and its trade-off</h2>
         <p>Pionex is the odd one out because it isn't a bring-your-own-exchange tool at all. It's an <strong>exchange with the bots built in</strong>: the grid and DCA bots are free to use, and there's no subscription. That genuinely removes the software line — but it doesn't remove the fee line, and it changes what you can do about it:</p>
         <ul>
           <li><strong>You trade on Pionex's own fee schedule.</strong> Every bot fill pays Pionex's maker/taker rate. "Free bots" is free on the software, not on the trading.</li>
-          <li><strong>No external rebate.</strong> Because your capital sits inside Pionex rather than on a Binance or OKX account you control by API key, you can't bind an external rebate to it the way you can with 3Commas or Cryptohopper on a major exchange.</li>
+          <li><strong>No external rebate.</strong> Because your capital sits inside Pionex rather than on a Binance account you control by API key, you can't bind an external rebate to it the way you can with 3Commas or Cryptohopper on a major exchange.</li>
           <li><strong>Lock-in.</strong> Your strategies, capital and history live inside one venue. That's convenient, but it removes the ability to shop the fee leg — which is the leg that dominates for any active bot.</li>
         </ul>
         <p>So the real comparison isn't "paid bot vs free bot." It's "small fixed subscription plus a fee leg you can rebate" versus "no subscription but a fee leg you can't." For a low-volume dabbler, Pionex's convenience can win. For anyone churning real volume, the rebatable fee leg is worth far more than the subscription it costs to keep it — see the venue math in <a href="/en/blog/best-exchange-grid-bots-2026.html">best exchange for grid bots 2026</a>.</p>
@@ -217,24 +208,21 @@
         <div class="faq-list">
           <details class="faq-item" open><summary class="faq-q">Do 3Commas or Cryptohopper give you a fee rebate?<span class="plus">+</span></summary><div class="faq-a">No. The subscription you pay to 3Commas or Cryptohopper is completely separate from the trading fees your exchange charges when the bot places orders. The bot software does not touch your exchange fee at all. A fee rebate is applied at the exchange account level, not by the bot vendor — so the two are independent, and a rebate can lower the exchange leg while the bot subscription stays exactly the same.</div></details>
           <details class="faq-item"><summary class="faq-q">Is the bot subscription or the exchange fee the bigger cost?<span class="plus">+</span></summary><div class="faq-a">For any active bot, the exchange fee overtakes the subscription within weeks. A subscription is a flat figure in the tens of dollars per month. Exchange fees scale with the volume the bot churns, and grid, DCA and signal bots turn over enormous notional relative to the capital deployed. Even a modest bot doing 1,000,000 dollars a month in volume pays several times its annual subscription in exchange fees — and heavier operators pay it many times over.</div></details>
-          <details class="faq-item"><summary class="faq-q">Can I get a rebate while using 3Commas or Cryptohopper?<span class="plus">+</span></summary><div class="faq-a">Yes. 3Commas and Cryptohopper both use a bring-your-own-exchange model: they connect to your Binance or OKX account through your own API key and place orders there. Because the trades settle on your exchange account, a rebate that is bound to that account returns a share of the fees regardless of whether you or a bot placed the order. The exchange only sees fills on your account; it does not distinguish bot orders from manual ones for rebate purposes.</div></details>
-          <details class="faq-item"><summary class="faq-q">What about Pionex — is it cheaper because the bots are free?<span class="plus">+</span></summary><div class="faq-a">Pionex is different from 3Commas and Cryptohopper: it bundles the bots into its own exchange, so there is no separate subscription and the bots are free to use. The trade-off is that you trade on Pionex's own fee schedule and cannot bind an external rebate to a bring-your-own account there. So 'free bots' is only free on the software line — you still pay Pionex's trading fees on every fill, and that leg is not reducible with an external rebate the way a Binance or OKX account is.</div></details>
-          <details class="faq-item"><summary class="faq-q">Does connecting a bot API key void my rebate?<span class="plus">+</span></summary><div class="faq-a">No. The rebate is tied to how the exchange account was created and reviewed, not to whether a human or a bot API key places the orders. Connecting a read-and-trade API key to 3Commas or Cryptohopper does not change your account's rebate status. What matters is that the account itself was opened or bound under a referral or sub-broker channel; after that, every eligible fill counts toward the rebate whether it was clicked by hand or triggered by the bot.</div></details>
+          <details class="faq-item"><summary class="faq-q">Can I get a rebate while using 3Commas or Cryptohopper?<span class="plus">+</span></summary><div class="faq-a">Yes. 3Commas and Cryptohopper both use a bring-your-own-exchange model: they connect to your exchange account (Binance, for example) through your own API key and place orders there. Because the trades settle on your exchange account, a rebate that is bound to that account returns a share of the fees regardless of whether you or a bot placed the order. The exchange only sees fills on your account; it does not distinguish bot orders from manual ones for rebate purposes.</div></details>
+          <details class="faq-item"><summary class="faq-q">What about Pionex — is it cheaper because the bots are free?<span class="plus">+</span></summary><div class="faq-a">Pionex is different from 3Commas and Cryptohopper: it bundles the bots into its own exchange, so there is no separate subscription and the bots are free to use. The trade-off is that you trade on Pionex's own fee schedule and cannot bind an external rebate to a bring-your-own account there. So 'free bots' is only free on the software line — you still pay Pionex's trading fees on every fill, and that leg is not reducible with an external rebate the way a Binance account is.</div></details>
+          <details class="faq-item"><summary class="faq-q">Does connecting a bot API key void my rebate?<span class="plus">+</span></summary><div class="faq-a">No. The rebate is tied to the referral link the exchange account was opened or bound under, not to whether a human or a bot API key places the orders. Connecting a read-and-trade API key to 3Commas or Cryptohopper does not change your account's referral attribution. What matters is that the account itself was opened or bound under a referral link; after that, every eligible fill counts toward the rebate whether it was clicked by hand or triggered by the bot.</div></details>
         </div>
 
         <div class="cta-band" style="margin-top:48px">
-          <h2>Cut the big leg — put a rebate on the account behind your bot</h2>
-          <p>Whichever bot you run, the exchange fee it generates is the cost worth optimising. A rebate returns up to 40% of the trading fee you pay (a maximum reference, not a guarantee), settled in USDT, single-tier and fully trackable — bound to your exchange account, so it works the same whether a human or your bot places the orders.</p>
+          <h2>Run your bot on a Binance account opened through JackTrader</h2>
+          <p>$20 cash for new Binance users · Premium rebates for $50K+ accounts · Free Alpha members group. Referral attribution sits on your exchange account, so it works the same whether a human or your bot places the orders. Message us on Telegram to claim the $20 or get a one-on-one rebate quote.</p>
           <div class="hero-actions" style="justify-content:center">
-<a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener nofollow sponsored">Open Binance with rebate</a>
-<a class="btn btn-okx" href="https://www.promooboost.com/join/TRADERJACK" target="_blank" rel="noopener nofollow sponsored">Open OKX with rebate</a>
-            <a class="btn btn-binance" href="/en/binance-rebate.html">Binance rebate</a>
-            <a class="btn btn-okx" href="/en/okx-rebate.html">OKX rebate</a>
+            <a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener nofollow sponsored">Register Binance</a>
             <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">Ask on Telegram</a>
           </div>
         </div>
 
-        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Subscription and fee figures reflect representative published rates at the time of writing and change over time; check the current schedule on each vendor's or exchange's site. 3Commas, Cryptohopper and Pionex are independent products and are not affiliated with JackTrader. "Up to 40%" is a maximum reference, not a guarantee of returns. JackTrader is an independent referral / sub-broker partner and is not affiliated with Binance or OKX. This article is educational and not investment advice; single-tier referrals only, no downline or multi-level structure.</p>
+        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Subscription and fee figures reflect representative published rates at the time of writing and change over time; check the current schedule on each vendor's or exchange's site. 3Commas, Cryptohopper and Pionex are independent products and are not affiliated with JackTrader. JackTrader is an independent referral partner and is not affiliated with Binance; rewards and rebates depend on available spots, account status and Binance's official rules, and are not a guarantee of returns. This article is educational and not investment advice; single-tier referrals only, no downline or multi-level structure.</p>
 
       </div>
     </section>
@@ -246,14 +234,14 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a class="brand" href="/en/"><span class="brand-mark">J</span><span>JackTrader</span></a>
-          <p>Trading fee rebates and channel partnerships across Binance, OKX, wallet and DEX ecosystems. Real-time settlement, fully trackable.</p>
+          <p>Binance rebates and a free Alpha members group: $20 cash for new users, premium rebates for $50K+ accounts.</p>
         </div>
         <div class="footer-col">
           <h4>Rebate plans</h4>
           <a href="/en/binance-rebate.html">Binance Rebate</a>
-          <a href="/en/okx-rebate.html">OKX Rebate</a>
+          
           <a href="/en/wallet-rebate.html">Wallet &amp; DEX</a>
-          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a><a href="/en/okx-partner.html">OKX partner</a>
+          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a>
         </div>
         <div class="footer-col">
           <h4>Deep dives</h4>
@@ -263,7 +251,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance or OKX. Rebate rates, eligibility and rules depend on platform policy, account status, review and local regulations; displayed rates are a maximum reference and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
+        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance. Rewards and rebates depend on available spots, account status and Binance's official rules, and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
         <p class="copyright">© 2026 JackTrader · Independent referral partner.</p>
       </div>
     </div>

@@ -100,7 +100,7 @@
       "name": "How do I verify my weekly rebate was actually paid correctly?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Cross-check three numbers: your own fee total for the week from the exchange's trade history, the rebate amount received in USDT, and the implied pass-through percentage. If you paid 1,000 USDT in fees and your channel quotes a 40% pass-through, you should receive about 400 USDT. A channel offering per-trade reconciliation can show the exact fee and rebate line by line. If the only thing you ever see is a lump sum with no breakdown, ask for the ledger before trusting the figure."
+        "text": "Cross-check three numbers: your own fee total for the week from the exchange's trade history, the rebate amount received in USDT, and the implied pass-through percentage. If you paid 1,000 USDT in fees and your channel quotes a 30% pass-through, you should receive about 300 USDT. A channel offering per-trade reconciliation can show the exact fee and rebate line by line. If the only thing you ever see is a lump sum with no breakdown, ask for the ledger before trusting the figure."
       }
     },
     {
@@ -123,11 +123,11 @@
       <nav class="site-nav" aria-label="Main navigation" id="primary-nav">
         <a href="/en/">Home</a>
         <a href="/en/binance-us-stocks.html">Binance Stocks 🔥</a>
-        <a href="/en/okx-us-stocks.html">OKX Stocks</a>
+        
         <a href="/en/binance-rebate.html">Binance</a>
-        <a href="/en/okx-rebate.html">OKX</a>
+        
         <a href="/en/binance-partner.html">Binance Partner</a>
-        <a href="/en/okx-partner.html">OKX Partner</a>
+        
         <a href="/en/blog/">Blog</a>
       </nav>
       <div class="nav-right">
@@ -143,8 +143,8 @@
         <div class="breadcrumb"><a href="/en/">Home</a> / <a href="/en/blog/">Blog</a> / Weekly USDT Rebate Settlement</div>
         <p class="eyebrow">Rebate mechanics · Updated June 2026</p>
         <h1>Weekly USDT rebate settlement explained: how and when you get paid</h1>
-        <p class="page-lede">A fee rebate is only worth what actually lands in your wallet, on time, in a currency you can use. "Real-time settlement in USDT" is the phrase every serious rebate channel uses — but few explain what it really means: what gets counted, when the snapshot is taken, why the money arrives a few days after the week closes, and how to check you were paid the right amount. This is the mechanics, end to end.</p>
-        <div class="related-note" style="margin-top:28px;padding:16px 20px;border-left:3px solid var(--yellow);background:rgba(255,255,255,0.03);border-radius:8px;color:var(--text-2);font-size:15px"><strong>Where JackTrader sits, so this page isn't read as a description of us.</strong> Everything below explains the <em>channel-payout</em> model: the channel collects commission from the exchange on a batch cycle, then forwards your share out of its own wallet — which is why that model settles weekly rather than instantly. We do not run that model. Our arrangement is credited through the exchange's own back office, so the split is applied at <a href="/en/binance-rebate.html">Binance</a> and <a href="/en/okx-rebate.html">OKX</a> in real time and you read it in your own account rather than in our ledger. Read this page as the map of how the rest of the market pays — and as the checklist for auditing any channel that does hold your money in between.</div>
+        <p class="page-lede">A fee rebate is only worth what actually lands in your wallet, on time, in a currency you can use. "Paid in USDT" is the promise every serious rebate channel makes — but few explain what it really means: what gets counted, when the snapshot is taken, why the money arrives a few days after the week closes, and how to check you were paid the right amount. This is the mechanics, end to end.</p>
+        <div class="related-note" style="margin-top:28px;padding:16px 20px;border-left:3px solid var(--yellow);background:rgba(255,255,255,0.03);border-radius:8px;color:var(--text-2);font-size:15px"><strong>Where JackTrader sits, so this page isn't read as a description of us.</strong> Everything below explains the <em>channel-payout</em> model: the channel collects commission from the exchange on a batch cycle, then forwards your share out of its own wallet — which is why that model settles weekly rather than instantly. For users who sign up to <a href="/en/binance-rebate.html">Binance</a> through JackTrader, any rebate rate and how it is delivered are confirmed one-on-one, so don't read the timeline below as our terms. Read this page as the map of how rebate channels across the market pay — and as the checklist for auditing any channel that holds your money in between.</div>
       </div>
     </section>
 
@@ -155,7 +155,7 @@
         <p>Your rebate doesn't come from thin air — it's a slice of fees that already left your account. Here's the path it travels:</p>
         <ol>
           <li><strong>You trade and pay fees.</strong> Every maker/taker fee on spot and futures is charged by the exchange in real time and logged to your account.</li>
-          <li><strong>The exchange pays the channel a commission.</strong> Because your account is bound to a referral / sub-broker channel, the exchange shares a percentage of those fees with the channel — its <em>gross commission</em>. How that percentage is set is covered in our <a href="/en/blog/okx-affiliate-commission-tiers.html">OKX commission tiers breakdown</a>.</li>
+          <li><strong>The exchange pays the channel a commission.</strong> Because your account is bound to a referral / sub-broker channel, the exchange shares a percentage of those fees with the channel — its <em>gross commission</em>. On Binance, how that percentage is set is covered in our <a href="/en/blog/binance-affiliate-program-commission.html">Binance affiliate commission breakdown</a>.</li>
           <li><strong>The channel applies your pass-through.</strong> It totals the fees you generated over the week, multiplies by your agreed rebate percentage, and earmarks that as your payout.</li>
           <li><strong>You receive USDT.</strong> The earmarked amount is sent to you in USDT, a few days after the settlement week closes and the exchange's commission report is reconciled.</li>
         </ol>
@@ -175,14 +175,14 @@
         <p class="hero-note">Exact cut-off times and payout days vary by channel and exchange policy. The principle — snapshot at week close, pay after the exchange reconciles — is the same everywhere serious.</p>
 
         <h2>Why weekly, why USDT</h2>
-        <p><strong>Why weekly.</strong> Exchanges don't report affiliate commission tick-by-tick; they batch it. That batching is why a channel that <em>pays you out of its own pocket</em> settles weekly — it can only pay once the exchange has reported. It is a different architecture from a rebate credited by the exchange&#x27;s own back office, where the split is applied at the exchange and you can read it in your own account rather than trusting a channel&#x27;s ledger. Neither is dishonest; they differ in who holds the money in between. Anything much longer than weekly (monthly, or "on request") usually means the channel is holding your money to earn float.</p>
-        <p><strong>Why USDT.</strong> Commission is reported in USDT-equivalent, and USDT holds its value between the trade and the payout. If you were paid the rebate in a volatile token, a 40% rebate could be worth 30% by the time it arrived. USDT keeps the number you were promised the number you receive.</p>
+        <p><strong>Why weekly.</strong> Exchanges don't report affiliate commission tick-by-tick; they batch it. That batching is why a channel that <em>pays you out of its own pocket</em> settles weekly — it can only pay once the exchange has reported. Some programs instead credit rebates through the exchange&#x27;s own systems, and terms differ between channels — whichever model you use, get the payout schedule confirmed in writing and check it against your own fee history.</p>
+        <p><strong>Why USDT.</strong> Commission is reported in USDT-equivalent, and USDT holds its value between the trade and the payout. If you were paid the rebate in a volatile token, a 30% rebate could be worth 20% by the time it arrived. USDT keeps the number you were promised the number you receive.</p>
 
         <h2>Worked example: reading your own settlement</h2>
-        <p>Suppose over one week you trade futures and pay <strong>1,000 USDT in fees</strong>, on a channel that passes through 40%:</p>
-        <p style="text-align:center;font-size:18px"><strong>1,000 USDT × 40% = 400 USDT rebated</strong></p>
-        <p>The Monday after the week closes, you should see roughly 400 USDT arrive. To verify it's right, pull your own fee total from the exchange's trade-history export and divide the rebate you received by it:</p>
-        <p style="text-align:center;font-size:18px"><strong>400 ÷ 1,000 = 40% effective pass-through ✓</strong></p>
+        <p>Suppose over one week you trade futures and pay <strong>1,000 USDT in fees</strong>, on a hypothetical channel that passes through 30%:</p>
+        <p style="text-align:center;font-size:18px"><strong>1,000 USDT × 30% = 300 USDT rebated</strong></p>
+        <p>The Monday after the week closes, you should see roughly 300 USDT arrive. To verify it's right, pull your own fee total from the exchange's trade-history export and divide the rebate you received by it:</p>
+        <p style="text-align:center;font-size:18px"><strong>300 ÷ 1,000 = 30% effective pass-through ✓</strong></p>
         <p>If the implied percentage comes out well below what you were quoted, the channel is keeping more margin than it admitted — or counting less of your volume than it should. This is the same effective-rate discipline we apply to fees themselves in <a href="/en/blog/crypto-fee-rebate-explained.html">crypto fee rebate explained</a>. For the underlying fee math by volume, the <a href="/en/blog/binance-fee-calculator-2026.html">Binance fee calculator</a> shows what you're paying before any rebate.</p>
 
         <h2>What counts — and what doesn't</h2>
@@ -190,7 +190,7 @@
           <li><strong>Counts:</strong> maker and taker fees on spot and futures, as actually charged.</li>
           <li><strong>Doesn't count:</strong> trades where you paid zero fee (some maker-rebate fills, zero-fee promo pairs).</li>
           <li><strong>Doesn't count:</strong> funding payments on perpetuals — those are not trading fees.</li>
-          <li><strong>Stacks on top:</strong> your VIP-tier discount and BNB/OKB discounts stay yours; the rebate is calculated on the fees you paid after those discounts.</li>
+          <li><strong>Stacks on top:</strong> your VIP-tier discount and BNB fee discount stay yours; the rebate is calculated on the fees you paid after those discounts.</li>
         </ul>
 
         <h2>How to verify a rebate was actually paid</h2>
@@ -207,22 +207,20 @@
           <details class="faq-item" open><summary class="faq-q">How does weekly USDT rebate settlement work?<span class="plus">+</span></summary><div class="faq-a">The exchange tracks the trading fees your account generates and pays the referring channel a commission on them. The channel then totals the fees you paid during the settlement week, applies your agreed pass-through percentage, and sends that amount to you in USDT. Most serious channels run a weekly cycle: fees are tallied through the end of the week, reconciled against the exchange's commission report, and the USDT lands in your account a few days after the week closes.</div></details>
           <details class="faq-item"><summary class="faq-q">Why is the rebate paid in USDT and weekly rather than instantly?<span class="plus">+</span></summary><div class="faq-a">USDT is used because it is the unit the exchange reports commission in and it holds value between trade and payout, so the rebate is not exposed to price swings. Weekly, rather than instant, exists because the exchange itself only finalises and reports affiliate commission on a batch cycle. The channel cannot pay you a clean, reconciled figure until the exchange has closed and confirmed the week's fees. Weekly USDT is the standard precisely because it matches the exchange's own reporting cadence.</div></details>
           <details class="faq-item"><summary class="faq-q">What trading volume counts toward my weekly rebate?<span class="plus">+</span></summary><div class="faq-a">The fees you actually paid during the settlement week count — both maker and taker fees on spot and futures, as charged by the exchange. Trades where you paid no fee, such as some maker-rebate fills or zero-fee promotional pairs, generate no commission and therefore no rebate. Funding payments on perpetuals are not trading fees and are not rebated. The rebate is always a share of fees the exchange charged you, never a bonus on volume by itself.</div></details>
-          <details class="faq-item"><summary class="faq-q">How do I verify my weekly rebate was actually paid correctly?<span class="plus">+</span></summary><div class="faq-a">Cross-check three numbers: your own fee total for the week from the exchange's trade history, the rebate amount received in USDT, and the implied pass-through percentage. If you paid 1,000 USDT in fees and your channel quotes a 40% pass-through, you should receive about 400 USDT. A channel offering per-trade reconciliation can show the exact fee and rebate line by line. If the only thing you ever see is a lump sum with no breakdown, ask for the ledger before trusting the figure.</div></details>
+          <details class="faq-item"><summary class="faq-q">How do I verify my weekly rebate was actually paid correctly?<span class="plus">+</span></summary><div class="faq-a">Cross-check three numbers: your own fee total for the week from the exchange's trade history, the rebate amount received in USDT, and the implied pass-through percentage. If you paid 1,000 USDT in fees and your channel quotes a 30% pass-through, you should receive about 300 USDT. A channel offering per-trade reconciliation can show the exact fee and rebate line by line. If the only thing you ever see is a lump sum with no breakdown, ask for the ledger before trusting the figure.</div></details>
           <details class="faq-item"><summary class="faq-q">Does receiving a USDT rebate affect my account or taxes?<span class="plus">+</span></summary><div class="faq-a">It does not change how your account trades, your VIP level or your exchange discounts, which all stack on top of the rebate. For tax, a fee rebate is generally treated as a reduction of cost or as income depending on your jurisdiction, so keep the weekly USDT records for your accounts. This is general information, not tax or investment advice; check the rules where you are resident.</div></details>
         </div>
 
         <div class="cta-band" style="margin-top:48px">
-          <h2>Get a clean weekly USDT rebate, fully reconciled</h2>
-          <p>JackTrader settles up to 40% of your Binance and OKX trading fees back in real time in USDT — single-tier, per-trade trackable, with your VIP and token discounts left untouched on top.</p>
+          <h2>Trading on Binance? Here's what JackTrader offers</h2>
+          <p>Sign up to Binance through JackTrader for $20 cash for new Binance users (first 15 each quarter), premium rebates for $50K+ accounts and a free Alpha members group. The exact rebate rate and how it is delivered are confirmed one-on-one — message us on Telegram.</p>
           <div class="hero-actions" style="justify-content:center">
-<a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener nofollow sponsored">Open Binance with rebate</a>
-            <a class="btn btn-binance" href="/en/binance-rebate.html">Binance rebate</a>
-            <a class="btn btn-okx" href="/en/okx-rebate.html">OKX rebate</a>
+            <a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener nofollow sponsored">Register Binance</a>
             <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">Ask on Telegram</a>
           </div>
         </div>
 
-        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Settlement timing, counted volume and pass-through percentages depend on platform policy, your account status and the channel's terms. "Up to 40%" is a maximum reference, not a guarantee of returns. JackTrader is an independent referral / sub-broker partner and is not affiliated with Binance or OKX. This article is educational and not investment or tax advice; single-tier referrals only, no downline or multi-level structure.</p>
+        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Settlement timing, counted volume and pass-through percentages depend on platform policy, your account status and the channel's terms. JackTrader is an independent referral partner and is not affiliated with Binance. This article is educational and not investment or tax advice; single-tier referrals only, no downline or multi-level structure.</p>
 
       </div>
     </section>
@@ -234,24 +232,23 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a class="brand" href="/en/"><span class="brand-mark">J</span><span>JackTrader</span></a>
-          <p>Trading fee rebates and channel partnerships across Binance, OKX, wallet and DEX ecosystems. Real-time settlement, fully trackable.</p>
+          <p>Binance rebates and a free Alpha members group: $20 cash for new users, premium rebates for $50K+ accounts.</p>
         </div>
         <div class="footer-col">
           <h4>Rebate plans</h4>
           <a href="/en/binance-rebate.html">Binance Rebate</a>
-          <a href="/en/okx-rebate.html">OKX Rebate</a>
+          
           <a href="/en/wallet-rebate.html">Wallet &amp; DEX</a>
-          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a><a href="/en/okx-partner.html">OKX partner</a>
+          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a>
         </div>
         <div class="footer-col">
           <h4>Deep dives</h4>
           <a href="/en/blog/crypto-fee-rebate-explained.html">Crypto fee rebate explained</a>
-          <a href="/en/blog/okx-affiliate-commission-tiers.html">OKX commission tiers</a>
           <a href="/en/blog/affiliate-vs-sub-broker-vs-ib.html">Affiliate vs sub-broker vs IB</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance or OKX. Rebate rates, eligibility and rules depend on platform policy, account status, review and local regulations; displayed rates are a maximum reference and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
+        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance. Rewards and rebates depend on available spots, account status and Binance's official rules, and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
         <p class="copyright">© 2026 JackTrader · Independent referral partner.</p>
       </div>
     </div>

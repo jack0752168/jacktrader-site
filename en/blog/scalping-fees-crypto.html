@@ -47,7 +47,7 @@
     "author":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/en/"},
     "publisher":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/en/","logo":{"@type":"ImageObject","url":"https://www.jacktrader.xyz/assets/brand/favicon.svg"}},
     "datePublished":"2026-06-28",
-    "dateModified":"2026-06-28",
+    "dateModified":"2026-09-14",
     "mainEntityOfPage":"https://www.jacktrader.xyz/en/blog/scalping-fees-crypto.html",
     "image":"https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg",
     "articleSection":"Bot trading",
@@ -100,7 +100,7 @@
       "name": "How much can a rebate save a high-frequency scalper?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A scalper doing $10,000,000 a month of mostly-taker perp volume pays roughly 0.0470% blended, about $4,700 a month or $56,400 a year in fees. A rebate that returns up to 40% of trading fees gives back up to roughly $22,560 a year, settled in USDT, without changing a single line of the strategy. For a thin-margin book that figure is frequently the difference between positive and negative net expectancy."
+        "text": "A scalper doing $10,000,000 a month of mostly-taker perp volume pays roughly 0.0470% blended, about $4,700 a month or $56,400 a year in fees. Every percentage point of rebate on that bill is worth about $564 a year, so even a modest rate adds up to thousands of dollars without changing a single line of the strategy. For traders with $50,000 or more in funds, JackTrader offers an above-market rebate rate, assessed one-on-one."
       }
     },
     {
@@ -108,7 +108,7 @@
       "name": "Which exchange is cheapest for scalping in 2026?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For scalping the headline maker/taker rate matters less than your effective rate after maker routing and a rebate. Binance and OKX both sit around 0.0200% maker and 0.0500% taker on USDT perpetuals at non-VIP tiers, with deep liquidity that keeps spreads tight — the other half of a scalper's cost. The cheapest venue is whichever one gives you tight spreads, reliable post-only fills and a bound rebate; the rebate is what most scalpers leave on the table."
+        "text": "For scalping the headline maker/taker rate matters less than your effective rate after maker routing and a rebate. Binance sits at 0.0200% maker and 0.0500% taker on USDT perpetuals at non-VIP tiers, with deep liquidity that keeps spreads tight — the other half of a scalper's cost. The cheapest venue is whichever one gives you tight spreads, reliable post-only fills and a bound rebate; the rebate is what most scalpers leave on the table."
       }
     }
   ]
@@ -123,11 +123,11 @@
       <nav class="site-nav" aria-label="Main navigation" id="primary-nav">
         <a href="/en/">Home</a>
         <a href="/en/binance-us-stocks.html">Binance Stocks 🔥</a>
-        <a href="/en/okx-us-stocks.html">OKX Stocks</a>
+        
         <a href="/en/binance-rebate.html">Binance</a>
-        <a href="/en/okx-rebate.html">OKX</a>
+        
         <a href="/en/binance-partner.html">Binance Partner</a>
-        <a href="/en/okx-partner.html">OKX Partner</a>
+        
         <a href="/en/blog/">Blog</a>
       </nav>
       <div class="nav-right">
@@ -141,7 +141,7 @@
     <section class="page-hero">
       <div class="container">
         <div class="breadcrumb"><a href="/en/">Home</a> / <a href="/en/blog/">Blog</a> / Scalping Fees in Crypto 2026</div>
-        <p class="eyebrow">Bot trading · Updated June 2026</p>
+        <p class="eyebrow">Bot trading · Updated September 2026</p>
         <h1>Scalping fees in crypto 2026: why takers bleed &amp; how to fix it</h1>
         <p class="page-lede">Scalping has the thinnest edge of any strategy — a few ticks per trade — and the fattest fee bill, because it pays the spread <em>and</em> the taker fee on enormous turnover. For most scalpers, fees aren't a line item, they're the whole game: the strategy lives or dies on the effective rate, not the entry signal. Here's the 2026 math on what scalping actually costs, why the taker fee is the silent killer, and the three levers that keep an edge alive.</p>
       </div>
@@ -164,48 +164,46 @@
         <h2>Worked example: what a scalper really loses to fees</h2>
         <p>Take a scalper turning over <strong>$10,000,000/month</strong> of USDT-perp volume, 90% taker (typical for an aggressive book), at non-VIP rates (0.0200% maker / 0.0500% taker):</p>
         <table class="compare">
-          <thead><tr><th>Order mix</th><th>Blended rate</th><th>Monthly fees</th><th>Per year</th><th>After up-to-40% rebate</th></tr></thead>
+          <thead><tr><th>Order mix</th><th>Blended rate</th><th>Monthly fees</th><th>Per year</th></tr></thead>
           <tbody>
-            <tr><td>90% taker (aggressive)</td><td>~0.0470%</td><td>$4,700</td><td>$56,400</td><td><strong>~$33,840</strong></td></tr>
-            <tr><td>50/50 (disciplined)</td><td>~0.0350%</td><td>$3,500</td><td>$42,000</td><td><strong>~$25,200</strong></td></tr>
-            <tr><td>90% maker (post-only)</td><td>~0.0230%</td><td>$2,300</td><td>$27,600</td><td><strong>~$16,560</strong></td></tr>
+            <tr><td>90% taker (aggressive)</td><td>~0.0470%</td><td>$4,700</td><td><strong>$56,400</strong></td></tr>
+            <tr><td>50/50 (disciplined)</td><td>~0.0350%</td><td>$3,500</td><td><strong>$42,000</strong></td></tr>
+            <tr><td>90% maker (post-only)</td><td>~0.0230%</td><td>$2,300</td><td><strong>$27,600</strong></td></tr>
           </tbody>
         </table>
-        <p>Same dollar of turnover, but the aggressive taker book pays <strong>more than double</strong> the post-only book — purely on order style. And on every row, a rebate strips up to 40% off whatever remains: the aggressive scalper alone gets back over <strong>$22,000 a year</strong>. When your gross edge per trade is a few basis points, that saving routinely decides whether the strategy is net positive at all. See the wider picture in <a href="/en/blog/crypto-trading-bot-fees-2026.html">crypto trading bot fees 2026</a>.</p>
+        <p>Same dollar of turnover, but the aggressive taker book pays <strong>more than double</strong> the post-only book — purely on order style. And on every row, a rebate takes a share off whatever remains: on the aggressive book's $56,400 bill, every percentage point of rebate is worth about <strong>$564 a year</strong>. When your gross edge per trade is a few basis points, that saving routinely decides whether the strategy is net positive at all. See the wider picture in <a href="/en/blog/crypto-trading-bot-fees-2026.html">crypto trading bot fees 2026</a>.</p>
         <p class="hero-note">Rates reflect standard non-VIP USDT-perp schedules at the time of writing and depend on platform policy, your 30-day volume, balances, promotions and region. Blended rates are illustrative; confirm the live schedule.</p>
 
         <h2>The three levers that keep a scalping edge alive</h2>
         <ol>
           <li><strong>Route to maker wherever the edge survives it.</strong> Posting passive (post-only) limit orders earns the maker fee — roughly 0.0200% versus 0.0500% taker, more than half off. The trade-off is fill risk, so you won't get every trade as maker, but every fill you move from taker to maker is the single biggest free saving in scalping. At institutional volume the maker side can even flip negative — see how <a href="/en/blog/crypto-market-maker-rebates.html">market-maker rebates</a> pay high-volume desks to post liquidity.</li>
-          <li><strong>Pick a venue with tight spreads <em>and</em> deep liquidity.</strong> Remember the spread is the other half of your cost. A slightly higher headline fee on a deep, liquid book can beat a cheap fee on a thin one where you pay more spread and slip. Binance and OKX both offer deep USDT-perp liquidity at competitive maker/taker rates — see <a href="/en/blog/binance-vs-okx-fees-2026.html">Binance vs OKX fees 2026</a>.</li>
-          <li><strong>Bind a rebate.</strong> After you've minimised taker volume, a rebate returns up to 40% of the fees you still pay, settled in real time in USDT. It changes nothing about the strategy and compounds on every single fill — which is exactly why high-frequency operators treat it as standard infrastructure rather than a bonus. Start on <a href="/en/binance-rebate.html">Binance</a> or <a href="/en/okx-rebate.html">OKX</a>.</li>
+          <li><strong>Pick a venue with tight spreads <em>and</em> deep liquidity.</strong> Remember the spread is the other half of your cost. A slightly higher headline fee on a deep, liquid book can beat a cheap fee on a thin one where you pay more spread and slip. Binance offers some of the deepest USDT-perp liquidity at competitive maker/taker rates — see <a href="/en/blog/binance-vs-bybit-fees-2026.html">Binance vs Bybit fees 2026</a> for a head-to-head.</li>
+          <li><strong>Bind a rebate.</strong> After you've minimised taker volume, a rebate returns a share of the fees you still pay. It changes nothing about the strategy and compounds on every single fill — which is exactly why high-frequency operators treat it as standard infrastructure rather than a bonus. Start on the <a href="/en/binance-rebate.html">Binance rebate page</a>: for traders with $50,000 or more in funds, we offer an above-market rebate rate, assessed one-on-one.</li>
         </ol>
 
         <h2>Why the rebate matters most to scalpers</h2>
-        <p>A rebate gives back a fixed <em>percentage</em> of fees, so its dollar value scales with how much you pay — which means the traders who pay the most benefit the most. Scalpers pay the most. A long-term holder saves pennies from a rebate; a high-frequency scalper saves tens of thousands a year from the identical arrangement. That's the asymmetry: the same up-to-40% rebate is a rounding error for one trader and a strategy-saver for another. If your book is high-turnover and taker-heavy, the rebate isn't optional optimisation — it's the cheapest expectancy you can buy. For the full cost-cutting checklist, read <a href="/en/blog/reduce-crypto-trading-fees.html">how to reduce crypto trading fees</a>.</p>
+        <p>A rebate gives back a fixed <em>percentage</em> of fees, so its dollar value scales with how much you pay — which means the traders who pay the most benefit the most. Scalpers pay the most. A long-term holder saves pennies from a rebate; a high-frequency scalper can save thousands a year from the identical arrangement. That's the asymmetry: the same rebate percentage is a rounding error for one trader and a strategy-saver for another. If your book is high-turnover and taker-heavy, the rebate isn't optional optimisation — it's the cheapest expectancy you can buy. For the full cost-cutting checklist, read <a href="/en/blog/reduce-crypto-trading-fees.html">how to reduce crypto trading fees</a>.</p>
 
         <h2>FAQ</h2>
         <div class="faq-list">
           <details class="faq-item" open><summary class="faq-q">Why do scalpers pay more in fees than other traders?<span class="plus">+</span></summary><div class="faq-a">Because scalping combines the two most expensive habits: it crosses the spread as a taker to get filled instantly, and it does so on enormous turnover. A swing trader pays a taker fee a few times a week; a scalper pays it hundreds of times a day. Each individual fee looks trivial — 0.0500% on a perp — but multiplied by the trade count it becomes the single largest cost on the book, often larger than the strategy's gross edge. That is why fees, not signal, kill most scalping strategies.</div></details>
           <details class="faq-item"><summary class="faq-q">What is the real cost of scalping: the spread or the fee?<span class="plus">+</span></summary><div class="faq-a">Both, and they stack. When a scalper takes liquidity they pay the half-spread to cross the book and the taker fee to the exchange on the same fill, on entry and again on exit. On a tight major pair the spread might be one tick, but the taker fee is fixed regardless. Over thousands of round trips the fee is the part you can actually engineer down — the spread is set by the market, but the fee is set by your order type, your venue and whether you have a rebate bound.</div></details>
           <details class="faq-item"><summary class="faq-q">Can a scalping strategy be maker-only to avoid taker fees?<span class="plus">+</span></summary><div class="faq-a">Partially. Some scalpers post passive limit (post-only) orders and only earn the maker fee, which on USDT perpetuals is roughly 0.0200% versus 0.0500% taker — more than half off. The trade-off is fill risk: a resting order may not get hit before the edge disappears. Most real scalping books are a mix, so the goal is to route as much volume as possible to maker without missing the trades that matter, then bind a rebate to cut whatever taker fee remains.</div></details>
-          <details class="faq-item"><summary class="faq-q">How much can a rebate save a high-frequency scalper?<span class="plus">+</span></summary><div class="faq-a">A scalper doing $10,000,000 a month of mostly-taker perp volume pays roughly 0.0470% blended, about $4,700 a month or $56,400 a year in fees. A rebate that returns up to 40% of trading fees gives back up to roughly $22,560 a year, settled in USDT, without changing a single line of the strategy. For a thin-margin book that figure is frequently the difference between positive and negative net expectancy.</div></details>
-          <details class="faq-item"><summary class="faq-q">Which exchange is cheapest for scalping in 2026?<span class="plus">+</span></summary><div class="faq-a">For scalping the headline maker/taker rate matters less than your effective rate after maker routing and a rebate. Binance and OKX both sit around 0.0200% maker and 0.0500% taker on USDT perpetuals at non-VIP tiers, with deep liquidity that keeps spreads tight — the other half of a scalper's cost. The cheapest venue is whichever one gives you tight spreads, reliable post-only fills and a bound rebate; the rebate is what most scalpers leave on the table.</div></details>
+          <details class="faq-item"><summary class="faq-q">How much can a rebate save a high-frequency scalper?<span class="plus">+</span></summary><div class="faq-a">A scalper doing $10,000,000 a month of mostly-taker perp volume pays roughly 0.0470% blended, about $4,700 a month or $56,400 a year in fees. Every percentage point of rebate on that bill is worth about $564 a year, so even a modest rate adds up to thousands of dollars without changing a single line of the strategy. For traders with $50,000 or more in funds, JackTrader offers an above-market rebate rate, assessed one-on-one.</div></details>
+          <details class="faq-item"><summary class="faq-q">Which exchange is cheapest for scalping in 2026?<span class="plus">+</span></summary><div class="faq-a">For scalping the headline maker/taker rate matters less than your effective rate after maker routing and a rebate. Binance sits at 0.0200% maker and 0.0500% taker on USDT perpetuals at non-VIP tiers, with deep liquidity that keeps spreads tight — the other half of a scalper's cost. The cheapest venue is whichever one gives you tight spreads, reliable post-only fills and a bound rebate; the rebate is what most scalpers leave on the table.</div></details>
         </div>
 
         <div class="cta-band" style="margin-top:48px">
           <h2>Stop bleeding the thinnest edge in trading to fees</h2>
-          <p>Scalpers pay the most in fees, so they have the most to gain from a rebate. Bind your Binance or OKX account to JackTrader's channel and get up to 40% of your trading fees back in USDT, settled in real time, single-tier and fully trackable.</p>
+          <p>Scalpers pay the most in fees, so they have the most to gain from a rebate. Register on Binance through JackTrader: $20 cash for new Binance users, premium rebates for $50K+ accounts (the exact rate is assessed one-on-one), and a free Alpha members group. Single-tier referrals only.</p>
           <div class="hero-actions" style="justify-content:center">
-<a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener nofollow sponsored">Open Binance with rebate</a>
-<a class="btn btn-okx" href="https://www.promooboost.com/join/TRADERJACK" target="_blank" rel="noopener nofollow sponsored">Open OKX with rebate</a>
+<a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener nofollow sponsored">Register on Binance</a>
             <a class="btn btn-binance" href="/en/binance-rebate.html">Binance rebate</a>
-            <a class="btn btn-okx" href="/en/okx-rebate.html">OKX rebate</a>
             <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">Ask on Telegram</a>
           </div>
         </div>
 
-        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Fee rates reflect each exchange's published standard schedule at the time of writing and depend on platform policy, your account, 30-day volume, balances, promotions and region. "Up to 40%" is a maximum reference, not a guarantee of returns. JackTrader is an independent referral / sub-broker partner and is not affiliated with Binance, OKX or Bybit. This article is educational and not investment advice; single-tier referrals only, no downline or multi-level structure.</p>
+        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Fee rates reflect each exchange's published standard schedule at the time of writing and depend on platform policy, your account, 30-day volume, balances, promotions and region. Rebates are not a guarantee of returns. JackTrader is an independent referral partner and is not affiliated with Binance or Bybit. This article is educational and not investment advice; single-tier referrals only, no downline or multi-level structure.</p>
 
       </div>
     </section>
@@ -217,14 +215,14 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a class="brand" href="/en/"><span class="brand-mark">J</span><span>JackTrader</span></a>
-          <p>Trading fee rebates and channel partnerships across Binance, OKX, wallet and DEX ecosystems. Real-time settlement, fully trackable.</p>
+          <p>Binance rebates and a free Alpha members group: $20 cash for new users, premium rebates for $50K+ accounts.</p>
         </div>
         <div class="footer-col">
           <h4>Rebate plans</h4>
           <a href="/en/binance-rebate.html">Binance Rebate</a>
-          <a href="/en/okx-rebate.html">OKX Rebate</a>
+          
           <a href="/en/wallet-rebate.html">Wallet &amp; DEX</a>
-          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a><a href="/en/okx-partner.html">OKX partner</a>
+          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a>
         </div>
         <div class="footer-col">
           <h4>Deep dives</h4>
@@ -234,7 +232,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance, OKX or Bybit. Rebate rates, eligibility and rules depend on platform policy, account status, review and local regulations; displayed rates are a maximum reference and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
+        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance. Rewards and rebates depend on available spots, account status and Binance's official rules, and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
         <p class="copyright">© 2026 JackTrader · Independent referral partner.</p>
       </div>
     </div>

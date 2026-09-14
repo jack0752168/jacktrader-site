@@ -100,7 +100,7 @@
       "name": "How much can a rebate save a DCA investor?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A DCA bot buying $3,000 a day of spot — about $1.08M of volume a year — pays roughly $1,080 in fees at the standard 0.10% spot rate. Paying fees with BNB (25% off spot) trims that to about $810, and a rebate that returns up to 40% of what you pay gives back up to roughly $324 more, settled in USDT. That is around $600 a year of the $1,080 handed back — on a passive plan you were never going to trade actively, over a decade that is thousands of dollars of capital that stays invested and keeps compounding."
+        "text": "A DCA bot buying $3,000 a day of spot — about $1.08M of volume a year — pays roughly $1,080 in fees at the standard 0.10% spot rate. Paying fees with BNB (25% off spot) trims that to about $810 — $270 a year kept. A rebate then returns a share of what you still pay, so the saving scales with the bill; for accounts with $50,000 or more in funds, JackTrader offers an above-market rebate rate, assessed one-on-one. On a passive plan you were never going to trade actively, every dollar kept is capital that stays invested and keeps compounding for years."
       }
     },
     {
@@ -108,7 +108,7 @@
       "name": "Does a rebate change how my DCA bot runs?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. A rebate is bound at the account level to the referral channel your exchange account sits under; it does not touch your bot's schedule, order sizes, API keys or logic. The bot keeps placing the same recurring buys, the exchange keeps charging the same fee, and a percentage of that fee is returned to you in real time in USDT. It is the cleanest saving available to a passive strategy precisely because it requires no behaviour change at all — single-tier, with no downline or multi-level structure."
+        "text": "No. A rebate is bound at the account level to the referral channel your exchange account sits under; it does not touch your bot's schedule, order sizes, API keys or logic. The bot keeps placing the same recurring buys, the exchange keeps charging the same fee, and a percentage of that fee is returned to you. It is the cleanest saving available to a passive strategy precisely because it requires no behaviour change at all, and the referral is strictly single-tier."
       }
     }
   ]
@@ -123,11 +123,11 @@
       <nav class="site-nav" aria-label="Main navigation" id="primary-nav">
         <a href="/en/">Home</a>
         <a href="/en/binance-us-stocks.html">Binance Stocks 🔥</a>
-        <a href="/en/okx-us-stocks.html">OKX Stocks</a>
+        
         <a href="/en/binance-rebate.html">Binance</a>
-        <a href="/en/okx-rebate.html">OKX</a>
+        
         <a href="/en/binance-partner.html">Binance Partner</a>
-        <a href="/en/okx-partner.html">OKX Partner</a>
+        
         <a href="/en/blog/">Blog</a>
       </nav>
       <div class="nav-right">
@@ -165,48 +165,45 @@
         <p>There's a second, sneakier cost. Exchange "auto-invest" and one-click recurring-buy features are wonderfully easy to set up — and some of them carry a flat convenience fee that sits <em>above</em> the standard spot schedule, not below it. You pay for the convenience without ever seeing a line item that says so. A self-hosted DCA bot placing plain spot orders through the API pays the ordinary published rate and nothing extra. Before you assume the built-in button is the cheap option, compare its effective rate against the plain spot schedule — the convenience can quietly double your per-buy cost. This is the same "platform fee ≠ exchange fee" trap we break down in <a href="/en/blog/crypto-trading-bot-fees-2026.html">crypto trading bot fees 2026</a>.</p>
 
         <h2>Worked example: a $3,000/day DCA bot</h2>
-        <p>Take a serious DCA bot buying <strong>$3,000 a day</strong> across a basket — about <strong>$90,000 a month</strong>, or <strong>$1.08M of spot volume a year</strong>. At the standard non-VIP spot rate of 0.10%, that's the top row below. Watch what the two available levers do to it:</p>
+        <p>Take a serious DCA bot buying <strong>$3,000 a day</strong> across a basket — about <strong>$90,000 a month</strong>, or <strong>$1.08M of spot volume a year</strong>. At the standard non-VIP spot rate of 0.10%, that's the top row below. Watch what the first lever does to it:</p>
         <table class="compare">
           <thead><tr><th>Stage</th><th>Effective spot rate</th><th>Annual fee on $1.08M</th><th>Saved vs headline</th></tr></thead>
           <tbody>
             <tr><td>Headline spot fee</td><td>0.1000%</td><td>$1,080</td><td>—</td></tr>
             <tr><td>Pay fees with BNB (25% off spot)</td><td>0.0750%</td><td>$810</td><td>$270</td></tr>
-            <tr><td>+ up-to-40% rebate on the fee paid</td><td>~0.0450%</td><td>~$486</td><td><strong>~$594</strong></td></tr>
           </tbody>
         </table>
-        <p>The headline fee is $1,080 a year. Stack the BNB spot discount and a rebate and you keep roughly <strong>$594 of it</strong> — more than half — without changing a single scheduled buy. On a passive plan you were never going to trade actively, that is about as close to free money as a DCA investor gets. And because it's the same percentage every year, compounded over a decade of DCA it's several thousand dollars of capital that stays in the market instead of leaking to the exchange.</p>
+        <p>The headline fee is $1,080 a year. The BNB spot discount alone keeps <strong>$270 of it</strong> without changing a single scheduled buy. On a passive plan you were never going to trade actively, that is about as close to free money as a DCA investor gets. And because it's the same percentage every year, compounded over a decade of DCA it's a few thousand dollars of capital that stays in the market instead of leaking to the exchange. A rebate on the fee you still pay — the second lever below — can take the bill lower again.</p>
         <p class="hero-note">Rates reflect standard non-VIP spot schedules at the time of writing and depend on platform policy, your 30-day volume, BNB balance, promotions and region. Figures are illustrative; confirm the live schedule. The BNB discount applies to spot fees when you opt to pay fees in BNB.</p>
 
         <h2>The two levers a passive investor can actually pull</h2>
         <ol>
-          <li><strong>Pay fees with the exchange token.</strong> On Binance, opting to pay spot fees in BNB takes 25% off the fee — the single biggest built-in discount available to a spot buyer, and it requires nothing but holding a small BNB balance and flicking the setting on. See <a href="/en/blog/bnb-fee-discount.html">is the BNB fee discount worth it</a>.</li>
-          <li><strong>Bind a rebate.</strong> After the token discount, a rebate returns up to 40% of the fees you still pay, settled in real time in USDT. It's account-level, it doesn't touch your bot, and it's the only lever that keeps working no matter which asset you DCA into. Start on <a href="/en/binance-rebate.html">Binance</a> or <a href="/en/okx-rebate.html">OKX</a>.</li>
+          <li><strong>Pay fees with the exchange token.</strong> On Binance, opting to pay spot fees in BNB takes 25% off the fee — the single biggest built-in discount available to a spot buyer, and it requires nothing but holding a small BNB balance and flicking the setting on. See <a href="/en/blog/bnb-fee-discount-2026.html">is the BNB fee discount worth it</a>.</li>
+          <li><strong>Bind a rebate.</strong> After the token discount, a rebate returns a share of the fees you still pay. It's account-level, it doesn't touch your bot, and it's the only lever that keeps working no matter which asset you DCA into. If your plan runs on $50,000 or more in funds, JackTrader offers an above-market rebate rate, assessed one-on-one — details on the <a href="/en/binance-rebate.html">Binance rebate</a> page.</li>
         </ol>
 
         <h2>Why the rebate fits DCA so well</h2>
-        <p>DCA investors are, almost by definition, the most fee-averse traders there are — they chose a passive strategy specifically to avoid the churn and cost of active trading. Yet the one cost they can't design away with order types is exactly the one a rebate targets. A rebate gives back a fixed percentage of fees with zero behaviour change: the bot keeps running, the schedule stays the same, and a slice of every fee comes back in real time. For a strategy whose whole edge is patience and low cost, handing back half the fee drag is perfectly on-thesis. If you also run higher-turnover bots, see how the same account-level rebate scales in <a href="/en/blog/grid-bot-fee-optimization.html">grid bot fee optimization</a> and the wider <a href="/en/blog/reduce-crypto-trading-fees.html">how to reduce crypto trading fees</a> checklist.</p>
+        <p>DCA investors are, almost by definition, the most fee-averse traders there are — they chose a passive strategy specifically to avoid the churn and cost of active trading. Yet the one cost they can't design away with order types is exactly the one a rebate targets. A rebate gives back a share of your fees with zero behaviour change: the bot keeps running and the schedule stays the same. For a strategy whose whole edge is patience and low cost, trimming the fee drag is perfectly on-thesis. Traders with $50,000 or more in funds can get an above-market rebate rate from JackTrader — the exact rate is assessed one-on-one. If you also run higher-turnover bots, see how the same account-level rebate scales in <a href="/en/blog/grid-bot-fee-optimization.html">grid bot fee optimization</a> and the wider <a href="/en/blog/reduce-crypto-trading-fees.html">how to reduce crypto trading fees</a> checklist.</p>
 
         <h2>FAQ</h2>
         <div class="faq-list">
           <details class="faq-item" open><summary class="faq-q">Do DCA bots really pay trading fees on every buy?<span class="plus">+</span></summary><div class="faq-a">Yes. Every scheduled purchase is a real order that pays the exchange's normal trading fee, whether it comes from a self-hosted DCA bot, a third-party app or an exchange's built-in recurring-buy feature. Individually a $0.50 fee on a $500 buy looks like nothing, but a DCA plan is defined by repetition — daily or weekly, often across several assets, for years — so the fees compound quietly in the background while the strategy is designed to be passive and cheap. The buys feel free; the fee statement says otherwise.</div></details>
           <details class="faq-item"><summary class="faq-q">Why are DCA fees worse than they look?<span class="plus">+</span></summary><div class="faq-a">Because DCA is a buy-and-hold thesis, so every fee is pure drag with no offsetting alpha — money that never gets invested and therefore never compounds. A scalper's fee at least buys a trade with an edge; a DCA fee just shrinks the position. On spot, where maker and taker fees are identical at the standard 0.10% tier, you can't even engineer the fee down by posting passive orders the way a perp trader can. The only real levers left are the fee-payment discount and a rebate.</div></details>
           <details class="faq-item"><summary class="faq-q">Are exchange auto-invest and recurring-buy features cheaper than a bot?<span class="plus">+</span></summary><div class="faq-a">Not always. Convenience recurring-buy and auto-invest products are easy to set up, but some of them carry a flat convenience fee that can sit above the exchange's standard spot schedule rather than below it. A self-hosted DCA bot placing ordinary spot orders pays the normal published rate — around 0.10% at the non-VIP tier — and nothing extra. Always compare the effective rate of the convenience product against the plain spot schedule before assuming the built-in feature is the cheaper route.</div></details>
-          <details class="faq-item"><summary class="faq-q">How much can a rebate save a DCA investor?<span class="plus">+</span></summary><div class="faq-a">A DCA bot buying $3,000 a day of spot — about $1.08M of volume a year — pays roughly $1,080 in fees at the standard 0.10% spot rate. Paying fees with BNB (25% off spot) trims that to about $810, and a rebate that returns up to 40% of what you pay gives back up to roughly $324 more, settled in USDT. That is around $600 a year of the $1,080 handed back — on a passive plan you were never going to trade actively, over a decade that is thousands of dollars of capital that stays invested and keeps compounding.</div></details>
-          <details class="faq-item"><summary class="faq-q">Does a rebate change how my DCA bot runs?<span class="plus">+</span></summary><div class="faq-a">No. A rebate is bound at the account level to the referral channel your exchange account sits under; it does not touch your bot's schedule, order sizes, API keys or logic. The bot keeps placing the same recurring buys, the exchange keeps charging the same fee, and a percentage of that fee is returned to you in real time in USDT. It is the cleanest saving available to a passive strategy precisely because it requires no behaviour change at all — single-tier, with no downline or multi-level structure.</div></details>
+          <details class="faq-item"><summary class="faq-q">How much can a rebate save a DCA investor?<span class="plus">+</span></summary><div class="faq-a">A DCA bot buying $3,000 a day of spot — about $1.08M of volume a year — pays roughly $1,080 in fees at the standard 0.10% spot rate. Paying fees with BNB (25% off spot) trims that to about $810 — $270 a year kept. A rebate then returns a share of what you still pay, so the saving scales with the bill; for accounts with $50,000 or more in funds, JackTrader offers an above-market rebate rate, assessed one-on-one. On a passive plan you were never going to trade actively, every dollar kept is capital that stays invested and keeps compounding for years.</div></details>
+          <details class="faq-item"><summary class="faq-q">Does a rebate change how my DCA bot runs?<span class="plus">+</span></summary><div class="faq-a">No. A rebate is bound at the account level to the referral channel your exchange account sits under; it does not touch your bot's schedule, order sizes, API keys or logic. The bot keeps placing the same recurring buys, the exchange keeps charging the same fee, and a percentage of that fee is returned to you. It is the cleanest saving available to a passive strategy precisely because it requires no behaviour change at all, and the referral is strictly single-tier.</div></details>
         </div>
 
         <div class="cta-band" style="margin-top:48px">
           <h2>Stop leaking your DCA plan to fees</h2>
-          <p>DCA is passive by design — so is a rebate. Bind your Binance or OKX account to JackTrader's channel and get up to 40% of your trading fees back in USDT, settled in real time, single-tier and fully trackable. Nothing about your recurring buys changes.</p>
+          <p>DCA is passive by design — so is signing up the right way. Open Binance through JackTrader: $20 cash for new Binance users (the first 15 each quarter, first-come, first-served), premium rebates for $50K+ accounts, and a free Alpha members group for everyone who signs up through us. Nothing about your recurring buys changes.</p>
           <div class="hero-actions" style="justify-content:center">
-<a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener nofollow sponsored">Open Binance with rebate</a>
-            <a class="btn btn-binance" href="/en/binance-rebate.html">Binance rebate</a>
-            <a class="btn btn-okx" href="/en/okx-rebate.html">OKX rebate</a>
-            <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">Ask on Telegram</a>
+<a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener nofollow sponsored">Sign up to Binance</a>
+            <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">Claim $20 or get a quote on Telegram</a>
           </div>
         </div>
 
-        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Fee rates reflect each exchange's published standard schedule at the time of writing and depend on platform policy, your account, 30-day volume, balances, promotions and region. "Up to 40%" is a maximum reference, not a guarantee of returns. JackTrader is an independent referral / sub-broker partner and is not affiliated with Binance or OKX. This article is educational and not investment advice; single-tier referrals only, no downline or multi-level structure.</p>
+        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Fee rates reflect each exchange's published standard schedule at the time of writing and depend on platform policy, your account, 30-day volume, balances, promotions and region. JackTrader is an independent referral partner and is not affiliated with Binance. Rewards and rebates depend on available spots, account status and Binance's official rules, and are not a guarantee of returns. This article is educational and not investment advice; single-tier referrals only.</p>
 
       </div>
     </section>
@@ -218,14 +215,14 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a class="brand" href="/en/"><span class="brand-mark">J</span><span>JackTrader</span></a>
-          <p>Trading fee rebates and channel partnerships across Binance, OKX, wallet and DEX ecosystems. Real-time settlement, fully trackable.</p>
+          <p>Binance rebates and a free Alpha members group: $20 cash for new users, premium rebates for $50K+ accounts.</p>
         </div>
         <div class="footer-col">
           <h4>Rebate plans</h4>
           <a href="/en/binance-rebate.html">Binance Rebate</a>
-          <a href="/en/okx-rebate.html">OKX Rebate</a>
+          
           <a href="/en/wallet-rebate.html">Wallet &amp; DEX</a>
-          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a><a href="/en/okx-partner.html">OKX partner</a>
+          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a>
         </div>
         <div class="footer-col">
           <h4>Deep dives</h4>
@@ -235,7 +232,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance or OKX. Rebate rates, eligibility and rules depend on platform policy, account status, review and local regulations; displayed rates are a maximum reference and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
+        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance. Rewards and rebates depend on available spots, account status and Binance's official rules, and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
         <p class="copyright">© 2026 JackTrader · Independent referral partner.</p>
       </div>
     </div>

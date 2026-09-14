@@ -47,7 +47,7 @@
     "author":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/en/"},
     "publisher":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/en/","logo":{"@type":"ImageObject","url":"https://www.jacktrader.xyz/assets/brand/favicon.svg"}},
     "datePublished":"2026-06-28",
-    "dateModified":"2026-06-28",
+    "dateModified":"2026-09-14",
     "mainEntityOfPage":"https://www.jacktrader.xyz/en/blog/funding-rate-vs-trading-fee.html",
     "image":"https://www.jacktrader.xyz/assets/rebate/large-rebate.jpg",
     "articleSection":"Fee mechanics",
@@ -100,7 +100,7 @@
       "name": "Does a fee rebate reduce the funding rate too?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. A rebate returns a share of the trading fees you pay the exchange — it does not touch funding, because funding is a trader-to-trader payment the exchange never keeps. So a rebate of up to 40% directly cuts the maker/taker side of your costs but has no effect on what you pay or receive in funding. The way to manage funding is positioning: avoid holding the expensive side through funding timestamps, or use the rate itself as part of the trade thesis."
+        "text": "No. A rebate returns a share of the trading fees you pay the exchange — it does not touch funding, because funding is a trader-to-trader payment the exchange never keeps. So a rebate directly cuts the maker/taker side of your costs but has no effect on what you pay or receive in funding. The way to manage funding is positioning: avoid holding the expensive side through funding timestamps, or use the rate itself as part of the trade thesis."
       }
     },
     {
@@ -123,11 +123,11 @@
       <nav class="site-nav" aria-label="Main navigation" id="primary-nav">
         <a href="/en/">Home</a>
         <a href="/en/binance-us-stocks.html">Binance Stocks 🔥</a>
-        <a href="/en/okx-us-stocks.html">OKX Stocks</a>
+        
         <a href="/en/binance-rebate.html">Binance</a>
-        <a href="/en/okx-rebate.html">OKX</a>
+        
         <a href="/en/binance-partner.html">Binance Partner</a>
-        <a href="/en/okx-partner.html">OKX Partner</a>
+        
         <a href="/en/blog/">Blog</a>
       </nav>
       <div class="nav-right">
@@ -181,44 +181,41 @@
             <tr><td>Entry + exit trading fee</td><td>$500 + $500 = <strong>$1,000</strong></td><td>$500 + $500 = <strong>$1,000</strong></td></tr>
             <tr><td>Funding payments</td><td>0 (flat before timestamp) = <strong>$0</strong></td><td>30 × $100 = <strong>$3,000</strong></td></tr>
             <tr><td>Total cost</td><td><strong>$1,000</strong></td><td><strong>$4,000</strong></td></tr>
-            <tr><td>Reducible by a rebate?</td><td>Yes — up to 40% of $1,000</td><td>Only the $1,000 fee part</td></tr>
+            <tr><td>Reducible by a rebate?</td><td>Yes — the whole $1,000 is fee</td><td>Only the $1,000 fee part</td></tr>
           </tbody>
         </table>
-        <p>For the scalper, fees are 100% of the cost and a rebate cuts up to 40% of the whole bill. For the position trader, funding is three-quarters of the cost and untouchable by a rebate — the lever there is <em>positioning</em>, not fee optimisation. Same instrument, opposite cost structure. For the turnover-heavy end of this spectrum, see <a href="/en/blog/scalping-fees-crypto.html">scalping fees in crypto</a> and <a href="/en/blog/reduce-crypto-trading-fees.html">how to reduce crypto trading fees</a>. If your flow is overwhelmingly passive, there is a second lever beyond the rebate: <a href="/en/blog/crypto-market-maker-rebates.html">maker rebates</a> that pay you for quoting rather than charging you.</p>
+        <p>For the scalper, fees are 100% of the cost, so any rebate cuts into the whole bill. For the position trader, funding is three-quarters of the cost and untouchable by a rebate — the lever there is <em>positioning</em>, not fee optimisation. Same instrument, opposite cost structure. For the turnover-heavy end of this spectrum, see <a href="/en/blog/scalping-fees-crypto.html">scalping fees in crypto</a> and <a href="/en/blog/reduce-crypto-trading-fees.html">how to reduce crypto trading fees</a>. If your flow is overwhelmingly passive, there is a second lever beyond the rebate: <a href="/en/blog/crypto-market-maker-rebates.html">maker rebates</a> that pay you for quoting rather than charging you.</p>
         <p class="hero-note">Rates are illustrative non-VIP USDT-perp figures at the time of writing; funding rates vary continuously by market and timestamp. Confirm live schedules and the current funding rate on your venue.</p>
 
         <h2>What you can actually cut — and how</h2>
         <p>Be precise about your lever, because the two costs respond to different actions:</p>
         <ol>
-          <li><strong>Trading fee → maker routing + a rebate.</strong> Post-only orders move you from taker (0.0500%) to maker (0.0200%), and a rebate then returns up to 40% of whatever you still pay, settled in USDT. This is the reducible cost. Start on <a href="/en/binance-rebate.html">Binance</a> or <a href="/en/okx-rebate.html">OKX</a>.</li>
+          <li><strong>Trading fee → maker routing + a rebate.</strong> Post-only orders move you from taker (0.0500%) to maker (0.0200%), and a rebate can then return part of whatever you still pay. This is the reducible cost. For traders with $50,000 or more in funds, JackTrader offers an above-market rebate rate, assessed one-on-one — details on the <a href="/en/binance-rebate.html">Binance rebate page</a>.</li>
           <li><strong>Funding → positioning, not fees.</strong> A rebate can't touch funding. You manage it by not holding the expensive side through timestamps, by sizing for the carry, or — for some desks — by deliberately collecting funding on the side that gets paid. It's a trade-design problem, not a fee-schedule one.</li>
         </ol>
-        <p>The takeaway: diagnose which cost is actually eating your returns before you optimise. If you turn over fast, attack the trading fee — that's where the rebate gives you up to 40% back for free. If you hold for days, look at funding and your entry timing first. For the cross-venue fee picture, see <a href="/en/blog/binance-vs-okx-fees-2026.html">Binance vs OKX fees 2026</a>, and for the tier-by-tier maker and taker numbers you would actually be charged on Binance perpetuals, the <a href="/en/blog/binance-futures-fee-schedule-2026.html">2026 Binance futures fee schedule</a> lays them out alongside the BNB discount.</p>
+        <p>The takeaway: diagnose which cost is actually eating your returns before you optimise. If you turn over fast, attack the trading fee — maker routing, the BNB discount and a rebate all work on that side. If you hold for days, look at funding and your entry timing first. For the tier-by-tier maker and taker numbers you would actually be charged on Binance perpetuals, the <a href="/en/blog/binance-futures-fee-schedule-2026.html">2026 Binance futures fee schedule</a> lays them out alongside the BNB discount.</p>
 
         <h2>FAQ</h2>
         <div class="faq-list">
           <details class="faq-item" open><summary class="faq-q">What is the difference between a funding rate and a trading fee?<span class="plus">+</span></summary><div class="faq-a">A trading fee is paid to the exchange every time you open or close a position — a maker or taker percentage on the notional you trade. A funding rate is a periodic payment exchanged between long and short holders of a perpetual contract, usually every eight hours, to keep the perp price tethered to spot. The exchange does not keep funding; it flows trader to trader. So the trading fee is a transaction cost you pay on every fill, while funding is a holding cost (or income) that depends only on which side you hold and for how long.</div></details>
           <details class="faq-item"><summary class="faq-q">Who pays the funding rate, longs or shorts?<span class="plus">+</span></summary><div class="faq-a">It depends on the sign of the rate. When the perpetual trades above spot, the funding rate is positive and longs pay shorts; when it trades below spot, the rate is negative and shorts pay longs. The rate is applied to your position's notional at each funding timestamp, so if you are flat at the funding time you pay and receive nothing. Holding the crowded side of a strongly trending market can mean paying funding repeatedly, which over days can exceed what you ever paid in trading fees.</div></details>
           <details class="faq-item"><summary class="faq-q">Which costs more, funding or trading fees?<span class="plus">+</span></summary><div class="faq-a">It depends entirely on how you trade. For a high-frequency trader who opens and closes constantly but holds briefly, trading fees dominate because funding barely applies. For a position trader who holds a leveraged perp for days or weeks, funding usually dominates because it recurs every eight hours while the trading fee was paid only twice. The rule of thumb: the faster you turn over, the more fees matter; the longer you hold, the more funding matters.</div></details>
-          <details class="faq-item"><summary class="faq-q">Does a fee rebate reduce the funding rate too?<span class="plus">+</span></summary><div class="faq-a">No. A rebate returns a share of the trading fees you pay the exchange — it does not touch funding, because funding is a trader-to-trader payment the exchange never keeps. So a rebate of up to 40% directly cuts the maker/taker side of your costs but has no effect on what you pay or receive in funding. The way to manage funding is positioning: avoid holding the expensive side through funding timestamps, or use the rate itself as part of the trade thesis.</div></details>
+          <details class="faq-item"><summary class="faq-q">Does a fee rebate reduce the funding rate too?<span class="plus">+</span></summary><div class="faq-a">No. A rebate returns a share of the trading fees you pay the exchange — it does not touch funding, because funding is a trader-to-trader payment the exchange never keeps. So a rebate directly cuts the maker/taker side of your costs but has no effect on what you pay or receive in funding. The way to manage funding is positioning: avoid holding the expensive side through funding timestamps, or use the rate itself as part of the trade thesis.</div></details>
           <details class="faq-item"><summary class="faq-q">How do I calculate my total perpetual trading cost?<span class="plus">+</span></summary><div class="faq-a">Add three things: the trading fee on entry, the trading fee on exit, and the sum of every funding payment while the position was open. Trading fee per side is roughly 0.0200% maker or 0.0500% taker of notional on USDT perps; funding is the published rate times notional at each eight-hour timestamp. A short scalp might cost two trading fees and zero funding; a multi-day hold might cost two trading fees plus a dozen funding payments. Only the trading-fee portion is reducible with a rebate.</div></details>
         </div>
 
-        <div class="related-note" style="margin-top:40px;padding:16px 20px;border-left:3px solid var(--yellow);background:rgba(255,255,255,0.03);border-radius:8px;color:var(--text-2);font-size:15px"><strong>Funding scales with the position; fees scale with the turnover.</strong> That is why a low-frequency carry trade and a high-frequency bot on the same notional end up with completely different cost structures — one is dominated by funding, the other by the fee ladder. For the turnover side of that split on OKX, see <a href="/en/blog/okx-fee-calculator-2026.html">the per-level maker and taker breakdown</a>.</div>
+        <div class="related-note" style="margin-top:40px;padding:16px 20px;border-left:3px solid var(--yellow);background:rgba(255,255,255,0.03);border-radius:8px;color:var(--text-2);font-size:15px"><strong>Funding scales with the position; fees scale with the turnover.</strong> That is why a low-frequency carry trade and a high-frequency bot on the same notional end up with completely different cost structures — one is dominated by funding, the other by the fee ladder. For the turnover side of that split on Binance, run your own volume through the <a href="/en/blog/binance-fee-calculator-2026.html">Binance fee calculator</a>.</div>
 
         <div class="cta-band" style="margin-top:48px">
           <h2>Cut the cost you can actually cut</h2>
-          <p>A rebate can't touch funding, but it strips up to 40% off every trading fee you pay. Bind your Binance or OKX account to JackTrader's channel and get it back in USDT, settled in real time, single-tier and fully trackable.</p>
+          <p>A rebate can't touch funding, but the fee side is where the channel you register through matters. Register Binance through JackTrader: $20 cash for new Binance users (first 15 each quarter), premium rebates for $50K+ accounts quoted one-on-one, and a free Alpha members group.</p>
           <div class="hero-actions" style="justify-content:center">
-<a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener nofollow sponsored">Open Binance with rebate</a>
-<a class="btn btn-okx" href="https://www.promooboost.com/join/TRADERJACK" target="_blank" rel="noopener nofollow sponsored">Open OKX with rebate</a>
-            <a class="btn btn-binance" href="/en/binance-rebate.html">Binance rebate</a>
-            <a class="btn btn-okx" href="/en/okx-rebate.html">OKX rebate</a>
+<a class="btn btn-binance" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener nofollow sponsored">Register Binance</a>
             <a class="btn btn-ghost" href="https://t.me/Jack168668" target="_blank" rel="noopener">Ask on Telegram</a>
           </div>
         </div>
 
-        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Fee and funding figures reflect each exchange's published schedule and live market conditions at the time of writing and depend on platform policy, your account, 30-day volume, balances, promotions and region. "Up to 40%" is a maximum reference, not a guarantee of returns. JackTrader is an independent referral / sub-broker partner and is not affiliated with Binance, OKX or Bybit. This article is educational and not investment advice; single-tier referrals only, no downline or multi-level structure.</p>
+        <p style="margin-top:32px;color:var(--text-3);font-size:13px">Disclaimer: Fee and funding figures reflect published exchange schedules and live market conditions at the time of writing and depend on platform policy, your account, 30-day volume, balances, promotions and region. Rewards and rebates depend on available spots, account status and Binance's official rules, and are not a guarantee of returns. JackTrader is an independent referral partner and is not affiliated with Binance. This article is educational and not investment advice; referrals are single-tier only.</p>
 
       </div>
     </section>
@@ -230,14 +227,14 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a class="brand" href="/en/"><span class="brand-mark">J</span><span>JackTrader</span></a>
-          <p>Trading fee rebates and channel partnerships across Binance, OKX, wallet and DEX ecosystems. Real-time settlement, fully trackable.</p>
+          <p>Binance rebates and a free Alpha members group: $20 cash for new users, premium rebates for $50K+ accounts.</p>
         </div>
         <div class="footer-col">
           <h4>Rebate plans</h4>
           <a href="/en/binance-rebate.html">Binance Rebate</a>
-          <a href="/en/okx-rebate.html">OKX Rebate</a>
+          
           <a href="/en/wallet-rebate.html">Wallet &amp; DEX</a>
-          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a><a href="/en/okx-partner.html">OKX partner</a>
+          <a href="/en/partner.html">Partner program</a><a href="/en/binance-partner.html">Binance partner</a>
         </div>
         <div class="footer-col">
           <h4>Deep dives</h4>
@@ -247,7 +244,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance, OKX or Bybit. Rebate rates, eligibility and rules depend on platform policy, account status, review and local regulations; displayed rates are a maximum reference and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
+        <p class="disclaimer">JackTrader is an independent referral partner and is not affiliated with Binance. Rewards and rebates depend on available spots, account status and Binance's official rules, and are not a guarantee of returns. Digital asset trading involves risk; nothing here is investment advice.</p>
         <p class="copyright">© 2026 JackTrader · Independent referral partner.</p>
       </div>
     </div>
