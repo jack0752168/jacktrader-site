@@ -126,6 +126,22 @@
     // 换绑(rebind)链接也在 bsmkweb.cc 域下，必须先判它，否则会被计成普通注册
     else if (href.indexOf("bind-ref") > -1) track("cta_rebind_binance", { page: page });
     else if (href.indexOf("bsmkweb.cc") > -1) track("cta_register_binance", { page: page });
-    else if (href.indexOf("t.me/") > -1) track("cta_telegram", { page: page });
+    else if (href.indexOf("t.me/") > -1) {
+      track("cta_telegram", { page: page });
+      // 招商页(partner 族)上的 Telegram 链接 = 助力人漏斗的实际出口。
+      // 2026-09-16 加：此前只有 binance-partner.html / en/binance-partner.html 两页的
+      // 申请组件会发 cta_partner_apply；其余 5 个招商页(4 个 partner.html + ko/binance-partner)
+      // 只有裸 t.me 链接，点击全部落进 cta_telegram ⇒ 「助力人申请 0 次」是结构性假零，不是量到的零。
+      // 实证：2026-08-24 01:xx 一位韩国访客在 /ko/okx-partner.html 连看 4 天后点了 t.me，
+      // 该点击在 cta_partner_apply 口径下显示为 0。
+      // 故意不复用 cta_partner_apply：那是「填完申请表才发」的高意图事件，
+      // 把导航栏链接点击混进去会虚报日报 KPI(禁虚荣指标)。这里单独记一个更弱的事件，
+      // 并排除 nav-cta(导航栏)，只计正文里的申请按钮。
+      // 放在 scripts.js 而不是逐页加：同族修复已 4 次栽在「语种不全」(ko/zh-tw 漏改)，
+      // 共享脚本天然覆盖全部语种，结构上不可能漏。
+      var onPartnerPage = /(^|\/)(partner|binance-partner|okx-partner)\.html$/.test(page);
+      var isNavCta = (" " + (a.className || "") + " ").indexOf(" nav-cta ") > -1;
+      if (onPartnerPage && !isNavCta) { track("cta_partner_tg_open", { page: page }); }
+    }
   }, true);
 })();
