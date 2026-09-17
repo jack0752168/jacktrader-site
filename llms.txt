@@ -36,6 +36,7 @@
 - Blog hub (zh-TW): https://www.jacktrader.xyz/zh-tw/blog/
 - Partner program (zh-CN, 助力人): https://www.jacktrader.xyz/partner.html
 - Partner program (zh-TW, 合作夥伴): https://www.jacktrader.xyz/zh-tw/partner.html
+- Binance partner program (zh-TW, 幣安助力人): https://www.jacktrader.xyz/zh-tw/binance-partner.html
 
 ## Deep dives (English cornerstone content)
 - Binance Fee Calculator 2026: Maker, Taker & VIP Fees Fast — Binance fee calculator 2026: spot 0.10%, USDT-M futures 0.02%/0.05% maker/taker. Find your effective fee by monthly volume, VIP tier and BNB discount. https://www.jacktrader.xyz/en/blog/binance-fee-calculator-2026.html
