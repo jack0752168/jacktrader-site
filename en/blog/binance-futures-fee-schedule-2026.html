@@ -178,21 +178,21 @@
         <p class="hero-note">This is the one place on this site that prints the futures ladder tier by tier — deliberately, so there is a single version to keep current rather than several copies drifting apart. Binance does revise the volume thresholds, so if you are close to a boundary, confirm the row you are planning around against Binance's own <a href="https://www.binance.com/en/fee/futureFee" rel="nofollow noopener">futures fee page</a>. The maker/taker rates move far less often than the volume bands do.</p>
 
         <table class="compare">
-          <thead><tr><th>Fee tier</th><th>30-day futures volume</th><th>Maker fee</th><th>Taker fee</th></tr></thead>
+          <thead><tr><th>Fee tier</th><th>30-day futures volume</th><th>Min BNB</th><th>Maker fee</th><th>Taker fee</th></tr></thead>
           <tbody>
-            <tr><td>Regular</td><td>&lt; $15M</td><td>0.0200%</td><td>0.0500%</td></tr>
-            <tr><td>VIP 1</td><td>≥ $15M</td><td>0.0160%</td><td>0.0400%</td></tr>
-            <tr><td>VIP 2</td><td>≥ $75M</td><td>0.0140%</td><td>0.0350%</td></tr>
-            <tr><td>VIP 3</td><td>≥ $250M</td><td>0.0120%</td><td>0.0320%</td></tr>
-            <tr><td>VIP 4</td><td>≥ $600M</td><td>0.0100%</td><td>0.0300%</td></tr>
-            <tr><td>VIP 5</td><td>≥ $1.5B</td><td>0.0080%</td><td>0.0270%</td></tr>
-            <tr><td>VIP 6</td><td>≥ $3B</td><td>0.0060%</td><td>0.0250%</td></tr>
-            <tr><td>VIP 7</td><td>≥ $6B</td><td>0.0040%</td><td>0.0220%</td></tr>
-            <tr><td>VIP 8</td><td>≥ $15B</td><td>0.0000%</td><td>0.0170%</td></tr>
-            <tr><td>VIP 9</td><td>≥ $30B</td><td>0.0000%</td><td>0.0170%</td></tr>
+            <tr><td>Regular</td><td>&lt; $5M</td><td>0</td><td>0.0200%</td><td>0.0500%</td></tr>
+            <tr><td>VIP 1</td><td>≥ $5M</td><td>5</td><td>0.0180%</td><td>0.0500%</td></tr>
+            <tr><td>VIP 2</td><td>≥ $10M</td><td>25</td><td>0.0160%</td><td>0.0400%</td></tr>
+            <tr><td>VIP 3</td><td>≥ $50M</td><td>100</td><td>0.0120%</td><td>0.0320%</td></tr>
+            <tr><td>VIP 4</td><td>≥ $600M</td><td>500</td><td>0.0100%</td><td>0.0300%</td></tr>
+            <tr><td>VIP 5</td><td>≥ $1B</td><td>1,000</td><td>0.0080%</td><td>0.0270%</td></tr>
+            <tr><td>VIP 6</td><td>≥ $2.5B</td><td>1,750</td><td>0.0060%</td><td>0.0250%</td></tr>
+            <tr><td>VIP 7</td><td>≥ $5B</td><td>3,000</td><td>0.0040%</td><td>0.0220%</td></tr>
+            <tr><td>VIP 8</td><td>≥ $12.5B</td><td>4,500</td><td>0.0020%</td><td>0.0200%</td></tr>
+            <tr><td>VIP 9</td><td>≥ $25B</td><td>5,500</td><td>0.0000%</td><td>0.0170%</td></tr>
           </tbody>
         </table>
-        <p class="hero-note">Schedule is approximate to Binance's published USDⓈ-M rates at time of writing; Binance adjusts the bands and BNB gates periodically. Each VIP tier also requires a minimum BNB balance — the full volume + BNB gates are in our <a href="/en/blog/binance-vip-fee-tiers-2026.html">Binance VIP tiers guide</a>. Verify your exact tier on Binance's official futures fee page before relying on a number.</p>
+        <p class="hero-note">Read from Binance's published USDⓈ-M fee page on 18 September 2026. Binance moves these bands periodically — this table was materially out of date before that check, with the VIP 1 gate listed three times too high. From VIP 1 up you need the 30-day volume <strong>and</strong> the BNB balance; miss the BNB gate and you stay at the tier below no matter your volume. The same figures in machine-readable form are in our <a href="https://github.com/jack0752168/crypto-exchange-fee-data">open fee-data repo</a>, and the spot side is in our <a href="/en/blog/binance-vip-fee-tiers-2026.html">Binance VIP tiers guide</a>. Verify your own tier on Binance's official futures fee page before relying on a number.</p>
 
         <h2>Coin-M (coin-margined) futures — same base, different settlement</h2>
         <p>Coin-M contracts are quoted in USD but margined and settled in the underlying coin (BTC, ETH, etc.). The fee base is essentially the same as USDⓈ-M — roughly <strong>0.0200% maker / 0.0500% taker</strong> at Regular, climbing the same shape of ladder. The catch is not the fee, it is the settlement asset: your margin, PnL <em>and</em> fees are all denominated in the coin, so the USD value of everything moves with the coin's price. For a fee-sensitive volume trader that adds noise, which is why most bots and market makers stay on USDⓈ-M. Coin-M earns its place mainly for holders hedging a coin position they do not want to sell for tax or conviction reasons.</p>
@@ -227,13 +227,14 @@
         <p>That is roughly <strong>$15,600 a year</strong> in fees from a single $5M / month bot. Enable the BNB discount and the gross drops to ~$1,170 a month first; any rebate is then calculated on the smaller number. A book this size is where a rebate starts to matter: for traders with $50,000 or more in funds, JackTrader offers an above-market rebate rate. The exact rate is assessed one-on-one — <a href="https://t.me/Jack168668" target="_blank" rel="noopener">contact us on Telegram</a> for a quote, or <a href="/en/binance-rebate.html">see the Binance rebate page</a>.</p>
 
         <h2>Worked example #2 — a taker-heavy desk at $20M / month</h2>
-        <p>A momentum desk hitting the book aggressively might run 30% maker / 70% taker at $20M monthly notional, Regular tier:</p>
+        <p>A momentum desk hitting the book aggressively might run 30% maker / 70% taker at $20M monthly notional. $20M clears the VIP 2 volume gate comfortably — but only if the account also holds 25 BNB. Miss that and the same flow prices at Regular:</p>
         <ul>
           <li>Maker = $6M × 0.0200% = <strong>$1,200</strong></li>
           <li>Taker = $14M × 0.0500% = <strong>$7,000</strong></li>
           <li>Gross = <strong>$8,200 / month</strong></li>
         </ul>
-        <p>At $20M/month you would technically clear the VIP 1 volume gate (≥ $15M over 30 days, plus the BNB balance each tier requires), but the example stays at the Regular rate to keep the math simple — VIP 1 only trims maker to 0.0160% and taker to 0.0400%, taking the bill to about $6,560, and the taker leg is still roughly 85% of it. No tier ever takes taker to zero, so the levers that reliably compress a taker-dominated book are your fill style and a rebate on the fee you still pay. Moving 30% of total flow ($6M) from taker to maker saves about $1,800 a month at Regular rates — more than the whole VIP 1 step is worth (~$1,640).</p>
+        <p>Clear the BNB gate and the same $20M prices at VIP 2 — maker 0.0160%, taker 0.0400% — taking the bill to <strong>about $6,560</strong>. That is <strong>$1,640 a month for holding 25 BNB</strong>, and it is the single most overlooked line in this table: the volume gate is the one everybody checks, the balance gate is the one that actually decides which row you land on.</p>
+        <p>Notice what does not change. At VIP 2 the taker leg is still roughly 85% of the bill. No tier ever takes taker to zero, so the levers that reliably compress a taker-dominated book are your fill style and a rebate on the fee you still pay. Moving 30% of total flow ($6M) from taker to maker saves about $1,800 a month at Regular rates — more than the entire VIP 2 step is worth (~$1,640). Fill style beats tier chasing at this size.</p>
 
         <h2>Worked example #3 — why funding can beat the fee</h2>
         <p>Say you hold a <strong>$500,000 long</strong> through a trending week with funding averaging 0.0300% per 8 hours (elevated but common in a strong uptrend). You entered and will exit once — two taker fills:</p>
