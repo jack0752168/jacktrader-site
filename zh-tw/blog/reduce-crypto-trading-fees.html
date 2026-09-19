@@ -205,15 +205,16 @@
 <h2>槓桿 5 — 升一級 VIP 交易量等級</h2>
 <p>一旦你的 30 天交易量跨過門檻，幣安就會把你的費率往下調一級。這些等級在合約上比現貨好升，因為合約名目量的滾動速度快一個數量級。下面挑幾級幣安 USDⓈ-M 合約階梯，看得出曲線怎麼彎：</p>
 <table class="compare">
-<thead><tr><th>幣安等級</th><th>30 天合約量</th><th>掛單</th><th>吃單</th></tr></thead>
+<thead><tr><th>幣安等級</th><th>30 天合約量</th><th>BNB 最低持倉</th><th>掛單</th><th>吃單</th></tr></thead>
 <tbody>
-<tr><td>一般用戶</td><td>&lt; $15M</td><td>0.0200%</td><td>0.0500%</td></tr>
-<tr><td>VIP 1</td><td>≥ $15M</td><td>0.0160%</td><td>0.0400%</td></tr>
-<tr><td>VIP 4</td><td>≥ $600M</td><td>0.0100%</td><td>0.0300%</td></tr>
-<tr><td>VIP 9</td><td>≥ $30B</td><td>0.0000%</td><td>0.0170%</td></tr>
+<tr><td>一般用戶</td><td>&lt; $5M</td><td>—</td><td>0.0200%</td><td>0.0500%</td></tr>
+<tr><td>VIP 1</td><td>≥ $5M</td><td>≥ 5 BNB</td><td>0.0180%</td><td>0.0500%</td></tr>
+<tr><td>VIP 2</td><td>≥ $10M</td><td>≥ 25 BNB</td><td>0.0160%</td><td>0.0400%</td></tr>
+<tr><td>VIP 4</td><td>≥ $600M</td><td>≥ 500 BNB</td><td>0.0100%</td><td>0.0300%</td></tr>
+<tr><td>VIP 9</td><td>≥ $25B</td><td>≥ 5,500 BNB</td><td>0.0000%</td><td>0.0170%</td></tr>
 </tbody>
 </table>
-<p>到標準階梯最頂端，掛單費降到<strong>零</strong>；再往下的負掛單費，屬於專門的造市商安排。幣安會調整這些門檻，如果你已經接近某個級距，動手規劃前請先對照<a href="/zh-tw/blog/binance-fee-calculator-2026.html">幣安手續費計算機 2026</a>與幣安官方的<a href="https://www.binance.com/en/fee/futureFee" target="_blank" rel="nofollow noopener">合約手續費頁</a>。兩個實用提醒：把交易量集中在<em>較少</em>的子帳戶（每個子帳戶各自算 VIP，分散反而讓你每個都卡在一般等級），還有，如果你是資金 5 萬美元以上的中大戶，升 VIP 和槓桿 2 的中大戶返傭可以同時用，具體比例一對一評估。</p>
+<p>這張表有兩件事值得留意：入場門檻比傳說中低——VIP 1 只要 30 天合約量 <strong>$5M</strong>，不是八位數；但 <strong>VIP 1 對吃單費沒有任何幫助</strong>，吃單要到 VIP 2 才從 0.0500% 降下來。另外每一級除了量能還要求 BNB 最低持倉，每晚把 BNB 換成穩定幣的帳戶會被降一級計費。到標準階梯最頂端，掛單費降到<strong>零</strong>；再往下的負掛單費，屬於專門的造市商安排。幣安會調整這些門檻，如果你已經接近某個級距，動手規劃前請先對照<a href="/zh-tw/blog/binance-fee-calculator-2026.html">幣安手續費計算機 2026</a>與幣安官方的<a href="https://www.binance.com/en/fee/futureFee" target="_blank" rel="nofollow noopener">合約手續費頁</a>。兩個實用提醒：把交易量集中在<em>較少</em>的子帳戶（每個子帳戶各自算 VIP，分散反而讓你每個都卡在一般等級），還有，如果你是資金 5 萬美元以上的中大戶，升 VIP 和槓桿 2 的中大戶返傭可以同時用，具體比例一對一評估。</p>
 
 <h2>槓桿 6 — 選對交易所（但別想太多）</h2>
 <p>交易所的選擇，沒有信仰戰爭講得那麼重要。把所有折扣扣完之後，主流大交易所在多數人交易的產品上，差距往往只剩幾個基點，而且會隨等級與產品翻轉。以幣安和 Bybit 為例：USDT 永續掛單費同為 0.0200%，差別只在吃單——幣安 0.0500%、Bybit 0.0550%。挑 API 穩定度、交易對深度、子帳戶結構最適合你策略的那家，然後在落腳的那家把其他槓桿做足，因為它們對你成本的影響遠大於選哪家。完整對比看<a href="/zh-tw/blog/binance-vs-bybit-fees-2026.html">幣安 vs Bybit 手續費 2026</a>。</p>

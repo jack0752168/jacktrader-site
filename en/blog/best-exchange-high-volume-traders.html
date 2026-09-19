@@ -206,28 +206,29 @@
 <h2>Fees at scale: how the Binance VIP ladder bends</h2>
 <p>Binance's Regular USDⓈ-M perpetual rate is 0.0200% maker / 0.0500% taker. Two things move it as you scale: how the VIP ladder bends as you climb, and how the token discount layers on. Binance applies a BNB discount — 25% off spot, 10% off futures when you pay fees in BNB — that stacks <em>on top of</em> your VIP rate. Here is the USDⓈ-M futures ladder by 30-day futures volume — pull the live schedule before you act on it, because exchanges revise these bands without notice:</p>
 <table class="compare">
-<thead><tr><th>Binance tier</th><th>30-day futures volume</th><th>Maker</th><th>Taker</th></tr></thead>
+<thead><tr><th>Binance tier</th><th>30-day futures volume</th><th>Min BNB balance</th><th>Maker</th><th>Taker</th></tr></thead>
 <tbody>
-<tr><td>Regular</td><td>&lt; $15M</td><td>0.0200%</td><td>0.0500%</td></tr>
-<tr><td>VIP 1</td><td>≥ $15M</td><td>0.0160%</td><td>0.0400%</td></tr>
-<tr><td>VIP 2</td><td>≥ $75M</td><td>0.0140%</td><td>0.0350%</td></tr>
-<tr><td>VIP 3</td><td>≥ $250M</td><td>0.0120%</td><td>0.0320%</td></tr>
-<tr><td>VIP 4</td><td>≥ $600M</td><td>0.0100%</td><td>0.0300%</td></tr>
-<tr><td>VIP 5</td><td>≥ $1.5B</td><td>0.0080%</td><td>0.0270%</td></tr>
-<tr><td>VIP 6</td><td>≥ $3B</td><td>0.0060%</td><td>0.0250%</td></tr>
-<tr><td>VIP 7</td><td>≥ $6B</td><td>0.0040%</td><td>0.0220%</td></tr>
-<tr><td>VIP 8</td><td>≥ $15B</td><td>0.0000%</td><td>0.0170%</td></tr>
-<tr><td>VIP 9</td><td>≥ $30B</td><td>0.0000%</td><td>0.0170%</td></tr>
+<tr><td>Regular</td><td>&lt; $5M</td><td>&mdash;</td><td>0.0200%</td><td>0.0500%</td></tr>
+<tr><td>VIP 1</td><td>≥ $5M</td><td>≥ 5 BNB</td><td>0.0180%</td><td>0.0500%</td></tr>
+<tr><td>VIP 2</td><td>≥ $10M</td><td>≥ 25 BNB</td><td>0.0160%</td><td>0.0400%</td></tr>
+<tr><td>VIP 3</td><td>≥ $50M</td><td>≥ 100 BNB</td><td>0.0120%</td><td>0.0320%</td></tr>
+<tr><td>VIP 4</td><td>≥ $600M</td><td>≥ 500 BNB</td><td>0.0100%</td><td>0.0300%</td></tr>
+<tr><td>VIP 5</td><td>≥ $1B</td><td>≥ 1,000 BNB</td><td>0.0080%</td><td>0.0270%</td></tr>
+<tr><td>VIP 6</td><td>≥ $2.5B</td><td>≥ 1,750 BNB</td><td>0.0060%</td><td>0.0250%</td></tr>
+<tr><td>VIP 7</td><td>≥ $5B</td><td>≥ 3,000 BNB</td><td>0.0040%</td><td>0.0220%</td></tr>
+<tr><td>VIP 8</td><td>≥ $12.5B</td><td>≥ 4,500 BNB</td><td>0.0020%</td><td>0.0200%</td></tr>
+<tr><td>VIP 9</td><td>≥ $25B</td><td>≥ 5,500 BNB</td><td>0.0000%</td><td>0.0170%</td></tr>
 </tbody>
 </table>
-<p>The shape matters. The maker side compresses all the way to 0.0000% at VIP 8, while the taker side never drops below 0.0170%. And the bands are wide: VIP 1 needs $15M of 30-day futures volume, VIP 3 needs $250M, and the zero-maker band sits at $15B. Translation: if you are a <strong>maker-heavy quoting desk</strong>, each step up the ladder does most of the work for you; if you are a <strong>mixed or taker-leaning book</strong>, a bigger share of your savings comes from paying fees in BNB and from shifting flow to maker, because no tier takes the taker fee to zero. Run your specific split through the <a href="/en/blog/binance-fee-calculator-2026.html">Binance fee calculator</a> rather than trusting the headline. For the distinction between reaching the top of the public VIP ladder and applying to a dedicated market-maker program — where negative maker fees on selected pairs actually live — see <a href="/en/blog/crypto-market-maker-rebates.html">negative maker fees and market-maker programs</a>.</p>
+<p>Two structural facts are worth more than the table itself. First, <strong>every VIP band carries a BNB balance gate alongside the volume gate</strong> — you need both, and desks that sweep BNB to stables nightly routinely sit a tier below what their volume alone would buy. Second, the maker side only reaches 0.0000% at VIP 9, while the taker side never drops below 0.0170%. The lower bands are tighter than most write-ups claim: VIP 1 starts at $5M of 30-day futures volume and VIP 3 at $50M, which puts a mid-size algo book inside the ladder far earlier than the "you need nine figures" folklore suggests. The zero-maker band, by contrast, sits all the way out at $25B. Translation: if you are a <strong>maker-heavy quoting desk</strong>, each step up the ladder does most of the work for you; if you are a <strong>mixed or taker-leaning book</strong>, a bigger share of your savings comes from paying fees in BNB and from shifting flow to maker, because no tier takes the taker fee to zero. Run your specific split through the <a href="/en/blog/binance-fee-calculator-2026.html">Binance fee calculator</a> rather than trusting the headline. For the distinction between reaching the top of the public VIP ladder and applying to a dedicated market-maker program — where negative maker fees on selected pairs actually live — see <a href="/en/blog/crypto-market-maker-rebates.html">negative maker fees and market-maker programs</a>.</p>
 
 <h2>Worked example: a $50M/month perpetuals desk</h2>
-<p>Assume a desk doing $50M notional a month on USDT-perps, split 70% maker / 30% taker — a realistic profile for an algo book that posts liquidity but crosses the spread to manage inventory. That is $35M maker volume and $15M taker volume. At $50M it clears Binance's VIP 1 band (≥ $15M) but not VIP 2 (≥ $75M).</p>
+<p>Assume a desk doing $50M notional a month on USDT-perps, split 70% maker / 30% taker — a realistic profile for an algo book that posts liquidity but crosses the spread to manage inventory. That is $35M maker volume and $15M taker volume. $50M lands exactly on Binance's VIP 3 volume gate — <em>but only if the account also holds at least 100 BNB</em>. Miss that balance and the same flow sits at VIP 2. That single detail is worth more than $2,600 a month here:</p>
 <ul>
 <li><strong>Regular rates, for reference:</strong> 0.0200% maker on $35M = $7,000; 0.0500% taker on $15M = $7,500. Monthly fee ≈ <strong>$14,500</strong>.</li>
-<li><strong>VIP 1:</strong> 0.0160% maker on $35M = $5,600; 0.0400% taker on $15M = $6,000. Monthly fee ≈ <strong>$11,600</strong>.</li>
-<li><strong>VIP 1, paying fees in BNB</strong> (10% off futures): 0.0144% effective maker on $35M ≈ $5,040; 0.0360% effective taker on $15M ≈ $5,400. Monthly fee ≈ <strong>$10,440</strong> — roughly $125,000 a year.</li>
+<li><strong>VIP 2</strong> (volume clears VIP 3 but BNB balance does not): 0.0160% maker on $35M = $5,600; 0.0400% taker on $15M = $6,000. Monthly fee ≈ <strong>$11,600</strong>.</li>
+<li><strong>VIP 3</strong> (volume <em>and</em> ≥ 100 BNB): 0.0120% maker on $35M = $4,200; 0.0320% taker on $15M = $4,800. Monthly fee ≈ <strong>$9,000</strong>.</li>
+<li><strong>VIP 3, paying fees in BNB</strong> (10% off futures): 0.0108% effective maker on $35M ≈ $3,780; 0.0288% effective taker on $15M ≈ $4,320. Monthly fee ≈ <strong>$8,100</strong> — roughly $97,000 a year, against $174,000 at Regular rates.</li>
 </ul>
 <p>Two honest caveats. First, Binance recalculates VIP tiers daily on a rolling 30-day window and revises published rates from time to time, so treat these figures as a band, not a point. Second — and this is the part most comparisons miss — the tier is not the only lever. In every one of those scenarios the taker leg is more than half the bill, and no VIP band will ever zero it out. We get to the lever that works on the whole bill below.</p>
 

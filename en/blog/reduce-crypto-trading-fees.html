@@ -231,15 +231,16 @@
 <h2>Lever 5 — Climb a VIP volume tier</h2>
 <p>Once your 30-day volume crosses a gate, Binance steps your fee down. The bands are easier to climb on futures than spot, because futures notional moves an order of magnitude faster. A few rungs of Binance's USDⓈ-M futures ladder show how the curve bends:</p>
 <table class="compare">
-<thead><tr><th>Binance tier</th><th>30-day futures volume</th><th>Maker</th><th>Taker</th></tr></thead>
+<thead><tr><th>Binance tier</th><th>30-day futures volume</th><th>Min BNB balance</th><th>Maker</th><th>Taker</th></tr></thead>
 <tbody>
-<tr><td>Regular</td><td>&lt; $15M</td><td>0.0200%</td><td>0.0500%</td></tr>
-<tr><td>VIP 1</td><td>≥ $15M</td><td>0.0160%</td><td>0.0400%</td></tr>
-<tr><td>VIP 4</td><td>≥ $600M</td><td>0.0100%</td><td>0.0300%</td></tr>
-<tr><td>VIP 9</td><td>≥ $30B</td><td>0.0000%</td><td>0.0170%</td></tr>
+<tr><td>Regular</td><td>&lt; $5M</td><td>&mdash;</td><td>0.0200%</td><td>0.0500%</td></tr>
+<tr><td>VIP 1</td><td>≥ $5M</td><td>≥ 5 BNB</td><td>0.0180%</td><td>0.0500%</td></tr>
+<tr><td>VIP 2</td><td>≥ $10M</td><td>≥ 25 BNB</td><td>0.0160%</td><td>0.0400%</td></tr>
+<tr><td>VIP 4</td><td>≥ $600M</td><td>≥ 500 BNB</td><td>0.0100%</td><td>0.0300%</td></tr>
+<tr><td>VIP 9</td><td>≥ $25B</td><td>≥ 5,500 BNB</td><td>0.0000%</td><td>0.0170%</td></tr>
 </tbody>
 </table>
-<p>At the very top of the standard ladder the maker fee reaches <strong>zero</strong>; fees below zero are the territory of dedicated market-maker arrangements, covered in <a href="/en/blog/crypto-market-maker-rebates.html">how negative maker fees work</a>. Binance revises these thresholds, so confirm the tier you are near on the full <a href="/en/blog/binance-futures-fee-schedule-2026.html">Binance futures fee schedule 2026</a> before planning around it. Two practical tips: concentrate volume in <em>fewer</em> sub-accounts (each one has its own VIP calculation, so spreading volume keeps you stuck in Regular on each), and remember that any partner rebate from Lever 2 is computed on whatever tier you reach.</p>
+<p>Two things this cut of the table makes visible. The entry rungs are lower than the folklore — VIP 1 starts at <strong>$5M</strong> of 30-day futures volume, not eight figures — but <strong>VIP 1 does nothing for your taker fee</strong>, which stays at 0.0500% until VIP 2. And every band has a BNB balance gate alongside the volume gate, so an account that sweeps BNB out nightly gets billed a tier down. At the very top of the standard ladder the maker fee reaches <strong>zero</strong>; fees below zero are the territory of dedicated market-maker arrangements, covered in <a href="/en/blog/crypto-market-maker-rebates.html">how negative maker fees work</a>. Binance revises these thresholds, so confirm the tier you are near on the full <a href="/en/blog/binance-futures-fee-schedule-2026.html">Binance futures fee schedule 2026</a> before planning around it. Two practical tips: concentrate volume in <em>fewer</em> sub-accounts (each one has its own VIP calculation, so spreading volume keeps you stuck in Regular on each), and remember that any partner rebate from Lever 2 is computed on whatever tier you reach.</p>
 
 <h2>Lever 6 — Choose the right venue (but don't overthink it)</h2>
 <p>Exchange choice matters less than the loyalty wars suggest. Net of every discount, the major exchanges sit within a few basis points of each other on the products most people trade, and the gaps flip depending on tier and product. Pick the venue whose API reliability, pair depth, and sub-account structure fit your strategy — then work through the other levers on whichever you land on, because they move your cost far more than the venue does. For a head-to-head, see <a href="/en/blog/binance-vs-bybit-fees-2026.html">Binance vs Bybit fees 2026</a> and the <a href="/en/blog/cheapest-crypto-exchange-2026.html">cheapest crypto exchange 2026</a> comparison.</p>

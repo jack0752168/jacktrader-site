@@ -118,8 +118,8 @@
         <p>Diminishing returns hit fast once you're above ~90% maker; pushing further usually trades fees against fill quality.</p>
 
         <h3>Knob 2 — exchange-side: VIP tier and product</h3>
-        <p>Binance's USDT-M futures fee structure rewards volume disproportionately. Climbing from Regular to VIP 1 (which gates at $15M / month futures notional) cuts maker fees from 0.0200% to 0.0160% — a 20% rate cut. From Regular to VIP 3 ($250M / month) it's a 40% maker-rate cut.</p>
-        <p>For grid bot operators below the VIP 1 gate, you're rarely going to get to VIP 1 by adding more grids alone — that's $15M of monthly notional. Two ways to actually get there:</p>
+        <p>Binance's USDT-M futures fee structure rewards volume disproportionately, and the entry rungs sit lower than most grid operators assume. Climbing from Regular to <strong>VIP 1 (gated at $5M / month futures notional, plus a ≥ 5 BNB balance)</strong> cuts maker fees from 0.0200% to 0.0180% — a 10% rate cut, and it does <em>nothing</em> for the taker leg, which stays at 0.0500%. <strong>VIP 2 ($10M / month, ≥ 25 BNB)</strong> is the first rung that actually bites: 0.0160% maker and 0.0400% taker. From Regular to VIP 3 ($50M / month, ≥ 100 BNB) it's a 40% maker-rate cut.</p>
+        <p>Note the trap in that shape: a grid bot is maker-heavy by construction, so VIP 1's maker-only discount is worth having — but the account also has to hold the BNB, and plenty of operators sweep BNB to stables nightly and quietly stay at Regular rates on volume that already qualifies. For grid bot operators below the VIP 1 gate, $5M of monthly notional is reachable but rarely by adding more grids alone. Two ways to actually get there:</p>
         <ul>
           <li>Concentrate volume into one account, not three sub-accounts.</li>
           <li>Add a second strategy (e.g. a perpetual basis trade) that runs higher turnover than the grid itself.</li>

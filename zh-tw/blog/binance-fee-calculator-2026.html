@@ -194,32 +194,33 @@
 <h2>幣安現貨手續費表（一般用戶到 VIP 9）</h2>
 <p>現貨費表是對稱的——每一級的掛單與吃單費率相同。最大的兩個落差出現在「一般用戶 → VIP 1」（量能門檻的最底層）以及「VIP 4 → VIP 5」（機構門檻）。</p>
 <table class="compare">
-<thead><tr><th>VIP 等級</th><th>30 天現貨量（USDT）</th><th>掛單費</th><th>吃單費</th></tr></thead>
+<thead><tr><th>VIP 等級</th><th>30 天現貨量（美元等值）</th><th>BNB 最低持倉</th><th>掛單費</th><th>吃單費</th></tr></thead>
 <tbody>
-<tr><td>一般用戶</td><td>&lt; $1M</td><td>0.1000%</td><td>0.1000%</td></tr>
-<tr><td>VIP 1</td><td>≥ $1M</td><td>0.0900%</td><td>0.1000%</td></tr>
-<tr><td>VIP 2</td><td>≥ $5M</td><td>0.0800%</td><td>0.1000%</td></tr>
-<tr><td>VIP 3</td><td>≥ $20M</td><td>0.0420%</td><td>0.0600%</td></tr>
-<tr><td>VIP 4</td><td>≥ $100M</td><td>0.0420%</td><td>0.0540%</td></tr>
-<tr><td>VIP 5</td><td>≥ $150M</td><td>0.0360%</td><td>0.0480%</td></tr>
-<tr><td>VIP 6</td><td>≥ $400M</td><td>0.0300%</td><td>0.0420%</td></tr>
-<tr><td>VIP 7</td><td>≥ $800M</td><td>0.0240%</td><td>0.0360%</td></tr>
-<tr><td>VIP 8</td><td>≥ $2B</td><td>0.0180%</td><td>0.0300%</td></tr>
-<tr><td>VIP 9</td><td>≥ $4B</td><td>0.0120%</td><td>0.0240%</td></tr>
+<tr><td>一般用戶</td><td>&lt; $1M</td><td>—</td><td>0.1000%</td><td>0.1000%</td></tr>
+<tr><td>VIP 1</td><td>≥ $1M</td><td>≥ 5 BNB</td><td>0.0900%</td><td>0.1000%</td></tr>
+<tr><td>VIP 2</td><td>≥ $5M</td><td>≥ 25 BNB</td><td>0.0800%</td><td>0.1000%</td></tr>
+<tr><td>VIP 3</td><td>≥ $20M</td><td>≥ 100 BNB</td><td>0.0400%</td><td>0.0600%</td></tr>
+<tr><td>VIP 4</td><td>≥ $75M</td><td>≥ 500 BNB</td><td>0.0400%</td><td>0.0520%</td></tr>
+<tr><td>VIP 5</td><td>≥ $150M</td><td>≥ 1,000 BNB</td><td>0.0250%</td><td>0.0310%</td></tr>
+<tr><td>VIP 6</td><td>≥ $400M</td><td>≥ 1,750 BNB</td><td>0.0200%</td><td>0.0290%</td></tr>
+<tr><td>VIP 7</td><td>≥ $800M</td><td>≥ 3,000 BNB</td><td>0.0190%</td><td>0.0280%</td></tr>
+<tr><td>VIP 8</td><td>≥ $2B</td><td>≥ 4,500 BNB</td><td>0.0160%</td><td>0.0250%</td></tr>
+<tr><td>VIP 9</td><td>≥ $4B</td><td>≥ 5,500 BNB</td><td>0.0110%</td><td>0.0230%</td></tr>
 </tbody>
 </table>
-<p>以上接近撰稿時的公布費率，幣安偶爾會調整級距。再用 BNB 付費可額外打 75 折（省 25%）。</p>
+<p>以上於 2026-09-18 直讀幣安官方現貨費率頁。每一級 VIP 都是「30 天量能」與「BNB 最低持倉」<strong>兩個條件同時满足</strong>才算數；只過量能不過持倉，會停在下一級。現貨量能計入現貨、槓桿、閃兑、跟單與交易機器人。再用 BNB 付費可額外打 75 折（省 25%）。</p>
 
 <h2>幣安 USDT 本位永續合約手續費表</h2>
 <p>USDT 本位永續與季度合約用的是另一張量能表——而且合約的級距比現貨好爬，因為計入的是合約名目量（notional），它累積的速度比現貨快上一個數量級。對跑網格機器人或量化策略的人來說，光靠合約量就能比現貨更快升級。（幣安 App 裡把這個產品寫成 <strong>USDⓈ-M</strong>；USDT-M、USDT 本位、「USDT perpetual」指的都是同一批合約、同一張費率表。）</p>
 <table class="compare">
-<thead><tr><th>VIP 等級</th><th>30 天合約量（USDT）</th><th>掛單費</th><th>吃單費</th></tr></thead>
+<thead><tr><th>VIP 等級</th><th>30 天合約量（USDT）</th><th>BNB 最低持倉</th><th>掛單費</th><th>吃單費</th></tr></thead>
 <tbody>
-<tr><td>一般用戶</td><td>&lt; $15M</td><td>0.0200%</td><td>0.0500%</td></tr>
-<tr><td>VIP 1</td><td>≥ $15M</td><td>0.0160%</td><td>0.0400%</td></tr>
+<tr><td>一般用戶</td><td>&lt; $5M</td><td>—</td><td>0.0200%</td><td>0.0500%</td></tr>
+<tr><td>VIP 1</td><td>≥ $5M</td><td>≥ 5 BNB</td><td>0.0180%</td><td>0.0500%</td></tr>
+<tr><td>VIP 2</td><td>≥ $10M</td><td>≥ 25 BNB</td><td>0.0160%</td><td>0.0400%</td></tr>
 </tbody>
 </table>
-<p class="hero-note">這張表<strong>刻意只列到 VIP 1</strong>。會來查手續費計算機的人幾乎都落在一般用戶與 VIP 1 這兩檔（下面每一個實算範例也都在一般用戶級距），而幣安會調整更上層的合約量門檻——列一個過期的門檻比不列還糟。所以完整的逐級合約費率表我們<strong>只放在一個頁面</strong>，不在這裡再複製一份、讓兩邊對不上。若你已經接近某個級距的邊界，動手規劃前請以幣安官方的<a href="https://www.binance.com/en/fee/futureFee" rel="nofollow noopener">合約手續費頁</a>為準。BNB 合約折扣（活動期間 9 折）則是疊在你所在級距之上。</p>
+<p class="hero-note">這張表<strong>刻意只列到 VIP 2</strong>——而且請看清它的形狀：<strong>VIP 1 對吃單費完全沒幫助</strong>（仍是 0.0500%），所以吃單為主的交易者要到 VIP 2 才有實際降幅。會來查手續費計算機的人幾乎都落在一般用戶到 VIP 2 這幾檔（下面每一個實算範例也都在一般用戶級距），而幣安會調整更上層的合約量門檻——列一個過期的門檻比不列還糟。所以完整的逐級合約費率表我們<strong>只放在一個頁面</strong>，不在這裡再複製一份、讓兩邊對不上。若你已經接近某個級距的邊界，動手規劃前請以幣安官方的<a href="https://www.binance.com/en/fee/futureFee" rel="nofollow noopener">合約手續費頁</a>為準。BNB 合約折扣（活動期間 9 折）則是疊在你所在級距之上。</p>
 <p>完整的 <strong>USDT-M（USDⓈ-M）與幣本位 Coin-M 費率表</strong>——每一個 VIP 級距、BNB 折扣現貨 25% 對合約 10% 的差別，以及沒有任何費率表會印出來的資金費率——見我們的英文完整版：<a href="/en/blog/binance-futures-fee-schedule-2026.html">Binance futures fee schedule 2026</a>。</p>
 
 <h2>實算範例 #1——每月 $5M 的網格機器人玩家</h2>
@@ -243,7 +244,7 @@
 <li>吃單 = $14M × 0.0500% = <strong>$7,000</strong></li>
 <li>總計 = <strong>$8,200／月</strong></li>
 </ul>
-<p>用 BNB 付（合約省 10%）後為 <strong>$7,380</strong>，一年約 <strong>$88,560</strong>。到了 VIP 1 等級（門檻在每月 $15M）費率會再往下走。對很多小型量化團隊來說，這筆手續費幾乎等於整套基礎設施的營運成本；這個量級的團隊，建議直接透過 Telegram 做中大戶返傭的一對一評估。</p>
+<p>用 BNB 付（合約省 10%）後為 <strong>$7,380</strong>，一年約 <strong>$88,560</strong>。每月 $20M 已經跨過 <strong>VIP 2</strong> 的量能門檻（每月 $10M，另需持倉 ≥ 25 BNB）。這裡要留意 VIP 1 <em>幫不上忙</em>：它的吃單費仍是 0.0500%，70% 吃單的帳本在 VIP 1 只能降到 $8,080；要到 VIP 2（0.0160% 掛單／0.0400% 吃單）才是 $960 + $5,600 = <strong>$6,560</strong>，用 BNB 付約 <strong>$5,904／月</strong>。對很多小型量化團隊來說，這筆手續費幾乎等於整套基礎設施的營運成本；這個量級的團隊，建議直接透過 Telegram 做中大戶返傭的一對一評估。</p>
 
 <h2>實算範例 #3——每月 $50k 的散戶現貨玩家</h2>
 <p>不是每個讀者都是量化。一個每月約 $50k 現貨成交、停在一般用戶等級的散戶買家會付：</p>

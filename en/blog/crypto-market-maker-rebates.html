@@ -108,7 +108,7 @@
       "name": "At what volume does the maker fee go negative on Binance?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "On Binance's published USDⓈ-M futures ladder it doesn't. The maker fee steps down from 0.0200% at Regular to 0.0100% at VIP 4 (about $600M in 30-day volume) and reaches 0.0000% at VIP 8 (about $15B), where it stays at VIP 9. Negative maker fees on Binance come through the dedicated market-maker program, on selected pairs and repriced on performance. Below the top tiers, the ladder keeps your maker fee positive but reduced."
+        "text": "On Binance's published USDⓈ-M futures ladder it doesn't. The maker fee steps down from 0.0200% at Regular to 0.0100% at VIP 4 (about $600M in 30-day volume), 0.0020% at VIP 8 (about $12.5B) and 0.0000% only at VIP 9 (about $25B). Negative maker fees on Binance come through the dedicated market-maker program, on selected pairs and repriced on performance. Below the top tiers, the ladder keeps your maker fee positive but reduced."
       }
     },
     {
@@ -202,21 +202,21 @@
 <h2>The VIP ladder: how far the maker fee falls (Binance, 2026)</h2>
 <p>Binance's USDⓈ-M futures ladder is the reference most desks model against. These are the published USDⓈ-M perpetual rates by 30-day futures volume (maker / taker). Check them against the live schedule before committing capital — exchanges revise these bands and we do not mirror them in real time:</p>
 <table class="compare">
-<thead><tr><th>Tier</th><th>30-day futures volume</th><th>Maker</th><th>Taker</th></tr></thead>
+<thead><tr><th>Tier</th><th>30-day futures volume</th><th>Min BNB balance</th><th>Maker</th><th>Taker</th></tr></thead>
 <tbody>
-<tr><td>Regular</td><td>&lt; $15M</td><td>0.0200%</td><td>0.0500%</td></tr>
-<tr><td>VIP 1</td><td>≥ $15M</td><td>0.0160%</td><td>0.0400%</td></tr>
-<tr><td>VIP 2</td><td>≥ $75M</td><td>0.0140%</td><td>0.0350%</td></tr>
-<tr><td>VIP 3</td><td>≥ $250M</td><td>0.0120%</td><td>0.0320%</td></tr>
-<tr><td>VIP 4</td><td>≥ $600M</td><td>0.0100%</td><td>0.0300%</td></tr>
-<tr><td>VIP 5</td><td>≥ $1.5B</td><td>0.0080%</td><td>0.0270%</td></tr>
-<tr><td>VIP 6</td><td>≥ $3B</td><td>0.0060%</td><td>0.0250%</td></tr>
-<tr><td>VIP 7</td><td>≥ $6B</td><td>0.0040%</td><td>0.0220%</td></tr>
-<tr><td>VIP 8</td><td>≥ $15B</td><td><strong>0.0000%</strong></td><td>0.0170%</td></tr>
-<tr><td>VIP 9</td><td>≥ $30B</td><td><strong>0.0000%</strong></td><td>0.0170%</td></tr>
+<tr><td>Regular</td><td>&lt; $5M</td><td>&mdash;</td><td>0.0200%</td><td>0.0500%</td></tr>
+<tr><td>VIP 1</td><td>≥ $5M</td><td>≥ 5 BNB</td><td>0.0180%</td><td>0.0500%</td></tr>
+<tr><td>VIP 2</td><td>≥ $10M</td><td>≥ 25 BNB</td><td>0.0160%</td><td>0.0400%</td></tr>
+<tr><td>VIP 3</td><td>≥ $50M</td><td>≥ 100 BNB</td><td>0.0120%</td><td>0.0320%</td></tr>
+<tr><td>VIP 4</td><td>≥ $600M</td><td>≥ 500 BNB</td><td>0.0100%</td><td>0.0300%</td></tr>
+<tr><td>VIP 5</td><td>≥ $1B</td><td>≥ 1,000 BNB</td><td>0.0080%</td><td>0.0270%</td></tr>
+<tr><td>VIP 6</td><td>≥ $2.5B</td><td>≥ 1,750 BNB</td><td>0.0060%</td><td>0.0250%</td></tr>
+<tr><td>VIP 7</td><td>≥ $5B</td><td>≥ 3,000 BNB</td><td>0.0040%</td><td>0.0220%</td></tr>
+<tr><td>VIP 8</td><td>≥ $12.5B</td><td>≥ 4,500 BNB</td><td>0.0020%</td><td>0.0200%</td></tr>
+<tr><td>VIP 9</td><td>≥ $25B</td><td>≥ 5,500 BNB</td><td><strong>0.0000%</strong></td><td>0.0170%</td></tr>
 </tbody>
 </table>
-<p>Read the curve, not just the endpoints. The maker fee halves to 0.0100% at <strong>VIP 4</strong> ($600M/30d) and only reaches <strong>zero at VIP 8</strong> ($15B/30d) — on the published ladder it never goes below zero. So on Binance, "negative maker fees via the VIP ladder" is simply not on the table: you keep paying to make, just less, until the very top tiers make it free. The taker side compresses on a different schedule and never reaches zero (0.0170% at VIP 8-9), which is why a desk's <em>maker ratio</em> is the lever that decides how heavy the fee line is.</p>
+<p>Read the curve, not just the endpoints. The maker fee halves to 0.0100% at <strong>VIP 4</strong> ($600M/30d) and only reaches <strong>zero at VIP 9</strong> ($25B/30d) — on the published ladder it never goes below zero. So on Binance, "negative maker fees via the VIP ladder" is simply not on the table: you keep paying to make, just less, until the very top tier makes it free. The taker side compresses on a different schedule and never reaches zero (0.0170% at VIP 9), which is why a desk's <em>maker ratio</em> is the lever that decides how heavy the fee line is. One more gate that trips desks up: <strong>every VIP band requires a minimum BNB balance as well as the volume</strong> — 100 BNB for VIP 3, for instance — so an account that sweeps BNB out nightly can clear the volume test and still be billed a tier lower.</p>
 <p>Paying fees in BNB takes a further 10% off USDⓈ-M futures fees at any tier. Negative maker pricing on Binance lives in the dedicated market-maker program, covered next. For the full Binance tier table and a live calculator, see our <a href="/en/blog/binance-fee-calculator-2026.html">Binance fee calculator</a>, and for the spot side and the BNB balance each tier asks for, <a href="/en/blog/binance-vip-fee-tiers-2026.html">Binance VIP fee tiers</a>. For the starting point every maker band is measured down from, see <a href="/en/blog/binance-futures-fee-schedule-2026.html">where Binance’s USDⓈ-M maker fee sits before any rebate</a>.</p>
 
 <h2>The dedicated market-maker program: a different animal</h2>
@@ -226,11 +226,11 @@
 <p>The takeaway for a desk: the dedicated program can beat the VIP ladder on <em>specific pairs you are willing to quote continuously</em>, but it comes with obligations, performance repricing, and — critically — usually <strong>replaces the public VIP pricing and shuts you out of volume and affiliate promotions</strong>. It is the right call for a committed liquidity provider on a handful of books, and the wrong call for a multi-strategy quant desk that wants flexibility across hundreds of symbols.</p>
 
 <h2>Worked example: VIP ladder vs. dedicated program on the same flow</h2>
-<p>Take a desk running <strong>$300M / month</strong> in USDⓈ-M futures, 80% of it filled as a maker ($240M maker volume). At that volume it sits in Binance's VIP 3 band (≥ $250M). Compare two configurations.</p>
+<p>Take a desk running <strong>$300M / month</strong> in USDⓈ-M futures, 80% of it filled as a maker ($240M maker volume). At that volume it sits in Binance's VIP 3 band (≥ $50M, and ≥ 100 BNB held). Compare two configurations.</p>
 <table class="compare">
 <thead><tr><th>Configuration</th><th>Maker rate</th><th>Maker volume</th><th>Net maker fee / month</th></tr></thead>
 <tbody>
-<tr><td>VIP 3 ladder (≥$250M)</td><td>0.0120%</td><td>$240M</td><td>You pay $28,800</td></tr>
+<tr><td>VIP 3 ladder (≥$50M)</td><td>0.0120%</td><td>$240M</td><td>You pay $28,800</td></tr>
 <tr><td>Dedicated MM, illustrative -0.003% on quoted pairs</td><td>-0.003%</td><td>$240M</td><td>You earn $7,200</td></tr>
 <tr><td><strong>Swing</strong></td><td>—</td><td>—</td><td><strong>$36,000 / month</strong></td></tr>
 </tbody>
@@ -247,7 +247,7 @@
 <tr><td>Dedicated MM program participant</td><td><strong>Usually excluded.</strong> MM-program accounts are typically removed from VIP/volume <em>and</em> affiliate promotions. The MM agreement is your compensation.</td></tr>
 </tbody>
 </table>
-<p>The practical sweet spot is exactly where most real desks live: anyone from Regular up through VIP 2 — under $250M of 30-day futures volume — is paying a positive maker fee, and a referral rebate is measured on every basis point of it. A desk at VIP 2 (0.0140% maker) running $80M/month at an 80% maker ratio pays roughly $8,960 in monthly maker fees, plus its taker fees; that bill is the base any rebate is measured against, and claiming it does not touch strategy, custody, or API keys. The rebate compounds with the maker discount you already earn by posting limit orders; it does not replace it. The same logic is why grid and quant flow benefits twice — see <a href="/en/blog/grid-bot-fee-optimization.html">grid bot fee optimization</a> for the maker-ratio mechanics. Getting onto the affiliate side of that ledger yourself is its own process: see <a href="/en/blog/binance-affiliate-program-requirements.html">what Binance asks of an affiliate applicant</a>.</p>
+<p>The practical sweet spot is exactly where most real desks live: anyone from Regular up through VIP 2 — under $50M of 30-day futures volume — is paying a positive maker fee, and a referral rebate is measured on every basis point of it. A desk at VIP 2 (0.0160% maker) running $30M/month at an 80% maker ratio pays roughly $3,840 in monthly maker fees, plus its taker fees; that bill is the base any rebate is measured against, and claiming it does not touch strategy, custody, or API keys. The rebate compounds with the maker discount you already earn by posting limit orders; it does not replace it. The same logic is why grid and quant flow benefits twice — see <a href="/en/blog/grid-bot-fee-optimization.html">grid bot fee optimization</a> for the maker-ratio mechanics. Getting onto the affiliate side of that ledger yourself is its own process: see <a href="/en/blog/binance-affiliate-program-requirements.html">what Binance asks of an affiliate applicant</a>.</p>
 <p>The corollary is the part to be honest about: <strong>on Binance the referral rebate stops long before the maker fee reaches zero</strong>, because commissions end at VIP 3, and Futures commissions are capped at 12 months per referral. If you are at VIP 3 or above, or inside a dedicated MM program, the rebate is no longer your fee lever — your tier and program negotiation are. For everyone below that, which is the overwhelming majority of trading desks, a referral rebate on a positive maker fee is the lower-friction move.</p>
 
 <h2>Existing account? You may still be eligible</h2>
@@ -255,7 +255,7 @@
 
 <h2>How to decide, in one pass</h2>
 <ul>
-<li><strong>Below VIP 3 (under $250M of 30-day futures volume)?</strong> Your maker fee is positive and a referral rebate can still apply. Optimise your maker ratio with post-only fills and stack a <a href="/en/binance-rebate.html">Binance rebate</a> on top. This is most desks.</li>
+<li><strong>Below VIP 3 (under $50M of 30-day futures volume)?</strong> Your maker fee is positive and a referral rebate can still apply. Optimise your maker ratio with post-only fills and stack a <a href="/en/binance-rebate.html">Binance rebate</a> on top. This is most desks.</li>
 <li><strong>Committed to quoting a handful of pairs continuously?</strong> Model the dedicated MM program — but price in the quoting obligation, the performance repricing, and giving up public-tier pricing and any affiliate rebate.</li>
 <li><strong>Multi-strategy across many symbols?</strong> Stay on the ladder for flexibility; the program's per-pair obligations rarely fit diversified flow.</li>
 <li><strong>Already at VIP 3 or above?</strong> Binance's referral commission has stopped at your tier. Focus on maker ratio and BNB fee payment, and negotiate your tier or MM terms directly.</li>
@@ -268,7 +268,7 @@
         </div>
         <div class="faq-list">
           <details class="faq-item" open><summary class="faq-q">What is a negative maker fee in crypto trading?<span class="plus">+</span></summary><div class="faq-a">A negative maker fee means the exchange pays you instead of charging you when your resting limit order is filled as a maker. The taker on the other side pays a positive fee, the exchange keeps the spread, and a portion is credited back to you for supplying liquidity. It only earns on orders that actually fill as makers — unfilled or spread-crossing orders earn nothing.</div></details>
-          <details class="faq-item"><summary class="faq-q">At what volume does the maker fee go negative on Binance?<span class="plus">+</span></summary><div class="faq-a">On Binance&#x27;s published USDⓈ-M futures ladder it doesn&#x27;t. The maker fee steps down from 0.0200% at Regular to 0.0100% at VIP 4 (about $600M in 30-day volume) and reaches 0.0000% at VIP 8 (about $15B), where it stays at VIP 9. Negative maker fees on Binance come through the dedicated market-maker program, on selected pairs and repriced on performance. Below the top tiers, the ladder keeps your maker fee positive but reduced.</div></details>
+          <details class="faq-item"><summary class="faq-q">At what volume does the maker fee go negative on Binance?<span class="plus">+</span></summary><div class="faq-a">On Binance&#x27;s published USDⓈ-M futures ladder it doesn&#x27;t. The maker fee steps down from 0.0200% at Regular to 0.0100% at VIP 4 (about $600M in 30-day volume), 0.0020% at VIP 8 (about $12.5B) and 0.0000% only at VIP 9 (about $25B). Negative maker fees on Binance come through the dedicated market-maker program, on selected pairs and repriced on performance. Below the top tiers, the ladder keeps your maker fee positive but reduced.</div></details>
           <details class="faq-item"><summary class="faq-q">What is the difference between the VIP fee ladder and a dedicated market-maker program?<span class="plus">+</span></summary><div class="faq-a">The VIP ladder is automatic — you earn the rate by hitting a 30-day volume threshold, with no obligations. The dedicated market-maker program is an application-based agreement where you select pairs, often post collateral, and take on quoting obligations in exchange for negotiated negative fees on selected pairs that get repriced based on your performance. Crucially, joining the dedicated program usually replaces the public VIP pricing and excludes you from volume and affiliate promotions.</div></details>
           <details class="faq-item"><summary class="faq-q">How do I apply to the Binance market-maker program?<span class="plus">+</span></summary><div class="faq-a">The published entry bar is 30-day volume above 1,000 BTC (comparable volume on another exchange is also accepted), plus quality market-making strategies. You apply by emailing the program desk (mmprogram@binance.com) with proof of your market-making volume, or through your Key Account Manager. Binance.US runs a parallel program encouraging applicants above $10M monthly volume, with ranked rebates for top performers.</div></details>
           <details class="faq-item"><summary class="faq-q">Does a third-party affiliate rebate stack with VIP maker fees?<span class="plus">+</span></summary><div class="faq-a">Yes, on a positive maker fee and within Binance&#x27;s limits. From Regular up through VIP 2 you pay a positive maker fee, and a referral rebate is measured on that paid fee, stacking on top of your BNB discount and VIP tier. Binance stops referral commissions once a referred user reaches VIP 3 and caps Futures commissions at 12 months per referral, and dedicated market-maker program participants are typically excluded from affiliate and volume promotions altogether.</div></details>

@@ -117,33 +117,34 @@
         <p>The spot schedule is symmetric — maker and taker are the same at every tier. The big steps are between Regular → VIP 1 (the bottom of the volume gate) and again between VIP 4 → VIP 5 (the institutional gate). Futures is different: it is the only side where the maker line can cross zero, which we cover in <a href="/en/blog/crypto-market-maker-rebates.html">the point where maker fees go negative</a>.</p>
 
         <table class="compare">
-          <thead><tr><th>VIP tier</th><th>30-day spot volume (BUSD/USDT)</th><th>Maker fee</th><th>Taker fee</th></tr></thead>
+          <thead><tr><th>VIP tier</th><th>30-day spot volume (USD equiv.)</th><th>Min BNB balance</th><th>Maker fee</th><th>Taker fee</th></tr></thead>
           <tbody>
-            <tr><td>Regular</td><td>&lt; $1M</td><td>0.1000%</td><td>0.1000%</td></tr>
-            <tr><td>VIP 1</td><td>≥ $1M</td><td>0.0900%</td><td>0.1000%</td></tr>
-            <tr><td>VIP 2</td><td>≥ $5M</td><td>0.0800%</td><td>0.1000%</td></tr>
-            <tr><td>VIP 3</td><td>≥ $20M</td><td>0.0420%</td><td>0.0600%</td></tr>
-            <tr><td>VIP 4</td><td>≥ $100M</td><td>0.0420%</td><td>0.0540%</td></tr>
-            <tr><td>VIP 5</td><td>≥ $150M</td><td>0.0360%</td><td>0.0480%</td></tr>
-            <tr><td>VIP 6</td><td>≥ $400M</td><td>0.0300%</td><td>0.0420%</td></tr>
-            <tr><td>VIP 7</td><td>≥ $800M</td><td>0.0240%</td><td>0.0360%</td></tr>
-            <tr><td>VIP 8</td><td>≥ $2B</td><td>0.0180%</td><td>0.0300%</td></tr>
-            <tr><td>VIP 9</td><td>≥ $4B</td><td>0.0120%</td><td>0.0240%</td></tr>
+            <tr><td>Regular</td><td>&lt; $1M</td><td>&mdash;</td><td>0.1000%</td><td>0.1000%</td></tr>
+            <tr><td>VIP 1</td><td>≥ $1M</td><td>≥ 5 BNB</td><td>0.0900%</td><td>0.1000%</td></tr>
+            <tr><td>VIP 2</td><td>≥ $5M</td><td>≥ 25 BNB</td><td>0.0800%</td><td>0.1000%</td></tr>
+            <tr><td>VIP 3</td><td>≥ $20M</td><td>≥ 100 BNB</td><td>0.0400%</td><td>0.0600%</td></tr>
+            <tr><td>VIP 4</td><td>≥ $75M</td><td>≥ 500 BNB</td><td>0.0400%</td><td>0.0520%</td></tr>
+            <tr><td>VIP 5</td><td>≥ $150M</td><td>≥ 1,000 BNB</td><td>0.0250%</td><td>0.0310%</td></tr>
+            <tr><td>VIP 6</td><td>≥ $400M</td><td>≥ 1,750 BNB</td><td>0.0200%</td><td>0.0290%</td></tr>
+            <tr><td>VIP 7</td><td>≥ $800M</td><td>≥ 3,000 BNB</td><td>0.0190%</td><td>0.0280%</td></tr>
+            <tr><td>VIP 8</td><td>≥ $2B</td><td>≥ 4,500 BNB</td><td>0.0160%</td><td>0.0250%</td></tr>
+            <tr><td>VIP 9</td><td>≥ $4B</td><td>≥ 5,500 BNB</td><td>0.0110%</td><td>0.0230%</td></tr>
           </tbody>
         </table>
-        <p class="hero-note">Schedule is approximate to the published rates at time of writing; Binance does adjust the bands occasionally. Pay with BNB to take an additional 25% off.</p>
+        <p class="hero-note">Read from Binance's published spot schedule on 2026-09-18. Every VIP band needs the 30-day volume <em>and</em> the minimum BNB balance in the column above — clear one without the other and you stay a tier down. Spot volume counts spot, margin, convert, copy trading and trading bots. Pay fees in BNB to take an additional 25% off.</p>
 
         <h2>Binance USDT-M futures fee schedule</h2>
         <p>USDT-M perpetuals and quarterly futures use a separate volume table from spot — and the futures bands are easier to climb, because the volume that counts is futures notional, which moves an order of magnitude faster than spot. (Binance's app writes this product <strong>USDⓈ-M</strong>; USDT-M, USDT-margined and "USDT perpetual" all mean the same contracts and the same fee table.)</p>
 
         <table class="compare">
-          <thead><tr><th>VIP tier</th><th>30-day futures volume (USDT)</th><th>Maker fee</th><th>Taker fee</th></tr></thead>
+          <thead><tr><th>VIP tier</th><th>30-day futures volume (USDT)</th><th>Min BNB balance</th><th>Maker fee</th><th>Taker fee</th></tr></thead>
           <tbody>
-            <tr><td>Regular</td><td>&lt; $15M</td><td>0.0200%</td><td>0.0500%</td></tr>
-            <tr><td>VIP 1</td><td>≥ $15M</td><td>0.0160%</td><td>0.0400%</td></tr>
+            <tr><td>Regular</td><td>&lt; $5M</td><td>&mdash;</td><td>0.0200%</td><td>0.0500%</td></tr>
+            <tr><td>VIP 1</td><td>≥ $5M</td><td>≥ 5 BNB</td><td>0.0180%</td><td>0.0500%</td></tr>
+            <tr><td>VIP 2</td><td>≥ $10M</td><td>≥ 25 BNB</td><td>0.0160%</td><td>0.0400%</td></tr>
           </tbody>
         </table>
-        <p class="hero-note">This table stops at VIP 1 on purpose. Regular and VIP 1 cover essentially everyone who arrives at a fee calculator — every worked example below sits in the Regular band — and Binance revises the higher futures volume thresholds. A stale threshold is worse than no threshold, so we keep the full tier-by-tier futures reference on <strong>one page only</strong> rather than repeating a copy here that can drift out of sync. If you are near a tier boundary, confirm against Binance's own <a href="https://www.binance.com/en/fee/futureFee" rel="nofollow noopener">futures fee page</a> before you plan around it. The BNB futures discount (10% off, while the promo runs) sits on top of whatever tier you are in.</p>
+        <p class="hero-note">This table stops at VIP 2 on purpose — and note the shape: <strong>VIP 1 does nothing for the taker leg</strong> (still 0.0500%), so a taker-heavy book only sees a real cut at VIP 2. Regular through VIP 2 covers essentially everyone who arrives at a fee calculator — every worked example below sits in the Regular band — and Binance revises the higher futures volume thresholds. A stale threshold is worse than no threshold, so we keep the full tier-by-tier futures reference on <strong>one page only</strong> rather than repeating a copy here that can drift out of sync. If you are near a tier boundary, confirm against Binance's own <a href="https://www.binance.com/en/fee/futureFee" rel="nofollow noopener">futures fee page</a> before you plan around it. The BNB futures discount (10% off, while the promo runs) sits on top of whatever tier you are in.</p>
         <p>Futures is where most high-volume traders pay the bulk of their fees, and the maker/taker split plus funding decide the real cost. For the full <strong>USDT-M (USDⓈ-M) and Coin-M fee schedule</strong> — every VIP tier, the 10%-vs-25% BNB difference, and why funding is the line no fee schedule prints — see our dedicated <a href="/en/blog/binance-futures-fee-schedule-2026.html">Binance futures fee schedule 2026</a>.</p>
 
         <h2>Worked example #1 — a grid bot trader at $5M / month</h2>
@@ -154,7 +155,7 @@
           <li>Gross monthly fees = <strong>$1,225</strong></li>
         </ul>
         <p>Apply the BNB futures discount (10% off): <strong>$1,102.50 / month</strong> — roughly <strong>$13,230 a year</strong> in fees from a single $5M / month bot.</p>
-        <p>That annual line is what a rebate works against, and the bot pays it on every fill whether the strategy is profitable or not. For two bots at the same volume, scale linearly; once a single account clears $15M / month and meets Binance's VIP 1 criteria, the futures rates themselves step down. If the account behind the bot holds $50,000 or more in funds, we offer an above-market rebate rate, assessed one-on-one — <a href="https://t.me/Jack168668" target="_blank" rel="noopener">contact us for a quote</a>. <a href="/en/binance-rebate.html">See the Binance rebate page</a> for how it works.</p>
+        <p>That annual line is what a rebate works against, and the bot pays it on every fill whether the strategy is profitable or not. For two bots at the same volume, scale linearly; once a single account clears $5M / month and holds at least 5 BNB, it meets Binance's VIP 1 criteria and the maker rate steps down (the taker rate does not move until VIP 2 at $10M). If the account behind the bot holds $50,000 or more in funds, we offer an above-market rebate rate, assessed one-on-one — <a href="https://t.me/Jack168668" target="_blank" rel="noopener">contact us for a quote</a>. <a href="/en/binance-rebate.html">See the Binance rebate page</a> for how it works.</p>
 
         <h2>Worked example #2 — a high-frequency taker at $20M / month</h2>
         <p>An HFT desk hitting both sides aggressively might be 30% maker, 70% taker at $20M monthly.</p>
@@ -163,7 +164,7 @@
           <li>Taker = $14M × 0.0500% = <strong>$7,000</strong></li>
           <li>Gross = <strong>$8,200 / month</strong></li>
         </ul>
-        <p>Pay with BNB (10% off futures): <strong>$7,380 / month</strong>. At $20M the desk also clears the VIP 1 volume gate ($15M / month); if it meets Binance's VIP 1 criteria, USDT-M rates step down to 0.0160% maker / 0.0400% taker: $960 + $5,600 = <strong>$6,560</strong>, or <strong>~$5,904 / month</strong> after BNB — still about $71,000 a year. At that scale fees are an infrastructure-sized cost line, which is exactly where a one-on-one quote on our premium rebate for $50K+ accounts is worth asking for.</p>
+        <p>Pay with BNB (10% off futures): <strong>$7,380 / month</strong>. At $20M the desk clears the <strong>VIP 2</strong> volume gate ($10M / month, plus ≥ 25 BNB held). Note what VIP 1 would <em>not</em> do here: its taker rate is still 0.0500%, so VIP 1 alone only trims the bill to $8,080 on a 70%-taker book. VIP 2 is where it moves — 0.0160% maker / 0.0400% taker: $960 + $5,600 = <strong>$6,560</strong>, or <strong>~$5,904 / month</strong> after BNB — still about $71,000 a year. At that scale fees are an infrastructure-sized cost line, which is exactly where a one-on-one quote on our premium rebate for $50K+ accounts is worth asking for.</p>
 
         <h2>Worked example #3 — a casual spot trader at $50k / month</h2>
         <p>Not every reader is a quant. A casual buyer making roughly $50k / month in spot trades at the Regular tier pays:</p>
@@ -221,7 +222,7 @@
 <tr><td>$50M</td><td>~$13,000</td><td>~$11,700</td><td>~$140,000</td></tr>
 </tbody>
 </table>
-<p class="hero-note">*Gross = (volume × 80% × 0.02%) + (volume × 20% × 0.05%) at the Regular tier. Crossing the $15M VIP 1 gate lowers the gross fee further, so high-volume rows overstate what a VIP account pays. Always verify current rates against Binance's official schedule.</p>
+<p class="hero-note">*Gross = (volume × 80% × 0.02%) + (volume × 20% × 0.05%) at the Regular tier. Crossing the $5M VIP 1 gate trims the maker leg (the taker leg does not move until VIP 2 at $10M), so high-volume rows overstate what a VIP account pays. Always verify current rates against Binance's official schedule.</p>
 <p><strong>Funds of $50,000 or more?</strong> We offer an above-market rebate rate for $50K+ accounts — the exact rate is assessed one-on-one. <a href="https://t.me/Jack168668" target="_blank" rel="noopener">Contact us on Telegram for a quote</a>.</p>
 <p>For a spot-heavy trader, swap in the 0.10% spot rate (25% off with BNB) — the <a href="/en/#calculator">fee calculator on our homepage</a> lets you plug in your exact volume and trading style, and our <a href="/en/blog/binance-vs-bybit-fees-2026.html">Binance vs Bybit fee breakdown</a> compares venues.</p>
         </section>
