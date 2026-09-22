@@ -47,7 +47,7 @@
     "author":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/en/"},
     "publisher":{"@type":"Organization","name":"JackTrader","url":"https://www.jacktrader.xyz/en/","logo":{"@type":"ImageObject","url":"https://www.jacktrader.xyz/assets/brand/favicon.svg"}},
     "datePublished":"2026-06-09",
-    "dateModified":"2026-07-10",
+    "dateModified":"2026-09-22",
     "mainEntityOfPage":"https://www.jacktrader.xyz/en/blog/grid-bot-fee-optimization.html",
     "image":"https://www.jacktrader.xyz/assets/rebate/monthly-volume.jpg",
     "articleSection":"Quant trading",
@@ -129,7 +129,7 @@
         <h3>Knob 3 — affiliate side: the rebate</h3>
         <p>This is the knob most grid-bot operators leave on the table. The exchange has already decided how much of your fees to charge — and a defined share of those fees goes to whatever affiliate channel your account is bound to. If your account is on a default referral or a typical rebate site, that share is captured by someone else and you see none of it.</p>
         <p><a href="/en/binance-rebate.html">JackTrader's Binance offer</a> is split by account size rather than promising everyone the same percentage. For traders with $50,000 or more in funds, we offer an above-market rebate rate. The exact rate is assessed one-on-one — contact us for a quote. Accounts of any size can still pick up the new-user reward. Each quarter, the first 15 new Binance users who sign up through a JackTrader invite receive a $20 cash reward. Spots are limited and first-come, first-served — message us on Telegram to confirm how to claim.</p>
-        <p>Whatever the channel, a rebate is calculated on the fee line you actually pay — after the BNB discount and your VIP rate. For the $600k / month grid above:</p>
+        <p>Whatever the channel, a rebate is calculated on the fee line you actually pay — after the BNB discount and your VIP rate. Two Binance rules cap it, verbatim from Binance's referral FAQ: commission is paid only on referred users at Regular or VIP 1–2 — <em>&ldquo;The commissions will be discontinued once the referred user reaches VIP 3 or higher&rdquo;</em> — and futures commission runs <em>&ldquo;only for 12 months from the day the referrals open their Futures Accounts&rdquo;</em>. For the $600k / month grid above:</p>
         <ul>
           <li>Gross fees ≈ $147 / month</li>
           <li>After paying fees in BNB (10% off) ≈ <strong>$132 / month, or ~$1,590 / year</strong></li>
@@ -144,7 +144,8 @@
           <li>Gross fees = $5,200 / month</li>
           <li>BNB discount (10%) → <strong>$4,680 / month, ~$56,160 / year</strong></li>
         </ul>
-        <p>$56k / year in fees is more than the cost of one decent quant infrastructure engineer in many markets. At this scale the rebate line deserves a proper one-on-one quote rather than whatever default referral the account happened to sign up under — it is a meaningful component of net returns for a desk at this volume.</p>
+        <p>Those are Regular rates. $20M a month already clears the VIP 2 volume gate ($10M / month) — provided the account also holds ≥ 25 BNB. At VIP 2: maker $16M × 0.0160% = $2,560, taker $4M × 0.0400% = $1,600, gross $4,160, after BNB ≈ $3,744 / month, <strong>~$44,930 / year</strong> — about $11k a year less than Regular. Without the 25 BNB the desk stays on Regular rates despite the volume.</p>
+        <p>Even at VIP 2, $45k–56k / year in fees is more than the cost of one decent quant infrastructure engineer in many markets. At this scale the rebate line deserves a proper one-on-one quote rather than whatever default referral the account happened to sign up under — it is a meaningful component of net returns for a desk at this volume.</p>
 
         <h2>Binance for grid bots — the effective rate after discounts</h2>
         <p>On Binance, what a grid really pays comes from the blend of its fills, not the sticker rate:</p>
