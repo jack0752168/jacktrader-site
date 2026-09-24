@@ -69,3 +69,5 @@ Allow: /
 
 Sitemap: https://www.jacktrader.xyz/sitemap.xml
 Sitemap: https://www.jacktrader.xyz/sitemap2.xml
+# 除名 sitemap：全是 noindex 页，列出来只为让 Googlebot 回抓并把它们从索引丢掉（不是催收录）
+Sitemap: https://www.jacktrader.xyz/sitemap-noindex.xml
