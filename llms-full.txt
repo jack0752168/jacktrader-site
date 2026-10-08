@@ -2401,48 +2401,50 @@ URL: https://www.jacktrader.xyz/en/blog/binance-lifetime-fee-rebate.html
 Summary: Is a Binance lifetime fee rebate real in 2026? What 'lifetime' actually means, the futures 12-month limit, and the rebind eligibility catch to check first.
 
 Home / Blog / Binance Lifetime Fee Rebate 2026
-Crypto fees · Updated September 2026
+Crypto fees · Updated October 2026
 Binance lifetime fee rebate 2026: is it real, and how do you get one?
-"Lifetime rebate" is one of the most-searched and most-misunderstood phrases in crypto referrals. The short answer: the rebate really is ongoing — but "lifetime" means bound to your account, not a fixed percentage guaranteed forever. Here's exactly what you get, what you don't, and how to lock it in.
+"Lifetime rebate" is not an unconditional promise. Referral binding and commission eligibility are separate: commissions stop at VIP 3 or higher, and futures commissions also have a 12-month limit unless the referrer has passed Binance's 30% commission evaluation or above. A binding does not guarantee a fixed percentage or payments forever.
 
 ## The short version
-A Binance fee rebate paid through a referral channel keeps paying for as long as your account stays bound to the same referrer and you keep trading. For spot trading, there is no 30-day or 12-month timer that switches it off — that's the legitimate sense in which it's "lifetime" for spot. What it is not is a contract that locks a specific percentage forever: any quoted rate is reviewed per account, and the dollars you keep move with your VIP tier. Treat "lifetime" as "ongoing for spot, no expiry counter" — not "a guaranteed percentage until the end of time."(Binance exception: referral commissions on futures accounts are limited to 12 months from when the referred user opens their Futures account. This limit is removed if the referrer has passed the 30% referral commission evaluation. Spot rebates are unaffected.) A rebate is not the only recurring credit on the maker side — see market-maker rebate programs for the exchange-side equivalent and how the two interact.
+A referral binding alone does not guarantee an ongoing Binance fee rebate. Binance pays referral commissions only for Regular or VIP 1–2 users; commissions stop when the referred user reaches VIP 3 or higher. For futures accounts, there is also a 12-month limit from the day the referred user opens their Futures account, removed only if the referrer has passed Binance's 30% referral commission evaluation or above. The VIP 3 cutoff still applies. Any share passed back to a trader depends on the channel's terms, and neither a fixed percentage nor lifetime payments are guaranteed. These limits come from Binance's Referral Pro FAQ. A rebate is not the only recurring credit on the maker side — see market-maker rebate programs for the exchange-side equivalent and how the two interact.
 ## What "lifetime" really refers to
-On Binance, the rebate isn't a coupon you redeem once. It's a property of the referral binding on your account. When you register through a referral link, your account is permanently associated with that referrer in Binance's system. From then on, every trading fee you generate produces referral commission on Binance's side, and the channel can pass a share of it back to you — with nothing to re-claim.
-That binding doesn't carry an expiry date. So the rebate runs until one of three things happens:
+On Binance, referral binding identifies the referrer associated with your account. It does not make every future trading fee commission-eligible. Commissions apply only while the referred user is Regular or VIP 1–2 and stop at VIP 3 or higher. Futures commissions also have the 12-month limit described above, removed only if the referrer has passed Binance's 30% commission evaluation or above. A channel can pass back a share of eligible commissions under its agreed terms.
+Continued binding is not the same as continued eligibility. Payments can stop when:
 The binding is removed or the account is closed.
 You stop trading (no fees = no rebate, obviously).
+The referred user reaches VIP 3 or higher.
+The 12-month futures limit is reached without the qualifying referral evaluation.
 Platform policy changes the underlying commission structure.
-For spot trading, none of those is a timer — and that's why it's fair to call it a lifetime rebate. (Binance exception: futures commissions stop after 12 months unless the referrer holds a 30% or higher commission evaluation.) Either way, it's misleading to read "lifetime" as "a frozen number".
+The futures time limit does not make spot referral commissions unconditional: the VIP 3 or higher cutoff still applies. Passing the qualifying evaluation removes the 12-month futures limit, not the VIP cutoff. It is misleading to read "lifetime" as either guaranteed duration or a frozen percentage.
 ## Lifetime vs the fine print: what can still change
 
-Stays "lifetime"
-Can still move
+Referral binding
+Commission eligibility and amount
 
-No expiry date on the rebate itself
-Your effective % at very high VIP tiers
+Binding alone does not guarantee rebates
+Commissions stop at VIP 3 or higher
 
-Binding persists across years of trading
-The absolute dollars (scale with volume)
+A binding can remain while eligibility ends
+Futures: 12 months unless the referrer passed the qualifying evaluation
 
-Referral commission keeps accruing on spot fees
-Binance's affiliate policy / schedule
+Only eligible trading fees produce commissions
+Binance's referral policy and the channel's agreed terms
 
 No need to re-claim each week
 Whether a promo top-up applies
-Any rebate percentage is reviewed per account and is not a guarantee. Futures commission is subject to Binance's 12-month limit described above. Verify current rates against Binance's official schedule.
+Any rebate percentage is reviewed per account and is not a guarantee. Commissions stop at VIP 3 or higher; futures commissions also have the 12-month limit and qualifying-evaluation exception described above. Verify current rates against Binance's official schedule.
 ## Worked example: the fee base a "lifetime" rebate works on
 A grid-bot trader running $2,000,000 / month in USDT-M futures, 80% maker / 20% taker:
 Gross fee ≈ $520 / month at the Regular 0.02%/0.05% rate.
 Over a year that's ≈ $6,240 in fees; over three years of steady trading, ≈ $18,720.
-Because this is a futures account, Binance's referral commission on it is limited to 12 months unless the referrer has passed the 30% commission evaluation — ask any channel how that applies before you count on year two.
-That persistence is the entire point of "lifetime": it isn't a bigger one-time number, it's a rebate on a fee base that keeps growing for as long as the binding stands. Plug your own volume into the Binance fee calculator to see your own fee base. The size of any pass-through is capped by whichever commission tier the channel itself holds, which is what the Binance affiliate program's own requirements and commission ceilings actually determine. On the trader side, the number a rebate is a share of comes from the Binance futures fee schedule itself.
-## How to lock in a lifetime Binance rebate
+Binance referral commissions stop if the user reaches VIP 3 or higher. This futures account also has a 12-month commission limit unless the referrer has passed Binance's 30% commission evaluation or above — ask any channel how those limits apply before counting on rebates.
+These totals describe trading fees, not guaranteed rebate income over one or three years. Referral commissions stop at VIP 3 or higher, and futures commissions also have the 12-month limit unless the referrer passed the qualifying evaluation. Plug your own volume into the Binance fee calculator to see your own fee base. The size of any pass-through is capped by whichever commission tier the channel itself holds, which is what the Binance affiliate program's own requirements and commission ceilings actually determine. On the trader side, the number a rebate is a share of comes from the Binance futures fee schedule itself.
+## How to check Binance rebate eligibility
 Know which tier the channel sits on. On a standard Binance referral, the referrer earns a base 20% commission and can share only 0%, 5% or 10% of it with you; approved Binance spot affiliates earn from 41% up to 50%. See what a crypto sub-broker is.
 Enable BNB. The BNB discount cuts the gross fee first (25% spot / 10% futures), and the rebate stacks on top — they don't cancel. Details in the Binance fee calculator.
 Already have an account? You may still qualify via the one-time official rebind — it tests your trailing 90-day trading volume (5,000 USD or less), not how long ago you registered, and needs 150,000 USD within 30 days to activate. Walkthrough in rebinding an existing Binance account.
-Reconcile regularly. A genuine lifetime rebate is verifiable: match what you receive against your Binance fee history, using whatever payout method you agreed on. If the payouts quietly stop, it was never "lifetime".
-Avoid "guaranteed 50%+ forever" claims. Those overstate either the percentage or the permanence. The honest version is ongoing, single-tier, with the rate and payout method confirmed one-on-one — read how Binance referral rebates really work for the catch.
+Reconcile regularly. Match what you receive against your Binance fee history and agreed payout terms. A payout stopping can reflect the VIP 3 cutoff or the 12-month futures limit, rather than a broken referral binding.
+Avoid "guaranteed 50%+ forever" claims. Those overstate either the percentage or the permanence. The honest version is conditional, single-tier, with the VIP 3 cutoff and 12-month futures limit explained, and the rate and payout method confirmed one-on-one — read how Binance referral rebates really work for the catch.
 ## What JackTrader offers on Binance
 $20 cash for new Binance users. Each quarter, the first 15 new Binance users who sign up through a JackTrader invite receive a $20 cash reward. Spots are limited and first-come, first-served — message us on Telegram to confirm how to claim.
 Premium rebates for $50K+ accounts. For traders with $50,000 or more in funds, we offer an above-market rebate rate. The exact rate is assessed one-on-one — contact us for a quote.
@@ -2451,24 +2453,24 @@ Compare your options: if you're weighing which venue to bind to, the highest-reb
 ## FAQ
 
 Is the Binance lifetime fee rebate real?+
-Yes, in the sense that the rebate keeps paying for as long as your account stays bound to the same referrer and you keep trading. For spot trading there is no expiry counter; for futures accounts Binance limits referral commissions to 12 months from when the referred user opens a Futures account (this limit drops if the referrer has passed the 30% commission evaluation). What "lifetime" does not mean is a fixed percentage forever: the rate is reviewed per account and platform policy can change. So it is an ongoing rebate, not a contractual guarantee of a number.
+Not as an unconditional lifetime promise. Referral binding and commission eligibility are separate. Binance referral commissions apply only while the referred user is Regular or VIP 1–2 and stop at VIP 3 or higher. Futures referral commissions also have a 12-month limit from when the referred user opens a Futures account; Binance removes that limit only if the referrer has passed its 30% referral commission evaluation or above. Any rebate paid to you depends on the channel's agreed terms; neither a fixed percentage nor payments forever are guaranteed.
 
 What does 'lifetime' actually mean for a Binance rebate?+
-It means the rebate is attached to the referral binding on your account rather than to a one-off promo. Once your account is bound to a channel, every fee you generate keeps producing referral commission on Binance's side, with no need to re-claim; what share of it reaches you depends on the channel's terms. For spot trading it stops only if the binding is removed, the account is closed, or you stop trading. For futures accounts Binance additionally applies a 12-month limit on referral commissions (waived if the referrer has passed the 30% commission evaluation).
+It describes an account's referral binding rather than a one-off promotion, but that binding does not guarantee continuing commission eligibility. Binance referral commissions apply only while the referred user is Regular or VIP 1–2 and stop at VIP 3 or higher. Futures referral commissions also have a 12-month limit from when the referred user opens a Futures account; Binance removes that limit only if the referrer has passed its 30% referral commission evaluation or above. A channel can pass back a share of eligible commissions under its agreed terms.
 
 Does the rebate percentage stay the same for life?+
-No channel can honestly lock a percentage for life. The absolute dollars you get back move with your VIP tier and trading volume, and at very high VIP tiers the rebate-as-percentage can change because Binance's affiliate rules differ for ultra-low-fee accounts. Anyone advertising a guaranteed fixed percentage forever is overstating it — read the terms.
+No channel can honestly lock a percentage for life. The amount depends on eligible trading fees and the channel's agreed terms. Binance referral commissions apply only while the referred user is Regular or VIP 1–2 and stop at VIP 3 or higher. Futures referral commissions also have a 12-month limit from when the referred user opens a Futures account; Binance removes that limit only if the referrer has passed its 30% referral commission evaluation or above. Reaching VIP 3 ends commissions rather than merely changing the percentage. A guaranteed fixed percentage forever is an overstatement.
 
 Can I get a lifetime rebate on a Binance account I already have?+
-Possibly. Binance operates a one-time official rebind for existing accounts, but the bar is specific: completed KYC, a master account with no current referrer, and 5,000 USD or less of total trading volume in the past 90 days. That 90 days is a lookback on volume, not a countdown from when you registered — account age is irrelevant. Submitting is also not the end: the binding only takes effect once the account trades 150,000 USD within 30 days, with no partial credit below that. If you are ineligible, the existing binding stands — check before assuming either way.
+You may qualify for a referral binding, but this does not guarantee a lifetime rebate. Binance operates a one-time official rebind for existing accounts, but the bar is specific: completed KYC, a master account with no current referrer, and 5,000 USD or less of total trading volume in the past 90 days. That 90 days is a lookback on volume, not a countdown from when you registered — account age is irrelevant. Submitting is also not the end: the binding only takes effect once the account trades 150,000 USD within 30 days, with no partial credit below that. If you are ineligible, the existing binding stands — check before assuming either way. Binance referral commissions apply only while the referred user is Regular or VIP 1–2 and stop at VIP 3 or higher. Futures referral commissions also have a 12-month limit from when the referred user opens a Futures account; Binance removes that limit only if the referrer has passed its 30% referral commission evaluation or above.
 
 How do I lock in a lifetime Binance fee rebate?+
-Register a fresh Binance account through a referral channel — that is the clean route, with no activation volume to hit. An existing account can only be rebound if it passes Binance's eligibility test (KYC done, master account, no current referrer, 5,000 USD or less traded in the past 90 days) and then trades 150,000 USD within 30 days to activate. Either way, keep the binding in place and enable BNB for the stacking discount. Confirm the rebate rate and payout method with the channel one-on-one, then check what you receive against your Binance fee history so you know it is actually being paid.
+You cannot lock in an unconditional lifetime rebate. Binance referral commissions apply only while the referred user is Regular or VIP 1–2 and stop at VIP 3 or higher. Futures referral commissions also have a 12-month limit from when the referred user opens a Futures account; Binance removes that limit only if the referrer has passed its 30% referral commission evaluation or above. Registering a fresh Binance account through a referral channel is the clean binding route, with no rebind activation volume to hit. An existing account can only be rebound if it passes Binance's eligibility test (KYC done, master account, no current referrer, 5,000 USD or less traded in the past 90 days) and then trades 150,000 USD within 30 days to activate. Confirm the rebate rate and payout method with the channel one-on-one, then reconcile what you receive against your Binance fee history. Do not assume our channel qualifies for the futures time-limit exception.
 
 ## Bind your Binance account the right way
 Register on Binance through JackTrader: $20 cash for new Binance users, premium rebates for $50K+ accounts, and a free Alpha members group. Already have an account? Ask us on Telegram whether it qualifies for Binance's official rebind.
 Register on BinanceBinance rebateAsk on Telegram
-Disclaimer: Fee and commission figures reflect Binance's published rates and rules at the time of writing and may change without notice. "Lifetime" describes a referral binding with no expiry counter on spot, not a guaranteed fixed percentage; Binance limits futures referral commission to 12 months unless the referrer has passed the 30% commission evaluation. Actual rebates depend on account review, Binance's official rules and local regulations. This article is educational and not investment advice. JackTrader is an independent referral partner, single-tier referrals only, and is not affiliated with Binance.
+Disclaimer: Fee and commission figures reflect Binance's published rates and rules at the time of writing and may change without notice. "Lifetime" is not a guarantee of duration or a fixed percentage. Referral commissions stop at VIP 3 or higher; futures commissions also have a 12-month limit from account opening unless the referrer has passed Binance's 30% commission evaluation or above. We do not claim that our channel qualifies for that exception. Actual rebates depend on account review, Binance's official rules and local regulations. This article is educational and not investment advice. JackTrader is an independent referral partner, single-tier referrals only, and is not affiliated with Binance.
 
 
 ---
@@ -2896,14 +2898,14 @@ URL: https://www.jacktrader.xyz/en/blog/binance-sign-up-bonus-2026.html
 Summary: Binance sign-up bonus 2026: what the advertised promo pool actually pays, why it is task-based rather than cash, and why your fee link matters more.
 
 Home / Blog / Binance Sign-Up Bonus 2026
-Crypto bonuses · Updated July 2026
+Crypto bonuses · Updated October 2026
 Binance sign-up bonus 2026: what the "$600 promo code" actually gives you
 Search "Binance sign-up bonus" and you'll see numbers like $100, $600, even "up to $1,000." Almost none of it is cash that lands in your wallet on day one. This guide breaks down what the welcome promo really pays in 2026, what a promo or referral code changes about your account, and why — for anyone who trades more than occasionally — the boring fee rebate is worth far more than the flashy bonus.
 
 ## The short version
 Two different things get called a "bonus," and confusing them costs people money:
 The welcome bonus / promo pool (the "$600") — a set of task-based vouchers Binance hands out to genuinely new accounts. You unlock pieces by depositing, making a first trade, or holding assets. Each piece is usually a fee-rebate voucher, a futures bonus, or a token reward — and each one expires if you don't use it in time.
-The lifetime fee rebate — a percentage of every trading fee you ever pay, routed back to you because your account is bound to a referrer or sub-broker channel. No tasks, and it keeps adding up for as long as the referral stays eligible.
+The ongoing fee rebate — a share of eligible trading fees, available through a referrer or sub-broker channel while the referral stays eligible. Binance stops referral commissions once the referred user reaches VIP 3 or higher, and Futures-account commissions are capped at 12 months from when the referred user opens a Futures account, unless the referrer has passed Binance's 30% referral commission evaluation or above.
 The welcome pool is a one-time headline. The rebate is the thing that actually adds up. Below we show exactly why, with numbers.
 ## What the "$600 bonus" really is
 The advertised figure is a maximum — the total of every voucher you could theoretically unlock, not a lump sum. In practice it breaks into task gates that look roughly like this (exact amounts and tasks change by region and promo cycle):
@@ -2934,13 +2936,13 @@ Capital locked to qualify
 Vouchers are typically fee rebates or futures "bonus" credits — the futures bonus can be used as margin but generally cannot be withdrawn as cash until you meet trading conditions. Treat the headline number as a ceiling almost nobody reaches, not a signing cheque.
 None of this is a scam — the vouchers are real and worth claiming. But the gap between the headline "$600" and what a typical new user actually banks is large, because the tasks are time-gated and the rewards are constrained to specific uses. If you pick your exchange because of the bonus number, you're optimizing the wrong variable.
 ## What a promo code or referral code actually changes
-When you enter a referral or promo code during registration, one durable thing happens: your account is permanently bound to that referrer. That binding is what decides your fee kickback for as long as the referral remains eligible. (Binance publishes two limits on this: commissions stop once the referred user reaches VIP 3 or above, and Futures-account commissions are capped at 12 months per referral.) The welcome vouchers are a side effect that expires in weeks; the fee link is the part that keeps paying.
-This is why the code you sign up with matters more than the bonus it advertises. A plain referral link leaves you on Binance's standard referral mode, where the inviter takes a 20% base commission on your spot fees and decides whether any of it comes back to you — the published choices are 0%, 5% or 10%, and plenty of links pass back nothing at all. A sub-broker channel binds you at a higher tier — the referrer sits on an affiliate or sub-broker rate and can pass a larger share back to you. Same signup, same account, very different lifetime economics. We break the mechanics down in how Binance referral codes really work. If you are weighing whether to apply to Binance directly instead, the eligibility bar for the Binance affiliate program is worth reading first, the commission bands that decide what an approved partner actually earns are broken out separately, and our referral vs affiliate vs sub-broker comparison shows which of the three routes actually pays a solo trader. Our Binance affiliate program review covers whether that application is worth making in the first place.
-## Sign-up bonus vs lifetime fee rebate — side by side
+When you enter a referral or promo code during registration, one durable thing happens: your account is permanently bound to that referrer. That binding is what decides your fee kickback for as long as the referral remains eligible. (Binance publishes two limits on this: commissions stop once the referred user reaches VIP 3 or above, and Futures-account commissions have a 12-month limit from when the referred user opens a Futures account, removed only if the referrer has passed Binance's 30% referral commission evaluation or above.) The welcome vouchers are a side effect that expires in weeks; the fee link is the part that keeps paying.
+This is why the code you sign up with matters more than the bonus it advertises. A plain referral link leaves you on Binance's standard referral mode, where the inviter takes a 20% base commission on your spot fees and decides whether any of it comes back to you — the published choices are 0%, 5% or 10%, and plenty of links pass back nothing at all. A sub-broker channel binds you at a higher tier — the referrer sits on an affiliate or sub-broker rate and can pass a larger share back to you. Same signup, same account, very different ongoing fee economics. We break the mechanics down in how Binance referral codes really work. If you are weighing whether to apply to Binance directly instead, the eligibility bar for the Binance affiliate program is worth reading first, the commission bands that decide what an approved partner actually earns are broken out separately, and our referral vs affiliate vs sub-broker comparison shows which of the three routes actually pays a solo trader. Our Binance affiliate program review covers whether that application is worth making in the first place.
+## Sign-up bonus vs ongoing fee rebate — side by side
 
 Dimension
 Welcome bonus ("$600")
-Lifetime fee rebate
+Ongoing fee rebate
 
 Form
 Expiring vouchers / constrained bonus
@@ -2948,7 +2950,7 @@ Cash-value rebate on real fees paid
 
 How often
 Once, at signup
-Every trade, while the referral stays eligible
+Eligible trades only; commissions stop at VIP 3 or higher. Futures commissions have a 12-month limit unless the referrer has passed Binance's 30% referral commission evaluation or above
 
 Effort to claim
 Multiple timed tasks
@@ -2964,7 +2966,7 @@ Rate and payout method set by the referrer
 
 Value for active traders
 Marginal after month one
-Recurring while the referral stays eligible (futures commission capped at 12 months)
+Recurring while the referral stays eligible (futures commissions have a 12-month limit unless the referrer has passed Binance's 30% referral commission evaluation or above)
 Through JackTrader, a fee rebate applies to accounts with $50,000 or more in funds, at a rate assessed one-on-one; new users get the $20 cash reward (first 15 each quarter) and the free Alpha members group.
 ## Worked example — why the rebate laps the bonus
 Say you're a moderately active trader running a Binance USDT-M grid bot at $1,000,000 notional volume per month, 80% maker / 20% taker at the Regular tier (0.02% maker / 0.05% taker).
@@ -2980,23 +2982,23 @@ Confirm the referral is bound. The referral attached to your account decides whi
 Already have an account? You've missed the new-user vouchers, but the rebate may still be recoverable — an existing account can sometimes be re-linked under Binance's official rebind rule. See how to rebind an existing Binance account.
 The one-time-bind rule and the rebind test that trips people up — it measures your trailing 90-day trading volume, not your account's age — are covered in the Binance rebate page. If you're comparing venues before you sign up, the Binance vs Bybit fee breakdown shows how the two exchanges' fees stack up.
 ## The takeaway
-Chase the bonus if you enjoy the treasure hunt — the vouchers are free and real. But choose your exchange, and the code you sign up with, based on the lifetime fee rebate, because that's the number that follows you for years. A one-time $600 headline you'll realistically claim a fraction of is not worth optimizing over the fee link that sits behind every trade you make.
+Chase the bonus if you enjoy the treasure hunt — the vouchers are free and real. But when choosing your exchange and referral code, compare the ongoing fee rebate on eligible trades with the one-time welcome offer. Binance stops referral commissions once the referred user reaches VIP 3 or higher, and Futures-account commissions are capped at 12 months from when the referred user opens a Futures account, unless the referrer has passed Binance's 30% referral commission evaluation or above. Evaluate the actual rebate terms rather than relying on either the $600 headline or a promise of permanent savings.
 ## FAQ
 
 Is the Binance $600 sign-up bonus real?+
 The advertised figure is a maximum voucher pool, not a guaranteed cash deposit. You unlock it in pieces by completing tasks — deposits, first trades, holding certain assets — and each piece is usually a voucher (trading-fee rebate voucher, futures bonus, or token reward) that expires if unused. Most new users never complete every task, so the amount actually claimed is far below the headline number. The pool size and rules also vary by country and change often.
 
 What does a Binance promo code or referral code actually do?+
-Entering a referral or promo code at sign-up binds your new account to a referrer. Two things follow: you may qualify for whatever welcome-task vouchers are running, and — more importantly — your account is bound to that referrer's fee-kickback rate. The one-time vouchers expire in weeks; the fee link keeps paying as you trade for as long as the referral stays eligible (Binance stops referral commissions once the referred user reaches VIP 3, and caps Futures-account commissions at 12 months).
+Entering a referral or promo code at sign-up binds your new account to a referrer. Two things follow: you may qualify for whatever welcome-task vouchers are running, and — more importantly — your account is bound to that referrer's fee-kickback rate. The one-time vouchers expire in weeks; the fee link keeps paying as you trade for as long as the referral stays eligible (Binance stops referral commissions once the referred user reaches VIP 3 or higher; Futures-account commissions have a 12-month limit from when the referred user opens a Futures account, removed only if the referrer has passed Binance's 30% referral commission evaluation or above).
 
-Can I claim a sign-up bonus and a lifetime fee rebate at the same time?+
+Can I claim a sign-up bonus and an ongoing fee rebate at the same time?+
 Yes. They are separate mechanisms. The welcome vouchers come from Binance's promo budget; the fee rebate comes from the referrer's affiliate or sub-broker share. Signing up through a JackTrader invite does not stop you from completing whatever Binance welcome tasks your account is offered. On top of that, the first 15 new Binance users who sign up through a JackTrader invite each quarter receive a $20 cash reward (message us on Telegram to confirm how to claim), traders with $50,000 or more in funds get an above-market rebate rate assessed one-on-one, and everyone can join our Alpha members group for free.
 
 Do I lose the bonus if I already have a Binance account?+
-Welcome bonuses are for genuinely new registrations, so an existing account usually cannot claim them retroactively. The lifetime fee rebate is different: an existing account can sometimes be re-linked to a sub-broker channel under Binance's official rebind rule — but only if it is a KYC-verified master account with no current referrer and 5,000 USD or less of trading volume over the past 90 days, and the binding then only activates after 150,000 USD of volume within 30 days. It is a volume test, not a countdown from when you registered. See our guide on rebinding an existing Binance account.
+Welcome bonuses are for genuinely new registrations, so an existing account usually cannot claim them retroactively. The ongoing fee rebate is different: an existing account can sometimes be re-linked to a sub-broker channel under Binance's official rebind rule — but only if it is a KYC-verified master account with no current referrer and 5,000 USD or less of trading volume over the past 90 days, and the binding then only activates after 150,000 USD of volume within 30 days. It is a volume test, not a countdown from when you registered. See our guide on rebinding an existing Binance account. Binance stops referral commissions once the referred user reaches VIP 3 or higher, and Futures-account commissions are capped at 12 months from when the referred user opens a Futures account, unless the referrer has passed Binance's 30% referral commission evaluation or above.
 
 Why is the fee rebate worth more than the sign-up bonus for active traders?+
-The sign-up bonus is a one-time, capped, expiring amount. The fee rebate is a percentage of the fees you pay for as long as the referral stays eligible. A trader running even a modest $1M/month futures bot pays roughly $3,100 a year in fees, so a rebate on that recurring bill can outgrow a one-time welcome-voucher pool, with no tasks to complete. (Binance exception: referral commissions on futures accounts are limited to 12 months from when the referred user opens a Futures account; spot rebates have no such timer.)
+The sign-up bonus is a one-time, capped, expiring amount. The fee rebate is a percentage of the fees you pay for as long as the referral stays eligible. A trader running even a modest $1M/month futures bot pays roughly $3,100 a year in fees, so a rebate on that recurring bill can outgrow a one-time welcome-voucher pool, with no tasks to complete. (Binance stops referral commissions once the referred user reaches VIP 3 or higher, and Futures-account commissions are capped at 12 months from when the referred user opens a Futures account, unless the referrer has passed Binance's 30% referral commission evaluation or above.)
 
 ## Skip the treasure hunt — sign up the right way
 $20 cash for new Binance users (first 15 sign-ups each quarter), premium rebates for $50K+ accounts, and a free Alpha members group for everyone who signs up through JackTrader.
@@ -8272,7 +8274,7 @@ $50,000 × 0.10% = $50／月 手續費
 若你開啟了 BNB 抵扣，幣安會對這筆毛手續費套用 BNB 折扣（現貨省 25% / 合約省 10%）。
 剩下的這筆，才是幣安留存、並與推薦端拆分的部分。
 推薦夥伴要從這筆分潤中回饋你多少、怎麼發放，由各家自訂；JackTrader 對中大戶的具體返傭比例與發放方式一對一確認。
-BNB 不會抵消返傭，返傭也不會抵消 BNB——你可以、也應該兩個一起開。VIP 等級同理：返傭是疊在你目前所在級距之上的。
+在符合幣安推薦佣金資格的前提下，BNB 抵扣與返傭可以疊加：VIP 等級決定毛手續費，BNB 再打折，返傭則是把符合條件的已付手續費的一部分退回。被推薦用戶達到 VIP 3 以上時，推薦佣金即停止；一般合約推薦佣金自被推薦用戶開通合約帳戶起，原則上最多 12 個月，是否符合幣安官方評估豁免須另行確認。
 ## 怎麼更快爬上 VIP 等級
 把量集中在較少的子帳號。每個子帳號各自計算 VIP，量能分散在多帳號常常會讓每一個都卡在一般用戶級距。
 用合約量來過門檻，而不是現貨——合約名目量比現貨美元量更容易達標。
@@ -8288,7 +8290,7 @@ BNB 不會抵消返傭，返傭也不會抵消 BNB——你可以、也應該兩
 ### VIP 1 以上的帳號也能參加 JackTrader 的方案嗎？
 中大戶返傭看的是資金規模：資金 5 萬美元以上的中大戶，我們提供高於市面水準的超高比例返傭，具體比例一對一評估。要注意的是，已有幣安帳戶想換綁，必須符合幣安官方換綁資格（其中一條是申請前 90 天總交易量 ≤5,000 USD），已達 VIP 1 量能的帳號不符合這一條，建議先透過 Telegram 確認可行路徑。
 ### 升到 VIP 7 以上，我的返傭會怎樣？
-幣安官方規則下，被推薦人達到 VIP 3 後推薦佣金即停止（合約佣金另有每位推薦人最多 12 個月的上限），所以 VIP 7 以上的超高量帳號不適用一般推薦返傭；這個量級能適用什麼方案需要逐戶評估，請直接透過 Telegram 一對一諮詢。
+幣安官方規則下，被推薦用戶達到 VIP 3 以上時推薦佣金即停止（一般合約推薦佣金自被推薦用戶開通合約帳戶起，原則上最多 12 個月，是否符合幣安官方評估豁免須另行確認），所以 VIP 7 以上的超高量帳號不適用一般推薦返傭；這個量級能適用什麼方案需要逐戶評估，請直接透過 Telegram 一對一諮詢。
 ### BNB 折扣 2026 年會取消嗎？
 幣安的 BNB 合約折扣已經多次延長。目前仍在生效中；排程一有變動我們就會更新本頁。
 ### 怎麼查我在幣安的實際手續費紀錄？
@@ -8300,13 +8302,13 @@ BNB 不會抵消返傭，返傭也不會抵消 BNB——你可以、也應該兩
 掛單（maker）是你的限價單掛進訂單簿、提供流動性時收的費；吃單（taker）是你的單立即與簿上既有單成交、消耗流動性時收的費。幣安 USDT 永續標準費率掛單 0.02%、吃單 0.05%，所以多用限價單掛單能明顯省費。現貨則是掛單吃單同價。
 
 用 BNB 付手續費可以省多少？+
-開啟 BNB 抵扣後，現貨手續費打 75 折（省 25%）、合約手續費打 9 折（省 10%），依幣安活動排程而定。這個折扣會疊在你的 VIP 費率與返傭之上，不會互相抵消。
+開啟 BNB 抵扣後，現貨手續費打 75 折（省 25%）、合約手續費打 9 折（省 10%），依幣安活動排程而定。在符合幣安推薦佣金資格的前提下，BNB 抵扣與返傭可以疊加。被推薦用戶達到 VIP 3 以上時，推薦佣金即停止；一般合約推薦佣金自被推薦用戶開通合約帳戶起，原則上最多 12 個月，是否符合幣安官方評估豁免須另行確認。
 
 透過 JackTrader 註冊幣安有什麼福利？+
 每季前 15 名透過 JackTrader 邀請註冊的幣安新用戶，可領取 20 美元現金獎勵。名額有限、先到先得，領取方式請聯繫 Telegram 確認。資金 5 萬美元以上的中大戶，我們提供高於市面水準的超高比例返傭，具體比例一對一評估，歡迎諮詢。所有透過 JackTrader 註冊幣安的用戶，也都可以免費加入 Alpha 會員群。獎勵與返傭以名額、帳戶狀態及幣安官方規則為準，不構成收益保證；JackTrader 為獨立推薦夥伴，與幣安無隸屬關係。
 
 返傭會跟我已經有的 VIP 等級或 BNB 折扣衝突嗎？+
-不會。返傭是疊在你目前 VIP 級距與 BNB 折扣之上的。VIP 改變的是毛手續費，BNB 再打折，返傭則是把已付手續費的一部分退回給你。
+在符合幣安推薦佣金資格的前提下，BNB 抵扣與返傭可以疊加。VIP 改變的是毛手續費，BNB 再打折，返傭則是把符合條件的已付手續費的一部分退回給你。被推薦用戶達到 VIP 3 以上時，推薦佣金即停止；一般合約推薦佣金自被推薦用戶開通合約帳戶起，原則上最多 12 個月，是否符合幣安官方評估豁免須另行確認。
 
 網格機器人用戶為什麼特別適合談返傭？+
 網格機器人成交頻繁、月名目量大，手續費是主要成本之一。以每月 $5M、85% 掛單的網格為例，就算開了 BNB 折扣，一年手續費仍約 $13,230，而且談返傭不用改任何策略程式碼。資金 5 萬美元以上的中大戶，具體返傭比例一對一評估。合約量也比現貨更容易把你推上更高 VIP 等級。
