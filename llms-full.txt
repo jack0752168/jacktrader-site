@@ -4220,7 +4220,7 @@ One thing to be clear about: a healthy rebate relationship is one level deep. Yo
 ## How the numbers stack on Binance
 The most common misconception is that a rebate replaces the other discounts you already get. It does not — it stacks on top of them. Let's make this concrete with Binance.
 Binance spot fees start at 0.10% (Regular tier). USDT-M futures are 0.02% maker / 0.05% taker. Paying fees in BNB knocks 25% off spot and 10% off futures. VIP tiers cut further still — at the top of the ladder, futures maker fees fall to zero. A rebate layers on after all of that: it is calculated on the fee that actually booked. So a trader using BNB at VIP 1 keeps their BNB discount, keeps their VIP rate, and then gets a share of whatever fee is left returned. One Binance rule to keep in mind: referral commissions stop once the referred user reaches VIP 3, so a rebate is a tool for the tiers below it. How fees can go below zero for dedicated liquidity providers — and where a third-party rebate does and does not stack on that — is laid out in negative maker fees explained.
-Stripped to the headline number: at Regular tier, Binance futures cost 0.02% maker / 0.05% taker, and turning on BNB takes the taker leg to 0.045% before any rebate. If you want to run these numbers against your own volume, our Binance fee calculator for 2026 does the arithmetic for you, and the Binance VIP fee tiers show how far each level cuts the base rate.
+Stripped to the headline number: at Regular tier, Binance futures cost 0.02% maker / 0.05% taker, and turning on BNB takes the taker leg to 0.045% before any rebate. If you want to run these numbers against your own volume, our Binance fee calculator for 2026 does the arithmetic for you, and the Binance VIP fee tiers show how far each level cuts the base rate. Choosing where to hold the account is a separate decision from which rebate to take: the BTC fee comparison across exchanges shows why the headline rate is usually a tie and your maker/taker mix decides the bill.
 ## A worked example: where the money actually shows up
 Take an active trader doing $2,000,000 a month in Binance USDT-M futures notional, split 60% maker / 40% taker, at the Regular fee tier:
 Maker fees: $1,200,000 × 0.02% = $240
@@ -5182,7 +5182,7 @@ Even at VIP 2, $45k–56k / year in fees is more than the cost of one decent qua
 On Binance, what a grid really pays comes from the blend of its fills, not the sticker rate:
 Binance USDT-M, Regular tier: 0.0200% / 0.0500% gross; paying fees in BNB takes 10% off, to 0.0180% / 0.0450%. Blended for an 85% maker grid ≈ 0.0221%.
 Higher VIP tiers: maker rates keep falling with volume, and on some products and tiers exchanges pay negative maker fees — how negative maker fees work, and who actually reaches them, is covered in crypto market-maker rebates.
-The practical answer for most grid-bot operators on Binance in 2026: don't chase the sticker rate — stack maker share, BNB fee payment and a proper referral binding on the account the bot already trades, and let volume carry you toward the next VIP tier.
+The practical answer for most grid-bot operators on Binance in 2026: don't chase the sticker rate — stack maker share, BNB fee payment and a proper referral binding on the account the bot already trades, and let volume carry you toward the next VIP tier. Nothing above depends on which software places the orders, because the binding sits on the exchange account — the OctoBot fee rebate walkthrough shows the same stack on a free self-hosted bot.
 ## What about HyperLiquid, Lighter, and other perp DEXs?
 Perpetual DEXs (HyperLiquid, Lighter, dYdX-style) typically advertise lower published fees than centralised exchanges, but two things to know:
 Liquidity at the inside spread is thinner — your effective fill price (including slippage) can be worse, especially for tight-grid strategies that need passive fills.
@@ -6726,7 +6726,7 @@ CFD — best when you specifically need leverage or to short a name through a br
 ETF — best for owning a diversified, regulated basket you intend to hold. Real ownership and investor protection; trades only in market hours through a broker.
 Now the detail behind each, then a full comparison table.
 ## What Each One Actually Is
-Stock token (tokenized stock). A blockchain token whose price tracks a listed equity, traded on a crypto exchange and usually quoted and settled in USDT. You buy it like any spot pair, fractionally, from your exchange wallet — no brokerage, no bank wire. It gives price exposure, not equity: no voting rights, no shareholder-of-record status, and it sits outside SIPC-type protection. We cover the mechanics in tokenized stocks explained. On Binance, buying US stock tokens with USDT covers that route end to end.
+Stock token (tokenized stock). A blockchain token whose price tracks a listed equity, traded on a crypto exchange and usually quoted and settled in USDT. You buy it like any spot pair, fractionally, from your exchange wallet — no brokerage, no bank wire. It gives price exposure, not equity: no voting rights, no shareholder-of-record status, and it sits outside SIPC-type protection. We cover the mechanics in tokenized stocks explained. On Binance, buying US stock tokens with USDT covers that route end to end, and if you want a single-name walkthrough, buying Tesla and Nvidia exposure with USDT takes one order from funding to fill.
 CFD (contract for difference). A leveraged derivative contract with a broker that pays the price difference of an underlying from open to close. You never own the asset. The appeal is built-in leverage and easy shorting; the catch is a spread plus daily financing on the leveraged position that quietly erodes returns the longer you hold, and leverage that magnifies losses as much as gains. CFDs are restricted or banned for retail in several jurisdictions.
 ETF (exchange-traded fund). A regulated fund you buy through a brokerage that holds a real basket of stocks (an index, a sector, a theme). You own fund shares with standard investor protection, the fund handles voting and dividends, and costs are a small annual expense ratio plus your broker's trading commission. It trades during regular market hours only.
 ## Side by Side: The Differences That Matter
@@ -10626,7 +10626,7 @@ Alpha 会员群免费加入
 
 为什么现在看币安美股
 ## 跨境券商收紧后，美股多了一条新路径
-2026 年以来，部分跨境券商受监管政策影响，大陆存量客户面临「只卖不买」等限制，很多人在找继续配置美股的渠道。币安的股票通证提供了一条加密原生的新路径——它不是传统券商账户，有自己的优点，也有要讲清楚的边界。
+2026 年以来，部分跨境券商受监管政策影响，大陆存量客户面临「只卖不买」等限制，很多人在找继续配置美股的渠道。币安的股票通证提供了一条加密原生的新路径——它不是传统券商账户，有自己的优点，也有要讲清楚的边界。如果你还在传统券商、美股 ETF 与加密渠道之间做选择，美股 ETF 怎么买：传统券商 vs 加密渠道全对比把三条路的费率、开户与持仓成本逐项列了出来。
 
 优点 1
 ### USDT 直接买，无需电汇
