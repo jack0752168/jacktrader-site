@@ -113,19 +113,27 @@
   // GitHub Pages, /_vercel/insights/script.js 404s, so va() only ever queued events
   // into a vaq array nothing drained. GA4 is now the sole (and only live) sink.
   function track(name, data) {
+    var params = new URLSearchParams(location.search);
+    if (params.get('qa') === '1') return;
+    data = data || {};
+    data.page = location.pathname;
+    var campaign = params.get('utm_campaign');
+    if (campaign && /^[a-zA-Z0-9_-]{1,64}$/.test(campaign)) data.campaign_id = campaign;
     if (typeof window.gtag === "function") { window.gtag("event", name, data); }
   }
+  window.jtTrack = track;
   document.addEventListener("click", function (e) {
     var a = e.target.closest && e.target.closest("a[href]");
     if (!a) return;
     var href = a.getAttribute("href") || "";
     var page = location.pathname;
+    var placement = a.getAttribute('data-jt-placement') || 'existing';
     // 社区主页关注（站内 → 交易所社区，与 /sq /xq 的反向；用于测「站内访客有多少去关注」）
     if (href.indexOf("square/profile") > -1 || href.indexOf("uni-qr/cpro") > -1)
       track("cta_follow_binance_square", { page: page });
     // 换绑(rebind)链接也在 bsmkweb.cc 域下，必须先判它，否则会被计成普通注册
-    else if (href.indexOf("bind-ref") > -1) track("cta_rebind_binance", { page: page });
-    else if (href.indexOf("bsmkweb.cc") > -1) track("cta_register_binance", { page: page });
+    else if (href.indexOf("bind-ref") > -1) track("cta_rebind_binance", { page: page, placement: placement });
+    else if (href.indexOf("bsmkweb.cc") > -1) track("cta_register_binance", { page: page, placement: placement });
     else if (href.indexOf("t.me/") > -1) {
       track("cta_telegram", { page: page });
       // 招商页(partner 族)上的 Telegram 链接 = 助力人漏斗的实际出口。

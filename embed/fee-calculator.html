@@ -1,89 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Binance Fee Calculator — JackTrader</title>
-<style>
-  :root{--bg:#0e1116;--card:#161b22;--tx1:#e6edf3;--tx2:#9aa4b2;--tx3:#6b7684;--acc:#f0b90b;--acc2:#2ea043;--line:rgba(255,255,255,.10)}
-  *{box-sizing:border-box;margin:0;padding:0}
-  html,body{background:transparent}
-  .wrap{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    max-width:520px;margin:0 auto;padding:18px;color:var(--tx1);background:var(--card);
-    border:1px solid var(--line);border-radius:14px}
-  h2{font-size:17px;font-weight:700;margin-bottom:2px}
-  .sub{font-size:12px;color:var(--tx3);margin-bottom:14px}
-  label{display:block;font-size:12px;color:var(--tx2);margin:12px 0 5px}
-  select,input[type=number]{width:100%;padding:9px 10px;background:#0e1116;color:var(--tx1);
-    border:1px solid var(--line);border-radius:8px;font-size:14px}
-  .row{display:flex;gap:10px}.row>div{flex:1}
-  input[type=range]{width:100%;accent-color:var(--acc)}
-  .rv{font-size:13px;color:var(--tx1);font-weight:600;float:right}
-  .out{margin-top:16px;background:#0e1116;border:1px solid var(--line);border-radius:10px;padding:14px}
-  .out .line{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;font-size:13px;color:var(--tx2)}
-  .out .line b{font-size:15px;color:var(--tx1)}
-  .out .hl{border-top:1px dashed var(--line);margin-top:6px;padding-top:10px}
-  .out .hl b{font-size:20px;color:var(--acc2)}
-  .cta{display:block;text-align:center;margin-top:14px;padding:11px;background:var(--acc);color:#0e1116;
-    font-weight:700;font-size:14px;text-decoration:none;border-radius:9px}
-  .foot{margin-top:11px;font-size:11px;color:var(--tx3);text-align:center;line-height:1.5}
-  .foot a{color:var(--tx2)}
-</style>
-</head>
-<body>
-<div class="wrap">
-  <h2>Binance Fee Calculator</h2>
-  <div class="sub">See what your Binance trading fees really cost each month.</div>
-
-  <div class="row">
-    <div>
-      <label>Product</label>
-      <select id="prod">
-        <option value="5">Futures / perps (taker ~0.05%)</option>
-        <option value="10">Spot (taker ~0.10%)</option>
-      </select>
-    </div>
-    <div>
-      <label>Order mix</label>
-      <select id="mix">
-        <option value="1">Mostly taker</option>
-        <option value="0.7">Mixed</option>
-        <option value="0.4">Mostly maker</option>
-      </select>
-    </div>
-  </div>
-
-  <label>Monthly trading volume (USD)</label>
-  <input type="number" id="vol" value="500000" min="0" step="10000">
-
-  <div class="out">
-    <div class="line">Effective fee rate<b id="bps">0.050%</b></div>
-    <div class="line hl">Fees you pay / month<b id="fee">$0</b></div>
-    <div class="line">Fees you pay / year<b id="yr">$0</b></div>
-  </div>
-
-  <a class="cta" id="cta" href="https://www.jacktrader.xyz/en/?utm_source=embed&utm_medium=widget&utm_campaign=fee-calc" target="_blank" rel="noopener">New to Binance? $20 cash · $50K+ premium rebates →</a>
-  <div class="foot">
-    Estimates only, based on Binance regular-tier rates; VIP tiers and BNB discounts lower them. Not financial advice.<br>
-    Widget by <a href="https://www.jacktrader.xyz/en/?utm_source=embed&utm_medium=attribution&utm_campaign=fee-calc" target="_blank" rel="noopener"><b>JackTrader</b></a> — independent Binance referral partner.
-  </div>
-</div>
-
-<script>
-(function(){
-  var $=function(id){return document.getElementById(id)};
-  function fmt(n){return '$'+Math.round(n).toLocaleString()}
-  function calc(){
-    var bps=+$('prod').value*(+$('mix').value), vol=+$('vol').value||0;
-    $('bps').textContent=(bps/100).toFixed(3)+'%';
-    var fee=vol*bps/10000;
-    $('fee').textContent=fmt(fee);
-    $('yr').textContent=fmt(fee*12);
-  }
-  ['prod','mix','vol'].forEach(function(id){$(id).addEventListener('input',calc)});
-  calc();
-})();
-</script>
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,follow"><title>Binance spot fee calculator with BNB | JackTrader</title><style>
+*{box-sizing:border-box}body{margin:0;background:transparent;color:#e7edf5;font:15px/1.6 system-ui,sans-serif}.wrap{max-width:720px;margin:auto;padding:22px;background:#151b25;border:1px solid #394252;border-radius:14px}h2{font-size:24px;line-height:1.3;margin:0 0 12px}.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{display:block;margin:12px 0 4px}input,select,button{font:inherit}input[type=number],select{width:100%;padding:10px;border:1px solid #647084;border-radius:7px;background:#0d121b;color:inherit}button{padding:10px 15px;border:1px solid #aeb7c5;border-radius:7px;background:transparent;color:inherit;cursor:pointer}.result{padding:16px;margin:18px 0;border-radius:10px;background:#080d14}.result strong{font-size:30px;color:#f0b90b}.muted{font-size:13px;color:#b9c4d2}a{color:#f0b90b}.cta{display:block;background:#f0b90b;color:#12151c;padding:12px;border-radius:8px;text-align:center;text-decoration:none;font-weight:700;margin-top:14px}.checks label{display:flex;gap:8px;align-items:baseline}.code{display:flex;gap:12px;flex-wrap:wrap;align-items:center}code{font-size:20px}button:focus-visible,a:focus-visible{outline:3px solid #fff;outline-offset:3px}@media(max-width:440px){.row{grid-template-columns:1fr}.wrap{padding:16px}}
+</style></head><body><main class="wrap"><h2 data-i18n="title">Binance spot fee calculator</h2><p data-i18n="intro">Enter executed trade value, not margin. Compare a spot fee with and without BNB, or enter your own account rate.</p>
+<form id="fee-form"><label for="product" data-i18n="product">Fee setting</label><select id="product"><option value="spot" data-i18n="spot">Spot example (0.10%)</option><option value="custom" data-i18n="custom">Custom rate (spot or futures)</option></select><div class="row"><div><label for="volume" data-i18n="volume">Executed trade value (USD equivalent)</label><input id="volume" type="number" min="0" max="1000000000000" step="any" value="1000" required></div><div><label for="rate" data-i18n="rate">Trading fee rate (%)</label><input id="rate" type="number" min="0" max="100" step="any" value="0.10" required></div></div><div class="checks"><label><input id="bnb" type="checkbox"><span data-i18n="bnb">Apply 25% BNB deduction (spot example only)</span></label><label><input id="roundtrip" type="checkbox"><span data-i18n="roundtrip">Estimate two equal-value trades (buy + sell)</span></label></div><button type="submit" data-i18n="calculate">Calculate fees</button></form>
+<div class="result" aria-live="polite"><span data-i18n="estimated">Estimated trading fee</span><br><strong id="fee">$1.00</strong><div id="breakdown"></div></div><p class="muted" data-i18n="limits">A quote-currency estimate, not a commission or profit forecast. Actual fees may be charged in the received asset or BNB. Excludes funding, slippage and withdrawal fees; use your account's current rate. No JackTrader rebate rate is assumed.</p><div class="code"><code>MPZQWSDC</code><button id="copy" type="button" data-i18n="copy">Copy referral code</button><span id="copy-status" role="status"></span></div><a class="cta" id="signup" href="https://www.bsmkweb.cc/join?ref=MPZQWSDC" target="_blank" rel="noopener nofollow sponsored" data-i18n="signup">New account: open Binance with this code</a><p class="muted" data-i18n="offer">JackTrader: $20 cash for the first 15 new invite sign-ups each quarter; confirm availability and claiming on Telegram. Free Alpha members group for all users registering through us. Funds of $50K+? Ask for an account-specific rebate quote.</p><p><a id="existing" href="/en/blog/binance-rebind-existing-account.html" target="_blank" rel="noopener" data-i18n="existing">Already registered? Check binding eligibility</a> · <a href="https://t.me/Jack168668" target="_blank" rel="noopener">Telegram</a></p><p class="muted"><a href="https://www.binance.com/en/support/faq/detail/e85d6e703b874674840122196b89780a" target="_blank" rel="noopener" data-i18n="source">Binance's spot fee calculation guide</a> · <a href="https://www.jacktrader.xyz/en/" target="_blank" rel="noopener">JackTrader</a><br><span data-i18n="disclosure">Independent referral service. Eligible trading through our link may earn us commission. Information only; not investment advice.</span></p></main><script>
+(function(){'use strict';var $=function(id){return document.getElementById(id)};var params=new URLSearchParams(location.search);var zh=params.get('lang')==='zh';var qa=params.get('qa')==='1';var embedded=window.parent!==window;var words={title:'幣安現貨手續費計算機',intro:'輸入實際成交名義金額，不是保證金。比較現貨開啟／關閉 BNB 抵扣的費用，或輸入你帳戶的實際費率。',product:'費率設定',spot:'現貨範例（0.10%）',custom:'自訂費率（現貨或合約）',volume:'成交金額（美元等值）',rate:'交易手續費率（%）',bnb:'套用 25% BNB 抵扣（僅現貨範例）',roundtrip:'估算兩筆同等金額成交（買入＋賣出）',calculate:'計算手續費',estimated:'估計交易手續費',limits:'結果為報價幣等值估算，不是佣金或利潤預測。實際費用可能以收到的資產或 BNB 扣除；不含資金費、滑點及提幣費，請使用帳戶當前費率。不預設任何 JackTrader 返佣比例。',copy:'複製推薦碼',signup:'新帳戶：帶此推薦碼前往幣安註冊',offer:'JackTrader：每季度前 15 名經我們邀請註冊的幣安新戶，可領 20 美元現金；名額及領取方式請先向 Telegram 確認。經我們註冊者皆可免費加入 Alpha 會員群。資金 5 萬美元以上可諮詢專屬返佣報價。',existing:'已註冊？先確認補綁資格',source:'幣安官方現貨費用計算說明',disclosure:'獨立推薦服務。透過我們入口的合資格交易可能為我們帶來佣金。資訊僅供參考，不構成投資建議。'};
+if(zh){document.documentElement.lang='zh-TW';document.querySelectorAll('[data-i18n]').forEach(function(el){el.textContent=words[el.dataset.i18n]});$('existing').href='/zh-tw/blog/binance-referral-code-2026.html#existing'}
+function send(action){if(!embedded||qa)return;window.parent.postMessage({type:'jt-fee-tool',action:action,product:$('product').value,height:document.documentElement.scrollHeight},location.origin)}
+function calculate(report){var vol=Number($('volume').value),rate=Number($('rate').value);if(!Number.isFinite(vol)||!Number.isFinite(rate)||vol<0||vol>1e12||rate<0||rate>100)return;var trades=$('roundtrip').checked?2:1;var bnb=$('product').value==='spot'&&$('bnb').checked;var fee=vol*rate/100*trades*(bnb?0.75:1);$('fee').textContent=new Intl.NumberFormat(zh?'zh-TW':'en-US',{style:'currency',currency:'USD',minimumFractionDigits:2,maximumFractionDigits:6}).format(fee);$('breakdown').textContent=zh?'成交金額 × '+rate+'% × '+trades+' 筆'+(bnb?' × 75%（BNB）':''):'Trade value × '+rate+'% × '+trades+' trade(s)'+(bnb?' × 75% (BNB)':'');send(report?'calculate':'resize')}
+$('product').addEventListener('change',function(){var spot=$('product').value==='spot';$('bnb').disabled=!spot;if(!spot)$('bnb').checked=false;else $('rate').value='0.10';calculate(false)});$('fee-form').addEventListener('submit',function(event){event.preventDefault();if(this.reportValidity())calculate(true)});['volume','rate','bnb','roundtrip'].forEach(function(id){$(id).addEventListener('input',function(){calculate(false)})});$('signup').addEventListener('click',function(){send('register')});$('copy').addEventListener('click',function(){navigator.clipboard.writeText('MPZQWSDC').then(function(){$('copy-status').textContent=zh?'已複製':'Copied';send('copy')}).catch(function(){$('copy-status').textContent=zh?'請選取上方推薦碼複製':'Select and copy the code above.'})});if(embedded&&'ResizeObserver' in window)new ResizeObserver(function(){send('resize')}).observe(document.body);calculate(false);
+})();</script></body></html>

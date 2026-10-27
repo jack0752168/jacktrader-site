@@ -53,10 +53,13 @@
 ## 6. 币安老用户绑定：先区分官方路线（2026-10-27 一手文档复核）
 
 来源仅采用币安官方：
+- 新户漏填码： https://www.binance.com/en/support/faq/detail/6233094e540b4ea4ac50387d1518911b （Referral Pro FAQ Q4，本轮2026-10-27核对）
 - Recall： https://www.binance.com/en/support/faq/detail/a502d59af1f74566a983a6a011aec371 （官方更新 2026-03-24）
 - Rebind： https://www.binance.com/en/support/faq/detail/185520b0cb3d43d2a1ab0d12ba223d35 （官方更新 2026-09-28，重点 Q2/Q4/Q10/Q17）
 
-**三条路线不能混用条件。** 已经有推荐人的账户不能通过这些机制改换推荐人；具体资格与地域由币安审核。
+**新户漏填码与以下三条老户路线不能混用条件。** 已经有推荐人的账户不能通过这些机制改换推荐人；具体资格与地域由币安审核。
+
+0. **新户标准补绑（Referral Pro Q4）**。注册30天内、无入金或交易、无既有推荐关系、母账户、KYC身份资料过去180天未在其他账户使用、无洗单标记；需同时符合，由币安最终审核。不要把150,000 USD / 30天套在这条路线上，不建议注销重开来换码。
 
 1. **从未交易：Self-rebind**。官方 Rebind Q17 明确与有交易历史的 Application 区分。先在官方流程核验，不向所有未交易老户统一附加 150,000 USD / 30天条件。
 2. **沉寂账户：Affiliates Recall**。无历史邀请人、账户超过90天、过去90天没有交易或使用币安产品；须使用联盟后台当前有效的 Recall 邀请链接，已有账户登录并按官方提示确认绑定。官方明确该路线采用当前新格式 `https://www.binance.com/join?ref=XXXXXXXX`；不能断言所有 `/join` 只限新户，也不能仅凭URL格式证明本账户旧链接有Recall权限。未核实Jack当前Recall链接，站上先引导联系确认，不伪造链接。
