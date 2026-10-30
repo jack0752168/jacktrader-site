@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#071014" />
+    <meta name="description" content="私人 BTC 投資組合資產曲線與倉位總覽" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <meta name="referrer" content="no-referrer" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src https://api.github.com; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'" />
+    <title>Portfolio · 私人資產看板</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./config.js"></script>
+    <script defer src="./vault.js"></script>
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand" aria-label="Portfolio 私人資產看板">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <div class="brand-copy"><strong>PORTFOLIO</strong><span>PRIVATE VIEW / JACK</span></div>
+        </div>
+        <div class="topbar-right">
+          <span class="private-label"><span class="private-dot"></span>私人資產頁面</span>
+          <span id="syncStatus" class="sync-status" role="status" aria-live="polite">正在連線…</span>
+          <button class="icon-button" id="refreshButton" type="button" aria-label="立即刷新資料" title="立即刷新資料">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M6.1 9A7 7 0 0 1 18.4 7L20 12M4 12l1.6 5A7 7 0 0 0 17.9 15"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="heroTitle">
+          <div class="hero-primary">
+            <div class="eyebrow"><span class="eyebrow-line"></span> 五戶合併資產</div>
+            <h1 id="heroTitle">總淨值 <span>· USD</span></h1>
+            <div id="totalUsd" class="hero-value">—</div>
+            <div class="hero-foot">
+              <span id="heroChange" class="change-pill neutral">歷史資料收集中</span>
+              <span id="latestTime" class="hero-time">等待帳戶快照</span>
+            </div>
+          </div>
+          <div class="hero-stats">
+            <div class="metric">
+              <span class="metric-label">BTC 等值淨值</span>
+              <strong id="totalBtc">—</strong>
+              <span class="metric-caption">全部資產按即時 BTC 價換算</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">BTC 方向 Delta</span>
+              <strong id="totalDelta">—</strong>
+              <span id="deltaMultiple" class="metric-caption">現貨與合約、期權方向合計</span>
+            </div>
+            <div class="metric metric-market">
+              <span class="metric-label">BTC / USD</span>
+              <strong id="btcPrice">—</strong>
+              <span class="metric-caption">統一換算參考價</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel chart-panel" aria-labelledby="chartTitle">
+          <div class="panel-heading chart-heading">
+            <div>
+              <div class="section-kicker">EQUITY HISTORY</div>
+              <h2 id="chartTitle">資金曲線</h2>
+              <p id="chartSubtitle">記錄中的帳戶淨值；轉入轉出也會改變曲線。</p>
+            </div>
+            <div class="chart-actions">
+              <div class="segmented" role="group" aria-label="曲線計價單位">
+                <button id="currencyUsd" class="selected" type="button" data-currency="usd" aria-pressed="true">USD</button>
+                <button id="currencyBtc" type="button" data-currency="btc" aria-pressed="false">BTC</button>
+              </div>
+              <div class="segmented" role="group" aria-label="曲線時間區間">
+                <button type="button" data-range="24h" class="selected" aria-pressed="true">24H</button>
+                <button type="button" data-range="7d" aria-pressed="false">7D</button>
+                <button type="button" data-range="30d" aria-pressed="false">30D</button>
+                <button type="button" data-range="all" aria-pressed="false">全部</button>
+              </div>
+            </div>
+          </div>
+          <div id="seriesSelector" class="series-selector" role="group" aria-label="選擇曲線帳戶"></div>
+          <div id="chartRegion" class="chart-region" role="img" aria-label="資產淨值曲線">
+            <svg id="equityChart" viewBox="0 0 1000 350" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="areaGradient" x1="0" x2="0" y1="0" y2="1">
+                  <stop id="gradientTop" offset="0%" stop-color="#70e7bf" stop-opacity=".28" />
+                  <stop id="gradientBottom" offset="100%" stop-color="#70e7bf" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <g id="chartGrid"></g>
+              <path id="chartArea" fill="url(#areaGradient)"></path>
+              <path id="chartLine" fill="none" stroke="#70e7bf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+              <line id="chartCrosshair" x1="0" x2="0" y1="24" y2="300" visibility="hidden"></line>
+              <circle id="chartHoverDot" r="6" visibility="hidden"></circle>
+              <g id="chartLabels"></g>
+            </svg>
+            <div id="chartTooltip" class="chart-tooltip" hidden></div>
+            <div id="chartEmpty" class="chart-empty">
+              <div class="empty-orbit" aria-hidden="true"><span></span></div>
+              <strong>資金曲線開始記錄中</strong>
+              <span>收到至少兩筆有效快照後，這裡會顯示真實曲線。</span>
+            </div>
+          </div>
+          <div class="chart-bottom"><span id="chartPointCount">尚無曲線資料</span><span>時間為新加坡時間（UTC+8）</span></div>
+        </section>
+
+        <section class="accounts-section" aria-labelledby="accountsTitle">
+          <div class="section-heading">
+            <div><div class="section-kicker">ACCOUNT BREAKDOWN</div><h2 id="accountsTitle">五個帳戶</h2></div>
+            <span id="accountCount" class="section-meta">等待同步</span>
+          </div>
+          <div id="accountGrid" class="account-grid">
+            <div class="account-placeholder">正在讀取帳戶資料…</div>
+          </div>
+        </section>
+
+        <section class="panel derivatives-panel" aria-labelledby="derivativesTitle">
+          <div class="panel-heading">
+            <div><div class="section-kicker">OPEN DERIVATIVES</div><h2 id="derivativesTitle">衍生品倉位</h2><p>期權市值與合約浮盈虧已計入淨值；合約面額只表示曝險。手機可左右滑動表格。</p></div>
+            <span id="derivativesCount" class="section-meta">—</span>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>帳戶</th><th>合約</th><th>方向</th><th class="num">名義 BTC</th><th class="num">當前面額 USD</th><th class="num">市值 / 浮盈虧</th><th class="num">BTC Delta</th></tr></thead>
+              <tbody id="derivativesBody"><tr><td colspan="7" class="table-empty">等待倉位資料…</td></tr></tbody>
+            </table>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <span>PRIVATE PORTFOLIO · 端到端加密快照</span>
+          <span id="qualityNote">各帳戶估值以資料來源與時間標示為準。</span>
+        </footer>
+      </main>
+    </div>
+
+    <dialog id="manualDialog" class="manual-dialog" aria-labelledby="manualTitle">
+      <form id="manualForm" method="dialog">
+        <div class="dialog-kicker">MANUAL ACCOUNT INPUT</div>
+        <h2 id="manualTitle">更新第二個 OKX 現貨</h2>
+        <p>填寫純 BTC 現貨顆數；不要包含那張 0.5 BTC 名義 Call 的市值。</p>
+        <label for="manualBtcCash">BTC 現貨數量</label>
+        <input id="manualBtcCash" name="btc_cash" type="number" min="0" max="1000" step="0.00000001" inputmode="decimal" placeholder="例如 5.3663" required />
+        <div id="manualError" class="form-error" role="alert"></div>
+        <div class="dialog-actions"><button id="manualCancel" type="button" class="secondary-button">取消</button><button id="manualSave" type="submit" class="primary-button">儲存並刷新</button></div>
+      </form>
+    </dialog>
+  </body>
+</html>
