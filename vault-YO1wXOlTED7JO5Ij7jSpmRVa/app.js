@@ -96,7 +96,12 @@
     }
     const ageMinutes = Math.max(0, Math.floor((Date.now() - cutoff) / 60_000));
     const cached = data.delivery?.mode === "cached";
-    const fresh = data.quality === "complete" && !cached && ageMinutes < 5 && !errorMessage;
+    const sourceAges = Array.isArray(data.accounts) ? data.accounts.map((account) => {
+      const sourceTime = timestamp(account.asof);
+      return sourceTime === null ? Infinity : Math.max(0, Math.floor((Date.now() - sourceTime) / 60_000));
+    }) : [];
+    const oldestSourceMinutes = sourceAges.length === 5 ? Math.max(...sourceAges) : Infinity;
+    const fresh = data.quality === "complete" && !cached && ageMinutes < 5 && oldestSourceMinutes < 10 && !errorMessage;
     if (fresh) {
       badge.textContent = "資料已更新";
     } else if (ageMinutes >= 15 || errorMessage) {
@@ -104,12 +109,13 @@
       badge.textContent = "更新中斷";
     } else {
       banner.classList.add("is-stale");
-      badge.textContent = cached ? "顯示暫存" : "資料較舊";
+      badge.textContent = cached ? "顯示暫存" : oldestSourceMinutes >= 10 ? "來源較舊" : "資料較舊";
     }
     title.textContent = `資料截止：${formatDate(data.timestamp)}（新加坡時間）`;
     const published = timestamp(data.delivery?.publishedAt);
     const publishText = published === null ? "" : ` · 密文上傳 ${formatDate(data.delivery.publishedAt, true)}`;
-    detail.textContent = `${ageMinutes < 1 ? "不足 1" : ageMinutes} 分鐘前${publishText}${cached ? " · 正使用上次可解密快照" : ""}${errorMessage ? " · 目前無法取得更新" : ""}`;
+    const sourceText = oldestSourceMinutes >= 10 && Number.isFinite(oldestSourceMinutes) ? ` · 最舊帳戶 ${oldestSourceMinutes} 分鐘前` : "";
+    detail.textContent = `${ageMinutes < 1 ? "不足 1" : ageMinutes} 分鐘前${publishText}${sourceText}${cached ? " · 正使用上次可解密快照" : ""}${errorMessage ? " · 目前無法取得更新" : ""}`;
   }
 
   async function getJson(path, options) {
