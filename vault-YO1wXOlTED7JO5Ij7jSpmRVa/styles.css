@@ -53,6 +53,18 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); ou
 .icon-button svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
+.freshness-banner { display: flex; align-items: center; gap: 16px; margin-top: 20px; padding: 16px 19px; border: 1px solid rgba(112, 231, 191, .35); border-radius: 12px; background: rgba(29, 83, 69, .24); }
+.freshness-badge { flex: none; padding: 7px 10px; border-radius: 7px; background: rgba(112, 231, 191, .17); color: var(--accent-strong); font-size: 12px; font-weight: 760; white-space: nowrap; }
+.freshness-copy { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.freshness-copy strong { font-size: 15px; font-variant-numeric: tabular-nums; }
+.freshness-copy span { color: var(--muted); font-size: 12px; line-height: 1.4; }
+.freshness-banner.is-stale { border-color: rgba(232, 196, 125, .45); background: rgba(104, 77, 28, .22); }
+.freshness-banner.is-stale .freshness-badge { background: rgba(232, 196, 125, .16); color: var(--yellow); }
+.freshness-banner.is-error { border-color: rgba(239, 157, 145, .45); background: rgba(104, 46, 39, .22); }
+.freshness-banner.is-error .freshness-badge { background: rgba(239, 157, 145, .15); color: var(--red); }
+.freshness-banner.is-loading { border-color: var(--border); background: #101b20; }
+.freshness-banner.is-loading .freshness-badge { background: #1a2a2c; color: var(--muted); }
+
 .hero { display: grid; grid-template-columns: minmax(330px, 1.06fr) minmax(440px, .94fr); gap: clamp(28px, 5vw, 78px); align-items: end; padding: 51px 0 38px; }
 .hero-primary { min-width: 0; }
 .eyebrow, .section-kicker, .dialog-kicker { font-size: 11px; font-weight: 760; letter-spacing: .16em; color: var(--accent); }
@@ -178,6 +190,10 @@ tbody tr:hover td { background: rgba(255,255,255,.015); }
 }
 @media (max-width: 600px) {
   .app-shell { padding: 0 16px 28px; }
+  .freshness-banner { align-items: flex-start; gap: 10px; margin-top: 13px; padding: 12px; }
+  .freshness-badge { font-size: 11px; padding: 6px 8px; }
+  .freshness-copy strong { font-size: 13px; }
+  .freshness-copy span { font-size: 11px; }
   .topbar { min-height: 68px; }
   .brand { gap: 10px; }
   .brand-copy strong { font-size: 13px; }

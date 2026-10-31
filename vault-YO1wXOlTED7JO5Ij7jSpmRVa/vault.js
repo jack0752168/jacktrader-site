@@ -4,6 +4,7 @@
   const FILENAME = "portfolio.enc.json";
   const AAD = new TextEncoder().encode("jacktrader-btc-portfolio-v1");
   const CACHE_MS = 150_000;
+  const STORAGE_KEY = "portfolio-last-encrypted-snapshot-v1";
   let cached = null;
   let lastFetchAt = 0;
   let pending = null;
@@ -60,25 +61,33 @@
         throw new Error("資料入口尚未完成設定");
       }
       const key = keyFromLink();
-      const bucket = Math.floor(Date.now() / CACHE_MS);
-      const url = `https://api.github.com/gists/${gistId}?v=${bucket}`;
-      const response = await fetch(url, { cache: "no-store", headers: { Accept: "application/vnd.github+json" } });
-      if (!response.ok) throw new Error(`加密資料暫時無法取得（${response.status}）`);
-      const gist = await response.json();
-      const file = gist?.files?.[FILENAME];
-      if (!file || file.truncated || typeof file.content !== "string") {
-        throw new Error("加密快照不存在或超出 Gist API 大小限制");
-      }
-      let envelope;
       try {
-        envelope = JSON.parse(file.content);
-      } catch {
-        throw new Error("加密快照格式無效");
+        const bucket = Math.floor(Date.now() / CACHE_MS);
+        const url = `https://api.github.com/gists/${gistId}?v=${bucket}`;
+        const response = await fetch(url, { cache: "no-store", headers: { Accept: "application/vnd.github+json" } });
+        if (!response.ok) throw new Error(`加密資料暫時無法取得（${response.status}）`);
+        const gist = await response.json();
+        const file = gist?.files?.[FILENAME];
+        if (!file || file.truncated || typeof file.content !== "string") {
+          throw new Error("加密快照不存在或超出 Gist API 大小限制");
+        }
+        const envelope = JSON.parse(file.content);
+        const result = await decryptEnvelope(envelope, key);
+        result.delivery = { mode: "live", publishedAt: gist.updated_at || null };
+        try { sessionStorage.setItem(STORAGE_KEY, JSON.stringify({ envelope, publishedAt: gist.updated_at || null })); } catch {}
+        cached = result;
+        lastFetchAt = Date.now();
+        return result;
+      } catch (error) {
+        let saved;
+        try { saved = JSON.parse(sessionStorage.getItem(STORAGE_KEY) || "null"); } catch {}
+        if (!saved?.envelope) throw error;
+        const result = await decryptEnvelope(saved.envelope, key);
+        result.delivery = { mode: "cached", publishedAt: saved.publishedAt || null };
+        cached = result;
+        lastFetchAt = Date.now();
+        return result;
       }
-      const result = await decryptEnvelope(envelope, key);
-      cached = result;
-      lastFetchAt = Date.now();
-      return result;
     })();
     try {
       return await pending;
@@ -102,8 +111,8 @@
     const request = new URL(path, window.location.origin);
     const payload = await fetchPayload();
     if (request.pathname === "/api/latest") {
-      const latest = { ...payload.latest, remote: {} };
-      if (latest.quality === "complete" && Date.now() - Date.parse(latest.timestamp) > 5 * 60_000) {
+      const latest = { ...payload.latest, remote: {}, delivery: payload.delivery || {} };
+      if (payload.delivery?.mode === "cached" || (latest.quality === "complete" && Date.now() - Date.parse(latest.timestamp) > 5 * 60_000)) {
         latest.quality = "stale";
       }
       return latest;

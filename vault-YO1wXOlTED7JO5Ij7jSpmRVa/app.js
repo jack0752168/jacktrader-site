@@ -79,6 +79,39 @@
     $("syncStatus").classList.toggle("is-error", isError);
   }
 
+  function renderFreshness(errorMessage = "") {
+    const banner = $("freshnessBanner");
+    const badge = $("freshnessBadge");
+    const title = $("freshnessTitle");
+    const detail = $("freshnessDetail");
+    const data = state.latest;
+    const cutoff = timestamp(data?.timestamp);
+    banner.className = "freshness-banner";
+    if (!data || cutoff === null) {
+      banner.classList.add("is-error");
+      badge.textContent = "無資料";
+      title.textContent = "尚未讀到資產快照";
+      detail.textContent = errorMessage || "請從原始 iMessage 完整連結開啟，再按右上角刷新。";
+      return;
+    }
+    const ageMinutes = Math.max(0, Math.floor((Date.now() - cutoff) / 60_000));
+    const cached = data.delivery?.mode === "cached";
+    const fresh = data.quality === "complete" && !cached && ageMinutes < 5 && !errorMessage;
+    if (fresh) {
+      badge.textContent = "資料已更新";
+    } else if (ageMinutes >= 15 || errorMessage) {
+      banner.classList.add("is-error");
+      badge.textContent = "更新中斷";
+    } else {
+      banner.classList.add("is-stale");
+      badge.textContent = cached ? "顯示暫存" : "資料較舊";
+    }
+    title.textContent = `資料截止：${formatDate(data.timestamp)}（新加坡時間）`;
+    const published = timestamp(data.delivery?.publishedAt);
+    const publishText = published === null ? "" : ` · 密文上傳 ${formatDate(data.delivery.publishedAt, true)}`;
+    detail.textContent = `${ageMinutes < 1 ? "不足 1" : ageMinutes} 分鐘前${publishText}${cached ? " · 正使用上次可解密快照" : ""}${errorMessage ? " · 目前無法取得更新" : ""}`;
+  }
+
   async function getJson(path, options) {
     return window.portfolioVault.getJson(path, options);
   }
@@ -98,7 +131,8 @@
       renderLatest();
     } else {
       failures += 1;
-      if (!state.latest) renderConnectionError();
+      if (!state.latest) renderConnectionError(results[0].reason?.message);
+      else { state.latest.delivery = { ...(state.latest.delivery || {}), mode: "cached" }; renderFreshness(results[0].reason?.message); }
     }
     if (results[1].status === "fulfilled") {
       state.points = Array.isArray(results[1].value?.points) ? results[1].value.points : [];
@@ -130,7 +164,8 @@
     }
   }
 
-  function renderConnectionError() {
+  function renderConnectionError(message) {
+    renderFreshness(message);
     $("accountGrid").innerHTML = '<div class="account-placeholder">無法連接資料服務；稍後會自動重試。</div>';
     $("derivativesBody").innerHTML = '<tr><td colspan="7" class="table-empty">等待資料服務</td></tr>';
     $("chartEmpty").querySelector("strong").textContent = "等待資料服務";
@@ -168,6 +203,7 @@
 
   function renderLatest() {
     const data = state.latest || {};
+    renderFreshness();
     $("totalUsd").textContent = formatUsd(data.total_usd);
     $("totalBtc").textContent = formatBtc(data.total_btc_equiv);
     $("totalDelta").textContent = formatDelta(data.total_delta_btc);
@@ -455,5 +491,6 @@
   $("manualForm").addEventListener("submit", saveManual);
   document.addEventListener("visibilitychange", () => { if (!document.hidden) refresh(); });
   setInterval(() => { if (!document.hidden) refresh(); }, 150_000);
+  setInterval(() => { if (!document.hidden) renderFreshness(); }, 30_000);
   refresh();
 })();
