@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./styles-20261031m.css" />
     <script defer src="./config.js"></script>
     <script defer src="./vault-20261101j.js"></script>
-    <script defer src="./app-20261101q.js"></script>
+    <script defer src="./app-20261101r.js"></script>
   </head>
   <body>
     <div class="app-shell">
@@ -60,7 +60,12 @@
             <div class="metric">
               <span class="metric-label">BTC 有效槓桿</span>
               <strong id="leverageValue">—</strong>
-              <span class="metric-caption">Delta ÷ BTC 等值淨值；非強平槓桿</span>
+              <span class="metric-caption">只計 BTC Delta ÷ 淨值；ETH 倉位不影響此數</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">全部期貨名義倍數</span>
+              <strong id="futuresMultiple">—</strong>
+              <span id="futuresCaption" class="metric-caption">BTC、ETH 等期貨名義 ÷ 五戶淨值；不含期權</span>
             </div>
             <div class="metric metric-market">
               <span class="metric-label">BTC / USD</span>
