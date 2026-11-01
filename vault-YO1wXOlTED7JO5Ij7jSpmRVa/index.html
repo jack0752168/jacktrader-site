@@ -10,10 +10,10 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src https://api.github.com https://gist.githubusercontent.com https://*.trycloudflare.com; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'" />
     <title>Portfolio · 私人資產看板</title>
     <script type="application/json" id="portfolioSeed">{"envelope":null}</script>
-    <link rel="stylesheet" href="./styles-20261031m.css" />
+    <link rel="stylesheet" href="./styles-20261101a.css" />
     <script defer src="./config.js"></script>
     <script defer src="./vault-20261101j.js"></script>
-    <script defer src="./app-20261101t.js"></script>
+    <script defer src="./app-20261101u.js"></script>
   </head>
   <body>
     <div class="app-shell">
@@ -78,6 +78,11 @@
               <span class="metric-caption">統一換算參考價</span>
             </div>
           </div>
+        </section>
+
+        <section class="panel delta-panel" aria-labelledby="deltaTitle">
+          <div class="panel-heading"><div><div class="section-kicker">BTC DIRECTION</div><h2 id="deltaTitle">BTC Delta 拆分</h2><p>五戶 BTC 現貨／抵押、BTC 合約及 BTC 期權的方向合計；期權按當前 Delta 折算。</p></div></div>
+          <div id="deltaBreakdown" class="delta-content" aria-live="polite">正在核對五戶 BTC Delta…</div>
         </section>
 
         <section class="panel today-panel" aria-labelledby="todayTitle">
