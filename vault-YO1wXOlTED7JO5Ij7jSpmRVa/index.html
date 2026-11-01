@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./styles-20261031m.css" />
     <script defer src="./config.js"></script>
     <script defer src="./vault-20261101j.js"></script>
-    <script defer src="./app-20261101s.js"></script>
+    <script defer src="./app-20261101t.js"></script>
   </head>
   <body>
     <div class="app-shell">
@@ -63,7 +63,12 @@
               <span class="metric-caption">只計 BTC Delta ÷ 淨值；ETH 倉位不影響此數</span>
             </div>
             <div class="metric">
-              <span class="metric-label">全倉美元名義槓桿率</span>
+              <span class="metric-label">全倉美元方向槓桿率</span>
+              <strong id="usdDirectionalLeverage">—</strong>
+              <span id="usdDirectionalCaption" class="metric-caption">BTC Delta 與其他幣種方向曝險 ÷ 五戶美元淨值</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">全倉美元名義倉位倍數</span>
               <strong id="usdLeverage">—</strong>
               <span id="usdLeverageCaption" class="metric-caption">現貨＋合約＋期權美元名義 ÷ 五戶淨值</span>
             </div>
