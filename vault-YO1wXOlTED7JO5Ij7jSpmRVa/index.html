@@ -58,6 +58,11 @@
               <span id="deltaMultiple" class="metric-caption">現貨與合約、期權方向合計</span>
             </div>
             <div class="metric">
+              <span class="metric-label">期權 Theta</span>
+              <strong id="totalTheta">—</strong>
+              <span class="metric-caption">價格和隱波不變時，過一天的期權盈虧。負數是時間在消耗權利金。合約不加。</span>
+            </div>
+            <div class="metric">
               <span class="metric-label">BTC 有效槓桿</span>
               <strong id="leverageValue">—</strong>
               <span class="metric-caption">只計 BTC Delta ÷ 淨值；ETH 倉位不影響此數</span>
@@ -173,8 +178,8 @@
           </div>
           <div class="table-scroll">
             <table>
-              <thead><tr><th>帳戶</th><th>合約</th><th>方向</th><th class="num">名義 BTC</th><th class="num">當前面額 USD</th><th class="num">市值 / 浮盈虧</th><th class="num">BTC Delta</th></tr></thead>
-              <tbody id="derivativesBody"><tr><td colspan="7" class="table-empty">等待倉位資料…</td></tr></tbody>
+              <thead><tr><th>帳戶</th><th>合約</th><th>方向</th><th class="num">名義 BTC</th><th class="num">當前面額 USD</th><th class="num">市值 / 浮盈虧</th><th class="num">BTC Delta</th><th class="num">Theta／天</th></tr></thead>
+              <tbody id="derivativesBody"><tr><td colspan="8" class="table-empty">等待倉位資料…</td></tr></tbody>
             </table>
           </div>
         </section>

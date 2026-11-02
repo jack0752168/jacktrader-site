@@ -23,6 +23,7 @@
   const usdFormat = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
   const signedUsdFormat = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0, signDisplay: "always" });
   const usdCentsFormat = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const signedUsdCentsFormat = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 2, maximumFractionDigits: 2, signDisplay: "always" });
   const btcFormat = new Intl.NumberFormat("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 6 });
   const deltaFormat = new Intl.NumberFormat("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 4, signDisplay: "always" });
   const deltaPreciseFormat = new Intl.NumberFormat("en-US", { minimumFractionDigits: 8, maximumFractionDigits: 8, signDisplay: "always" });
@@ -63,6 +64,16 @@
   function formatBtc(value) {
     const n = finite(value);
     return n === null ? "—" : `${btcFormat.format(n)} BTC`;
+  }
+
+  function formatTheta(value) {
+    const n = finite(value);
+    return n === null ? "—" : `${signedUsdCentsFormat.format(n)}／天`;
+  }
+
+  function formatPositionTheta(item) {
+    const kind = item.kind || (finite(item.market_value_usd) !== null ? "option" : "future");
+    return kind === "option" ? formatTheta(item.theta_usd) : "—";
   }
 
   function formatDelta(value) {
@@ -302,7 +313,7 @@
   function renderConnectionError(message) {
     renderFreshness(message);
     $("accountGrid").innerHTML = '<div class="account-placeholder">無法連接資料服務；稍後會自動重試。</div>';
-    $("derivativesBody").innerHTML = '<tr><td colspan="7" class="table-empty">等待資料服務</td></tr>';
+    $("derivativesBody").innerHTML = '<tr><td colspan="8" class="table-empty">等待資料服務</td></tr>';
     $("chartEmpty").querySelector("strong").textContent = "等待資料服務";
     $("chartEmpty").querySelector("span:last-child").textContent = "請確認私人連結完整，且 Mac 已同步加密快照。";
   }
@@ -343,6 +354,9 @@
     $("totalBtc").textContent = formatBtc(data.total_btc_equiv);
     $("totalDelta").textContent = formatDelta(data.total_delta_btc);
     $("totalDelta").className = finite(data.total_delta_btc) < 0 ? "negative" : "positive";
+    const theta = finite(data.total_theta_usd);
+    $("totalTheta").textContent = formatTheta(theta);
+    $("totalTheta").className = theta === null ? "" : theta < 0 ? "negative" : theta > 0 ? "positive" : "";
     const equityBtc = finite(data.total_btc_equiv);
     const deltaBtc = finite(data.total_delta_btc);
     $("deltaMultiple").textContent = "現貨、合約與期權方向合計";
@@ -425,7 +439,7 @@
       return `<article class="account-card${state.series === id ? " selected" : ""}" style="--card-color:${colorFor(id, index)}" data-account-id="${escapeHtml(id)}">
         <div class="account-card-header"><span class="account-name">${escapeHtml(account.name || id)}</span><span class="status-badge ${status.className}">${status.label}</span></div>
         <strong class="account-value">${formatUsd(account.usd)}</strong>
-        <div class="account-detail"><span>等值 <b>${formatBtc(account.btc_equiv)}</b></span><span>BTC Delta <b>${formatDelta(account.delta_btc)}</b></span><span>BTC 方向倍數 <b>${finite(account.btc_equiv) > 0 && finite(account.delta_btc) !== null ? `${(Math.abs(Number(account.delta_btc)) / Number(account.btc_equiv)).toFixed(2)}×` : "—"}</b></span>${accountFuturesUsd > 0 ? `<span>期貨名義／本戶淨值 <b>${finite(account.usd) > 0 ? `${(accountFuturesUsd / Number(account.usd)).toFixed(2)}×` : "—"}</b></span>` : ""}</div>
+        <div class="account-detail"><span>等值 <b>${formatBtc(account.btc_equiv)}</b></span><span>BTC Delta <b>${formatDelta(account.delta_btc)}</b></span><span>期權 Theta <b class="${finite(account.theta_usd) < 0 ? "negative" : finite(account.theta_usd) > 0 ? "positive" : ""}">${formatTheta(account.theta_usd)}</b></span><span>BTC 方向倍數 <b>${finite(account.btc_equiv) > 0 && finite(account.delta_btc) !== null ? `${(Math.abs(Number(account.delta_btc)) / Number(account.btc_equiv)).toFixed(2)}×` : "—"}</b></span>${accountFuturesUsd > 0 ? `<span>期貨名義／本戶淨值 <b>${finite(account.usd) > 0 ? `${(accountFuturesUsd / Number(account.usd)).toFixed(2)}×` : "—"}</b></span>` : ""}</div>
         <div class="account-open-positions">${positionText}</div>
         <div class="account-source">${source}${escapeHtml(relativeTime(account.asof))}</div>
         ${note}${edit}
@@ -597,14 +611,14 @@
       const hiddenCount = assetHoldings.length - visibleHoldings.length;
       const positions = derivatives.filter((row) => row.account === account.id);
       const cashRows = visibleHoldings.length ? visibleHoldings.map((row) => `<tr><td>${escapeHtml(row.wallet)}</td><td>${escapeHtml(row.asset)}</td><td>${formatQuantity(row.quantity)}</td><td>${formatUsdCents(row.usd)}</td><td>${row.note ? escapeHtml(row.note) : "—"}</td></tr>`).join("") : '<tr><td colspan="5" class="table-empty">沒有估值達 $10 的餘額</td></tr>';
-      const derivativeRows = positions.length ? positions.map((row) => `<tr><td>${escapeHtml(row.instrument)}</td><td>${escapeHtml(row.side)}</td><td>${formatBtc(row.nominal_btc)}</td><td>${formatUsdCents(row.market_value_usd ?? row.unrealized_pnl_usd)}</td><td>${formatDelta(row.delta_btc)}</td></tr>`).join("") : '<tr><td colspan="5" class="table-empty">無未平倉衍生品</td></tr>';
+      const derivativeRows = positions.length ? positions.map((row) => `<tr><td>${escapeHtml(row.instrument)}</td><td>${escapeHtml(row.side)}</td><td>${formatBtc(row.nominal_btc)}</td><td>${formatUsdCents(row.market_value_usd ?? row.unrealized_pnl_usd)}</td><td>${formatDelta(row.delta_btc)}</td><td>${formatPositionTheta(row)}</td></tr>`).join("") : '<tr><td colspan="6" class="table-empty">無未平倉衍生品</td></tr>';
       return `<details class="account-position" open><summary><strong>${escapeHtml(account.name)}</strong><span>淨值 ${formatUsd(account.usd)} · ${visibleHoldings.length} 筆主要資產 · ${positions.length} 筆衍生品</span></summary>
         <div class="position-subtitle">現貨／錢包餘額 <small>幣種估值供核對；不可再加到帳戶淨值</small></div>
         <div class="table-scroll"><table><thead><tr><th>錢包</th><th>幣種</th><th>數量</th><th>估值 USD</th><th>說明</th></tr></thead><tbody>${cashRows}</tbody></table></div>
         ${hiddenCount ? `<div class="position-small-note">已隱藏 ${hiddenCount} 筆低於 $10 或未估值的小額餘額；帳戶淨值仍包含它們。</div>` : ""}
         ${Math.abs(adjustment) >= 1 ? `<div class="position-small-note">錢包估值差額 ${formatUsd(adjustment)} 已包含於帳戶淨值；這不是持倉。</div>` : ""}
         <div class="position-subtitle">合約／期權 <small>名義是曝險；市值或浮盈虧已計入淨值</small></div>
-        <div class="table-scroll"><table><thead><tr><th>合約</th><th>方向</th><th>名義 BTC</th><th>市值／浮盈虧</th><th>BTC Delta</th></tr></thead><tbody>${derivativeRows}</tbody></table></div>
+        <div class="table-scroll"><table><thead><tr><th>合約</th><th>方向</th><th>名義 BTC</th><th>市值／浮盈虧</th><th>BTC Delta</th><th>Theta／天</th></tr></thead><tbody>${derivativeRows}</tbody></table></div>
       </details>`;
     }).join("");
     const groups = new Map();
@@ -643,17 +657,17 @@
     const allocation = accounts.map((account, index) => ({ name: account.name, share: allocationTotal > 0 ? Math.max(0, Number(account.usd) / allocationTotal * 100) : 0, color: colorFor(String(account.id || index), index) }));
     const allocationBar = allocation.map((row) => `<span style="width:${row.share.toFixed(4)}%;background:${row.color}" title="${escapeHtml(row.name)} ${row.share.toFixed(1)}%"></span>`).join("");
     const allocationLegend = allocation.map((row) => `<span><i style="background:${row.color}"></i>${escapeHtml(row.name)} ${row.share.toFixed(1)}%</span>`).join("");
-    const accountRows = accounts.map((account) => `<tr><td>${escapeHtml(account.name)}</td><td>${formatUsdCents(account.usd)}</td><td>${formatBtc(account.btc_equiv)}</td><td>${formatDelta(account.delta_btc)}</td><td>${finite(account.btc_equiv) > 0 && finite(account.delta_btc) !== null ? `${(Math.abs(Number(account.delta_btc)) / Number(account.btc_equiv)).toFixed(2)}×` : "—"}</td></tr>`).join("");
+    const accountRows = accounts.map((account) => `<tr><td>${escapeHtml(account.name)}</td><td>${formatUsdCents(account.usd)}</td><td>${formatBtc(account.btc_equiv)}</td><td>${formatDelta(account.delta_btc)}</td><td>${formatTheta(account.theta_usd)}</td><td>${finite(account.btc_equiv) > 0 && finite(account.delta_btc) !== null ? `${(Math.abs(Number(account.delta_btc)) / Number(account.btc_equiv)).toFixed(2)}×` : "—"}</td></tr>`).join("");
     const exposure = grossUsdExposure(state.latest);
     const direction = directionalUsdExposure(state.latest);
     const usdLeverage = allocationTotal > 0 ? `${(exposure.total / allocationTotal).toFixed(2)}×` : "—";
     const directionLeverage = allocationTotal > 0 && direction ? `${(direction.total / allocationTotal).toFixed(2)}×` : "—";
     const otherDirection = direction ? [...direction.byAsset.entries()].map(([asset, usd]) => `${escapeHtml(asset)} ${formatUsdCents(Math.abs(usd))}`).join(" ＋ ") : "—";
-    $("aggregatePositions").innerHTML = `<div class="position-subtitle">五戶淨值對帳 <small>權威合計 ${formatUsdCents(state.latest.total_usd)}／${formatBtc(state.latest.total_btc_equiv)}</small></div><div class="table-scroll"><table><thead><tr><th>帳戶</th><th>淨值 USD</th><th>BTC 等值</th><th>BTC Delta</th><th>BTC 方向倍數</th></tr></thead><tbody>${accountRows}</tbody></table></div><div class="allocation"><div class="allocation-title">按帳戶淨值分布</div><div class="allocation-bar" aria-label="五戶資產占比">${allocationBar}</div><div class="allocation-legend">${allocationLegend}</div></div>
+    $("aggregatePositions").innerHTML = `<div class="position-subtitle">五戶淨值對帳 <small>權威合計 ${formatUsdCents(state.latest.total_usd)}／${formatBtc(state.latest.total_btc_equiv)}</small></div><div class="table-scroll"><table><thead><tr><th>帳戶</th><th>淨值 USD</th><th>BTC 等值</th><th>BTC Delta</th><th>期權 Theta／天</th><th>BTC 方向倍數</th></tr></thead><tbody>${accountRows}</tbody></table></div><div class="allocation"><div class="allocation-title">按帳戶淨值分布</div><div class="allocation-bar" aria-label="五戶資產占比">${allocationBar}</div><div class="allocation-legend">${allocationLegend}</div></div>
       <div class="position-subtitle">資產與淨值逐項對帳 <small>幣種餘額＋期權市值＋估值調整＝五戶總淨值；金額顯示到美分</small></div><div class="table-scroll"><table class="reconcile-table"><thead><tr><th>構成項目</th><th>實際數量／等值</th><th>計入淨值 USD</th><th>涉及帳戶／說明</th></tr></thead><tbody>${assetRows}${reconcileRows}</tbody></table></div>
       <div class="position-reconcile">全倉美元方向槓桿率 ${directionLeverage} · BTC Delta 等值 ${formatUsdCents(direction?.btcUsd)} ＋ ${otherDirection}；÷ 淨值 ${formatUsdCents(allocationTotal)}<small>期權按 Delta 計入 BTC 方向；非 BTC 幣種各自淨額取絕對值。${direction?.unvalued ? `另有 ${direction.unvalued} 筆未估值方向餘額未計入。` : ""}</small></div>
       <div class="position-reconcile">全倉美元名義倉位倍數 ${usdLeverage} · 現貨 ${formatUsdCents(exposure.spot)} ＋ 合約 ${formatUsdCents(exposure.futures)} ＋ 期權完整名義 ${formatUsdCents(exposure.options)} ＝ 名義 ${formatUsdCents(exposure.total)}；÷ 淨值 ${formatUsdCents(allocationTotal)}<small>現貨不含美元及穩定幣；期權完整名義高於其 Delta 等值，這是兩個倍數差異的主要來源。${exposure.unvalued ? `另有 ${exposure.unvalued} 筆未估值餘額未計入。` : ""}名義倍數不是強平槓桿。</small></div>
-      <div class="position-reconcile">衍生品 ${derivatives.length} 筆 · 名義 ${formatBtc(nominal)} · 期權市值 ${formatUsdCents(optionValue)} · 合約浮盈虧 ${formatUsdCents(futuresPnl)} · 全倉 BTC Delta ${formatDelta(state.latest.total_delta_btc)}<small>期權市值已在上方對帳表；合約浮盈虧已在錢包淨值，兩者均不再重複相加。BTC 現貨數量與 BTC 等值淨值是兩種不同口徑。</small></div>`;
+      <div class="position-reconcile">衍生品 ${derivatives.length} 筆 · 名義 ${formatBtc(nominal)} · 期權市值 ${formatUsdCents(optionValue)} · 合約浮盈虧 ${formatUsdCents(futuresPnl)} · 全倉 BTC Delta ${formatDelta(state.latest.total_delta_btc)} · 期權 Theta ${formatTheta(state.latest.total_theta_usd)}<small>只加期權。負數是時間在消耗權利金；合約、現貨和放貸沒有 Theta，記 0。期權市值已在上方對帳表；合約浮盈虧已在錢包淨值，兩者均不再重複相加。BTC 現貨數量與 BTC 等值淨值是兩種不同口徑。</small></div>`;
   }
 
   function renderSeriesSelector() {
@@ -675,7 +689,7 @@
     const items = Array.isArray(state.latest?.derivatives) ? state.latest.derivatives : [];
     $("derivativesCount").textContent = `${items.length} 筆未平倉`;
     if (!items.length) {
-      $("derivativesBody").innerHTML = '<tr><td colspan="7" class="table-empty">目前沒有可顯示的衍生品倉位。</td></tr>';
+      $("derivativesBody").innerHTML = '<tr><td colspan="8" class="table-empty">目前沒有可顯示的衍生品倉位。</td></tr>';
       return;
     }
     $("derivativesBody").innerHTML = items.map((item) => {
