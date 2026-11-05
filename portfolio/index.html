@@ -12,10 +12,12 @@
     <script type="application/json" id="portfolioSeed">{"envelope":null}</script>
     <link rel="stylesheet" href="./styles-20261101a.css" />
     <link rel="stylesheet" href="./scenario-20261105a.css" />
+    <link rel="stylesheet" href="./holdings-20261105a.css" />
     <script defer src="./config.js"></script>
     <script defer src="./vault-20261101j.js"></script>
     <script defer src="./scenario-20261105a.js"></script>
-    <script defer src="./app-20261105c.js"></script>
+    <script defer src="./holdings-20261105a.js"></script>
+    <script defer src="./app-20261105d.js"></script>
   </head>
   <body>
     <div class="app-shell">
@@ -185,6 +187,14 @@
           <div class="chart-bottom"><span id="chartPointCount">尚無曲線資料</span><span>時間為新加坡時間（UTC+8）</span></div>
         </section>
 
+        <section class="panel position-panel" aria-labelledby="aggregateTitle">
+          <div class="panel-heading"><div><div class="section-kicker">ALL ACCOUNT HOLDINGS</div><h2 id="aggregateTitle">五戶持倉匯總</h2><p>期權、合約、現貨；相同持倉跨帳戶合併。</p></div></div>
+          <div id="holdingsSummary" class="position-list">正在合併五戶持倉…</div>
+          <details class="account-position holdings-reconcile"><summary><strong>淨值對帳明細</strong><span>需要核對總資產時展開</span></summary>
+            <div id="aggregatePositions" class="position-list">正在計算全倉明細…</div>
+          </details>
+        </section>
+
         <section class="accounts-section" aria-labelledby="accountsTitle">
           <div class="section-heading">
             <div><div class="section-kicker">ACCOUNT BREAKDOWN</div><h2 id="accountsTitle">五個帳戶</h2></div>
@@ -200,10 +210,7 @@
           <div id="accountPositions" class="position-list">正在讀取持倉明細…</div>
         </section>
 
-        <section class="panel position-panel" aria-labelledby="aggregateTitle">
-          <div class="panel-heading"><div><div class="section-kicker">PORTFOLIO RECONCILIATION</div><h2 id="aggregateTitle">全倉實際匯總</h2><p>帳戶淨值、主要幣種、期權市值和估值差額逐項對上；衍生品名義不加進淨值。</p></div></div>
-          <div id="aggregatePositions" class="position-list">正在計算全倉明細…</div>
-        </section>
+
 
         <section class="panel derivatives-panel" aria-labelledby="derivativesTitle">
           <div class="panel-heading">
