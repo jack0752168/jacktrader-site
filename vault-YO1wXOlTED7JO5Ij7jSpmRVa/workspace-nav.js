@@ -34,5 +34,5 @@
   for(const [link,value] of [[account,links.portfolio],[watch,links.watch]]){
    const url=new URL(value);if(url.origin!==location.origin)throw Error('unexpected navigation origin');link.href=url.href;
   }
- }catch(e){const note=document.createElement('small');note.textContent='導航暫未連線，重新整理後重試';nav.append(note);}
+ }catch(e){nav.dataset.navigationError=e.name+': '+e.message;const note=document.createElement('small');note.textContent='導航暫未連線，重新整理後重試';nav.append(note);}
 })();
