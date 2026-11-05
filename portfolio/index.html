@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./styles-20261101a.css" />
     <script defer src="./config.js"></script>
     <script defer src="./vault-20261101j.js"></script>
-    <script defer src="./app-20261101u.js"></script>
+    <script defer src="./app-20261105a.js"></script>
   </head>
   <body>
     <div class="app-shell">
@@ -56,6 +56,11 @@
               <span class="metric-label">BTC 方向 Delta</span>
               <strong id="totalDelta">—</strong>
               <span id="deltaMultiple" class="metric-caption">現貨與合約、期權方向合計</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">期權 Theta</span>
+              <strong id="totalTheta">—</strong>
+              <span class="metric-caption">價格和隱波不變時，過一天的期權盈虧。負數是時間在消耗權利金。合約不加。</span>
             </div>
             <div class="metric">
               <span class="metric-label">BTC 有效槓桿</span>
@@ -105,7 +110,7 @@
             <div>
               <div class="section-kicker">EQUITY HISTORY</div>
               <h2 id="chartTitle">資金曲線</h2>
-              <p id="chartSubtitle">記錄中的帳戶淨值；轉入轉出也會改變曲線。</p>
+              <p id="chartSubtitle">各戶曲線已排除登記的內部轉帳本金；總曲線顯示五戶實際淨值，手續費照實計入。</p>
             </div>
             <div class="chart-actions">
               <div class="segmented" role="group" aria-label="曲線計價單位">
@@ -173,8 +178,8 @@
           </div>
           <div class="table-scroll">
             <table>
-              <thead><tr><th>帳戶</th><th>合約</th><th>方向</th><th class="num">名義 BTC</th><th class="num">當前面額 USD</th><th class="num">市值 / 浮盈虧</th><th class="num">BTC Delta</th></tr></thead>
-              <tbody id="derivativesBody"><tr><td colspan="7" class="table-empty">等待倉位資料…</td></tr></tbody>
+              <thead><tr><th>帳戶</th><th>合約</th><th>方向</th><th class="num">名義 BTC</th><th class="num">當前面額 USD</th><th class="num">市值 / 浮盈虧</th><th class="num">BTC Delta</th><th class="num">Theta／天</th></tr></thead>
+              <tbody id="derivativesBody"><tr><td colspan="8" class="table-empty">等待倉位資料…</td></tr></tbody>
             </table>
           </div>
         </section>
