@@ -1,0 +1,61 @@
+.scenario-panel { min-width: 0; margin-top: 24px; padding: 25px 28px; overflow: hidden; }
+.scenario-panel .panel-heading h2 { max-width: 700px; }
+.scenario-form { max-width: 660px; min-width: 0; margin-top: 22px; }
+.scenario-input-label { display: flex; align-items: baseline; gap: 8px; color: var(--text, #e9f0ee); font-size: 13px; font-weight: 600; }
+.scenario-input-label span { color: var(--subtle, #657b7d); font-size: 11px; font-weight: 450; }
+.scenario-input-row { display: flex; min-width: 0; align-items: stretch; gap: 10px; margin-top: 9px; }
+.scenario-input-wrap { min-width: 0; display: flex; align-items: center; flex: 1; gap: 9px; padding: 0 14px; border: 1px solid #385653; border-radius: 9px; background: #0a171a; color: var(--accent, #70e7bf); }
+.scenario-input-wrap:focus-within { border-color: var(--accent, #70e7bf); }
+.scenario-input-wrap > span { flex: none; color: var(--muted, #92a5a5); font-size: 17px; }
+.scenario-input-wrap input { width: 100%; min-width: 0; height: 49px; padding: 0; border: 0; outline: none; background: transparent; color: var(--text, #e9f0ee); font-size: 23px; font-weight: 580; letter-spacing: -.025em; font-variant-numeric: tabular-nums; -moz-appearance: textfield; }
+.scenario-input-wrap input::-webkit-inner-spin-button, .scenario-input-wrap input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.scenario-input-wrap input:focus-visible { outline: none; }
+.scenario-submit { flex: none; min-height: 49px; padding: 0 19px; border: 1px solid #75cfaf; border-radius: 9px; background: #70e7bf; color: #0b2720; font-size: 13px; font-weight: 720; }
+.scenario-submit:hover { background: #a4f3d7; }
+.scenario-input-note { margin-top: 8px; color: var(--subtle, #657b7d); font-size: 11px; line-height: 1.6; }
+.scenario-shortcuts { display: flex; min-width: 0; flex-wrap: wrap; gap: 7px; margin-top: 13px; }
+.scenario-shortcuts button { min-width: 59px; min-height: 36px; padding: 6px 11px; border: 1px solid var(--border, #26383d); border-radius: 7px; background: #0c181c; color: var(--muted, #92a5a5); font-size: 12px; font-variant-numeric: tabular-nums; }
+.scenario-shortcuts button:hover { color: var(--text, #e9f0ee); border-color: #477065; }
+.scenario-shortcuts button[aria-pressed="true"] { border-color: #4c8977; background: #1c3832; color: var(--accent-strong, #a4f3d7); }
+.scenario-shortcuts button:disabled { cursor: default; opacity: .5; }
+.scenario-asof { margin: 18px 0 12px; color: var(--muted, #92a5a5); font-size: 11px; line-height: 1.7; overflow-wrap: anywhere; }
+.scenario-error { margin: 10px 0 13px; padding: 11px 13px; border: 1px solid #87544b; border-radius: 8px; background: rgba(135, 68, 54, .13); color: var(--red, #ef9d91); font-size: 12px; line-height: 1.6; overflow-wrap: anywhere; }
+.scenario-error[hidden] { display: none; }
+.scenario-result { min-width: 0; max-width: 100%; }
+.scenario-warning { margin: 0 0 14px; padding: 12px 13px; border: 1px solid #87544b; border-radius: 8px; background: rgba(135, 68, 54, .13); color: var(--red, #ef9d91); font-size: 12px; line-height: 1.7; overflow-wrap: anywhere; }
+.scenario-unavailable { padding: 23px 18px; border: 1px dashed #35504e; border-radius: 10px; color: var(--muted, #92a5a5); font-size: 13px; line-height: 1.7; }
+.scenario-headline { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 13px; margin-bottom: 17px; }
+.scenario-stat { min-width: 0; padding: 19px 20px; border: 1px solid var(--border, #26383d); border-radius: 10px; background: #0d1b1e; }
+.scenario-stat > span { display: block; color: var(--muted, #92a5a5); font-size: 12px; line-height: 1.5; }
+.scenario-stat strong { display: block; margin: 10px 0 7px; color: var(--text, #e9f0ee); font-size: clamp(23px, 2.7vw, 34px); font-weight: 650; letter-spacing: -.045em; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.scenario-stat small { display: block; color: var(--subtle, #657b7d); font-size: 11px; line-height: 1.6; }
+.scenario-panel .scenario-up { color: var(--accent, #70e7bf); }
+.scenario-panel .scenario-down { color: var(--red, #ef9d91); }
+.scenario-account-table { width: 100%; min-width: 0; max-width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 12px; }
+.scenario-account-table th { padding: 11px 10px; border-bottom: 1px solid #344b4c; color: var(--subtle, #657b7d); font-size: 11px; font-weight: 550; text-align: right; }
+.scenario-account-table th:first-child { width: 28%; text-align: left; }
+.scenario-account-table td { padding: 13px 10px; border-bottom: 1px solid rgba(72, 100, 99, .25); color: var(--text, #e9f0ee); font-variant-numeric: tabular-nums; text-align: right; white-space: normal; overflow-wrap: anywhere; }
+.scenario-account-table td:first-child { text-align: left; }
+.scenario-account-table tbody tr:last-child td { border-bottom: 0; }
+.scenario-table-note, .scenario-method { margin: 10px 0 0; color: var(--subtle, #657b7d); font-size: 11px; line-height: 1.8; }
+.scenario-method { margin-top: 18px; padding-top: 15px; border-top: 1px solid rgba(72, 100, 99, .25); }
+@media (max-width: 600px) {
+  .scenario-panel { padding: 21px 17px; }
+  .scenario-panel .panel-heading h2 { font-size: 21px; line-height: 1.4; }
+  .scenario-input-row { gap: 8px; }
+  .scenario-input-wrap { padding: 0 11px; gap: 7px; }
+  .scenario-input-wrap input { height: 47px; font-size: 22px; }
+  .scenario-submit { min-height: 47px; padding: 0 12px; font-size: 12px; }
+  .scenario-shortcuts { gap: 6px; }
+  .scenario-shortcuts button { flex: 1 1 auto; min-width: 49px; min-height: 40px; padding: 5px 8px; font-size: 11px; }
+  .scenario-headline { grid-template-columns: minmax(0, 1fr); gap: 9px; }
+  .scenario-stat { padding: 16px; }
+  .scenario-stat strong { font-size: 30px; }
+  .scenario-account-table, .scenario-account-table tbody { display: block; width: 100%; }
+  .scenario-account-table thead { display: none; }
+  .scenario-account-table tbody { display: grid; gap: 9px; }
+  .scenario-account-table tr { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; padding: 13px 11px; border: 1px solid var(--border, #26383d); border-radius: 9px; background: #0c191d; }
+  .scenario-account-table td, .scenario-account-table tbody tr:last-child td { display: block; min-width: 0; padding: 0; border: 0; text-align: left; font-size: 12px; }
+  .scenario-account-table td:first-child { grid-column: 1/-1; margin-bottom: 4px; color: #c1d2cc; font-size: 13px; font-weight: 600; }
+  .scenario-account-table td[data-label]::before { content: attr(data-label); display: block; margin-bottom: 5px; color: var(--subtle, #657b7d); font-size: 10px; font-weight: 450; }
+}

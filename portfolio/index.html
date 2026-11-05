@@ -11,9 +11,11 @@
     <title>Portfolio · 私人資產看板</title>
     <script type="application/json" id="portfolioSeed">{"envelope":null}</script>
     <link rel="stylesheet" href="./styles-20261101a.css" />
+    <link rel="stylesheet" href="./scenario-20261105a.css" />
     <script defer src="./config.js"></script>
     <script defer src="./vault-20261101j.js"></script>
-    <script defer src="./app-20261105b.js"></script>
+    <script defer src="./scenario-20261105a.js"></script>
+    <script defer src="./app-20261105c.js"></script>
   </head>
   <body>
     <div class="app-shell">
@@ -84,6 +86,36 @@
             </div>
           </div>
         </section>
+
+<section class="panel scenario-panel" id="btcScenarioPanel" aria-labelledby="btcScenarioTitle">
+  <div class="panel-heading">
+    <div>
+      <div class="section-kicker">BTC PRICE SCENARIO</div>
+      <h2 id="btcScenarioTitle">BTC 到這個價格，淨值會是多少？</h2>
+      <p>按五戶目前持倉估算；現貨、合約與期權分別重估。</p>
+    </div>
+  </div>
+  <form id="btcScenarioForm" class="scenario-form" novalidate>
+    <label class="scenario-input-label" for="btcScenarioTarget">目標 BTC 價格 <span>USD</span></label>
+    <div class="scenario-input-row">
+      <div class="scenario-input-wrap"><span aria-hidden="true">$</span><input id="btcScenarioTarget" name="btcScenarioTarget" type="number" inputmode="decimal" min="1000" max="1000000" step="any" value="95000" autocomplete="off" aria-describedby="btcScenarioInputNote btcScenarioError" /></div>
+      <button class="scenario-submit" type="submit">估算淨值</button>
+    </div>
+    <div id="btcScenarioInputNote" class="scenario-input-note">可輸入 1,000～1,000,000 美元，結果會隨輸入更新。</div>
+    <div class="scenario-shortcuts" role="group" aria-label="快速選擇 BTC 目標價格">
+      <button type="button" data-scenario-target="current" aria-pressed="false">目前</button>
+      <button type="button" data-scenario-target="74500" aria-pressed="false">74,500</button>
+      <button type="button" data-scenario-target="94000" aria-pressed="false">94,000</button>
+      <button type="button" data-scenario-target="95000" aria-pressed="true">95,000</button>
+      <button type="button" data-scenario-target="100000" aria-pressed="false">100,000</button>
+    </div>
+  </form>
+  <p id="btcScenarioAsOf" class="scenario-asof">等待完整情境資料。</p>
+  <div id="btcScenarioError" class="scenario-error" role="status" aria-live="polite" hidden></div>
+  <div id="btcScenarioResult" class="scenario-result" aria-live="polite" aria-atomic="true"><div class="scenario-unavailable">正在確認五戶持倉與期權估值資料…</div></div>
+  <p class="scenario-method">模型假設短期立即到價，持倉、隱含波動率、遠期／現貨價格比例及其他幣價不變；期權按模型重新估值。已付權利金已包含在目前淨值，不再扣一次。未模擬強平或後續資金費、利息及平倉費用，結果供情境參考。</p>
+</section>
+
 
         <section class="panel"><div class="panel-heading"><div><div class="section-kicker">CASH FLOWS</div><h2>入出金與內部轉帳</h2><p>本金流不算收益，手續費保留；實際餘額與收益曲線分開計算。</p></div></div><div id="flowTracking">正在核對資金流水…</div></section>
 
