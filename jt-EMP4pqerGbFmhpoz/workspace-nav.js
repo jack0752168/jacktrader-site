@@ -25,7 +25,7 @@
    let t=targetPart.replace(/-/g,'+').replace(/_/g,'/');while(t.length%4)t+='=';
    const targetKey=await crypto.subtle.importKey('raw',Uint8Array.from(atob(t),c=>c.charCodeAt(0)),'AES-GCM',false,['encrypt']);
    const nonce=crypto.getRandomValues(new Uint8Array(12));
-   const cipher=new Uint8Array(await crypto.subtle.encrypt({name:'AES-GCM',iv:nonce,additionalData:aad},targetKey,new TextEncoder().encode(links.portfolio)));
+   const cipher=new Uint8Array(await crypto.subtle.encrypt({name:'AES-GCM',iv:nonce,additionalData:aad},targetKey,new TextEncoder().encode(location.href)));
    const savedReturn=JSON.stringify({iv:btoa(String.fromCharCode(...nonce)),data:btoa(String.fromCharCode(...cipher))});
    try{sessionStorage.setItem(returnName,savedReturn);}catch(storageError){sessionStorage.removeItem('smart-cipher');try{sessionStorage.setItem(returnName,savedReturn);}catch(ignore){}}
   }else{
