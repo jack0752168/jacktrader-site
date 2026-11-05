@@ -13,8 +13,9 @@
  try{
   let encoded=keyPart.replace(/-/g,'+').replace(/_/g,'/');while(encoded.length%4)encoded+='=';
   const key=await crypto.subtle.importKey('raw',Uint8Array.from(atob(encoded),c=>c.charCodeAt(0)),'AES-GCM',false,['decrypt']);
-  const r=await fetch('./navigation.enc.json',{cache:'no-store'});if(!r.ok)throw Error('navigation unavailable');
-  const envelope=await r.json(),iv=Uint8Array.from(atob(envelope.iv),c=>c.charCodeAt(0)),data=Uint8Array.from(atob(envelope.data),c=>c.charCodeAt(0));
+  const seed=document.getElementById('workspaceNavigation');
+  let envelope;if(seed){envelope=JSON.parse(seed.textContent);}else{const r=await fetch('./navigation.enc.json',{cache:'no-store'});if(!r.ok)throw Error('navigation unavailable');envelope=await r.json();}
+  const iv=Uint8Array.from(atob(envelope.iv),c=>c.charCodeAt(0)),data=Uint8Array.from(atob(envelope.data),c=>c.charCodeAt(0));
   const decoded=await crypto.subtle.decrypt({name:'AES-GCM',iv,additionalData:new TextEncoder().encode('jacktrader-navigation-v1')},key,data);
   const links=JSON.parse(new TextDecoder().decode(decoded));
   // Preserve a return route only for a session opened from the private account page.
@@ -25,9 +26,10 @@
    const targetKey=await crypto.subtle.importKey('raw',Uint8Array.from(atob(t),c=>c.charCodeAt(0)),'AES-GCM',false,['encrypt']);
    const nonce=crypto.getRandomValues(new Uint8Array(12));
    const cipher=new Uint8Array(await crypto.subtle.encrypt({name:'AES-GCM',iv:nonce,additionalData:aad},targetKey,new TextEncoder().encode(links.portfolio)));
-   sessionStorage.setItem(returnName,JSON.stringify({iv:btoa(String.fromCharCode(...nonce)),data:btoa(String.fromCharCode(...cipher))}));
+   const savedReturn=JSON.stringify({iv:btoa(String.fromCharCode(...nonce)),data:btoa(String.fromCharCode(...cipher))});
+   try{sessionStorage.setItem(returnName,savedReturn);}catch(storageError){sessionStorage.removeItem('smart-cipher');try{sessionStorage.setItem(returnName,savedReturn);}catch(ignore){}}
   }else{
-   const previous=sessionStorage.getItem(returnName);
+   let previous=null;try{previous=sessionStorage.getItem(returnName);}catch(ignore){}
    if(previous){const saved=JSON.parse(previous);const bytes=Uint8Array.from(atob(saved.data),c=>c.charCodeAt(0));const nonce=Uint8Array.from(atob(saved.iv),c=>c.charCodeAt(0));links.portfolio=new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:nonce,additionalData:aad},key,bytes));}
   }
 
